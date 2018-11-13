@@ -12,14 +12,17 @@ export class GameGrid extends cc.Component {
     /** 坐标 */
     private coordinate: Vec2 = null;
 
+    /** 构造函数 */
     protected constructor() {
         super();
     }
 
+    /** 类加载 */
     protected onLoad(): void {
 
     }
 
+    /** 类销毁 */
     protected onDestroy(): void {
 
     }

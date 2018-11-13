@@ -12,8 +12,8 @@ class ResourcesManagerClass {
     }
 
     private constructor() {
-        this.sounds = new Map<string, cc.AudioClip>();
-        this.images = new Map<string, cc.SpriteFrame>();
+        // this.sounds = new Map<string, cc.AudioClip>();
+        // this.images = new Map<string, cc.SpriteFrame>();
         this.prefabs = new Map<string, cc.Prefab>();
     }
 
@@ -35,9 +35,9 @@ class ResourcesManagerClass {
 
 
     public async load() {
-        await this.loadSounds();
-        await this.loadImages();
-        await this.loadSpriteAtlas();
+        // await this.loadSounds();
+        // await this.loadImages();
+        // await this.loadSpriteAtlas();
         await this.loadPrefabs();
     }
 

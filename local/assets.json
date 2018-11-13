@@ -1,3 +1,52 @@
 {
-  "item-states": []
+  "item-states": [
+    {
+      "folded": false,
+      "id": "mount-assets"
+    },
+    {
+      "folded": false,
+      "id": "29f52784-2fca-467b-92e7-8fd9ef8c57b7"
+    },
+    {
+      "folded": false,
+      "id": "4734c20c-0db8-4eb2-92ea-e692f4d70934"
+    },
+    {
+      "folded": true,
+      "id": "7b81d4e8-ec84-4716-968d-500ac1d78a54"
+    },
+    {
+      "folded": false,
+      "id": "1d2cbf7c-017a-4e7f-8cdc-cf9aad656725"
+    },
+    {
+      "folded": false,
+      "id": "55f8d650-7dfa-4f40-8481-5c27c2f7b021"
+    },
+    {
+      "folded": true,
+      "id": "659d66da-900d-4d61-9a8b-b62a9ba61812"
+    },
+    {
+      "folded": true,
+      "id": "6aa0aa6a-ebee-4155-a088-a687a6aadec4"
+    },
+    {
+      "folded": true,
+      "id": "a8027877-d8d6-4645-97a0-52d4a0123dba"
+    },
+    {
+      "folded": false,
+      "id": "5e83d933-b42b-4bdc-91dd-6f1885ea52a9"
+    },
+    {
+      "folded": false,
+      "id": "4b5ae72f-b0a5-40e6-9a3a-bbee95d85418"
+    },
+    {
+      "folded": true,
+      "id": "96c56d39-a9b0-48e4-90f9-88039e79cb19"
+    }
+  ]
 }

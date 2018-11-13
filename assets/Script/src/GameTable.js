@@ -19,7 +19,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var ccclass = cc._decorator.property;
+var ccclass = cc._decorator.ccclass;
 var Vec2_1 = require("./Vec2");
 var ResourcesManager_1 = require("./ResourcesManager");
 var GameTable = (function (_super) {
@@ -31,13 +31,16 @@ var GameTable = (function (_super) {
         _this.tableWidth = 8;
         _this.tableHeight = 11;
         _this.gridPrefab = null;
-        _this.grids = new Map();
+        _this.gridMap = new Map();
         return _this;
     }
     GameTable.prototype.onLoad = function () {
-        this.gridPrefab = ResourcesManager_1.ResourcesManager.getPrefab("GameGrid");
     };
     GameTable.prototype.onDestroy = function () {
+    };
+    GameTable.prototype.loadFinish = function () {
+        this.gridPrefab = ResourcesManager_1.ResourcesManager.getPrefab("GameGrid");
+        this.createTable();
     };
     GameTable.prototype.createTable = function () {
         for (var y = 0; y < this.tableHeight; y++) {
@@ -52,7 +55,7 @@ var GameTable = (function (_super) {
         var gameGrid = node.getComponent("GameGrid");
         gameGrid.init(vec2);
         this.node.addChild(gameGrid.node);
-        this.grids.set(vec2.toNumber(), gameGrid);
+        this.gridMap.set(vec2.toNumber(), gameGrid);
     };
     GameTable = __decorate([
         ccclass()

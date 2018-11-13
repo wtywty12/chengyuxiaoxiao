@@ -1,6 +1,7 @@
-import ccclass = cc._decorator.property;
+import ccclass = cc._decorator.ccclass;
 import {Vec2} from "./Vec2";
 import {GameGrid} from "./GameGrid";
+// import property = cc._decorator.property;
 import {ResourcesManager} from "./ResourcesManager";
 
 @ccclass()
@@ -19,28 +20,43 @@ export class GameTable extends cc.Component {
         倒计时到0时结算；
         结算时计算分数，公式：消除成语数
      */
-
+    /** 行 */
     private row: number = 8;
+    /** 列 */
     private line: number = 8;
+    /** 表宽 */
     private tableWidth: number = 8;
+    /** 表高 */
     private tableHeight: number = 11;
+    /** 格子prefab */
     private gridPrefab: cc.Prefab = null;
-    private grids: Map<number, GameGrid> = new Map<number, GameGrid>();
+    /** 格子容器 */
+    private gridMap: Map<number, GameGrid> = new Map<number, GameGrid>();
     
-    protected constructor() {
+    /** 构造函数 */
+    public constructor() {
         super();
     }
 
+    /** 类加载 */
     protected onLoad(): void {
-        this.gridPrefab = ResourcesManager.getPrefab("GameGrid");
+        
     }
 
+    /** 类销毁 */
     protected onDestroy(): void {
 
     }
 
+    /** 异步加载完成 */
+    public loadFinish(): void {
+        this.gridPrefab = ResourcesManager.getPrefab("GameGrid");
+        this.createTable();
+    }
+
     /**
      * 创建中心表
+     * 根据动态设定的表宽 表高自动生成表中心格子
      */
     private createTable(): void {
         for (let y = 0; y < this.tableHeight; y++) {
@@ -51,11 +67,15 @@ export class GameTable extends cc.Component {
         }
     }
 
+    /**
+     * 创建游戏格子
+     * 根据动态加载的prefab 初始化格子对象 并且加入Map中
+     */
     private createGameGrid(vec2: Vec2): void {
         let node: cc.Node = cc.instantiate(this.gridPrefab);
         let gameGrid: GameGrid = node.getComponent("GameGrid");
         gameGrid.init(vec2);
         this.node.addChild(gameGrid.node);
-        this.grids.set(vec2.toNumber(), gameGrid);
+        this.gridMap.set(vec2.toNumber(), gameGrid);
     }
 }

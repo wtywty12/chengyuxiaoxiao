@@ -1,58 +1,608 @@
-2018-11-13T07:19:35.619Z - normal: Load ~/.CocosCreator/settings.json
-2018-11-13T07:19:35.625Z - normal: checking language setting...
-2018-11-13T07:19:35.626Z - normal: Language: zh
-2018-11-13T07:19:36.875Z - success: protocol editor-framework registered
-2018-11-13T07:19:36.876Z - success: protocol app registered
-2018-11-13T07:19:36.876Z - success: protocol theme registered
-2018-11-13T07:19:36.877Z - success: protocol packages registered
-2018-11-13T07:19:36.877Z - success: protocol unpack registerred
-2018-11-13T07:19:36.877Z - success: protocol disable-commonjs registerred
-2018-11-13T07:19:37.046Z - normal: connected!
-2018-11-13T07:19:37.052Z - normal: Check project /Users/linzhang/youyou/idiom
-2018-11-13T07:19:37.057Z - normal: Initializing project /Users/linzhang/youyou/idiom
-2018-11-13T07:19:37.065Z - normal: Initializing Cocos2d
-2018-11-13T07:19:38.258Z - normal: Initializing Asset Database
-2018-11-13T07:19:38.345Z - success: protocol uuid registerred
-2018-11-13T07:19:38.346Z - success: protocol db registerred
-2018-11-13T07:19:38.346Z - success: protocol thumbnail registerred
-2018-11-13T07:19:38.347Z - normal: Loading editor/builtin packages
-2018-11-13T07:19:38.589Z - success: assets loaded
-2018-11-13T07:19:38.595Z - success: builder loaded
-2018-11-13T07:19:38.598Z - success: cocos-analytics loaded
-2018-11-13T07:19:38.605Z - success: console loaded
-2018-11-13T07:19:38.661Z - success: fb-instant-games loaded
-2018-11-13T07:19:38.663Z - success: google-instant-games loaded
-2018-11-13T07:19:38.673Z - success: hierarchy loaded
-2018-11-13T07:19:38.678Z - success: inspector loaded
-2018-11-13T07:19:38.681Z - success: keystore loaded
-2018-11-13T07:19:38.688Z - success: node-library loaded
-2018-11-13T07:19:38.692Z - success: package-asset loaded
-2018-11-13T07:19:38.694Z - success: preferences loaded
-2018-11-13T07:19:38.700Z - success: project-exporter loaded
-2018-11-13T07:19:38.725Z - success: project-importer loaded
-2018-11-13T07:19:38.729Z - success: project-settings loaded
-2018-11-13T07:19:38.739Z - success: ui-kit loaded
-2018-11-13T07:19:38.745Z - success: scene loaded
-2018-11-13T07:19:38.747Z - success: sprite-editor loaded
-2018-11-13T07:19:38.753Z - success: store loaded
-2018-11-13T07:19:38.760Z - success: timeline loaded
-2018-11-13T07:19:38.761Z - normal: Loading builtin packages
-2018-11-13T07:19:38.772Z - success: asset-db-debugger loaded
-2018-11-13T07:19:38.774Z - success: color-picker loaded
-2018-11-13T07:19:38.917Z - success: google-play-instant loaded
-2018-11-13T07:19:38.919Z - success: jsb-adapter loaded
-2018-11-13T07:19:38.928Z - success: oppo-runtime loaded
-2018-11-13T07:19:38.939Z - success: package-manager loaded
-2018-11-13T07:19:39.098Z - success: qqplay-adapter loaded
-2018-11-13T07:19:39.109Z - success: sdkbox loaded
-2018-11-13T07:19:39.118Z - success: tester loaded
-2018-11-13T07:19:39.127Z - success: ui-grid loaded
-2018-11-13T07:19:39.137Z - success: ui-kit-preview-extra loaded
-2018-11-13T07:19:39.144Z - success: ui-kit-preview loaded
-2018-11-13T07:19:39.151Z - success: ui-tree loaded
-2018-11-13T07:19:39.158Z - success: vivo-runtime loaded
-2018-11-13T07:19:39.160Z - success: weapp-adapter loaded
-2018-11-13T07:19:40.839Z - normal: Loading packages
-2018-11-13T07:19:40.848Z - normal: Watching packages
-2018-11-13T07:19:40.984Z - normal: Run Application
-2018-11-13T07:19:41.803Z - success: preview server running at http://localhost:7456
+2018-11-13T09:57:08.170Z - normal: Load ~/.CocosCreator/settings.json
+2018-11-13T09:57:08.176Z - normal: checking language setting...
+2018-11-13T09:57:08.176Z - normal: Language: zh
+2018-11-13T09:57:09.546Z - success: protocol editor-framework registered
+2018-11-13T09:57:09.547Z - success: protocol app registered
+2018-11-13T09:57:09.547Z - success: protocol theme registered
+2018-11-13T09:57:09.548Z - success: protocol packages registered
+2018-11-13T09:57:09.548Z - success: protocol unpack registerred
+2018-11-13T09:57:09.548Z - success: protocol disable-commonjs registerred
+2018-11-13T09:57:09.748Z - normal: connected!
+2018-11-13T09:57:09.753Z - normal: Check project /Users/linzhang/youyou/chengyuxiaoxiao
+2018-11-13T09:57:09.757Z - normal: Initializing project /Users/linzhang/youyou/chengyuxiaoxiao
+2018-11-13T09:57:09.765Z - normal: Initializing Cocos2d
+2018-11-13T09:57:10.962Z - normal: Initializing Asset Database
+2018-11-13T09:57:11.034Z - success: protocol uuid registerred
+2018-11-13T09:57:11.034Z - success: protocol db registerred
+2018-11-13T09:57:11.034Z - success: protocol thumbnail registerred
+2018-11-13T09:57:11.035Z - normal: Loading editor/builtin packages
+2018-11-13T09:57:11.276Z - success: assets loaded
+2018-11-13T09:57:11.283Z - success: builder loaded
+2018-11-13T09:57:11.286Z - success: cocos-analytics loaded
+2018-11-13T09:57:11.292Z - success: console loaded
+2018-11-13T09:57:11.353Z - success: fb-instant-games loaded
+2018-11-13T09:57:11.356Z - success: google-instant-games loaded
+2018-11-13T09:57:11.367Z - success: hierarchy loaded
+2018-11-13T09:57:11.373Z - success: inspector loaded
+2018-11-13T09:57:11.376Z - success: keystore loaded
+2018-11-13T09:57:11.385Z - success: node-library loaded
+2018-11-13T09:57:11.388Z - success: package-asset loaded
+2018-11-13T09:57:11.392Z - success: preferences loaded
+2018-11-13T09:57:11.398Z - success: project-exporter loaded
+2018-11-13T09:57:11.425Z - success: project-importer loaded
+2018-11-13T09:57:11.431Z - success: project-settings loaded
+2018-11-13T09:57:11.440Z - success: ui-kit loaded
+2018-11-13T09:57:11.447Z - success: scene loaded
+2018-11-13T09:57:11.450Z - success: sprite-editor loaded
+2018-11-13T09:57:11.457Z - success: store loaded
+2018-11-13T09:57:11.466Z - success: timeline loaded
+2018-11-13T09:57:11.466Z - normal: Loading builtin packages
+2018-11-13T09:57:11.475Z - success: asset-db-debugger loaded
+2018-11-13T09:57:11.479Z - success: color-picker loaded
+2018-11-13T09:57:11.643Z - success: google-play-instant loaded
+2018-11-13T09:57:11.646Z - success: jsb-adapter loaded
+2018-11-13T09:57:11.657Z - success: oppo-runtime loaded
+2018-11-13T09:57:11.667Z - success: package-manager loaded
+2018-11-13T09:57:11.857Z - success: qqplay-adapter loaded
+2018-11-13T09:57:11.867Z - success: sdkbox loaded
+2018-11-13T09:57:11.876Z - success: tester loaded
+2018-11-13T09:57:11.887Z - success: ui-grid loaded
+2018-11-13T09:57:11.893Z - success: ui-kit-preview-extra loaded
+2018-11-13T09:57:11.902Z - success: ui-kit-preview loaded
+2018-11-13T09:57:11.908Z - success: ui-tree loaded
+2018-11-13T09:57:11.915Z - success: vivo-runtime loaded
+2018-11-13T09:57:11.918Z - success: weapp-adapter loaded
+2018-11-13T09:57:13.999Z - normal: Loading packages
+2018-11-13T09:57:14.015Z - normal: Watching packages
+2018-11-13T09:57:14.151Z - normal: Run Application
+2018-11-13T09:57:16.140Z - success: preview server running at http://localhost:7456
+2018-11-13T09:58:48.222Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:1793
+2018-11-13T10:10:04.389Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:5214
+2018-11-13T10:49:36.754Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:49:36.757Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:51:09.676Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:51:09.679Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:51:14.670Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:42585
+2018-11-13T10:51:14.775Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:51:19.771Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:42620
+2018-11-13T10:51:19.879Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:51:24.872Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:42654
+2018-11-13T10:51:24.977Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:51:29.973Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:42689
+2018-11-13T10:51:30.080Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:51:45.884Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:51:45.892Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:51:50.877Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:42943
+2018-11-13T10:51:50.982Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:51:55.977Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:42978
+2018-11-13T10:51:56.087Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:52:01.080Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:43011
+2018-11-13T10:52:01.191Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:52:06.182Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:43046
+2018-11-13T10:52:06.289Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:52:11.283Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:43081
+2018-11-13T10:52:11.394Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:52:16.386Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:43114
+2018-11-13T10:52:16.500Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:52:21.491Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:43149
+2018-11-13T10:52:21.601Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:52:26.592Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:43184
+2018-11-13T10:52:26.702Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:52:28.276Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:52:28.283Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:52:33.271Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:43237
+2018-11-13T10:52:33.381Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:52:38.373Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:43272
+2018-11-13T10:52:38.487Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:52:43.477Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:43305
+2018-11-13T10:52:43.588Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:52:48.580Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:43340
+2018-11-13T10:52:48.689Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:52:53.680Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:43375
+2018-11-13T10:52:53.789Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:52:58.781Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:43410
+2018-11-13T10:52:58.889Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:53:03.882Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:43445
+2018-11-13T10:53:03.991Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:53:15.135Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:53:15.144Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:53:20.130Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:43645
+2018-11-13T10:53:20.243Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:53:25.232Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:43678
+2018-11-13T10:53:25.351Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:53:30.334Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:43713
+2018-11-13T10:53:30.442Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:53:35.435Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:43748
+2018-11-13T10:53:35.544Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:53:40.535Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:43783
+2018-11-13T10:53:40.643Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:53:41.565Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:53:42.642Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:53:42.648Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:53:47.634Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:43836
+2018-11-13T10:53:47.754Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:53:53.461Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:53:53.467Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:53:58.456Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:43922
+2018-11-13T10:53:58.563Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:54:03.557Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:43957
+2018-11-13T10:54:03.666Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:54:08.658Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:43992
+2018-11-13T10:54:08.767Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:54:13.759Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:44027
+2018-11-13T10:54:13.867Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:54:18.861Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:44062
+2018-11-13T10:54:18.970Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:54:23.962Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:44095
+2018-11-13T10:54:24.069Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+2018-11-13T10:54:25.760Z - error: TypeError: Cannot read property 'name' of null
+    at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
+    at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
+    at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
+    at m (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4009)
+    at h (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:4213)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:5913
+    at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
+    at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
+    at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
