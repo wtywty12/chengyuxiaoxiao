@@ -319,49 +319,49 @@
     "meta": 1542164048034,
     "relativePath": "resources/jsons/idiom.json"
   },
-  "e21ad909-bfb8-4728-be9e-a6ccc0f32d47": {
-    "asset": 1542182961955,
-    "meta": 1542182963801,
-    "relativePath": "Script/src/StringUtils.js"
-  },
   "500f0063-a31d-4079-a4cb-37b1172721b5": {
-    "asset": 1542183024564,
-    "meta": 1542183031847,
+    "asset": 1542185314239,
+    "meta": 1542185314764,
     "relativePath": "Script/src/ChooseView.js"
   },
   "1240c902-9809-4466-a965-ca815884fe90": {
-    "asset": 1542183024591,
-    "meta": 1542183031893,
+    "asset": 1542185314158,
+    "meta": 1542185314799,
     "relativePath": "Script/src/ConfigManager.js"
   },
   "722a28ab-b42a-4b4f-a5d0-0df481e04e57": {
-    "asset": 1542183024398,
-    "meta": 1542183032037,
+    "asset": 1542185314141,
+    "meta": 1542185314914,
     "relativePath": "Script/src/GameGrid.js"
   },
   "818bde6d-566c-4e34-9900-8344fe409af7": {
-    "asset": 1542183024949,
-    "meta": 1542183032093,
+    "asset": 1542185314250,
+    "meta": 1542185314977,
     "relativePath": "Script/src/GameScene.js"
   },
   "a099cf77-1bdd-4007-8720-ce289a7e3706": {
-    "asset": 1542183024885,
-    "meta": 1542183032161,
+    "asset": 1542185314219,
+    "meta": 1542185315065,
     "relativePath": "Script/src/GameTable.js"
   },
   "338d8686-8d88-4341-bf17-dc36c7731e84": {
-    "asset": 1542183024725,
-    "meta": 1542183032370,
+    "asset": 1542185314180,
+    "meta": 1542185315240,
     "relativePath": "Script/src/RandomAry.js"
   },
   "80bbc91a-c96c-4139-ae59-a214d543b442": {
-    "asset": 1542183024243,
-    "meta": 1542183032456,
+    "asset": 1542185314113,
+    "meta": 1542185315314,
     "relativePath": "Script/src/ResourcesManager.js"
   },
+  "e21ad909-bfb8-4728-be9e-a6ccc0f32d47": {
+    "asset": 1542185314036,
+    "meta": 1542185315328,
+    "relativePath": "Script/src/StringUtils.js"
+  },
   "2a8d129d-210a-448b-90e7-7c7b274a67df": {
-    "asset": 1542183024294,
-    "meta": 1542183032457,
+    "asset": 1542185314118,
+    "meta": 1542185315335,
     "relativePath": "Script/src/Vec2.js"
   }
 }

@@ -28,6 +28,7 @@ var ChooseView = (function (_super) {
         _this.gridPrefab = null;
         _this.idiomAry = null;
         _this.gridAry = null;
+        _this.gameTable = null;
         _this.idiomAry = [];
         _this.gridAry = [];
         return _this;
@@ -36,6 +37,9 @@ var ChooseView = (function (_super) {
     ChooseView.prototype.loadFinish = function () {
         this.gridPrefab = ResourcesManager_1.ResourcesManager.getPrefab("GameGrid");
         this.createTable();
+    };
+    ChooseView.prototype.setGameTable = function (view) {
+        this.gameTable = view;
     };
     ChooseView.prototype.createTable = function () {
         for (var x = 0; x < 4; x++) {
@@ -53,7 +57,11 @@ var ChooseView = (function (_super) {
         var gameGrid = node.getComponent("GameGrid");
         gameGrid.init(null);
         node.on(cc.Node.EventType.MOUSE_DOWN, function (event) {
-            console.log('remove' + this.idiomAry[index]);
+            var str = this.idiomAry[index];
+            console.log('remove' + str);
+            this.idiomAry.splice(index, index + 1);
+            this.gridAry[index].setGridString("");
+            this.gameTable.displayGrid(str);
         }, this);
         this.node.addChild(gameGrid.node);
         this.gridAry.push(gameGrid);
@@ -64,8 +72,13 @@ var ChooseView = (function (_super) {
             return;
         }
         this.idiomAry.push(str);
-        var length = this.idiomAry.length;
-        this.gridAry[length - 1].setGridString(str);
+        for (var i = 0; i < this.gridAry.length; i++) {
+            var grid = this.gridAry[i];
+            if (grid.getGridString() == "") {
+                grid.setGridString(str);
+                break;
+            }
+        }
     };
     ChooseView = __decorate([
         ccclass()

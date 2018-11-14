@@ -44,6 +44,7 @@ var GameTable = (function (_super) {
         this.randomAry = new RandomAry_1.RandomAry((this.tableWidth * this.tableHeight) * 0.25);
         this.produceAry = this.randomAry.getProduceArray();
         this.gridPrefab = ResourcesManager_1.ResourcesManager.getPrefab("GameGrid");
+        this.chooseView.setGameTable(this);
         this.createTable();
     };
     GameTable.prototype.setChooseView = function (view) {
@@ -71,7 +72,18 @@ var GameTable = (function (_super) {
         gameGrid.init(vec2);
         gameGrid.setGridString(this.produceAry[index]);
         node.on(cc.Node.EventType.MOUSE_DOWN, function (event) {
+            var str = this.produceAry[index];
+            if (this.checkGridMap(str) == false) {
+                cc.log("已经存在");
+                return;
+            }
+            if (this.checkIsFour() == false) {
+                cc.log("已经4个字");
+                return;
+            }
             console.log('click' + this.produceAry[index]);
+            gameGrid.setGridString("");
+            this.gridMap.set(this.produceAry[index], gameGrid);
             this.chooseView.setGridText(this.produceAry[index]);
         }, this);
         if (this.node == null || gameGrid == null || gameGrid.node == null) {
@@ -79,7 +91,30 @@ var GameTable = (function (_super) {
             return;
         }
         this.node.addChild(gameGrid.node);
-        this.gridMap.set(vec2.toNumber(), gameGrid);
+    };
+    GameTable.prototype.checkGridMap = function (str) {
+        var isOk = true;
+        this.gridMap.forEach(function (value, key) {
+            if (key == str) {
+                isOk = false;
+            }
+        });
+        return isOk;
+    };
+    GameTable.prototype.checkIsFour = function () {
+        var index = 0;
+        this.gridMap.forEach(function (value) {
+            index++;
+        });
+        return index <= 4;
+    };
+    GameTable.prototype.displayGrid = function (str) {
+        if (typeof (str) != "string") {
+            return;
+        }
+        var grid = this.gridMap.get(str);
+        grid.setGridString(str);
+        this.gridMap.delete(str);
     };
     GameTable = __decorate([
         ccclass()

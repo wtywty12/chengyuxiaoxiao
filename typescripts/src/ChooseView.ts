@@ -1,5 +1,6 @@
 import ccclass = cc._decorator.ccclass;
 import {GameGrid} from "./GameGrid";
+import {GameTable} from "./GameTable";
 import {ResourcesManager} from "./ResourcesManager";
 
 @ccclass()
@@ -14,6 +15,9 @@ export class ChooseView extends cc.Component {
     /** 格子数组 */
     private gridAry: Array<GameGrid> = null;
 
+    /** GameTable */
+    private gameTable: GameTable = null;
+
     public constructor() {
         super();
         this.idiomAry = [];
@@ -24,6 +28,10 @@ export class ChooseView extends cc.Component {
         this.gridPrefab = ResourcesManager.getPrefab("GameGrid");
 
         this.createTable();
+    }
+
+    public setGameTable(view: GameTable) {
+        this.gameTable = view;
     }
 
     /**
@@ -52,7 +60,11 @@ export class ChooseView extends cc.Component {
         gameGrid.init(null);
         node.on(cc.Node.EventType.MOUSE_DOWN,function(event: any)
         {
-            console.log('remove' + this.idiomAry[index]);
+            let str = this.idiomAry[index];
+            console.log('remove' + str);
+            this.idiomAry.splice(index, index+1);
+            this.gridAry[index].setGridString("");
+            this.gameTable.displayGrid(str);
         },this);
         this.node.addChild(gameGrid.node);
         this.gridAry.push(gameGrid);
@@ -67,8 +79,13 @@ export class ChooseView extends cc.Component {
             return;
         }
         this.idiomAry.push(str);
-        var length = this.idiomAry.length;
-        this.gridAry[length-1].setGridString(str);
+        for (var i=0; i<this.gridAry.length; i++) {
+            let grid = this.gridAry[i];
+            if (grid.getGridString() == "") {
+                grid.setGridString(str);
+                break;
+            }
+        }
     }
 
 }
