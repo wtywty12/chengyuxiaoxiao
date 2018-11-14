@@ -30,6 +30,10 @@ export class ChooseView extends cc.Component {
         this.createTable();
     }
 
+    public getChooseIdiomAry(): Array<string> {
+        return this.idiomAry;
+    }
+
     public setGameTable(view: GameTable) {
         this.gameTable = view;
     }
@@ -58,7 +62,7 @@ export class ChooseView extends cc.Component {
         node.setContentSize(cc.size(w_h, w_h));
         let gameGrid: GameGrid = node.getComponent("GameGrid");
         gameGrid.init(null);
-        node.on(cc.Node.EventType.MOUSE_DOWN,function(event: any)
+        node.on(cc.Node.EventType.TOUCH_END,function(event: any)
         {
             let str = this.idiomAry[index];
             console.log('remove' + str);
@@ -86,6 +90,27 @@ export class ChooseView extends cc.Component {
                 break;
             }
         }
+    }
+
+    /**
+     * 还原成语
+     */
+    public restoreIdiom() {
+        for (var i=0; i<=this.idiomAry.length; i++) {
+            let str = this.idiomAry[i];
+            this.gameTable.displayGrid(str);
+        }
+    }
+
+    /**
+     * 清除上方成语
+     */
+    public clearIdiom() {
+        for (var i=0; i<this.gridAry.length; i++){
+            let gird = this.gridAry[i];
+            gird.setGridString("");
+        }
+        this.idiomAry = [];
     }
 
 }

@@ -12,6 +12,7 @@ var RandomAry = function () {
         this.configLength = null;
         this.jsonData = new Map();
         this.produceArray = null;
+        this.randomIdiom = null;
         this.needValus = need;
         this.jsonData = ConfigManager_1.ConfigManager.idiomJsonMap;
         this.produceArray = [];
@@ -24,8 +25,11 @@ var RandomAry = function () {
             return;
         }
         var randomAry = this.getRandomAry();
-        var randomIdiom = this.getRandomAryIdiom(randomAry);
-        this.produceArray = this.getSplitArray(randomIdiom);
+        this.randomIdiom = this.getRandomAryIdiom(randomAry);
+        this.produceArray = this.getSplitArray(this.randomIdiom);
+    };
+    RandomAry.prototype.getRandomIdiom = function () {
+        return this.randomIdiom;
     };
     RandomAry.prototype.getProduceArray = function () {
         return this.produceArray;
@@ -61,6 +65,7 @@ var RandomAry = function () {
             var s = v.toString();
             idiomAry.push(this.jsonData.get(v));
         }
+        cc.log("关卡成语   =>    ", idiomAry);
         return idiomAry;
     };
     RandomAry.prototype.getSplitArray = function (arr) {

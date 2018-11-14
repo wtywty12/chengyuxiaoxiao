@@ -44,17 +44,9 @@ export class GameScene extends cc.Component {
         this.gameTable.loadFinish();
     }
 
-    /** 异步加载上方view完成 */
-    // private loadChooseViewFinish(): void {
-    //     this.chooseView = new ChooseView();
-    //     this.gameTable.loadFinish();
-    // }
-
-    /** 异步加载中心view完成 */
-    // private loadGameTableFinish(): void {
-    //     this.gameTable = new GameTable(this.chooseView);
-    //     this.gameTable.loadFinish();
-    // }
+    public displayResult(isSuccess: boolean) {
+        
+    }
 
     
 }

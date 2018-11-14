@@ -38,6 +38,7 @@ export class GameTable extends cc.Component {
     /** 选择表 */
     private chooseView: ChooseView = null;
     
+    
     /** 构造函数 */
     public constructor() {
         super();
@@ -97,21 +98,30 @@ export class GameTable extends cc.Component {
         let gameGrid: GameGrid = node.getComponent("GameGrid");
         gameGrid.init(vec2);
         gameGrid.setGridString(this.produceAry[index]);
-        node.on(cc.Node.EventType.MOUSE_DOWN,function(event: any)
+        node.on(cc.Node.EventType.TOUCH_END,function(event: any)
         {
             let str = this.produceAry[index];
-            if (this.checkGridMap(str) == false) {
+            if (this.checkGridMap(gameGrid) == false) {
                 cc.log("已经存在");
                 return;
             }
-            if (this.checkIsFour() == false) {
+            let length = this.getGridMapLength();
+            if (length == 4) {
                 cc.log("已经4个字");
                 return;
             }
-            console.log('click' + this.produceAry[index]);
+            console.log('click' + str);
             gameGrid.setGridString("");
-            this.gridMap.set(this.produceAry[index], gameGrid);
-            this.chooseView.setGridText(this.produceAry[index]);
+            this.gridMap.set(str, gameGrid);
+            this.chooseView.setGridText(str);
+            if (length == 3) {
+                let ok = this.judgeResult();
+                if (ok) {
+                    this.onSuccessFul();
+                } else {
+                    this.onFailed();
+                }
+            }
         },this);
         if (this.node == null || gameGrid == null || gameGrid.node == null) {
             cc.log("Error in createGameGrid");
@@ -123,25 +133,24 @@ export class GameTable extends cc.Component {
     /**
      * 检查是否重复
      */
-    private checkGridMap(str: string): boolean {
+    private checkGridMap(grid: GameGrid): boolean {
         let isOk = true;
-        this.gridMap.forEach((value, key)=>{
-            if (key == str) {
-                isOk = false;
-            }
-        })
+        let str = grid.getGridString();
+        if (str == "") {
+            isOk = false;
+        }
         return isOk;
     }
 
     /**
-     * 检查是否4个
+     * 获取有效选择格子数
      */
-    private checkIsFour(): boolean {
+    private getGridMapLength(): number {
         let index = 0;
         this.gridMap.forEach(value=>{
             index++;
         });
-        return index <= 4;
+        return index;
     }
 
     /**
@@ -155,4 +164,60 @@ export class GameTable extends cc.Component {
         grid.setGridString(str);
         this.gridMap.delete(str);
     }
+
+    /**
+     * 判定结果
+     */
+    private judgeResult(): boolean {
+        cc.log("开始判定");
+        /** 每个关卡成语 */
+        let idiomAry = this.randomAry.getRandomIdiom();
+        /** 玩家选择成语字 */
+        let chooseAry = this.chooseView.getChooseIdiomAry();
+        /** 判定结果 */
+        let isSussess = false;
+        for (var i=0; i<idiomAry.length; i++) {
+            let idiom = idiomAry[i];
+            let isEqual = true;
+            for (var j=0; j<4; j++) {
+                if (idiom.substring(j, j+1) != chooseAry[j]) {
+                    isEqual = false;
+                    break;
+                }
+            }
+            if (isEqual) {
+                isSussess = true;
+                break;
+            }
+        }
+        return isSussess;
+    }
+
+    /**
+     * 判定成功
+     */
+    private onSuccessFul() {
+        cc.log("判定成功");
+        /** 清理上方成语 */
+        this.clearData();
+    }
+
+     /**
+      * 判定失败
+      */
+     private onFailed() {
+        cc.log("判定失败");
+        /** 还原成语字 */
+        this.chooseView.restoreIdiom();
+        /** 清理上方成语 */
+        this.clearData();
+     }
+
+     /**
+      * 清理数据
+      */
+     private clearData() {
+        this.gridMap.clear();
+        this.chooseView.clearIdiom();
+     }
 }

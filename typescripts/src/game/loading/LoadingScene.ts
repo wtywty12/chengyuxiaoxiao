@@ -16,7 +16,7 @@ export class LoadingScene extends CommonScene {
     @property(cc.Label)
     private progressLabel:cc.Label = null;
 
-    @property(cc.ProgressBar)
+    @property(cc.ProgressBar) 
     private progressBar:cc.ProgressBar = null;
 
     @property(cc.Button)
