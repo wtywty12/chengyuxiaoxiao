@@ -48,6 +48,7 @@ var GameTable = function (_super) {
         _this.gridMap = new Map();
         _this.randomAry = null;
         _this.produceAry = null;
+        _this.chooseView = null;
         return _this;
     }
     GameTable.prototype.onLoad = function () {};
@@ -57,6 +58,9 @@ var GameTable = function (_super) {
         this.produceAry = this.randomAry.getProduceArray();
         this.gridPrefab = ResourcesManager_1.ResourcesManager.getPrefab("GameGrid");
         this.createTable();
+    };
+    GameTable.prototype.setChooseView = function (view) {
+        this.chooseView = view;
     };
     GameTable.prototype.createTable = function () {
         var index = 0;
@@ -69,12 +73,24 @@ var GameTable = function (_super) {
         }
     };
     GameTable.prototype.createGameGrid = function (index, vec2) {
+        if (this.gridPrefab == null) {
+            cc.log("GameTable gridPrefab is null");
+            return;
+        }
         var node = cc.instantiate(this.gridPrefab);
         var w_h = 720 / this.tableWidth;
         node.setContentSize(cc.size(w_h, w_h));
         var gameGrid = node.getComponent("GameGrid");
         gameGrid.init(vec2);
         gameGrid.setGridString(this.produceAry[index]);
+        node.on(cc.Node.EventType.MOUSE_DOWN, function (event) {
+            console.log('click' + this.produceAry[index]);
+            this.chooseView.setGridText(this.produceAry[index]);
+        }, this);
+        if (this.node == null || gameGrid == null || gameGrid.node == null) {
+            cc.log("Error in createGameGrid");
+            return;
+        }
         this.node.addChild(gameGrid.node);
         this.gridMap.set(vec2.toNumber(), gameGrid);
     };

@@ -1,6 +1,7 @@
 import ccclass = cc._decorator.ccclass;
 import property = cc._decorator.property;
 import {GameTable} from "./GameTable";
+import {ChooseView} from "./ChooseView";
 import {ConfigManager} from "./ConfigManager";
 import {ResourcesManager} from "./ResourcesManager";
 
@@ -15,9 +16,14 @@ export class GameScene extends cc.Component {
     @property(GameTable)
     private gameTable: GameTable = null;
 
+    /** 上方选择表 */
+     @property(ChooseView)
+     private chooseView: ChooseView = null;
+
     /** 构造函数 */
     protected constructor() {
         super();
+        this.chooseView = new ChooseView();
         this.gameTable = new GameTable();
     }
 
@@ -33,8 +39,23 @@ export class GameScene extends cc.Component {
 
     }
 
-    /** 异步加载完成 */
     private loadFinish(): void {
+        this.chooseView.loadFinish();
+        this.gameTable.setChooseView(this.chooseView);
         this.gameTable.loadFinish();
     }
+
+    /** 异步加载上方view完成 */
+    // private loadChooseViewFinish(): void {
+    //     this.chooseView = new ChooseView();
+    //     this.gameTable.loadFinish();
+    // }
+
+    /** 异步加载中心view完成 */
+    // private loadGameTableFinish(): void {
+    //     this.gameTable = new GameTable(this.chooseView);
+    //     this.gameTable.loadFinish();
+    // }
+
+    
 }

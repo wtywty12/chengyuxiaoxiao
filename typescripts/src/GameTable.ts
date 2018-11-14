@@ -1,9 +1,9 @@
 import ccclass = cc._decorator.ccclass;
 import {Vec2} from "./Vec2";
 import {GameGrid} from "./GameGrid";
-// import property = cc._decorator.property;
 import {ResourcesManager} from "./ResourcesManager";
 import {RandomAry} from "./RandomAry";
+import {ChooseView} from "./ChooseView";
 
 @ccclass()
 export class GameTable extends cc.Component {
@@ -32,7 +32,10 @@ export class GameTable extends cc.Component {
     private gridMap: Map<number, GameGrid> = new Map<number, GameGrid>();
     /** 随机成语字 */
     private randomAry: RandomAry = null;
+    /** 最终散列字组 */
     private produceAry: Array<string> = null;
+    /** 选择表 */
+    private chooseView: ChooseView = null;
     
     /** 构造函数 */
     public constructor() {
@@ -54,7 +57,12 @@ export class GameTable extends cc.Component {
         this.randomAry = new RandomAry((this.tableWidth * this.tableHeight) * 0.25);
         this.produceAry = this.randomAry.getProduceArray();
         this.gridPrefab = ResourcesManager.getPrefab("GameGrid");
+
         this.createTable();
+    }
+
+    public setChooseView(view: ChooseView): void{
+        this.chooseView = view;
     }
 
     /**
@@ -77,12 +85,25 @@ export class GameTable extends cc.Component {
      * 根据动态加载的prefab 初始化格子对象 并且加入Map中
      */
     private createGameGrid(index: number, vec2: Vec2): void {
+        if (this.gridPrefab == null) {
+            cc.log("GameTable gridPrefab is null");
+            return
+        }
         let node: cc.Node = cc.instantiate(this.gridPrefab);
         let w_h = 720 / this.tableWidth;
         node.setContentSize(cc.size(w_h, w_h));
         let gameGrid: GameGrid = node.getComponent("GameGrid");
         gameGrid.init(vec2);
         gameGrid.setGridString(this.produceAry[index]);
+        node.on(cc.Node.EventType.MOUSE_DOWN,function(event: any)
+        {
+            console.log('click' + this.produceAry[index]);
+            this.chooseView.setGridText(this.produceAry[index]);
+        },this);
+        if (this.node == null || gameGrid == null || gameGrid.node == null) {
+            cc.log("Error in createGameGrid");
+            return;
+        }
         this.node.addChild(gameGrid.node);
         this.gridMap.set(vec2.toNumber(), gameGrid);
     }
