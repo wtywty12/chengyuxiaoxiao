@@ -26,6 +26,7 @@ var GameGrid = (function (_super) {
     function GameGrid() {
         var _this = _super.call(this) || this;
         _this.gridBg = null;
+        _this.gridText = null;
         _this.coordinate = null;
         return _this;
     }
@@ -35,9 +36,15 @@ var GameGrid = (function (_super) {
     };
     GameGrid.prototype.init = function (vec2) {
     };
+    GameGrid.prototype.setGridString = function (str) {
+        this.gridText.string = str;
+    };
     __decorate([
         property(cc.Sprite)
     ], GameGrid.prototype, "gridBg", void 0);
+    __decorate([
+        property(cc.Label)
+    ], GameGrid.prototype, "gridText", void 0);
     GameGrid = __decorate([
         ccclass()
     ], GameGrid);

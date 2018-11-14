@@ -7,22 +7,12 @@ interface IData {
     readonly id: number;
 }
 
-declare interface OutJson {
-    readonly spd: Array<ICheckPointData>;
-    readonly base: Array<IBaseData>;
+declare interface idiomJson {
+    readonly idiomAry: Array<Idiom>;
 }
 
-declare interface ICheckPointData extends IData {
-    readonly id: number;
-    readonly show: number;
-    readonly nextSpdId: number;
-    readonly cellQua: number;
-    readonly cellInterval: number;
-    readonly sumCell: number;
-}
-
-declare interface IBaseData extends IData {
-    readonly key: string;
-    readonly value: string;
+declare interface Idiom extends IData {
+    readonly ID: number;
+    readonly chengyu: string;
 }
 

@@ -3,6 +3,7 @@ import {Vec2} from "./Vec2";
 import {GameGrid} from "./GameGrid";
 // import property = cc._decorator.property;
 import {ResourcesManager} from "./ResourcesManager";
+import {RandomAry} from "./RandomAry";
 
 @ccclass()
 export class GameTable extends cc.Component {
@@ -20,18 +21,18 @@ export class GameTable extends cc.Component {
         倒计时到0时结算；
         结算时计算分数，公式：消除成语数
      */
-    /** 行 */
-    private row: number = 8;
-    /** 列 */
-    private line: number = 8;
+
     /** 表宽 */
-    private tableWidth: number = 8;
+    private tableWidth: number = 6;
     /** 表高 */
-    private tableHeight: number = 11;
+    private tableHeight: number = 6;
     /** 格子prefab */
     private gridPrefab: cc.Prefab = null;
     /** 格子容器 */
     private gridMap: Map<number, GameGrid> = new Map<number, GameGrid>();
+    /** 随机成语字 */
+    private randomAry: RandomAry = null;
+    private produceAry: Array<string> = null;
     
     /** 构造函数 */
     public constructor() {
@@ -50,6 +51,8 @@ export class GameTable extends cc.Component {
 
     /** 异步加载完成 */
     public loadFinish(): void {
+        this.randomAry = new RandomAry((this.tableWidth * this.tableHeight) * 0.25);
+        this.produceAry = this.randomAry.getProduceArray();
         this.gridPrefab = ResourcesManager.getPrefab("GameGrid");
         this.createTable();
     }
@@ -59,10 +62,12 @@ export class GameTable extends cc.Component {
      * 根据动态设定的表宽 表高自动生成表中心格子
      */
     private createTable(): void {
+        let index = 0;
         for (let y = 0; y < this.tableHeight; y++) {
             for (let x = 0; x < this.tableWidth; x++) {
                 let vec2 = new Vec2(x, y);
-                this.createGameGrid(vec2);
+                this.createGameGrid(index, vec2);
+                index++;
             }
         }
     }
@@ -71,10 +76,13 @@ export class GameTable extends cc.Component {
      * 创建游戏格子
      * 根据动态加载的prefab 初始化格子对象 并且加入Map中
      */
-    private createGameGrid(vec2: Vec2): void {
+    private createGameGrid(index: number, vec2: Vec2): void {
         let node: cc.Node = cc.instantiate(this.gridPrefab);
+        let w_h = 720 / this.tableWidth;
+        node.setContentSize(cc.size(w_h, w_h));
         let gameGrid: GameGrid = node.getComponent("GameGrid");
         gameGrid.init(vec2);
+        gameGrid.setGridString(this.produceAry[index]);
         this.node.addChild(gameGrid.node);
         this.gridMap.set(vec2.toNumber(), gameGrid);
     }

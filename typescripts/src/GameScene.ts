@@ -1,6 +1,7 @@
 import ccclass = cc._decorator.ccclass;
 import property = cc._decorator.property;
 import {GameTable} from "./GameTable";
+import {ConfigManager} from "./ConfigManager";
 import {ResourcesManager} from "./ResourcesManager";
 
 @ccclass()
@@ -22,6 +23,7 @@ export class GameScene extends cc.Component {
 
     /** 类加载 */
     protected async onLoad() {
+        await ConfigManager.load();
         await ResourcesManager.load();
         await this.loadFinish();
     }

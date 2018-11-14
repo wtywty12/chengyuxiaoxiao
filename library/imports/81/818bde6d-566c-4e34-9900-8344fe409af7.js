@@ -117,6 +117,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var ccclass = cc._decorator.ccclass;
 var property = cc._decorator.property;
 var GameTable_1 = require("./GameTable");
+var ConfigManager_1 = require("./ConfigManager");
 var ResourcesManager_1 = require("./ResourcesManager");
 var GameScene = function (_super) {
     __extends(GameScene, _super);
@@ -132,11 +133,14 @@ var GameScene = function (_super) {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        return [4, ResourcesManager_1.ResourcesManager.load()];
+                        return [4, ConfigManager_1.ConfigManager.load()];
                     case 1:
                         _a.sent();
-                        return [4, this.loadFinish()];
+                        return [4, ResourcesManager_1.ResourcesManager.load()];
                     case 2:
+                        _a.sent();
+                        return [4, this.loadFinish()];
+                    case 3:
                         _a.sent();
                         return [2];
                 }

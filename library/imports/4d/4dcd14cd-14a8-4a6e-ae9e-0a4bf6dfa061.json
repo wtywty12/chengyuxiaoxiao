@@ -77,7 +77,7 @@
       }
     ],
     "_active": true,
-    "_level": 0,
+    "_level": 1,
     "_components": [
       {
         "__id__": 11
@@ -324,7 +324,7 @@
       "height": 720
     },
     "_resize": 0,
-    "_N$layoutType": 0,
+    "_N$layoutType": 3,
     "_N$padding": 0,
     "_N$cellSize": {
       "__type__": "cc.Size",
