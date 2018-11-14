@@ -4,6 +4,7 @@ import {GameGrid} from "./GameGrid";
 // import property = cc._decorator.property;
 import {ResourcesManager} from "../common/data/ResourcesManager";
 import {RandomAry} from "./../common/model/RandomAry";
+import {ChooseView} from "./../game/ChooseView";
 
 @ccclass()
 export class GameTable extends cc.Component {
@@ -29,10 +30,13 @@ export class GameTable extends cc.Component {
     /** 格子prefab */
     private gridPrefab: cc.Prefab = null;
     /** 格子容器 */
-    private gridMap: Map<number, GameGrid> = new Map<number, GameGrid>();
+    private gridMap: Map<string, GameGrid> = new Map<string, GameGrid>();
     /** 随机成语字 */
     private randomAry: RandomAry = null;
+    /** 最终散列字组 */
     private produceAry: Array<string> = null;
+    /** 选择表 */
+    private chooseView: ChooseView = null;
     
     /** 构造函数 */
     public constructor() {
@@ -54,7 +58,13 @@ export class GameTable extends cc.Component {
         this.randomAry = new RandomAry((this.tableWidth * this.tableHeight) * 0.25);
         this.produceAry = this.randomAry.getProduceArray();
         this.gridPrefab = ResourcesManager.getPrefab("GameGrid");
+        this.chooseView.setGameTable(this);
+
         this.createTable();
+    }
+
+    public setChooseView(view: ChooseView): void{
+        this.chooseView = view;
     }
 
     /**
@@ -77,13 +87,72 @@ export class GameTable extends cc.Component {
      * 根据动态加载的prefab 初始化格子对象 并且加入Map中
      */
     private createGameGrid(index: number, vec2: Vec2): void {
+        if (this.gridPrefab == null) {
+            cc.log("GameTable gridPrefab is null");
+            return
+        }
         let node: cc.Node = cc.instantiate(this.gridPrefab);
         let w_h = 720 / this.tableWidth;
         node.setContentSize(cc.size(w_h, w_h));
         let gameGrid: GameGrid = node.getComponent("GameGrid");
         gameGrid.init(vec2);
         gameGrid.setGridString(this.produceAry[index]);
+        node.on(cc.Node.EventType.MOUSE_DOWN,function(event: any)
+        {
+            let str = this.produceAry[index];
+            if (this.checkGridMap(str) == false) {
+                cc.log("已经存在");
+                return;
+            }
+            if (this.checkIsFour() == false) {
+                cc.log("已经4个字");
+                return;
+            }
+            console.log('click' + this.produceAry[index]);
+            gameGrid.setGridString("");
+            this.gridMap.set(this.produceAry[index], gameGrid);
+            this.chooseView.setGridText(this.produceAry[index]);
+        },this);
+        if (this.node == null || gameGrid == null || gameGrid.node == null) {
+            cc.log("Error in createGameGrid");
+            return;
+        }
         this.node.addChild(gameGrid.node);
-        this.gridMap.set(vec2.toNumber(), gameGrid);
+    }
+
+    /**
+     * 检查是否重复
+     */
+    private checkGridMap(str: string): boolean {
+        let isOk = true;
+        this.gridMap.forEach((value, key)=>{
+            if (key == str) {
+                isOk = false;
+            }
+        })
+        return isOk;
+    }
+
+    /**
+     * 检查是否4个
+     */
+    private checkIsFour(): boolean {
+        let index = 0;
+        this.gridMap.forEach(value=>{
+            index++;
+        });
+        return index <= 4;
+    }
+
+    /**
+     * 显示格子
+     */
+    public displayGrid(str: string) {
+        if (typeof(str) != "string") {
+            return;
+        }
+        let grid = this.gridMap.get(str);
+        grid.setGridString(str);
+        this.gridMap.delete(str);
     }
 }

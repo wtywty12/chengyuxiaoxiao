@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2018-11-14T08:42:07.540Z - normal: Load ~/.CocosCreator/settings.json
 2018-11-14T08:42:07.543Z - normal: checking language setting...
 2018-11-14T08:42:07.543Z - normal: Language: zh
@@ -87,6 +88,74 @@ Class ID: "818bd5tVmxONJkAg0T+QJr3"
 
 2018-11-14T08:44:02.216Z - error: TypeError: Cannot read property 'name' of null
     at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+=======
+2018-11-14T02:22:43.860Z - normal: Load ~/.CocosCreator/settings.json
+2018-11-14T02:22:43.864Z - normal: checking language setting...
+2018-11-14T02:22:43.865Z - normal: Language: zh
+2018-11-14T02:22:45.080Z - success: protocol editor-framework registered
+2018-11-14T02:22:45.080Z - success: protocol app registered
+2018-11-14T02:22:45.081Z - success: protocol theme registered
+2018-11-14T02:22:45.081Z - success: protocol packages registered
+2018-11-14T02:22:45.081Z - success: protocol unpack registerred
+2018-11-14T02:22:45.081Z - success: protocol disable-commonjs registerred
+2018-11-14T02:22:45.212Z - normal: connected!
+2018-11-14T02:22:45.219Z - normal: Check project /Users/linzhang/youyou/chengyuxiaoxiao
+2018-11-14T02:22:45.226Z - normal: Initializing project /Users/linzhang/youyou/chengyuxiaoxiao
+2018-11-14T02:22:45.236Z - normal: Initializing Cocos2d
+2018-11-14T02:22:46.186Z - normal: Initializing Asset Database
+2018-11-14T02:22:46.262Z - success: protocol uuid registerred
+2018-11-14T02:22:46.263Z - success: protocol db registerred
+2018-11-14T02:22:46.263Z - success: protocol thumbnail registerred
+2018-11-14T02:22:46.263Z - normal: Loading editor/builtin packages
+2018-11-14T02:22:46.527Z - success: assets loaded
+2018-11-14T02:22:46.535Z - success: builder loaded
+2018-11-14T02:22:46.539Z - success: cocos-analytics loaded
+2018-11-14T02:22:46.547Z - success: console loaded
+2018-11-14T02:22:46.589Z - success: fb-instant-games loaded
+2018-11-14T02:22:46.592Z - success: google-instant-games loaded
+2018-11-14T02:22:46.603Z - success: hierarchy loaded
+2018-11-14T02:22:46.610Z - success: inspector loaded
+2018-11-14T02:22:46.613Z - success: keystore loaded
+2018-11-14T02:22:46.626Z - success: node-library loaded
+2018-11-14T02:22:46.629Z - success: package-asset loaded
+2018-11-14T02:22:46.633Z - success: preferences loaded
+2018-11-14T02:22:46.637Z - success: project-exporter loaded
+2018-11-14T02:22:46.666Z - success: project-importer loaded
+2018-11-14T02:22:46.672Z - success: project-settings loaded
+2018-11-14T02:22:46.677Z - success: ui-kit loaded
+2018-11-14T02:22:46.683Z - success: scene loaded
+2018-11-14T02:22:46.688Z - success: sprite-editor loaded
+2018-11-14T02:22:46.698Z - success: store loaded
+2018-11-14T02:22:46.708Z - success: timeline loaded
+2018-11-14T02:22:46.708Z - normal: Loading builtin packages
+2018-11-14T02:22:46.717Z - success: asset-db-debugger loaded
+2018-11-14T02:22:46.720Z - success: color-picker loaded
+2018-11-14T02:22:46.922Z - success: google-play-instant loaded
+2018-11-14T02:22:46.925Z - success: jsb-adapter loaded
+2018-11-14T02:22:46.933Z - success: oppo-runtime loaded
+2018-11-14T02:22:46.942Z - success: package-manager loaded
+2018-11-14T02:22:47.241Z - success: qqplay-adapter loaded
+2018-11-14T02:22:47.251Z - success: sdkbox loaded
+2018-11-14T02:22:47.261Z - success: tester loaded
+2018-11-14T02:22:47.269Z - success: ui-grid loaded
+2018-11-14T02:22:47.275Z - success: ui-kit-preview-extra loaded
+2018-11-14T02:22:47.284Z - success: ui-kit-preview loaded
+2018-11-14T02:22:47.290Z - success: ui-tree loaded
+2018-11-14T02:22:47.298Z - success: vivo-runtime loaded
+2018-11-14T02:22:47.301Z - success: weapp-adapter loaded
+2018-11-14T02:22:49.208Z - normal: Loading packages
+2018-11-14T02:22:49.214Z - normal: Watching packages
+2018-11-14T02:22:49.308Z - normal: Run Application
+2018-11-14T02:22:50.340Z - success: preview server running at http://localhost:7456
+2018-11-14T02:46:57.729Z - error: TypeError: Cannot read property 'target' of null
+    at HTMLElement._applyPopup (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/inspector/panel/index.js:1:8414)
+    at asset._selectType._vm._vm.target.__dirty__._selectID.Editor.assetdb.queryInfoByUuid (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/inspector/panel/index.js:1:8349)
+    at EventEmitter.o.on.n (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:3753)
+    at emitMany (events.js:127:13)
+    at EventEmitter.emit (events.js:204:7)
+2018-11-14T04:48:23.523Z - error: TypeError: Cannot read property 'name' of null
+    at ChooseView.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+>>>>>>> d53367002f116a93ae63119ee651b828c41ab0e9
     at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
     at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
     at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
@@ -96,9 +165,14 @@ Class ID: "818bd5tVmxONJkAg0T+QJr3"
     at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
     at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
     at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+<<<<<<< HEAD
 2018-11-14T08:44:07.201Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:2020
 2018-11-14T08:44:07.310Z - error: TypeError: Cannot read property 'name' of null
     at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+=======
+2018-11-14T04:48:23.534Z - error: TypeError: Cannot read property 'name' of null
+    at ChooseView.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+>>>>>>> d53367002f116a93ae63119ee651b828c41ab0e9
     at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
     at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
     at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
@@ -108,9 +182,14 @@ Class ID: "818bd5tVmxONJkAg0T+QJr3"
     at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
     at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
     at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+<<<<<<< HEAD
 2018-11-14T08:44:12.487Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:2038
 2018-11-14T08:44:12.498Z - error: TypeError: Cannot read property 'name' of null
     at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+=======
+2018-11-14T04:48:33.514Z - error: TypeError: Cannot read property 'name' of null
+    at ChooseView.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+>>>>>>> d53367002f116a93ae63119ee651b828c41ab0e9
     at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
     at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
     at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
@@ -120,9 +199,14 @@ Class ID: "818bd5tVmxONJkAg0T+QJr3"
     at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
     at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
     at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+<<<<<<< HEAD
 2018-11-14T08:44:17.409Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:2054
 2018-11-14T08:44:17.521Z - error: TypeError: Cannot read property 'name' of null
     at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+=======
+2018-11-14T04:48:33.518Z - error: TypeError: Cannot read property 'name' of null
+    at ChooseView.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+>>>>>>> d53367002f116a93ae63119ee651b828c41ab0e9
     at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
     at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
     at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
@@ -132,9 +216,15 @@ Class ID: "818bd5tVmxONJkAg0T+QJr3"
     at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
     at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
     at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+<<<<<<< HEAD
 2018-11-14T08:44:22.513Z - warn: [object Object]
 2018-11-14T08:44:22.890Z - error: TypeError: Cannot read property 'name' of null
     at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+=======
+2018-11-14T04:48:38.510Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:42563
+2018-11-14T04:48:38.620Z - error: TypeError: Cannot read property 'name' of null
+    at ChooseView.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+>>>>>>> d53367002f116a93ae63119ee651b828c41ab0e9
     at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
     at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
     at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
@@ -144,9 +234,15 @@ Class ID: "818bd5tVmxONJkAg0T+QJr3"
     at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
     at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
     at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+<<<<<<< HEAD
 2018-11-14T08:44:27.879Z - warn: [object Object]
 2018-11-14T08:44:28.888Z - error: TypeError: Cannot read property 'name' of null
     at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+=======
+2018-11-14T04:48:43.614Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:42580
+2018-11-14T04:48:43.722Z - error: TypeError: Cannot read property 'name' of null
+    at ChooseView.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+>>>>>>> d53367002f116a93ae63119ee651b828c41ab0e9
     at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
     at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
     at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
@@ -156,9 +252,15 @@ Class ID: "818bd5tVmxONJkAg0T+QJr3"
     at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
     at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
     at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+<<<<<<< HEAD
 2018-11-14T08:44:33.883Z - warn: [object Object]
 2018-11-14T08:44:34.905Z - error: TypeError: Cannot read property 'name' of null
     at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+=======
+2018-11-14T04:48:48.715Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:42598
+2018-11-14T04:48:48.822Z - error: TypeError: Cannot read property 'name' of null
+    at ChooseView.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+>>>>>>> d53367002f116a93ae63119ee651b828c41ab0e9
     at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
     at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
     at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
@@ -168,8 +270,14 @@ Class ID: "818bd5tVmxONJkAg0T+QJr3"
     at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
     at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
     at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+<<<<<<< HEAD
 2018-11-14T08:44:36.800Z - error: TypeError: Cannot read property 'name' of null
     at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+=======
+2018-11-14T04:48:53.816Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:42616
+2018-11-14T04:48:53.924Z - error: TypeError: Cannot read property 'name' of null
+    at ChooseView.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+>>>>>>> d53367002f116a93ae63119ee651b828c41ab0e9
     at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
     at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
     at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
@@ -179,8 +287,13 @@ Class ID: "818bd5tVmxONJkAg0T+QJr3"
     at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
     at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
     at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+<<<<<<< HEAD
 2018-11-14T08:44:49.707Z - error: TypeError: Cannot read property 'name' of null
     at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+=======
+2018-11-14T04:48:57.508Z - error: TypeError: Cannot read property 'name' of null
+    at ChooseView.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+>>>>>>> d53367002f116a93ae63119ee651b828c41ab0e9
     at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
     at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
     at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
@@ -190,8 +303,13 @@ Class ID: "818bd5tVmxONJkAg0T+QJr3"
     at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
     at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
     at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+<<<<<<< HEAD
 2018-11-14T08:44:49.712Z - error: TypeError: Cannot read property 'name' of null
     at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+=======
+2018-11-14T04:48:58.943Z - error: TypeError: Cannot read property 'name' of null
+    at ChooseView.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+>>>>>>> d53367002f116a93ae63119ee651b828c41ab0e9
     at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
     at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
     at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
@@ -201,9 +319,14 @@ Class ID: "818bd5tVmxONJkAg0T+QJr3"
     at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
     at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
     at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+<<<<<<< HEAD
 2018-11-14T08:44:54.699Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:2269
 2018-11-14T08:44:54.804Z - error: TypeError: Cannot read property 'name' of null
     at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+=======
+2018-11-14T04:48:58.949Z - error: TypeError: Cannot read property 'name' of null
+    at ChooseView.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+>>>>>>> d53367002f116a93ae63119ee651b828c41ab0e9
     at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
     at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
     at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
@@ -213,8 +336,14 @@ Class ID: "818bd5tVmxONJkAg0T+QJr3"
     at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
     at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
     at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+<<<<<<< HEAD
 2018-11-14T08:45:08.715Z - error: TypeError: Cannot read property 'name' of null
     at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+=======
+2018-11-14T04:49:03.935Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:42656
+2018-11-14T04:49:04.043Z - error: TypeError: Cannot read property 'name' of null
+    at ChooseView.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
+>>>>>>> d53367002f116a93ae63119ee651b828c41ab0e9
     at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
     at y (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2805)
     at _ (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:3461)
@@ -224,6 +353,7 @@ Class ID: "818bd5tVmxONJkAg0T+QJr3"
     at Object.module.exports [as getNodeDump] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:6097)
     at Object.dumpNode (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.js:1:7596)
     at HTMLElement.query-node (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-query.js:1:948)
+<<<<<<< HEAD
 2018-11-14T08:45:08.720Z - error: TypeError: Cannot read property 'name' of null
     at GameTable.get [as name] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCComponent.js:48:41)
     at /Applications/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/dump/get-node-dump.js:1:2709
@@ -321,3 +451,176 @@ Asset url: "db://assets/resources/prefabs/GameGrid.prefab"
 Script UUID: "722a28ab-b42a-4b4f-a5d0-0df481e04e57"
 Class ID: "722a2irtCpLT6XQDfSB4E5X"
 
+=======
+2018-11-14T05:38:38.123Z - error: The thing you want to instantiate must be an object
+    at Object.cc.errorID (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCDebug.js:167:16)
+    at Object.instantiate (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/instantiate.js:29:28)
+    at ChooseView.createGameGrid (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/ChooseView.js:59:23)
+    at ChooseView.createTable (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/ChooseView.js:55:18)
+    at new ChooseView (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/ChooseView.js:49:15)
+    at new GameScene (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/GameScene.js:131:28)
+    at extractActualDefaultValues (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClassDecorator.js:95:28)
+    at genProperty (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClassDecorator.js:141:81)
+    at normalized (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClassDecorator.js:204:21)
+2018-11-14T05:38:38.128Z - warn: Failed to construct a dummy instance of the "GameScene" class using `new` behind the scenes. This is for getting default values declared in TypeScript. Please ensure the class will be able to construct during script's initialization. TypeError: Cannot read property 'setContentSize' of null.
+2018-11-14T05:38:38.129Z - warn: Please specifiy a default value for "GameScene" property at its declaration:
+ 
+// Before:
+@property(...)
+value; 
+// After:
+@property(...)
+value = 0 title
+2018-11-14T05:38:38.130Z - warn: Please specifiy a default value for "GameScene" property at its declaration:
+ 
+// Before:
+@property(...)
+value; 
+// After:
+@property(...)
+value = 0 gameTable
+2018-11-14T05:38:38.130Z - warn: Please specifiy a default value for "GameScene" property at its declaration:
+ 
+// Before:
+@property(...)
+value; 
+// After:
+@property(...)
+value = 0 chooseView
+2018-11-14T05:38:38.146Z - error: The thing you want to instantiate must be an object
+    at Object.cc.errorID (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCDebug.js:167:16)
+    at Object.instantiate (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/instantiate.js:29:28)
+    at ChooseView.createGameGrid (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/ChooseView.js:59:23)
+    at ChooseView.createTable (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/ChooseView.js:55:18)
+    at new ChooseView (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/ChooseView.js:49:15)
+    at _Deserializer.prototype._deserializeObject (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:146:31)
+    at _Deserializer.prototype.deserialize (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:107:65)
+    at Object.cc.deserialize (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:530:36)
+    at Loader.loadUuid (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/uuid-loader.js:208:28)
+2018-11-14T06:18:48.952Z - warn: Can not instantiate CCClass 'ChooseView' with arguments.
+2018-11-14T06:18:48.969Z - error: The thing you want to instantiate must be an object
+    at Object.cc.errorID (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCDebug.js:167:16)
+    at Object.instantiate (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/instantiate.js:29:28)
+    at ChooseView.createGameGrid (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/ChooseView.js:58:23)
+    at ChooseView.createTable (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/ChooseView.js:54:18)
+    at new ChooseView (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/ChooseView.js:48:15)
+    at new GameScene (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/GameScene.js:131:28)
+    at extractActualDefaultValues (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClassDecorator.js:95:28)
+    at genProperty (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClassDecorator.js:141:81)
+    at normalized (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClassDecorator.js:204:21)
+2018-11-14T06:18:48.970Z - warn: Failed to construct a dummy instance of the "GameScene" class using `new` behind the scenes. This is for getting default values declared in TypeScript. Please ensure the class will be able to construct during script's initialization. TypeError: Cannot read property 'setContentSize' of null.
+2018-11-14T06:18:48.970Z - warn: Please specifiy a default value for "GameScene" property at its declaration:
+ 
+// Before:
+@property(...)
+value; 
+// After:
+@property(...)
+value = 0 title
+2018-11-14T06:18:48.970Z - warn: Please specifiy a default value for "GameScene" property at its declaration:
+ 
+// Before:
+@property(...)
+value; 
+// After:
+@property(...)
+value = 0 gameTable
+2018-11-14T06:18:48.971Z - warn: Please specifiy a default value for "GameScene" property at its declaration:
+ 
+// Before:
+@property(...)
+value; 
+// After:
+@property(...)
+value = 0 chooseView
+2018-11-14T06:18:48.990Z - error: The thing you want to instantiate must be an object
+    at Object.cc.errorID (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCDebug.js:167:16)
+    at Object.instantiate (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/instantiate.js:29:28)
+    at ChooseView.createGameGrid (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/ChooseView.js:58:23)
+    at ChooseView.createTable (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/ChooseView.js:54:18)
+    at new ChooseView (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/ChooseView.js:48:15)
+    at _Deserializer.prototype._deserializeObject (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:146:31)
+    at _Deserializer.prototype.deserialize (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:107:65)
+    at Object.cc.deserialize (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:530:36)
+    at Loader.loadUuid (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/uuid-loader.js:208:28)
+2018-11-14T06:20:51.255Z - warn: Can not instantiate CCClass 'ChooseView' with arguments.
+2018-11-14T06:20:51.284Z - error: The thing you want to instantiate must be an object
+    at Object.cc.errorID (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCDebug.js:167:16)
+    at Object.instantiate (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/instantiate.js:29:28)
+    at ChooseView.createGameGrid (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/ChooseView.js:58:23)
+    at ChooseView.createTable (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/ChooseView.js:54:18)
+    at new ChooseView (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/ChooseView.js:48:15)
+    at _Deserializer.prototype._deserializeObject (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:146:31)
+    at _Deserializer.prototype.deserialize (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:107:65)
+    at Object.cc.deserialize (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:530:36)
+    at Loader.loadUuid (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/uuid-loader.js:208:28)
+2018-11-14T06:34:31.550Z - warn: Can not instantiate CCClass 'ChooseView' with arguments.
+2018-11-14T06:34:31.585Z - error: The thing you want to instantiate must be an object
+    at Object.cc.errorID (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCDebug.js:167:16)
+    at Object.instantiate (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/instantiate.js:29:28)
+    at ChooseView.createGameGrid (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/ChooseView.js:58:23)
+    at ChooseView.createTable (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/ChooseView.js:54:18)
+    at new ChooseView (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/ChooseView.js:48:15)
+    at _Deserializer.prototype._deserializeObject (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:146:31)
+    at _Deserializer.prototype.deserialize (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:107:65)
+    at Object.cc.deserialize (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:530:36)
+    at Loader.loadUuid (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/uuid-loader.js:208:28)
+2018-11-14T06:38:36.116Z - warn: Can not instantiate CCClass 'ChooseView' with arguments.
+2018-11-14T06:38:36.138Z - error: The thing you want to instantiate must be an object
+    at Object.cc.errorID (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCDebug.js:167:16)
+    at Object.instantiate (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/instantiate.js:29:28)
+    at ChooseView.createGameGrid (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/ChooseView.js:58:23)
+    at ChooseView.createTable (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/ChooseView.js:54:18)
+    at new ChooseView (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/ChooseView.js:48:15)
+    at _Deserializer.prototype._deserializeObject (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:146:31)
+    at _Deserializer.prototype.deserialize (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:107:65)
+    at Object.cc.deserialize (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:530:36)
+    at Loader.loadUuid (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/uuid-loader.js:208:28)
+2018-11-14T06:40:09.566Z - warn: Can not instantiate CCClass 'ChooseView' with arguments.
+2018-11-14T06:40:09.599Z - error: The thing you want to instantiate must be an object
+    at Object.cc.errorID (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCDebug.js:167:16)
+    at Object.instantiate (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/instantiate.js:29:28)
+    at ChooseView.createGameGrid (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/ChooseView.js:58:23)
+    at ChooseView.createTable (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/ChooseView.js:54:18)
+    at new ChooseView (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/ChooseView.js:48:15)
+    at _Deserializer.prototype._deserializeObject (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:146:31)
+    at _Deserializer.prototype.deserialize (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:107:65)
+    at Object.cc.deserialize (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/deserialize.js:530:36)
+    at Loader.loadUuid (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/load-pipeline/uuid-loader.js:208:28)
+2018-11-14T06:40:47.498Z - warn: Can not instantiate CCClass 'ChooseView' with arguments.
+2018-11-14T06:40:47.520Z - normal: ChooseView gridPrefab is null
+2018-11-14T06:40:47.520Z - normal: ChooseView gridPrefab is null
+2018-11-14T06:40:47.521Z - normal: ChooseView gridPrefab is null
+2018-11-14T06:40:47.521Z - normal: ChooseView gridPrefab is null
+2018-11-14T06:53:45.109Z - warn: Can not instantiate CCClass 'ChooseView' with arguments.
+2018-11-14T06:53:45.143Z - normal: ChooseView gridPrefab is null
+2018-11-14T06:53:45.144Z - normal: ChooseView gridPrefab is null
+2018-11-14T06:53:45.145Z - normal: ChooseView gridPrefab is null
+2018-11-14T06:53:45.145Z - normal: ChooseView gridPrefab is null
+2018-11-14T07:04:36.318Z - warn: Can not instantiate CCClass 'GameTable' with arguments.
+2018-11-14T07:07:15.012Z - warn: Can not instantiate CCClass 'GameTable' with arguments.
+2018-11-14T07:11:38.568Z - warn: Can not instantiate CCClass 'GameTable' with arguments.
+2018-11-14T07:14:22.429Z - warn: Can not instantiate CCClass 'GameTable' with arguments.
+2018-11-14T07:53:47.520Z - normal: ChooseView gridPrefab is null
+2018-11-14T07:53:47.523Z - normal: ChooseView gridPrefab is null
+2018-11-14T07:53:47.524Z - normal: ChooseView gridPrefab is null
+2018-11-14T07:53:47.525Z - normal: ChooseView gridPrefab is null
+2018-11-14T07:56:36.041Z - warn: Can not instantiate CCClass 'GameTable' with arguments.
+2018-11-14T08:09:24.289Z - warn: Failed to construct a dummy instance of the "GameGrid" class using `new` behind the scenes. This is for getting default values declared in TypeScript. Please ensure the class will be able to construct during script's initialization. TypeError: Cannot set property 'string' of null.
+2018-11-14T08:09:24.292Z - warn: Please specifiy a default value for "GameGrid" property at its declaration:
+ 
+// Before:
+@property(...)
+value; 
+// After:
+@property(...)
+value = 0 gridBg
+2018-11-14T08:09:24.292Z - warn: Please specifiy a default value for "GameGrid" property at its declaration:
+ 
+// Before:
+@property(...)
+value; 
+// After:
+@property(...)
+value = 0 gridText
+>>>>>>> d53367002f116a93ae63119ee651b828c41ab0e9

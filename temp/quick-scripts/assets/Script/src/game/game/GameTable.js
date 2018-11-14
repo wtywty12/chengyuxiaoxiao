@@ -48,6 +48,7 @@ var GameTable = function (_super) {
         _this.gridMap = new Map();
         _this.randomAry = null;
         _this.produceAry = null;
+        _this.chooseView = null;
         return _this;
     }
     GameTable.prototype.onLoad = function () {};
@@ -56,7 +57,11 @@ var GameTable = function (_super) {
         this.randomAry = new RandomAry_1.RandomAry(this.tableWidth * this.tableHeight * 0.25);
         this.produceAry = this.randomAry.getProduceArray();
         this.gridPrefab = ResourcesManager_1.ResourcesManager.getPrefab("GameGrid");
+        this.chooseView.setGameTable(this);
         this.createTable();
+    };
+    GameTable.prototype.setChooseView = function (view) {
+        this.chooseView = view;
     };
     GameTable.prototype.createTable = function () {
         var index = 0;
@@ -69,14 +74,60 @@ var GameTable = function (_super) {
         }
     };
     GameTable.prototype.createGameGrid = function (index, vec2) {
+        if (this.gridPrefab == null) {
+            cc.log("GameTable gridPrefab is null");
+            return;
+        }
         var node = cc.instantiate(this.gridPrefab);
         var w_h = 720 / this.tableWidth;
         node.setContentSize(cc.size(w_h, w_h));
         var gameGrid = node.getComponent("GameGrid");
         gameGrid.init(vec2);
         gameGrid.setGridString(this.produceAry[index]);
+        node.on(cc.Node.EventType.MOUSE_DOWN, function (event) {
+            var str = this.produceAry[index];
+            if (this.checkGridMap(str) == false) {
+                cc.log("已经存在");
+                return;
+            }
+            if (this.checkIsFour() == false) {
+                cc.log("已经4个字");
+                return;
+            }
+            console.log('click' + this.produceAry[index]);
+            gameGrid.setGridString("");
+            this.gridMap.set(this.produceAry[index], gameGrid);
+            this.chooseView.setGridText(this.produceAry[index]);
+        }, this);
+        if (this.node == null || gameGrid == null || gameGrid.node == null) {
+            cc.log("Error in createGameGrid");
+            return;
+        }
         this.node.addChild(gameGrid.node);
-        this.gridMap.set(vec2.toNumber(), gameGrid);
+    };
+    GameTable.prototype.checkGridMap = function (str) {
+        var isOk = true;
+        this.gridMap.forEach(function (value, key) {
+            if (key == str) {
+                isOk = false;
+            }
+        });
+        return isOk;
+    };
+    GameTable.prototype.checkIsFour = function () {
+        var index = 0;
+        this.gridMap.forEach(function (value) {
+            index++;
+        });
+        return index <= 4;
+    };
+    GameTable.prototype.displayGrid = function (str) {
+        if (typeof str != "string") {
+            return;
+        }
+        var grid = this.gridMap.get(str);
+        grid.setGridString(str);
+        this.gridMap.delete(str);
     };
     GameTable = __decorate([ccclass()], GameTable);
     return GameTable;

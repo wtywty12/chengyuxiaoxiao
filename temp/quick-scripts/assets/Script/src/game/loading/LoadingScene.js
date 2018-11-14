@@ -119,6 +119,7 @@ var ConfigManager_1 = require("../common/ConfigManager");
 var CommonScene_1 = require("../../core/component/CommonScene");
 var ccclass = cc._decorator.ccclass;
 var property = cc._decorator.property;
+<<<<<<< HEAD:temp/quick-scripts/assets/Script/src/game/loading/LoadingScene.js
 var GameEngine_1 = require("../common/GameEngine");
 var GameSceneHepler_1 = require("../common/helper/GameSceneHepler");
 var LoadingScene = function (_super) {
@@ -132,6 +133,21 @@ var LoadingScene = function (_super) {
         _this.bg_title = null;
         _this.btn_start = null;
         _this.progress = 0;
+=======
+var GameTable_1 = require("./GameTable");
+var ChooseView_1 = require("./ChooseView");
+var ConfigManager_1 = require("./ConfigManager");
+var ResourcesManager_1 = require("./ResourcesManager");
+var GameScene = function (_super) {
+    __extends(GameScene, _super);
+    function GameScene() {
+        var _this = _super.call(this) || this;
+        _this.title = null;
+        _this.gameTable = null;
+        _this.chooseView = null;
+        _this.chooseView = new ChooseView_1.ChooseView();
+        _this.gameTable = new GameTable_1.GameTable();
+>>>>>>> d53367002f116a93ae63119ee651b828c41ab0e9:temp/quick-scripts/assets/Script/src/GameScene.js
         return _this;
     }
     LoadingScene.prototype.load = function () {
@@ -157,6 +173,7 @@ var LoadingScene = function (_super) {
             });
         });
     };
+<<<<<<< HEAD:temp/quick-scripts/assets/Script/src/game/loading/LoadingScene.js
     LoadingScene.prototype.unload = function () {};
     LoadingScene.prototype.setProgress = function (value) {
         this.progress = value;
@@ -190,6 +207,21 @@ var LoadingScene = function (_super) {
     return LoadingScene;
 }(CommonScene_1.CommonScene);
 exports.LoadingScene = LoadingScene;
+=======
+    GameScene.prototype.onDestroy = function () {};
+    GameScene.prototype.loadFinish = function () {
+        this.chooseView.loadFinish();
+        this.gameTable.setChooseView(this.chooseView);
+        this.gameTable.loadFinish();
+    };
+    __decorate([property(cc.Label)], GameScene.prototype, "title", void 0);
+    __decorate([property(GameTable_1.GameTable)], GameScene.prototype, "gameTable", void 0);
+    __decorate([property(ChooseView_1.ChooseView)], GameScene.prototype, "chooseView", void 0);
+    GameScene = __decorate([ccclass()], GameScene);
+    return GameScene;
+}(cc.Component);
+exports.GameScene = GameScene;
+>>>>>>> d53367002f116a93ae63119ee651b828c41ab0e9:temp/quick-scripts/assets/Script/src/GameScene.js
 
 cc._RF.pop();
         }

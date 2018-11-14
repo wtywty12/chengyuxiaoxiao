@@ -37,7 +37,14 @@ var GameGrid = (function (_super) {
     GameGrid.prototype.init = function (vec2) {
     };
     GameGrid.prototype.setGridString = function (str) {
+        if (typeof (str) != "string") {
+            cc.log("setGridString is null");
+            return;
+        }
         this.gridText.string = str;
+    };
+    GameGrid.prototype.getGridString = function () {
+        return this.gridText.string;
     };
     __decorate([
         property(cc.Sprite)

@@ -69,7 +69,6 @@ class ResourcesManagerClass {
                 for (let i = 0; i < datas.length; i++) {
                     let name = StringUtils.getName(urls[i]);
                     let data = datas[i];
-                    // cc.log(`loadImages -> name : ${name} , data : `, data);
                     this.images.set(name, data);
                 }
                 return fulfill();

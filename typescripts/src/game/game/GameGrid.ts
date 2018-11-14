@@ -35,6 +35,14 @@ export class GameGrid extends cc.Component {
     }
 
     public setGridString(str: string) {
+        if (typeof(str) != "string") {
+            cc.log("setGridString is null");
+            return;
+        }
         this.gridText.string = str;
+    }
+
+    public getGridString(): string {
+        return this.gridText.string;
     }
 }
