@@ -1,0 +1,102 @@
+(function() {"use strict";var __module = CC_EDITOR ? module : {exports:{}};var __filename = 'preview-scripts/assets/Script/src/game/common/model/RandomAry.js';var __require = CC_EDITOR ? function (request) {return cc.require(request, require);} : function (request) {return cc.require(request, __filename);};function __define (exports, require, module) {"use strict";
+cc._RF.push(module, 'd7781n4M31Jgomts2i9ZIst', 'RandomAry', __filename);
+// Script/src/game/common/model/RandomAry.js
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var ConfigManager_1 = require("./../ConfigManager");
+var RandomAry = function () {
+    function RandomAry(need) {
+        this.needValus = null;
+        this.configLength = null;
+        this.jsonData = new Map();
+        this.produceArray = null;
+        this.needValus = need;
+        this.jsonData = ConfigManager_1.ConfigManager.idiomJsonMap;
+        this.produceArray = [];
+        this.configLength = this.getMapLength(this.jsonData);
+        this.init();
+    }
+    RandomAry.prototype.init = function () {
+        if (this.configLength <= 0) {
+            cc.log("json读取失败");
+            return;
+        }
+        var randomAry = this.getRandomAry();
+        var randomIdiom = this.getRandomAryIdiom(randomAry);
+        this.produceArray = this.getSplitArray(randomIdiom);
+    };
+    RandomAry.prototype.getProduceArray = function () {
+        return this.produceArray;
+    };
+    RandomAry.prototype.getMapLength = function (map) {
+        var lenght = 0;
+        map.forEach(function (value) {
+            lenght++;
+        });
+        return lenght;
+    };
+    RandomAry.prototype.getRandomAry = function () {
+        var randomAry = [];
+        for (var i = 0; i < this.needValus; i++) {
+            var rand = Math.trunc(Math.random() * this.configLength);
+            var isOk = true;
+            for (var j = 0; j < randomAry.length; j++) {
+                if (randomAry[j] == rand) {
+                    isOk = false;
+                    break;
+                }
+            }
+            if (isOk) {
+                randomAry.push(rand);
+            }
+        }
+        return randomAry;
+    };
+    RandomAry.prototype.getRandomAryIdiom = function (arr) {
+        var idiomAry = [];
+        for (var i = 0; i < arr.length; i++) {
+            var v = arr[i];
+            var s = v.toString();
+            idiomAry.push(this.jsonData.get(v));
+        }
+        return idiomAry;
+    };
+    RandomAry.prototype.getSplitArray = function (arr) {
+        var produceArray = [];
+        for (var i = 0; i < arr.length; i++) {
+            var v = arr[i];
+            for (var j = 0; j < v.length; j++) {
+                var s = v.substring(j, j + 1);
+                produceArray.push(s);
+            }
+        }
+        var produceLength = produceArray.length;
+        for (var i = 0; i < produceLength; i++) {
+            var rand = Math.floor(Math.random() * produceLength);
+            if (i != rand) {
+                var temp = produceArray[i];
+                produceArray[i] = produceArray[rand];
+                produceArray[rand] = temp;
+            }
+        }
+        return produceArray;
+    };
+    return RandomAry;
+}();
+exports.RandomAry = RandomAry;
+
+cc._RF.pop();
+        }
+        if (CC_EDITOR) {
+            __define(__module.exports, __require, __module);
+        }
+        else {
+            cc.registerModuleFunc(__filename, function () {
+                __define(__module.exports, __require, __module);
+            });
+        }
+        })();
+        //# sourceMappingURL=RandomAry.js.map
+        
