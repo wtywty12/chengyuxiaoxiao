@@ -2,7 +2,7 @@ import ccclass = cc._decorator.ccclass;
 import {Vec2} from "./Vec2";
 import {GameGrid} from "./GameGrid";
 // import property = cc._decorator.property;
-import {ResourcesManager} from "./ResourcesManager";
+import {ResourcesManager} from "./game/common/data/ResourcesManager";
 
 @ccclass()
 export class GameTable extends cc.Component {

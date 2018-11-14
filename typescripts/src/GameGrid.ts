@@ -1,6 +1,6 @@
 import ccclass = cc._decorator.ccclass;
 import property = cc._decorator.property;
-import {ResourcesManager} from "./ResourcesManager";
+import {ResourcesManager} from "./game/common/data/ResourcesManager";
 import {Vec2} from "./Vec2";
 
 @ccclass()

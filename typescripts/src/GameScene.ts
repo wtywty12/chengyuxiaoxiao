@@ -1,7 +1,7 @@
 import ccclass = cc._decorator.ccclass;
 import property = cc._decorator.property;
 import {GameTable} from "./GameTable";
-import {ResourcesManager} from "./ResourcesManager";
+import {ResourcesManager} from "./game/common/data/ResourcesManager";
 
 @ccclass()
 export class GameScene extends cc.Component {
@@ -22,8 +22,8 @@ export class GameScene extends cc.Component {
 
     /** 类加载 */
     protected async onLoad() {
-        await ResourcesManager.load();
-        await this.loadFinish();
+        // await ResourcesManager.load();
+        // await this.loadFinish();
     }
 
     /** 类销毁 */

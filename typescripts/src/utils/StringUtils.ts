@@ -1,3 +1,8 @@
+/**
+ * @author: liubowen
+ * @date: 2018/9/19 上午12:18
+ * @description:
+ */
 export class StringUtils {
 
     public static isEmpty(value: string): boolean {
