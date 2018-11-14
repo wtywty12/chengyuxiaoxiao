@@ -131,6 +131,7 @@ var LoadingScene = function (_super) {
         _this.btn_rank = null;
         _this.bg_title = null;
         _this.btn_start = null;
+        _this.btn_myinfo = null;
         _this.progress = 0;
         return _this;
     }
@@ -174,6 +175,8 @@ var LoadingScene = function (_super) {
         this.btn_music.node.runAction(action2);
         var action3 = cc.moveBy(0.3, cc.v2(0, cc.view.getVisibleSize().height * 2 / 7));
         this.btn_rank.node.runAction(action3);
+        var action5 = cc.moveBy(0.3, cc.v2(0, cc.view.getVisibleSize().height * 2 / 7));
+        this.btn_myinfo.node.runAction(action5);
         var action4 = cc.moveBy(0.3, cc.v2(0, cc.view.getVisibleSize().height * 4 / 8));
         this.bg_title.node.runAction(action4);
     };
@@ -186,6 +189,7 @@ var LoadingScene = function (_super) {
     __decorate([property(cc.Button)], LoadingScene.prototype, "btn_rank", void 0);
     __decorate([property(cc.Sprite)], LoadingScene.prototype, "bg_title", void 0);
     __decorate([property(cc.Button)], LoadingScene.prototype, "btn_start", void 0);
+    __decorate([property(cc.Button)], LoadingScene.prototype, "btn_myinfo", void 0);
     LoadingScene = __decorate([ccclass()], LoadingScene);
     return LoadingScene;
 }(CommonScene_1.CommonScene);

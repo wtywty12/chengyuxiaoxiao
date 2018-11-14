@@ -2,7 +2,7 @@ import ccclass = cc._decorator.ccclass;
 import {Vec2} from "./../../utils/Vec2";
 import {GameGrid} from "./GameGrid";
 // import property = cc._decorator.property;
-import {ResourcesManager} from "../common/data/ResourcesManager";
+import {ResourcesManager} from "../../core/common/ResourcesManager";
 import {RandomAry} from "./../common/model/RandomAry";
 import {ChooseView} from "./../game/ChooseView";
 

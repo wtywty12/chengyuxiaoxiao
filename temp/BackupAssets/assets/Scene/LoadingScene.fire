@@ -41,8 +41,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.8006097518979868,
-      "y": 0.8006097518979868,
+      "x": 0.5460750298174684,
+      "y": 0.5460750298174684,
       "z": 1
     },
     "_quat": {
@@ -1495,7 +1495,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 198,
+      "x": 167,
       "y": -669,
       "z": 0
     },
@@ -1592,8 +1592,8 @@
     "_srcBlendFactor": 1,
     "_dstBlendFactor": 771,
     "_useOriginalSize": false,
-    "_string": "排行",
-    "_N$string": "排行",
+    "_string": "我的",
+    "_N$string": "我的",
     "_fontSize": 20,
     "_lineHeight": 40,
     "_enableWrapText": false,

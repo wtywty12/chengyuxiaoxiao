@@ -36,7 +36,7 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
 Object.defineProperty(exports, "__esModule", { value: true });
 var ccclass = cc._decorator.ccclass;
 var Vec2_1 = require("./../../utils/Vec2");
-var ResourcesManager_1 = require("../common/data/ResourcesManager");
+var ResourcesManager_1 = require("../../core/common/ResourcesManager");
 var RandomAry_1 = require("./../common/model/RandomAry");
 var GameTable = function (_super) {
     __extends(GameTable, _super);

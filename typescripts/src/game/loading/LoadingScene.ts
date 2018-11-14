@@ -31,6 +31,9 @@ export class LoadingScene extends CommonScene {
     @property(cc.Button)
     private btn_start:cc.Button = null;
 
+    @property(cc.Button)
+    private btn_myinfo:cc.Button = null;
+
     //进度
     private progress:number  = 0;
     protected async load() {
@@ -67,6 +70,9 @@ export class LoadingScene extends CommonScene {
 
         var action3 = cc.moveBy(0.3, cc.v2(0, cc.view.getVisibleSize().height * 2 / 7));
         this.btn_rank.node.runAction(action3);
+
+        var action5 = cc.moveBy(0.3,cc.v2(0,cc.view.getVisibleSize().height * 2 / 7))
+        this.btn_myinfo.node.runAction(action5)
 
         var action4 = cc.moveBy(0.3,cc.v2(0,cc.view.getVisibleSize().height * 4/8));
         this.bg_title.node.runAction(action4);

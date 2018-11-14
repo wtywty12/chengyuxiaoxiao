@@ -35,7 +35,7 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var ccclass = cc._decorator.ccclass;
-var ResourcesManager_1 = require("./../common/data/ResourcesManager");
+var ResourcesManager_1 = require("../../core/common/ResourcesManager");
 var ChooseView = function (_super) {
     __extends(ChooseView, _super);
     function ChooseView() {
