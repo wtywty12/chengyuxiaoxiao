@@ -21,7 +21,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var ccclass = cc._decorator.ccclass;
 var Vec2_1 = require("./Vec2");
-var ResourcesManager_1 = require("./ResourcesManager");
+var ResourcesManager_1 = require("./game/common/data/ResourcesManager");
 var GameTable = (function (_super) {
     __extends(GameTable, _super);
     function GameTable() {

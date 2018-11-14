@@ -54,39 +54,94 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var ResourcesManager_1 = require("../../core/common/ResourcesManager");
+var ConfigManager_1 = require("../common/ConfigManager");
+var CommonScene_1 = require("../../core/component/CommonScene");
 var ccclass = cc._decorator.ccclass;
 var property = cc._decorator.property;
-var GameTable_1 = require("./GameTable");
-var GameScene = (function (_super) {
-    __extends(GameScene, _super);
-    function GameScene() {
-        var _this = _super.call(this) || this;
-        _this.title = null;
-        _this.gameTable = null;
-        _this.gameTable = new GameTable_1.GameTable();
+var GameEngine_1 = require("../common/GameEngine");
+var GameSceneHepler_1 = require("../common/helper/GameSceneHepler");
+var LoadingScene = (function (_super) {
+    __extends(LoadingScene, _super);
+    function LoadingScene() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.progressLabel = null;
+        _this.progressBar = null;
+        _this.btn_music = null;
+        _this.btn_rank = null;
+        _this.bg_title = null;
+        _this.btn_start = null;
+        _this.progress = 0;
         return _this;
     }
-    GameScene.prototype.onLoad = function () {
+    LoadingScene.prototype.load = function () {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                return [2];
+                switch (_a.label) {
+                    case 0:
+                        this.progressLabel.string = "正在加载";
+                        this.setProgress(0);
+                        return [4, ConfigManager_1.ConfigManager.load()];
+                    case 1:
+                        _a.sent();
+                        this.setProgress(50);
+                        return [4, ResourcesManager_1.ResourcesManager.load()];
+                    case 2:
+                        _a.sent();
+                        this.setProgress(100);
+                        return [4, this.loadFinish()];
+                    case 3:
+                        _a.sent();
+                        return [2];
+                }
             });
         });
     };
-    GameScene.prototype.onDestroy = function () {
+    LoadingScene.prototype.unload = function () {
     };
-    GameScene.prototype.loadFinish = function () {
-        this.gameTable.loadFinish();
+    LoadingScene.prototype.setProgress = function (value) {
+        this.progress = value;
+        this.progressBar.progress = value;
+    };
+    LoadingScene.prototype.loadFinish = function () {
+        this.runAnimation();
+    };
+    LoadingScene.prototype.runAnimation = function () {
+        this.progressBar.node.active = false;
+        this.progressLabel.node.active = false;
+        var action1 = cc.moveBy(0.3, cc.v2(0, cc.view.getVisibleSize().height * 3 / 7));
+        this.btn_start.node.runAction(action1);
+        var action2 = cc.moveBy(0.3, cc.v2(0, cc.view.getVisibleSize().height * 2 / 7));
+        this.btn_music.node.runAction(action2);
+        var action3 = cc.moveBy(0.3, cc.v2(0, cc.view.getVisibleSize().height * 2 / 7));
+        this.btn_rank.node.runAction(action3);
+        var action4 = cc.moveBy(0.3, cc.v2(0, cc.view.getVisibleSize().height * 4 / 8));
+        this.bg_title.node.runAction(action4);
+    };
+    LoadingScene.prototype.startGame = function () {
+        GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.START);
     };
     __decorate([
         property(cc.Label)
-    ], GameScene.prototype, "title", void 0);
+    ], LoadingScene.prototype, "progressLabel", void 0);
     __decorate([
-        property(GameTable_1.GameTable)
-    ], GameScene.prototype, "gameTable", void 0);
-    GameScene = __decorate([
+        property(cc.ProgressBar)
+    ], LoadingScene.prototype, "progressBar", void 0);
+    __decorate([
+        property(cc.Button)
+    ], LoadingScene.prototype, "btn_music", void 0);
+    __decorate([
+        property(cc.Button)
+    ], LoadingScene.prototype, "btn_rank", void 0);
+    __decorate([
+        property(cc.Sprite)
+    ], LoadingScene.prototype, "bg_title", void 0);
+    __decorate([
+        property(cc.Button)
+    ], LoadingScene.prototype, "btn_start", void 0);
+    LoadingScene = __decorate([
         ccclass()
-    ], GameScene);
-    return GameScene;
-}(cc.Component));
-exports.GameScene = GameScene;
+    ], LoadingScene);
+    return LoadingScene;
+}(CommonScene_1.CommonScene));
+exports.LoadingScene = LoadingScene;

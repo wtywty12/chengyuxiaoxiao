@@ -1,23 +1,4 @@
 "use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    }
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -54,39 +35,48 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var ccclass = cc._decorator.ccclass;
-var property = cc._decorator.property;
-var GameTable_1 = require("./GameTable");
-var GameScene = (function (_super) {
-    __extends(GameScene, _super);
-    function GameScene() {
-        var _this = _super.call(this) || this;
-        _this.title = null;
-        _this.gameTable = null;
-        _this.gameTable = new GameTable_1.GameTable();
-        return _this;
+var Size = cc.Size;
+var ImageHelperClass = (function () {
+    function ImageHelperClass() {
     }
-    GameScene.prototype.onLoad = function () {
+    Object.defineProperty(ImageHelperClass, "instance", {
+        get: function () {
+            if (this._instance == null) {
+                this._instance = new ImageHelperClass();
+            }
+            return this._instance;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    ImageHelperClass.prototype.getImage = function (url) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                return [2];
+                return [2, new Promise(function (success, reject) {
+                        cc.loader.load({ url: url, type: 'png' }, function (error, data) {
+                            if (error) {
+                                cc.error(error);
+                                return;
+                            }
+                            return success(data);
+                        });
+                    })];
             });
         });
     };
-    GameScene.prototype.onDestroy = function () {
+    ImageHelperClass.prototype.loadImage = function (url, component) {
+        if (component == null) {
+            return;
+        }
+        cc.loader.load({ url: url, type: 'png' }, function (error, data) {
+            if (error) {
+                cc.error(error);
+                return;
+            }
+            component.spriteFrame = new cc.SpriteFrame(data);
+            component.spriteFrame.setOriginalSize(new Size(component.node.getContentSize()));
+        });
     };
-    GameScene.prototype.loadFinish = function () {
-        this.gameTable.loadFinish();
-    };
-    __decorate([
-        property(cc.Label)
-    ], GameScene.prototype, "title", void 0);
-    __decorate([
-        property(GameTable_1.GameTable)
-    ], GameScene.prototype, "gameTable", void 0);
-    GameScene = __decorate([
-        ccclass()
-    ], GameScene);
-    return GameScene;
-}(cc.Component));
-exports.GameScene = GameScene;
+    return ImageHelperClass;
+}());
+exports.ImageHelper = ImageHelperClass.instance;
