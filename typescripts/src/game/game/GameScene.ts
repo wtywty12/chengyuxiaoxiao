@@ -12,7 +12,7 @@ export class GameScene extends cc.Component {
     @property(cc.Label)
     private title: cc.Label = null;
 
-    /** 中心表 */
+    // /** 中心表 */
     @property(GameTable)
     private gameTable: GameTable = null;
 
@@ -30,8 +30,6 @@ export class GameScene extends cc.Component {
     /** 类加载 */
     protected onLoad() {
 
-        // await ConfigManager.load();
-        // await ResourcesManager.load();
          this.loadFinish();
     }
 

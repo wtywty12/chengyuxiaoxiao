@@ -1,4 +1,4 @@
-import {ResourcesManager} from "./../common/ResourcesManager";
+import {ResourcesManager} from "./ResourcesManager";
 
 /**
  * @author: liubowen
