@@ -42,13 +42,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-<<<<<<< HEAD
-      "x": 0.16484375,
-      "y": 0.16484375,
-=======
-      "x": 0.20621337890625,
-      "y": 0.20621337890625,
->>>>>>> d53367002f116a93ae63119ee651b828c41ab0e9
+      "x": 0.11796875,
+      "y": 0.11796875,
       "z": 1
     },
     "_quat": {
@@ -574,14 +569,14 @@
     "_id": "da/DcNlEVIgLLgAa4Jp9RX"
   },
   {
-    "__type__": "500f0Bjox1AeaTLN7EXJyG1",
+    "__type__": "3e510Ft2EJC2Klc4/+zFtPH",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 11
     },
     "_enabled": true,
-    "_id": "f3oaPXxctNxYBJ7t/7hk34"
+    "_id": "be7g/4xqtLuqs5ANpvHF3c"
   },
   {
     "__type__": "cc.Canvas",
@@ -614,13 +609,9 @@
     "gameTable": {
       "__id__": 8
     },
-<<<<<<< HEAD
-    "_id": "a8CLi28Y9AYY2fpWZfvC6B"
-=======
     "chooseView": {
       "__id__": 14
     },
     "_id": "90d3+LGaJCf7lgJlkcliV5"
->>>>>>> d53367002f116a93ae63119ee651b828c41ab0e9
   }
 ]

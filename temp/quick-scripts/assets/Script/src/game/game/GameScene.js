@@ -37,12 +37,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var ccclass = cc._decorator.ccclass;
 var property = cc._decorator.property;
 var GameTable_1 = require("./../game/GameTable");
+var ChooseView_1 = require("./../game/ChooseView");
 var GameScene = function (_super) {
     __extends(GameScene, _super);
     function GameScene() {
         var _this = _super.call(this) || this;
         _this.title = null;
         _this.gameTable = null;
+        _this.chooseView = null;
+        _this.chooseView = new ChooseView_1.ChooseView();
         _this.gameTable = new GameTable_1.GameTable();
         return _this;
     }
@@ -51,10 +54,13 @@ var GameScene = function (_super) {
     };
     GameScene.prototype.onDestroy = function () {};
     GameScene.prototype.loadFinish = function () {
+        this.chooseView.loadFinish();
+        this.gameTable.setChooseView(this.chooseView);
         this.gameTable.loadFinish();
     };
     __decorate([property(cc.Label)], GameScene.prototype, "title", void 0);
     __decorate([property(GameTable_1.GameTable)], GameScene.prototype, "gameTable", void 0);
+    __decorate([property(ChooseView_1.ChooseView)], GameScene.prototype, "chooseView", void 0);
     GameScene = __decorate([ccclass()], GameScene);
     return GameScene;
 }(cc.Component);

@@ -1,6 +1,6 @@
 "use strict";
-cc._RF.push(module, '500f0Bjox1AeaTLN7EXJyG1', 'ChooseView');
-// Script/src/ChooseView.js
+cc._RF.push(module, '3e510Ft2EJC2Klc4/+zFtPH', 'ChooseView');
+// Script/src/game/game/ChooseView.js
 
 "use strict";
 
@@ -35,7 +35,7 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var ccclass = cc._decorator.ccclass;
-var ResourcesManager_1 = require("./ResourcesManager");
+var ResourcesManager_1 = require("./../common/data/ResourcesManager");
 var ChooseView = function (_super) {
     __extends(ChooseView, _super);
     function ChooseView() {

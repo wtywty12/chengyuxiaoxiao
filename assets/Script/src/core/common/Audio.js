@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var ResourcesManager_1 = require("./../common/ResourcesManager");
+var ResourcesManager_1 = require("./ResourcesManager");
 var Audio = (function () {
     function Audio(bgVolume, bgAudioID) {
         this.bgVolume = 1.0;
