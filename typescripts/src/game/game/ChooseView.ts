@@ -1,7 +1,7 @@
 import ccclass = cc._decorator.ccclass;
 import {GameGrid} from "./GameGrid";
 import {GameTable} from "./GameTable";
-import {ResourcesManager} from "./ResourcesManager";
+import {ResourcesManager} from "./../common/data/ResourcesManager";
 
 @ccclass()
 export class ChooseView extends cc.Component {
