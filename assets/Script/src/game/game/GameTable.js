@@ -23,6 +23,9 @@ var ccclass = cc._decorator.ccclass;
 var Vec2_1 = require("./../../utils/Vec2");
 var ResourcesManager_1 = require("../../core/common/ResourcesManager");
 var RandomAry_1 = require("./../common/model/RandomAry");
+var GameEngine_1 = require("../common/GameEngine");
+var GameSceneHepler_1 = require("../common/helper/GameSceneHepler");
+var GameDataManager_1 = require("../common/data/GameDataManager");
 var GameTable = (function (_super) {
     __extends(GameTable, _super);
     function GameTable() {
@@ -72,6 +75,9 @@ var GameTable = (function (_super) {
         gameGrid.init(vec2);
         gameGrid.setGridString(this.produceAry[index]);
         node.on(cc.Node.EventType.MOUSE_DOWN, function (event) {
+            GameDataManager_1.GameDataManager.gameData.addscore(10);
+            GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.SETTLE);
+            return;
             var str = this.produceAry[index];
             if (this.checkGridMap(str) == false) {
                 cc.log("已经存在");

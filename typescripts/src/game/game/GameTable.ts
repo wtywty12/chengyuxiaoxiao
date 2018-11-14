@@ -5,6 +5,10 @@ import {GameGrid} from "./GameGrid";
 import {ResourcesManager} from "../../core/common/ResourcesManager";
 import {RandomAry} from "./../common/model/RandomAry";
 import {ChooseView} from "./../game/ChooseView";
+import { GameEngine } from "../common/GameEngine";
+import { GameSceneHepler } from "../common/helper/GameSceneHepler";
+import { GameData } from "../common/data/GameData";
+import { GameDataManager } from "../common/data/GameDataManager";
 
 @ccclass()
 export class GameTable extends cc.Component {
@@ -99,6 +103,10 @@ export class GameTable extends cc.Component {
         gameGrid.setGridString(this.produceAry[index]);
         node.on(cc.Node.EventType.MOUSE_DOWN,function(event: any)
         {
+            ////////TODO临时增加 结算界面调试
+            GameDataManager.gameData.addscore(10);
+            GameEngine.changeScene(GameSceneHepler.SETTLE);
+            return;
             let str = this.produceAry[index];
             if (this.checkGridMap(str) == false) {
                 cc.log("已经存在");

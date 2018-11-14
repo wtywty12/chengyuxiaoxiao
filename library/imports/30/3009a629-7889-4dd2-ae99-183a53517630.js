@@ -169,8 +169,16 @@ var LoadingScene = function (_super) {
     LoadingScene.prototype.runAnimation = function () {
         this.progressBar.node.active = false;
         this.progressLabel.node.active = false;
+        var self = this;
         var action1 = cc.moveBy(0.3, cc.v2(0, cc.view.getVisibleSize().height * 3 / 7));
-        this.btn_start.node.runAction(action1);
+        var scaleAction = cc.sequence(cc.scaleTo(0.3, 1.2), cc.scaleTo(0.3, 1));
+        var repeatAction = cc.repeatForever(scaleAction);
+        var callbackFunc = cc.callFunc(function () {
+            var scaleAction = cc.sequence(cc.scaleTo(0.7, 1.2), cc.scaleTo(0.7, 1));
+            var repeatAction = cc.repeatForever(scaleAction);
+            self.btn_start.node.runAction(repeatAction);
+        });
+        this.btn_start.node.runAction(cc.sequence(action1, callbackFunc));
         var action2 = cc.moveBy(0.3, cc.v2(0, cc.view.getVisibleSize().height * 2 / 7));
         this.btn_music.node.runAction(action2);
         var action3 = cc.moveBy(0.3, cc.v2(0, cc.view.getVisibleSize().height * 2 / 7));
@@ -181,7 +189,7 @@ var LoadingScene = function (_super) {
         this.bg_title.node.runAction(action4);
     };
     LoadingScene.prototype.startGame = function () {
-        GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.START);
+        GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.GAME);
     };
     __decorate([property(cc.Label)], LoadingScene.prototype, "progressLabel", void 0);
     __decorate([property(cc.ProgressBar)], LoadingScene.prototype, "progressBar", void 0);

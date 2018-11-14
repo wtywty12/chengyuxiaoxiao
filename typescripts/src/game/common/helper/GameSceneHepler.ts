@@ -4,12 +4,13 @@
  * @description:
  */
 export enum GameSceneHepler {
-    LOADING = "loading",
+    LOADING = "LoadingScene",
     LOGIN = "login",
     MAIN = "main",
-    GAME = "game",
+    GAME = "GameScene",
     SINGLE_GAME = "single-game",
     MULTIPLE_GAME = "multiple-game",
-    START = "GameScene",
-    END = "end",
+    SETTLE = "SettleScene",
+    MYINFO = "MyInfoScene",
+    RANK = "RANK",
 }
