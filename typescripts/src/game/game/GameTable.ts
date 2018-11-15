@@ -1,43 +1,30 @@
 import ccclass = cc._decorator.ccclass;
 import {Vec2} from "./../../utils/Vec2";
 import {GameGrid} from "./GameGrid";
-// import property = cc._decorator.property;
+import {GameResult} from "./GameResult";
+import {RecordGrid} from "../common/model/RecordGrid";
 import {ResourcesManager} from "../../core/common/ResourcesManager";
 import {RandomAry} from "./../common/model/RandomAry";
 import {ChooseView} from "./../game/ChooseView";
 
 @ccclass()
 export class GameTable extends cc.Component {
-
-    /**
-     * 【挑战玩法】1期开发
-        随机出一定数量四字成语，将各字顺序随机打乱后显示在8*8的题干区；
-        全部清空题干区为一轮，每轮刷新出的成语数量配表控制；
-        玩家选择文字，选择的结果出现在答案区，已选文字消失；
-        点选答案区的某文字，该文字从答案区消失，重新显示在题干区；
-        填满4个字后进行判断，答错一个成语，浮空显示一个红叉（美术制作），答案区全部文字消失，题干区重新显示这几个已选文字，剩余时间减X秒；
-        答对一个成语剩余时间加Y秒；
-        全部清空后，剩余时间加Z秒；
-        全部清空后，根据表中参数（成语数量）重新刷新题干区；
-        倒计时到0时结算；
-        结算时计算分数，公式：消除成语数
-     */
-
     /** 表宽 */
     private tableWidth: number = 6;
     /** 表高 */
     private tableHeight: number = 6;
     /** 格子prefab */
     private gridPrefab: cc.Prefab = null;
-    /** 格子容器 */
-    private gridMap: Map<string, GameGrid> = new Map<string, GameGrid>();
+    /** 每个关卡成语数组 */
+    private randomIdiom: Array<string> = [];
     /** 随机成语字 */
     private randomAry: RandomAry = null;
     /** 最终散列字组 */
     private produceAry: Array<string> = null;
-    /** 选择表 */
+    /** 上方选择表 */
     private chooseView: ChooseView = null;
-    
+    /** 游戏结算 */
+    private gameResult: GameResult = null;
     
     /** 构造函数 */
     public constructor() {
@@ -57,9 +44,11 @@ export class GameTable extends cc.Component {
     /** 异步加载完成 */
     public loadFinish(): void {
         this.randomAry = new RandomAry((this.tableWidth * this.tableHeight) * 0.25);
+        this.randomIdiom = this.randomAry.getRandomIdiom();
         this.produceAry = this.randomAry.getProduceArray();
         this.gridPrefab = ResourcesManager.getPrefab("GameGrid");
         this.chooseView.setGameTable(this);
+        this.gameResult = new GameResult(this, this.chooseView);
 
         this.createTable();
     }
@@ -96,7 +85,6 @@ export class GameTable extends cc.Component {
         let w_h = 720 / this.tableWidth;
         node.setContentSize(cc.size(w_h, w_h));
         let gameGrid: GameGrid = node.getComponent("GameGrid");
-        gameGrid.init(vec2);
         gameGrid.setGridString(this.produceAry[index]);
         node.on(cc.Node.EventType.TOUCH_END,function(event: any)
         {
@@ -105,22 +93,23 @@ export class GameTable extends cc.Component {
                 cc.log("已经存在");
                 return;
             }
-            let length = this.getGridMapLength();
+            let length = RecordGrid.getGridMapLength();
             if (length == 4) {
                 cc.log("已经4个字");
                 return;
             }
             console.log('click' + str);
+            /** 中心表格子设置空白 */
             gameGrid.setGridString("");
-            this.gridMap.set(str, gameGrid);
-            this.chooseView.setGridText(str);
+            /** 设置格子索引 */
+            gameGrid.setVec(index);
+            /** 记录玩家点击格子和索引 */
+            RecordGrid.setGameTableGridMap(index, gameGrid);
+            /** 上方表设置格子字和索引 */
+            this.chooseView.setGridInfo(index, str);
             if (length == 3) {
-                let ok = this.judgeResult();
-                if (ok) {
-                    this.onSuccessFul();
-                } else {
-                    this.onFailed();
-                }
+                /** 索引0开始 满足3进行结算判定 */
+                this.gameResult.startResult(this.randomIdiom);
             }
         },this);
         if (this.node == null || gameGrid == null || gameGrid.node == null) {
@@ -132,6 +121,7 @@ export class GameTable extends cc.Component {
 
     /**
      * 检查是否重复
+     * 根据格子是否有字判定
      */
     private checkGridMap(grid: GameGrid): boolean {
         let isOk = true;
@@ -141,83 +131,4 @@ export class GameTable extends cc.Component {
         }
         return isOk;
     }
-
-    /**
-     * 获取有效选择格子数
-     */
-    private getGridMapLength(): number {
-        let index = 0;
-        this.gridMap.forEach(value=>{
-            index++;
-        });
-        return index;
-    }
-
-    /**
-     * 显示格子
-     */
-    public displayGrid(str: string) {
-        if (typeof(str) != "string") {
-            return;
-        }
-        let grid = this.gridMap.get(str);
-        grid.setGridString(str);
-        this.gridMap.delete(str);
-    }
-
-    /**
-     * 判定结果
-     */
-    private judgeResult(): boolean {
-        cc.log("开始判定");
-        /** 每个关卡成语 */
-        let idiomAry = this.randomAry.getRandomIdiom();
-        /** 玩家选择成语字 */
-        let chooseAry = this.chooseView.getChooseIdiomAry();
-        /** 判定结果 */
-        let isSussess = false;
-        for (var i=0; i<idiomAry.length; i++) {
-            let idiom = idiomAry[i];
-            let isEqual = true;
-            for (var j=0; j<4; j++) {
-                if (idiom.substring(j, j+1) != chooseAry[j]) {
-                    isEqual = false;
-                    break;
-                }
-            }
-            if (isEqual) {
-                isSussess = true;
-                break;
-            }
-        }
-        return isSussess;
-    }
-
-    /**
-     * 判定成功
-     */
-    private onSuccessFul() {
-        cc.log("判定成功");
-        /** 清理上方成语 */
-        this.clearData();
-    }
-
-     /**
-      * 判定失败
-      */
-     private onFailed() {
-        cc.log("判定失败");
-        /** 还原成语字 */
-        this.chooseView.restoreIdiom();
-        /** 清理上方成语 */
-        this.clearData();
-     }
-
-     /**
-      * 清理数据
-      */
-     private clearData() {
-        this.gridMap.clear();
-        this.chooseView.clearIdiom();
-     }
 }

@@ -21,6 +21,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var ccclass = cc._decorator.ccclass;
 var Vec2_1 = require("./../../utils/Vec2");
+var GameResult_1 = require("./GameResult");
+var RecordGrid_1 = require("../common/model/RecordGrid");
 var ResourcesManager_1 = require("../../core/common/ResourcesManager");
 var RandomAry_1 = require("./../common/model/RandomAry");
 var GameTable = (function (_super) {
@@ -30,10 +32,11 @@ var GameTable = (function (_super) {
         _this.tableWidth = 6;
         _this.tableHeight = 6;
         _this.gridPrefab = null;
-        _this.gridMap = new Map();
+        _this.randomIdiom = [];
         _this.randomAry = null;
         _this.produceAry = null;
         _this.chooseView = null;
+        _this.gameResult = null;
         return _this;
     }
     GameTable.prototype.onLoad = function () {
@@ -42,9 +45,11 @@ var GameTable = (function (_super) {
     };
     GameTable.prototype.loadFinish = function () {
         this.randomAry = new RandomAry_1.RandomAry((this.tableWidth * this.tableHeight) * 0.25);
+        this.randomIdiom = this.randomAry.getRandomIdiom();
         this.produceAry = this.randomAry.getProduceArray();
         this.gridPrefab = ResourcesManager_1.ResourcesManager.getPrefab("GameGrid");
         this.chooseView.setGameTable(this);
+        this.gameResult = new GameResult_1.GameResult(this, this.chooseView);
         this.createTable();
     };
     GameTable.prototype.setChooseView = function (view) {
@@ -69,7 +74,6 @@ var GameTable = (function (_super) {
         var w_h = 720 / this.tableWidth;
         node.setContentSize(cc.size(w_h, w_h));
         var gameGrid = node.getComponent("GameGrid");
-        gameGrid.init(vec2);
         gameGrid.setGridString(this.produceAry[index]);
         node.on(cc.Node.EventType.TOUCH_END, function (event) {
             var str = this.produceAry[index];
@@ -77,23 +81,18 @@ var GameTable = (function (_super) {
                 cc.log("已经存在");
                 return;
             }
-            var length = this.getGridMapLength();
+            var length = RecordGrid_1.RecordGrid.getGridMapLength();
             if (length == 4) {
                 cc.log("已经4个字");
                 return;
             }
             console.log('click' + str);
             gameGrid.setGridString("");
-            this.gridMap.set(str, gameGrid);
-            this.chooseView.setGridText(str);
+            gameGrid.setVec(index);
+            RecordGrid_1.RecordGrid.setGameTableGridMap(index, gameGrid);
+            this.chooseView.setGridInfo(index, str);
             if (length == 3) {
-                var ok = this.judgeResult();
-                if (ok) {
-                    this.onSuccessFul();
-                }
-                else {
-                    this.onFailed();
-                }
+                this.gameResult.startResult(this.randomIdiom);
             }
         }, this);
         if (this.node == null || gameGrid == null || gameGrid.node == null) {
@@ -109,55 +108,6 @@ var GameTable = (function (_super) {
             isOk = false;
         }
         return isOk;
-    };
-    GameTable.prototype.getGridMapLength = function () {
-        var index = 0;
-        this.gridMap.forEach(function (value) {
-            index++;
-        });
-        return index;
-    };
-    GameTable.prototype.displayGrid = function (str) {
-        if (typeof (str) != "string") {
-            return;
-        }
-        var grid = this.gridMap.get(str);
-        grid.setGridString(str);
-        this.gridMap.delete(str);
-    };
-    GameTable.prototype.judgeResult = function () {
-        cc.log("开始判定");
-        var idiomAry = this.randomAry.getRandomIdiom();
-        var chooseAry = this.chooseView.getChooseIdiomAry();
-        var isSussess = false;
-        for (var i = 0; i < idiomAry.length; i++) {
-            var idiom = idiomAry[i];
-            var isEqual = true;
-            for (var j = 0; j < 4; j++) {
-                if (idiom.substring(j, j + 1) != chooseAry[j]) {
-                    isEqual = false;
-                    break;
-                }
-            }
-            if (isEqual) {
-                isSussess = true;
-                break;
-            }
-        }
-        return isSussess;
-    };
-    GameTable.prototype.onSuccessFul = function () {
-        cc.log("判定成功");
-        this.clearData();
-    };
-    GameTable.prototype.onFailed = function () {
-        cc.log("判定失败");
-        this.chooseView.restoreIdiom();
-        this.clearData();
-    };
-    GameTable.prototype.clearData = function () {
-        this.gridMap.clear();
-        this.chooseView.clearIdiom();
     };
     GameTable = __decorate([
         ccclass()

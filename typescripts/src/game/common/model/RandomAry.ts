@@ -1,4 +1,5 @@
 import {ConfigManager} from "./../ConfigManager";
+import { Tools } from "src/utils/Tools";
 
 /**
  * 此类用于根据成语json随机生成指定的成语配置表
@@ -19,7 +20,7 @@ export class RandomAry{
         this.needValus = need;
         this.jsonData = ConfigManager.idiomJsonMap;
         this.produceArray = [];
-        this.configLength = this.getMapLength(this.jsonData);
+        this.configLength = Tools.getMapLength(this.jsonData);
         this.init();
     }
 
@@ -36,22 +37,23 @@ export class RandomAry{
         this.produceArray = this.getSplitArray(this.randomIdiom);
     }
 
+    /**
+     * 获取每关成语表
+     */
     public getRandomIdiom(): Array<string> {
         return this.randomIdiom;
     }
 
+    /**
+     * 获取最终生成散列字表
+     */
     public getProduceArray(): Array<string> {
         return this.produceArray;
     }
 
-    private getMapLength(map: Map<any, any>): number {
-        let lenght: number = 0;
-        map.forEach(value=>{
-            lenght++;
-        })
-        return lenght;
-    }
-
+    /**
+     * 获取随机数组表 用于去json中获取对应成语数组
+     */
     private getRandomAry(): Array<number> {
         let randomAry: Array<number> = [];
         for(var i=0; i<this.needValus; i++) {
@@ -70,6 +72,9 @@ export class RandomAry{
         return randomAry;
     }
 
+    /**
+     * 获取随机成语表
+     */
     private getRandomAryIdiom(arr: Array<number>): Array<string>{
         let idiomAry: Array<string> = [];
         for(var i=0; i<arr.length; i++) {
@@ -81,6 +86,9 @@ export class RandomAry{
         return idiomAry;
     }
 
+    /**
+     * 获取散列成语字表
+     */
     private getSplitArray(arr: Array<string>): Array<string>{
         let produceArray: Array<string> = [];
         for (var i=0; i<arr.length; i++) {

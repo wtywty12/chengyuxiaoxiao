@@ -6,6 +6,7 @@ cc._RF.push(module, 'd7781n4M31Jgomts2i9ZIst', 'RandomAry');
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var ConfigManager_1 = require("./../ConfigManager");
+var Tools_1 = require("src/utils/Tools");
 var RandomAry = function () {
     function RandomAry(need) {
         this.needValus = null;
@@ -16,7 +17,7 @@ var RandomAry = function () {
         this.needValus = need;
         this.jsonData = ConfigManager_1.ConfigManager.idiomJsonMap;
         this.produceArray = [];
-        this.configLength = this.getMapLength(this.jsonData);
+        this.configLength = Tools_1.Tools.getMapLength(this.jsonData);
         this.init();
     }
     RandomAry.prototype.init = function () {
@@ -33,13 +34,6 @@ var RandomAry = function () {
     };
     RandomAry.prototype.getProduceArray = function () {
         return this.produceArray;
-    };
-    RandomAry.prototype.getMapLength = function (map) {
-        var lenght = 0;
-        map.forEach(function (value) {
-            lenght++;
-        });
-        return lenght;
     };
     RandomAry.prototype.getRandomAry = function () {
         var randomAry = [];

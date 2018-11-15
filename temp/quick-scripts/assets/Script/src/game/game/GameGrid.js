@@ -42,12 +42,33 @@ var GameGrid = function (_super) {
         var _this = _super.call(this) || this;
         _this.gridBg = null;
         _this.gridText = null;
-        _this.coordinate = null;
+        _this.index = null;
+        _this.vec = null;
         return _this;
     }
     GameGrid.prototype.onLoad = function () {};
     GameGrid.prototype.onDestroy = function () {};
-    GameGrid.prototype.init = function (vec2) {};
+    GameGrid.prototype.init = function () {};
+    GameGrid.prototype.setIndex = function (index) {
+        if (typeof index != "number") {
+            cc.log("index is null");
+            return;
+        }
+        this.index = index;
+    };
+    GameGrid.prototype.getIndex = function () {
+        return this.index;
+    };
+    GameGrid.prototype.setVec = function (vec) {
+        if (typeof vec != "number") {
+            cc.log("vec is null");
+            return;
+        }
+        this.vec = vec;
+    };
+    GameGrid.prototype.getVec = function () {
+        return this.vec;
+    };
     GameGrid.prototype.setGridString = function (str) {
         if (typeof str != "string") {
             cc.log("setGridString is null");

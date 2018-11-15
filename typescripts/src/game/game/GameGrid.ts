@@ -11,8 +11,10 @@ export class GameGrid extends cc.Component {
     /** 格子字 */
     @property(cc.Label)
     private gridText: cc.Label = null;
-    /** 坐标 */
-    private coordinate: Vec2 = null;
+    /** 索引 */
+    private index: number = null;
+    /** vec 用于标记中心表索引 */
+    private vec: number = null;
 
     /** 构造函数 */
     protected constructor() {
@@ -30,8 +32,32 @@ export class GameGrid extends cc.Component {
     }
 
     /** 真正调用的初始化函数 */
-    public init(vec2: Vec2): void {
+    public init(): void {
         
+    }
+
+    public setIndex(index: number) {
+        if (typeof(index) != "number") {
+            cc.log("index is null");
+            return;
+        }
+        this.index = index;
+    }
+
+    public getIndex(): number {
+        return this.index;
+    }
+
+    public setVec(vec: number) {
+        if (typeof(vec) != "number") {
+            cc.log("vec is null");
+            return;
+        }
+        this.vec = vec;
+    }
+
+    public getVec(): number {
+        return this.vec;
     }
 
     public setGridString(str: string) {

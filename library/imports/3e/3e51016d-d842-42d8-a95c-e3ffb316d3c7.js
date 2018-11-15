@@ -35,16 +35,15 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var ccclass = cc._decorator.ccclass;
+var RecordGrid_1 = require("../common/model/RecordGrid");
 var ResourcesManager_1 = require("../../core/common/ResourcesManager");
 var ChooseView = function (_super) {
     __extends(ChooseView, _super);
     function ChooseView() {
         var _this = _super.call(this) || this;
         _this.gridPrefab = null;
-        _this.idiomAry = null;
         _this.gridAry = null;
         _this.gameTable = null;
-        _this.idiomAry = [];
         _this.gridAry = [];
         return _this;
     }
@@ -52,9 +51,6 @@ var ChooseView = function (_super) {
     ChooseView.prototype.loadFinish = function () {
         this.gridPrefab = ResourcesManager_1.ResourcesManager.getPrefab("GameGrid");
         this.createTable();
-    };
-    ChooseView.prototype.getChooseIdiomAry = function () {
-        return this.idiomAry;
     };
     ChooseView.prototype.setGameTable = function (view) {
         this.gameTable = view;
@@ -73,43 +69,46 @@ var ChooseView = function (_super) {
         var w_h = 720 / 6;
         node.setContentSize(cc.size(w_h, w_h));
         var gameGrid = node.getComponent("GameGrid");
-        gameGrid.init(null);
         node.on(cc.Node.EventType.TOUCH_END, function (event) {
-            var str = this.idiomAry[index];
+            var vec = gameGrid.getVec();
+            var i = gameGrid.getIndex();
+            var str = gameGrid.getGridString();
             console.log('remove' + str);
-            this.idiomAry.splice(index, index + 1);
+            RecordGrid_1.RecordGrid.getChooseGridAry().splice(i, i + 1);
             this.gridAry[index].setGridString("");
-            this.gameTable.displayGrid(str);
+            RecordGrid_1.RecordGrid.displayGrid(str, vec);
         }, this);
         this.node.addChild(gameGrid.node);
         this.gridAry.push(gameGrid);
     };
-    ChooseView.prototype.setGridText = function (str) {
-        if (this.idiomAry.length >= 4) {
+    ChooseView.prototype.setGridInfo = function (vec, str) {
+        if (RecordGrid_1.RecordGrid.getChooseGridAry().length >= 4) {
             cc.log("已经满字 点击无效");
             return;
         }
-        this.idiomAry.push(str);
         for (var i = 0; i < this.gridAry.length; i++) {
             var grid = this.gridAry[i];
             if (grid.getGridString() == "") {
                 grid.setGridString(str);
+                grid.setVec(vec);
+                grid.setIndex(i);
+                RecordGrid_1.RecordGrid.setChooseGridAry(grid);
+                cc.log("RecordGrid.setChooseGridAry => ", RecordGrid_1.RecordGrid.getChooseGridAry());
                 break;
             }
         }
     };
     ChooseView.prototype.restoreIdiom = function () {
-        for (var i = 0; i <= this.idiomAry.length; i++) {
-            var str = this.idiomAry[i];
-            this.gameTable.displayGrid(str);
+        for (var i = 0; i < RecordGrid_1.RecordGrid.getChooseGridAry().length; i++) {
+            var grid = RecordGrid_1.RecordGrid.getChooseGridAry()[i];
+            RecordGrid_1.RecordGrid.displayGrid(grid.getGridString(), grid.getVec());
         }
     };
-    ChooseView.prototype.clearIdiom = function () {
+    ChooseView.prototype.clearChooseGrid = function () {
         for (var i = 0; i < this.gridAry.length; i++) {
             var gird = this.gridAry[i];
             gird.setGridString("");
         }
-        this.idiomAry = [];
     };
     ChooseView = __decorate([ccclass()], ChooseView);
     return ChooseView;
