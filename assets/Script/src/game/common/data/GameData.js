@@ -43,6 +43,9 @@ var GameData = (function () {
         enumerable: true,
         configurable: true
     });
+    GameData.prototype.addscore = function (value) {
+        this._score += value;
+    };
     Object.defineProperty(GameData.prototype, "gametime", {
         get: function () {
             return this._gametime;

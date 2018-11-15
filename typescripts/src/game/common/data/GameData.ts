@@ -48,6 +48,9 @@ export class GameData {
     set score(_score : number) {
         this._score = _score
     }
+    public addscore(value :number){
+        this._score += value;
+    }
     get gametime():number{
         return this._gametime
     }

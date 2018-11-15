@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "youzi",
+    "texture": "4085ca54-6009-4d8f-8c51-33b232184418",
+    "atlas": "",
+    "rect": [
+      0,
+      1,
+      158,
+      137
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      158,
+      138
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
