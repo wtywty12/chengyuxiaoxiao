@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "ding",
+    "texture": "7a43cc1c-b19f-43c9-868c-4aa1d903b5dc",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      720,
+      154
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      720,
+      154
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

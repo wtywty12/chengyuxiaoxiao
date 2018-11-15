@@ -29,11 +29,6 @@
     "meta": 1542108294972,
     "relativePath": "resources"
   },
-  "4b5ae72f-b0a5-40e6-9a3a-bbee95d85418": {
-    "asset": 1542108294973,
-    "meta": 1542108294972,
-    "relativePath": "resources/bg"
-  },
   "659d66da-900d-4d61-9a8b-b62a9ba61812": {
     "asset": 1542171927227,
     "meta": 1542171927227,
@@ -53,11 +48,6 @@
     "asset": 1542171921669,
     "meta": 1542171921668,
     "relativePath": "texture"
-  },
-  "96c56d39-a9b0-48e4-90f9-88039e79cb19": {
-    "asset": 1542108294972,
-    "meta": 1542183388491,
-    "relativePath": "resources/bg/bg_grid.png"
   },
   "d9a6e235-6007-4485-ade4-813cea6fa487": {
     "asset": 1542163269634,
@@ -89,20 +79,10 @@
     "meta": 1542187510362,
     "relativePath": "Texture/singleColor.png"
   },
-  "222c8c4e-ff5c-4206-a0d5-69280693002a": {
-    "asset": 1542185745392,
-    "meta": 1542186166051,
-    "relativePath": "resources/prefabs/GameGrid.prefab"
-  },
   "29f52784-2fca-467b-92e7-8fd9ef8c57b7": {
     "asset": 1542185745396,
     "meta": 1542187508601,
     "relativePath": "Scene"
-  },
-  "4dcd14cd-14a8-4a6e-ae9e-0a4bf6dfa061": {
-    "asset": 1542188819415,
-    "meta": 1542188819421,
-    "relativePath": "Scene/GameScene.fire"
   },
   "c94207a3-a037-40fc-b8af-cfa074ab0787": {
     "asset": 1542183403886,
@@ -200,8 +180,8 @@
     "relativePath": "Texture"
   },
   "a6ed62ac-6d2c-4666-896d-59c4c311faa8": {
-    "asset": 1542267078030,
-    "meta": 1542267078038,
+    "asset": 1542267300189,
+    "meta": 1542267300197,
     "relativePath": "Scene/MyinfoScene.fire"
   },
   "67a68164-6931-4f81-9a19-a0bd4d8968c0": {
@@ -644,40 +624,10 @@
     "meta": 1542266905616,
     "relativePath": "Script/src/game/common/model/RandomAry.js"
   },
-  "ae8dda00-8480-4e5c-a929-9a09af63bfd5": {
-    "asset": 1542266788152,
-    "meta": 1542266905648,
-    "relativePath": "Script/src/game/common/model/RecordGrid.js"
-  },
   "75122906-ce12-4704-a2f3-7227891c6e9e": {
     "asset": 1542266788101,
     "meta": 1542266905691,
     "relativePath": "Script/src/game/common/service/LoginService.js"
-  },
-  "3e51016d-d842-42d8-a95c-e3ffb316d3c7": {
-    "asset": 1542266788187,
-    "meta": 1542266905731,
-    "relativePath": "Script/src/game/game/ChooseView.js"
-  },
-  "03a82ca5-af63-4500-ae03-b0dda3856983": {
-    "asset": 1542266788147,
-    "meta": 1542266905747,
-    "relativePath": "Script/src/game/game/GameGrid.js"
-  },
-  "97be3ef2-5953-4964-860e-a648c5fe4058": {
-    "asset": 1542266788156,
-    "meta": 1542266905792,
-    "relativePath": "Script/src/game/game/GameResult.js"
-  },
-  "55ba82a3-b236-4690-adbb-afd926249335": {
-    "asset": 1542266788161,
-    "meta": 1542266905943,
-    "relativePath": "Script/src/game/game/GameScene.js"
-  },
-  "a33454b1-70fd-4ea2-93e1-4acdf53a51e0": {
-    "asset": 1542266788177,
-    "meta": 1542266906159,
-    "relativePath": "Script/src/game/game/GameTable.js"
   },
   "3009a629-7889-4dd2-ae99-183a53517630": {
     "asset": 1542266788200,
@@ -748,5 +698,105 @@
     "asset": 1542267137989,
     "meta": 1542267137993,
     "relativePath": "resources/prefabs/tips.prefab"
+  },
+  "222c8c4e-ff5c-4206-a0d5-69280693002a": {
+    "asset": 1542267199340,
+    "meta": 1542267226580,
+    "relativePath": "resources/prefabs/GameGrid.prefab"
+  },
+  "4dcd14cd-14a8-4a6e-ae9e-0a4bf6dfa061": {
+    "asset": 1542267199333,
+    "meta": 1542267226628,
+    "relativePath": "Scene/GameScene.fire"
+  },
+  "ae8dda00-8480-4e5c-a929-9a09af63bfd5": {
+    "asset": 1542267199805,
+    "meta": 1542267226689,
+    "relativePath": "Script/src/game/common/model/RecordGrid.js"
+  },
+  "3e51016d-d842-42d8-a95c-e3ffb316d3c7": {
+    "asset": 1542267199792,
+    "meta": 1542267226719,
+    "relativePath": "Script/src/game/game/ChooseView.js"
+  },
+  "03a82ca5-af63-4500-ae03-b0dda3856983": {
+    "asset": 1542267199787,
+    "meta": 1542267226739,
+    "relativePath": "Script/src/game/game/GameGrid.js"
+  },
+  "97be3ef2-5953-4964-860e-a648c5fe4058": {
+    "asset": 1542267199802,
+    "meta": 1542267226769,
+    "relativePath": "Script/src/game/game/GameResult.js"
+  },
+  "55ba82a3-b236-4690-adbb-afd926249335": {
+    "asset": 1542267199814,
+    "meta": 1542267226824,
+    "relativePath": "Script/src/game/game/GameScene.js"
+  },
+  "a33454b1-70fd-4ea2-93e1-4acdf53a51e0": {
+    "asset": 1542267199799,
+    "meta": 1542267226824,
+    "relativePath": "Script/src/game/game/GameTable.js"
+  },
+  "64cd69d0-ae22-4cad-9587-5804c6d4955b": {
+    "asset": 1542267199374,
+    "meta": 1542267199339,
+    "relativePath": "resources/images"
+  },
+  "96c56d39-a9b0-48e4-90f9-88039e79cb19": {
+    "asset": 1542267199374,
+    "meta": 1542267226878,
+    "relativePath": "resources/images/bg_grid.png"
+  },
+  "d9d4fe68-ef04-4ca2-ab60-0bb482ef6593": {
+    "asset": 1542267199339,
+    "meta": 1542267226879,
+    "relativePath": "resources/images/dati.png"
+  },
+  "24442bec-e023-4d3d-a934-69ddc9f34bf8": {
+    "asset": 1542267199339,
+    "meta": 1542267199375,
+    "relativePath": "texture/gameScene"
+  },
+  "28d574e5-363a-4301-898c-e84faf6c1542": {
+    "asset": 1542267199340,
+    "meta": 1542267226903,
+    "relativePath": "resources/images/xitong.png"
+  },
+  "52b07292-471c-4672-a0c4-878cc0dbbcf0": {
+    "asset": 1542267199336,
+    "meta": 1542267226920,
+    "relativePath": "texture/gameScene/advertising.png"
+  },
+  "f41fdbdf-41cc-4c29-a52b-d2037c894f7b": {
+    "asset": 1542267199336,
+    "meta": 1542267226927,
+    "relativePath": "texture/gameScene/biaoti.png"
+  },
+  "eecdc812-bb15-4ba6-a047-4139763977b0": {
+    "asset": 1542267199337,
+    "meta": 1542267226945,
+    "relativePath": "texture/gameScene/btn_fanhui.png"
+  },
+  "31da9711-f4d3-4744-a2fa-00f2885f6fcb": {
+    "asset": 1542267199337,
+    "meta": 1542267226964,
+    "relativePath": "texture/gameScene/btn_shijian.png"
+  },
+  "3844cb51-166f-4c2d-91ca-664008d73513": {
+    "asset": 1542267199337,
+    "meta": 1542267226975,
+    "relativePath": "texture/gameScene/btn_tishi.png"
+  },
+  "7a43cc1c-b19f-43c9-868c-4aa1d903b5dc": {
+    "asset": 1542267199339,
+    "meta": 1542267226996,
+    "relativePath": "texture/gameScene/ding.png"
+  },
+  "6e645fc0-d33c-48ea-9f9a-02632401776e": {
+    "asset": 1542267199338,
+    "meta": 1542267227049,
+    "relativePath": "texture/gameScene/diban.png"
   }
 }

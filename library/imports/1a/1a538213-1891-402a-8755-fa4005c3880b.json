@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "xitong",
+    "texture": "28d574e5-363a-4301-898c-e84faf6c1542",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      102,
+      107
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      102,
+      107
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

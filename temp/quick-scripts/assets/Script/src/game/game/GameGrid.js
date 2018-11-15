@@ -36,10 +36,12 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
 Object.defineProperty(exports, "__esModule", { value: true });
 var ccclass = cc._decorator.ccclass;
 var property = cc._decorator.property;
+var ResourcesManager_1 = require("../../core/common/ResourcesManager");
 var GameGrid = function (_super) {
     __extends(GameGrid, _super);
     function GameGrid() {
         var _this = _super.call(this) || this;
+        _this.gridBorder = null;
         _this.gridBg = null;
         _this.gridText = null;
         _this.index = null;
@@ -49,6 +51,9 @@ var GameGrid = function (_super) {
     GameGrid.prototype.onLoad = function () {};
     GameGrid.prototype.onDestroy = function () {};
     GameGrid.prototype.init = function () {};
+    GameGrid.prototype.setClickGridBg = function () {
+        this.gridBg.spriteFrame = ResourcesManager_1.ResourcesManager.getImage('dati');
+    };
     GameGrid.prototype.setIndex = function (index) {
         if (typeof index != "number") {
             cc.log("index is null");
@@ -79,6 +84,7 @@ var GameGrid = function (_super) {
     GameGrid.prototype.getGridString = function () {
         return this.gridText.string;
     };
+    __decorate([property(cc.Node)], GameGrid.prototype, "gridBorder", void 0);
     __decorate([property(cc.Sprite)], GameGrid.prototype, "gridBg", void 0);
     __decorate([property(cc.Label)], GameGrid.prototype, "gridText", void 0);
     GameGrid = __decorate([ccclass()], GameGrid);

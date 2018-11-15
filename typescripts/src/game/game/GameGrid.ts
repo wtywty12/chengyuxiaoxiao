@@ -1,10 +1,13 @@
 import ccclass = cc._decorator.ccclass;
 import property = cc._decorator.property;
 import {Vec2} from "./../../utils/Vec2";
+import {ResourcesManager} from "../../core/common/ResourcesManager";
 
 @ccclass()
 export class GameGrid extends cc.Component {
-
+    /** 格子边框 */
+    @property(cc.Node)
+    private gridBorder: cc.Node = null;
     /** 格子背景 */
     @property(cc.Sprite)
     private gridBg: cc.Sprite = null;
@@ -34,6 +37,13 @@ export class GameGrid extends cc.Component {
     /** 真正调用的初始化函数 */
     public init(): void {
         
+    }
+
+    /**
+     * 设置点击格子背景
+     */
+    public setClickGridBg() {
+        this.gridBg.spriteFrame = ResourcesManager.getImage('dati');
     }
 
     public setIndex(index: number) {

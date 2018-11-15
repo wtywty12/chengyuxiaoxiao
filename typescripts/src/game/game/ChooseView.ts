@@ -50,6 +50,7 @@ export class ChooseView extends cc.Component {
         let w_h = 720 / 6;
         node.setContentSize(cc.size(w_h, w_h));
         let gameGrid: GameGrid = node.getComponent("GameGrid");
+        gameGrid.setClickGridBg();
         node.on(cc.Node.EventType.TOUCH_END,function(event: any)
         {
             /** vec 中心表格子索引  i 上方表格子索引 */
