@@ -79,6 +79,5 @@ export class GameResult{
         RecordGrid.clearRecordData();
         /** 清理上方成语 */
         this.chooseView.clearChooseGrid();
-        // this.recordTableMap.clear();
      }
 }

@@ -111,6 +111,7 @@ var ChooseView = function (_super) {
             gird.setGridString("");
         }
     };
+    ChooseView.prototype.onGameOver = function () {};
     ChooseView = __decorate([ccclass()], ChooseView);
     return ChooseView;
 }(cc.Component);

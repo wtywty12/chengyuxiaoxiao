@@ -112,4 +112,11 @@ export class ChooseView extends cc.Component {
             gird.setGridString("");
         }
     }
+
+    /**
+     * 游戏结束
+     */
+    private onGameOver() {
+        
+    }
 }

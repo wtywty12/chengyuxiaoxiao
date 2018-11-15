@@ -131,4 +131,11 @@ export class GameTable extends cc.Component {
         }
         return isOk;
     }
+
+    /**
+     * 游戏结束
+     */
+    private onGameOver() {
+        
+    }
 }

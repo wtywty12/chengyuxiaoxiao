@@ -38,16 +38,18 @@ var ccclass = cc._decorator.ccclass;
 var property = cc._decorator.property;
 var GameTable_1 = require("./../game/GameTable");
 var ChooseView_1 = require("./../game/ChooseView");
+var GameManager_1 = require("./GameManager");
 var GameScene = function (_super) {
     __extends(GameScene, _super);
     function GameScene() {
         var _this = _super.call(this) || this;
-        _this.title = null;
         _this.gameTable = null;
         _this.chooseView = null;
-        _this.btn_time = null;
+        _this.lbl_time = null;
         _this.btn_back = null;
         _this.btn_share = null;
+        _this.gameManager = null;
+        _this.gameManager = new GameManager_1.GameManager();
         _this.chooseView = new ChooseView_1.ChooseView();
         _this.gameTable = new GameTable_1.GameTable();
         return _this;
@@ -57,10 +59,13 @@ var GameScene = function (_super) {
     };
     GameScene.prototype.onDestroy = function () {};
     GameScene.prototype.loadFinish = function () {
+        this.gameManager.onGameStart();
         this.chooseView.loadFinish();
         this.gameTable.setChooseView(this.chooseView);
         this.gameTable.loadFinish();
         this.btn_back.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
+        this.btn_share.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
+        this.createCDTime();
     };
     GameScene.prototype.onTouchEventListener = function (event) {
         var eventType = event.type;
@@ -73,16 +78,30 @@ var GameScene = function (_super) {
             case "btn_back":
                 cc.director.loadScene("LoadingScene");
                 break;
-            case "":
+            case "btn_share":
+                cc.log("分享游戏");
+                this.gameManager.onGameOver();
                 break;
             default:
                 break;
         }
     };
-    __decorate([property(cc.Label)], GameScene.prototype, "title", void 0);
+    GameScene.prototype.createCDTime = function () {
+        var totalTime = 60;
+        var nowTime = 60;
+        var timeCallback = function timeCallback(dt) {
+            nowTime--;
+            this.lbl_time.string = nowTime.toString();
+            if (nowTime == 0) {
+                this.gameManager.onGameOver();
+                this.unschedule(timeCallback);
+            }
+        };
+        this.schedule(timeCallback, 1);
+    };
     __decorate([property(GameTable_1.GameTable)], GameScene.prototype, "gameTable", void 0);
     __decorate([property(ChooseView_1.ChooseView)], GameScene.prototype, "chooseView", void 0);
-    __decorate([property(cc.Node)], GameScene.prototype, "btn_time", void 0);
+    __decorate([property(cc.Label)], GameScene.prototype, "lbl_time", void 0);
     __decorate([property(cc.Node)], GameScene.prototype, "btn_back", void 0);
     __decorate([property(cc.Node)], GameScene.prototype, "btn_share", void 0);
     GameScene = __decorate([ccclass()], GameScene);

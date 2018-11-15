@@ -109,6 +109,8 @@ var GameTable = (function (_super) {
         }
         return isOk;
     };
+    GameTable.prototype.onGameOver = function () {
+    };
     GameTable = __decorate([
         ccclass()
     ], GameTable);
