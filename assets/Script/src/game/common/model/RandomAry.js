@@ -21,6 +21,7 @@ var RandomAry = (function () {
             return;
         }
         var randomAry = this.getRandomAry();
+        cc.log("随机数组 => ", randomAry);
         this.randomIdiom = this.getRandomAryIdiom(randomAry);
         this.produceArray = this.getSplitArray(this.randomIdiom);
     };
@@ -33,17 +34,21 @@ var RandomAry = (function () {
     RandomAry.prototype.getRandomAry = function () {
         var randomAry = [];
         for (var i = 0; i < this.needValus; i++) {
-            var rand = Math.trunc(Math.random() * this.configLength);
+            var rand = Math.ceil(Math.random() * this.configLength);
             var isOk = true;
             for (var j = 0; j < randomAry.length; j++) {
                 if (randomAry[j] == rand) {
                     isOk = false;
+                    i--;
                     break;
                 }
             }
             if (isOk) {
                 randomAry.push(rand);
             }
+        }
+        if (randomAry.length == 8) {
+            cc.log("EEE");
         }
         return randomAry;
     };

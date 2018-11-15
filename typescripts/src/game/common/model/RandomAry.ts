@@ -31,6 +31,7 @@ export class RandomAry{
         }
         /** 获取随机数组 */
         let randomAry = this.getRandomAry();
+        cc.log("随机数组 => ", randomAry);
         /** 转化为随机成语 */
         this.randomIdiom = this.getRandomAryIdiom(randomAry);
         /** 拆分随机字 */
@@ -57,11 +58,12 @@ export class RandomAry{
     private getRandomAry(): Array<number> {
         let randomAry: Array<number> = [];
         for(var i=0; i<this.needValus; i++) {
-            let rand = Math.trunc(Math.random() * this.configLength);
+            let rand = Math.ceil(Math.random() * this.configLength);
             let isOk = true;
             for(var j=0; j<randomAry.length; j++) {
                 if (randomAry[j] == rand) {
                     isOk = false;
+                    i--;
                     break;
                 }
             }

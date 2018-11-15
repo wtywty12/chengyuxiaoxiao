@@ -87,8 +87,7 @@ export class GameScene extends cc.Component {
      * 创建倒计时
      */
     private createCDTime() {
-        var totalTime = 60;
-        var nowTime = 60;
+        var nowTime = 6;
         this.timeCallback = function (dt: number) {
             nowTime--;
             this.lbl_time.string = nowTime.toString();

@@ -544,259 +544,259 @@
     "meta": 1542271658742,
     "relativePath": "Scene/GameScene.fire"
   },
-  "7d83ef98-0aa5-442c-98de-7f56ae4d4576": {
-    "asset": 1542273654931,
-    "meta": 1542273658127,
-    "relativePath": "Script/src/core/common/Audio.js"
-  },
-  "8c94a64c-80bc-4e6c-adeb-87f02d40fcc0": {
-    "asset": 1542273654935,
-    "meta": 1542273658215,
-    "relativePath": "Script/src/core/common/LocalStorage.js"
-  },
-  "e402864b-9e49-49e3-975f-fabf7f03b039": {
-    "asset": 1542273654918,
-    "meta": 1542273658259,
-    "relativePath": "Script/src/core/common/ResourcesManager.js"
-  },
-  "fa494855-ed41-4f70-98d1-4d1ab13575d1": {
-    "asset": 1542273654965,
-    "meta": 1542273658278,
-    "relativePath": "Script/src/core/component/CommonScene.js"
-  },
-  "14da2992-e62a-4a12-8472-1a6e3d877291": {
-    "asset": 1542273654970,
-    "meta": 1542273658316,
-    "relativePath": "Script/src/core/component/GameComponent.js"
-  },
-  "5dc3089f-4c63-49e6-9eda-c77bc6cd6c9c": {
-    "asset": 1542273654978,
-    "meta": 1542273658350,
-    "relativePath": "Script/src/core/component/GameScrollView.js"
-  },
-  "be211da9-349d-4a9b-a525-9e07084d6592": {
-    "asset": 1542273654984,
-    "meta": 1542273658395,
-    "relativePath": "Script/src/core/event/DefaultGameEvent.js"
-  },
-  "d01d27ca-c43b-4ea8-8772-419a0a89a98d": {
-    "asset": 1542273654991,
-    "meta": 1542273658401,
-    "relativePath": "Script/src/core/event/DefaultGameListener.js"
-  },
-  "9e16e84a-bf6d-48d9-a5b6-1d4f636b15bb": {
-    "asset": 1542273654985,
-    "meta": 1542273658441,
-    "relativePath": "Script/src/core/event/EventListenerFunction.js"
-  },
-  "32a302c4-4733-40be-8df8-10cc8a6b914e": {
-    "asset": 1542273654938,
-    "meta": 1542273658452,
-    "relativePath": "Script/src/core/event/GameEvent.js"
-  },
-  "a41d2f35-7025-4d88-99f6-00f6d9dc9522": {
-    "asset": 1542273654940,
-    "meta": 1542273658531,
-    "relativePath": "Script/src/core/event/GameEventListener.js"
-  },
-  "7d0b2c10-e53b-483f-aa68-014d165e9560": {
-    "asset": 1542273654957,
-    "meta": 1542273658569,
-    "relativePath": "Script/src/core/event/GameEventListeners.js"
-  },
-  "4e5bc25a-4482-4d02-a648-651ec8e51bb6": {
-    "asset": 1542273654950,
-    "meta": 1542273658613,
-    "relativePath": "Script/src/core/event/GameEventTransmitter.js"
-  },
-  "a07f0e31-72cc-44c9-be97-fb006f31dbc6": {
-    "asset": 1542273654992,
-    "meta": 1542273658642,
-    "relativePath": "Script/src/core/net/CmdHandlerFunction.js"
-  },
-  "cfd06505-74df-44ee-ba47-f14aca287be9": {
-    "asset": 1542273655007,
-    "meta": 1542273658663,
-    "relativePath": "Script/src/core/net/DefaultCmdHandler.js"
-  },
-  "b382e936-e8b6-4541-93b9-f17cbfdaf46f": {
-    "asset": 1542273655001,
-    "meta": 1542273658679,
-    "relativePath": "Script/src/core/net/GameCmdHandler.js"
-  },
-  "da502991-2323-40a6-9ed6-85424d5e5b45": {
-    "asset": 1542273654997,
-    "meta": 1542273658748,
-    "relativePath": "Script/src/core/net/GameCmdHandlerManager.js"
-  },
-  "61df3752-83f0-4b38-96fd-9f38442ed8c6": {
-    "asset": 1542273655030,
-    "meta": 1542273658754,
-    "relativePath": "Script/src/core/net/Http.js"
-  },
-  "7e8cff81-376f-4896-aeaa-b04807d3bf97": {
-    "asset": 1542273655033,
-    "meta": 1542273658804,
-    "relativePath": "Script/src/core/net/NetEventCode.js"
-  },
-  "21f2b3b7-bef0-4c03-b1be-a58534f98a16": {
-    "asset": 1542273655049,
-    "meta": 1542273658809,
-    "relativePath": "Script/src/core/net/NetRouter.js"
-  },
-  "3614fead-50ca-4c87-9fda-2e281c6a6406": {
-    "asset": 1542273655051,
-    "meta": 1542273658843,
-    "relativePath": "Script/src/core/service/GameService.js"
-  },
-  "c653d173-1783-4de4-92d8-274d0ca01cc6": {
-    "asset": 1542273655064,
-    "meta": 1542273658852,
-    "relativePath": "Script/src/game/common/ConfigManager.js"
-  },
-  "f12c2946-6fa9-402f-bf76-a1f4a9485ebb": {
-    "asset": 1542273655153,
-    "meta": 1542273658896,
-    "relativePath": "Script/src/game/common/data/Base.js"
-  },
-  "b3633f1d-5921-4453-a2d4-3d2f735c9fea": {
-    "asset": 1542273655109,
-    "meta": 1542273658912,
-    "relativePath": "Script/src/game/common/data/GameData.js"
-  },
-  "9c42013f-3acb-44c5-8940-993be7214bf0": {
-    "asset": 1542273655118,
-    "meta": 1542273658963,
-    "relativePath": "Script/src/game/common/data/GameDataManager.js"
-  },
-  "27f53ef2-8453-4e36-8be3-a5afa9f432e8": {
-    "asset": 1542273655114,
-    "meta": 1542273659005,
-    "relativePath": "Script/src/game/common/data/UserData.js"
-  },
-  "104bad0a-000e-411e-b101-b9633620dd75": {
-    "asset": 1542273655150,
-    "meta": 1542273659032,
-    "relativePath": "Script/src/game/common/GameEngine.js"
-  },
-  "6a63b903-9d43-4089-8068-1eb6d97cec18": {
-    "asset": 1542273655066,
-    "meta": 1542273659107,
-    "relativePath": "Script/src/game/common/helper/GameSceneHepler.js"
-  },
-  "66de782b-4920-4163-9c17-2792dcf82980": {
-    "asset": 1542273655168,
-    "meta": 1542273659156,
-    "relativePath": "Script/src/game/common/helper/ImageHelper.js"
-  },
-  "d77819f8-337d-4982-89ad-b368bd648b2d": {
-    "asset": 1542273655188,
-    "meta": 1542273659174,
-    "relativePath": "Script/src/game/common/model/RandomAry.js"
-  },
-  "c5dc9d69-f6c8-42bc-9400-e531f8d40809": {
-    "asset": 1542273655133,
-    "meta": 1542273659272,
-    "relativePath": "Script/src/game/common/script/TipsScript.js"
-  },
-  "75122906-ce12-4704-a2f3-7227891c6e9e": {
-    "asset": 1542273655100,
-    "meta": 1542273659347,
-    "relativePath": "Script/src/game/common/service/LoginService.js"
-  },
-  "03a82ca5-af63-4500-ae03-b0dda3856983": {
-    "asset": 1542273655204,
-    "meta": 1542273659427,
-    "relativePath": "Script/src/game/game/GameGrid.js"
-  },
-  "3009a629-7889-4dd2-ae99-183a53517630": {
-    "asset": 1542273655321,
-    "meta": 1542273659967,
-    "relativePath": "Script/src/game/loading/LoadingScene.js"
-  },
-  "fab89146-579d-4e9b-9845-516ae60eac57": {
-    "asset": 1542273655336,
-    "meta": 1542273660066,
-    "relativePath": "Script/src/game/myinfo/MyinfoScene.js"
-  },
-  "240d0ec5-abd3-47ce-9f77-dfd2ac8280e0": {
-    "asset": 1542273655346,
-    "meta": 1542273660143,
-    "relativePath": "Script/src/game/settle/RedpackScene.js"
-  },
-  "7a80da82-d2db-4fb5-a891-eeffe5c62b0a": {
-    "asset": 1542273655360,
-    "meta": 1542273660570,
-    "relativePath": "Script/src/game/settle/SettleScene.js"
-  },
-  "933aa648-9e1b-41dd-8ffb-3792ac528312": {
-    "asset": 1542273655375,
-    "meta": 1542273660610,
-    "relativePath": "Script/src/utils/NumberUtils.js"
-  },
-  "d5483c93-07d9-4b0b-b26c-dde7f0a847c5": {
-    "asset": 1542273655070,
-    "meta": 1542273660794,
-    "relativePath": "Script/src/utils/ServerUrls.js"
-  },
-  "75775579-a19f-499f-b4bf-59b06330c653": {
-    "asset": 1542273655387,
-    "meta": 1542273660840,
-    "relativePath": "Script/src/utils/SplitUtils.js"
-  },
-  "cf7e0070-cc97-485a-9503-d076df6d75f5": {
-    "asset": 1542273654859,
-    "meta": 1542273660905,
-    "relativePath": "Script/src/utils/StringUtils.js"
-  },
-  "b70c1e9c-6f74-418c-8997-330ee1f5ec0e": {
-    "asset": 1542273655171,
-    "meta": 1542273660954,
-    "relativePath": "Script/src/utils/Tools.js"
-  },
-  "2c7d5394-d0f4-40e8-8aa1-782fe0346023": {
-    "asset": 1542273655401,
-    "meta": 1542273660982,
-    "relativePath": "Script/src/utils/UrlUtils.js"
-  },
-  "13600729-4b47-4d02-8050-e467ee23ebee": {
-    "asset": 1542273655192,
-    "meta": 1542273660982,
-    "relativePath": "Script/src/utils/Vec2.js"
-  },
   "fe977f0a-281a-451a-8b73-95ad8d59c35e": {
     "asset": 1542273800515,
     "meta": 1542273802002,
     "relativePath": "resources/jsons/idiom.json"
   },
+  "7d83ef98-0aa5-442c-98de-7f56ae4d4576": {
+    "asset": 1542277845231,
+    "meta": 1542277847504,
+    "relativePath": "Script/src/core/common/Audio.js"
+  },
+  "8c94a64c-80bc-4e6c-adeb-87f02d40fcc0": {
+    "asset": 1542277845234,
+    "meta": 1542277847587,
+    "relativePath": "Script/src/core/common/LocalStorage.js"
+  },
+  "e402864b-9e49-49e3-975f-fabf7f03b039": {
+    "asset": 1542277845216,
+    "meta": 1542277847642,
+    "relativePath": "Script/src/core/common/ResourcesManager.js"
+  },
+  "fa494855-ed41-4f70-98d1-4d1ab13575d1": {
+    "asset": 1542277845266,
+    "meta": 1542277847659,
+    "relativePath": "Script/src/core/component/CommonScene.js"
+  },
+  "14da2992-e62a-4a12-8472-1a6e3d877291": {
+    "asset": 1542277845271,
+    "meta": 1542277847686,
+    "relativePath": "Script/src/core/component/GameComponent.js"
+  },
+  "5dc3089f-4c63-49e6-9eda-c77bc6cd6c9c": {
+    "asset": 1542277845279,
+    "meta": 1542277847710,
+    "relativePath": "Script/src/core/component/GameScrollView.js"
+  },
+  "be211da9-349d-4a9b-a525-9e07084d6592": {
+    "asset": 1542277845284,
+    "meta": 1542277847742,
+    "relativePath": "Script/src/core/event/DefaultGameEvent.js"
+  },
+  "d01d27ca-c43b-4ea8-8772-419a0a89a98d": {
+    "asset": 1542277845291,
+    "meta": 1542277847746,
+    "relativePath": "Script/src/core/event/DefaultGameListener.js"
+  },
+  "9e16e84a-bf6d-48d9-a5b6-1d4f636b15bb": {
+    "asset": 1542277845286,
+    "meta": 1542277847765,
+    "relativePath": "Script/src/core/event/EventListenerFunction.js"
+  },
+  "32a302c4-4733-40be-8df8-10cc8a6b914e": {
+    "asset": 1542277845238,
+    "meta": 1542277847771,
+    "relativePath": "Script/src/core/event/GameEvent.js"
+  },
+  "a41d2f35-7025-4d88-99f6-00f6d9dc9522": {
+    "asset": 1542277845241,
+    "meta": 1542277847798,
+    "relativePath": "Script/src/core/event/GameEventListener.js"
+  },
+  "7d0b2c10-e53b-483f-aa68-014d165e9560": {
+    "asset": 1542277845257,
+    "meta": 1542277847820,
+    "relativePath": "Script/src/core/event/GameEventListeners.js"
+  },
+  "4e5bc25a-4482-4d02-a648-651ec8e51bb6": {
+    "asset": 1542277845251,
+    "meta": 1542277847834,
+    "relativePath": "Script/src/core/event/GameEventTransmitter.js"
+  },
+  "a07f0e31-72cc-44c9-be97-fb006f31dbc6": {
+    "asset": 1542277845292,
+    "meta": 1542277847865,
+    "relativePath": "Script/src/core/net/CmdHandlerFunction.js"
+  },
+  "cfd06505-74df-44ee-ba47-f14aca287be9": {
+    "asset": 1542277845309,
+    "meta": 1542277847886,
+    "relativePath": "Script/src/core/net/DefaultCmdHandler.js"
+  },
+  "b382e936-e8b6-4541-93b9-f17cbfdaf46f": {
+    "asset": 1542277845305,
+    "meta": 1542277847896,
+    "relativePath": "Script/src/core/net/GameCmdHandler.js"
+  },
+  "da502991-2323-40a6-9ed6-85424d5e5b45": {
+    "asset": 1542277845301,
+    "meta": 1542277847959,
+    "relativePath": "Script/src/core/net/GameCmdHandlerManager.js"
+  },
+  "61df3752-83f0-4b38-96fd-9f38442ed8c6": {
+    "asset": 1542277845337,
+    "meta": 1542277847966,
+    "relativePath": "Script/src/core/net/Http.js"
+  },
+  "7e8cff81-376f-4896-aeaa-b04807d3bf97": {
+    "asset": 1542277845341,
+    "meta": 1542277848053,
+    "relativePath": "Script/src/core/net/NetEventCode.js"
+  },
+  "21f2b3b7-bef0-4c03-b1be-a58534f98a16": {
+    "asset": 1542277845361,
+    "meta": 1542277848063,
+    "relativePath": "Script/src/core/net/NetRouter.js"
+  },
+  "3614fead-50ca-4c87-9fda-2e281c6a6406": {
+    "asset": 1542277845364,
+    "meta": 1542277848156,
+    "relativePath": "Script/src/core/service/GameService.js"
+  },
+  "c653d173-1783-4de4-92d8-274d0ca01cc6": {
+    "asset": 1542277845376,
+    "meta": 1542277848169,
+    "relativePath": "Script/src/game/common/ConfigManager.js"
+  },
+  "f12c2946-6fa9-402f-bf76-a1f4a9485ebb": {
+    "asset": 1542277845620,
+    "meta": 1542277848256,
+    "relativePath": "Script/src/game/common/data/Base.js"
+  },
+  "b3633f1d-5921-4453-a2d4-3d2f735c9fea": {
+    "asset": 1542277845455,
+    "meta": 1542277848275,
+    "relativePath": "Script/src/game/common/data/GameData.js"
+  },
+  "9c42013f-3acb-44c5-8940-993be7214bf0": {
+    "asset": 1542277845473,
+    "meta": 1542277848300,
+    "relativePath": "Script/src/game/common/data/GameDataManager.js"
+  },
+  "27f53ef2-8453-4e36-8be3-a5afa9f432e8": {
+    "asset": 1542277845464,
+    "meta": 1542277848342,
+    "relativePath": "Script/src/game/common/data/UserData.js"
+  },
+  "104bad0a-000e-411e-b101-b9633620dd75": {
+    "asset": 1542277845612,
+    "meta": 1542277848361,
+    "relativePath": "Script/src/game/common/GameEngine.js"
+  },
+  "6a63b903-9d43-4089-8068-1eb6d97cec18": {
+    "asset": 1542277845378,
+    "meta": 1542277848424,
+    "relativePath": "Script/src/game/common/helper/GameSceneHepler.js"
+  },
+  "66de782b-4920-4163-9c17-2792dcf82980": {
+    "asset": 1542277845681,
+    "meta": 1542277848488,
+    "relativePath": "Script/src/game/common/helper/ImageHelper.js"
+  },
   "ae8dda00-8480-4e5c-a929-9a09af63bfd5": {
-    "asset": 1542275029858,
-    "meta": 1542275917731,
+    "asset": 1542277845821,
+    "meta": 1542277848571,
     "relativePath": "Script/src/game/common/model/RecordGrid.js"
   },
+  "c5dc9d69-f6c8-42bc-9400-e531f8d40809": {
+    "asset": 1542277845513,
+    "meta": 1542277848619,
+    "relativePath": "Script/src/game/common/script/TipsScript.js"
+  },
+  "75122906-ce12-4704-a2f3-7227891c6e9e": {
+    "asset": 1542277845419,
+    "meta": 1542277848686,
+    "relativePath": "Script/src/game/common/service/LoginService.js"
+  },
   "3e51016d-d842-42d8-a95c-e3ffb316d3c7": {
-    "asset": 1542274991906,
-    "meta": 1542275917756,
+    "asset": 1542277845922,
+    "meta": 1542277848744,
     "relativePath": "Script/src/game/game/ChooseView.js"
   },
+  "03a82ca5-af63-4500-ae03-b0dda3856983": {
+    "asset": 1542277845807,
+    "meta": 1542277848789,
+    "relativePath": "Script/src/game/game/GameGrid.js"
+  },
   "5ab3a914-1231-4a71-bbe3-63f49e193a70": {
-    "asset": 1542275915646,
-    "meta": 1542275917782,
+    "asset": 1542277845859,
+    "meta": 1542277848812,
     "relativePath": "Script/src/game/game/GameManager.js"
   },
   "97be3ef2-5953-4964-860e-a648c5fe4058": {
-    "asset": 1542275884839,
-    "meta": 1542275917826,
+    "asset": 1542277845871,
+    "meta": 1542277848900,
     "relativePath": "Script/src/game/game/GameResult.js"
   },
   "55ba82a3-b236-4690-adbb-afd926249335": {
-    "asset": 1542275899215,
-    "meta": 1542275917910,
+    "asset": 1542277845842,
+    "meta": 1542277849042,
     "relativePath": "Script/src/game/game/GameScene.js"
   },
   "a33454b1-70fd-4ea2-93e1-4acdf53a51e0": {
-    "asset": 1542276016072,
-    "meta": 1542276018112,
+    "asset": 1542277845892,
+    "meta": 1542277849624,
     "relativePath": "Script/src/game/game/GameTable.js"
+  },
+  "3009a629-7889-4dd2-ae99-183a53517630": {
+    "asset": 1542277845956,
+    "meta": 1542277849709,
+    "relativePath": "Script/src/game/loading/LoadingScene.js"
+  },
+  "fab89146-579d-4e9b-9845-516ae60eac57": {
+    "asset": 1542277845970,
+    "meta": 1542277849815,
+    "relativePath": "Script/src/game/myinfo/MyinfoScene.js"
+  },
+  "240d0ec5-abd3-47ce-9f77-dfd2ac8280e0": {
+    "asset": 1542277845987,
+    "meta": 1542277849886,
+    "relativePath": "Script/src/game/settle/RedpackScene.js"
+  },
+  "7a80da82-d2db-4fb5-a891-eeffe5c62b0a": {
+    "asset": 1542277846012,
+    "meta": 1542277849948,
+    "relativePath": "Script/src/game/settle/SettleScene.js"
+  },
+  "933aa648-9e1b-41dd-8ffb-3792ac528312": {
+    "asset": 1542277846033,
+    "meta": 1542277849963,
+    "relativePath": "Script/src/utils/NumberUtils.js"
+  },
+  "d5483c93-07d9-4b0b-b26c-dde7f0a847c5": {
+    "asset": 1542277845383,
+    "meta": 1542277850000,
+    "relativePath": "Script/src/utils/ServerUrls.js"
+  },
+  "75775579-a19f-499f-b4bf-59b06330c653": {
+    "asset": 1542277846044,
+    "meta": 1542277850022,
+    "relativePath": "Script/src/utils/SplitUtils.js"
+  },
+  "cf7e0070-cc97-485a-9503-d076df6d75f5": {
+    "asset": 1542277845148,
+    "meta": 1542277850042,
+    "relativePath": "Script/src/utils/StringUtils.js"
+  },
+  "b70c1e9c-6f74-418c-8997-330ee1f5ec0e": {
+    "asset": 1542277845700,
+    "meta": 1542277850060,
+    "relativePath": "Script/src/utils/Tools.js"
+  },
+  "2c7d5394-d0f4-40e8-8aa1-782fe0346023": {
+    "asset": 1542277846055,
+    "meta": 1542277850088,
+    "relativePath": "Script/src/utils/UrlUtils.js"
+  },
+  "13600729-4b47-4d02-8050-e467ee23ebee": {
+    "asset": 1542277845788,
+    "meta": 1542277850089,
+    "relativePath": "Script/src/utils/Vec2.js"
+  },
+  "d77819f8-337d-4982-89ad-b368bd648b2d": {
+    "asset": 1542277945768,
+    "meta": 1542277952968,
+    "relativePath": "Script/src/game/common/model/RandomAry.js"
   }
 }
