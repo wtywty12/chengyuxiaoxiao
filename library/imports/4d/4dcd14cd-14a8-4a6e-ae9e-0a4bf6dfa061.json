@@ -806,7 +806,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "btn_fanhui",
+    "_name": "btn_back",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -895,7 +895,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "btn_shijian",
+    "_name": "btn_time",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -1074,7 +1074,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "btn_tishi",
+    "_name": "btn_share",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -1192,6 +1192,15 @@
     },
     "chooseView": {
       "__id__": 16
+    },
+    "btn_time": {
+      "__id__": 21
+    },
+    "btn_back": {
+      "__id__": 19
+    },
+    "btn_share": {
+      "__id__": 25
     },
     "_id": "90d3+LGaJCf7lgJlkcliV5"
   }

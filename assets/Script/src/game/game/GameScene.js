@@ -30,6 +30,9 @@ var GameScene = (function (_super) {
         _this.title = null;
         _this.gameTable = null;
         _this.chooseView = null;
+        _this.btn_time = null;
+        _this.btn_back = null;
+        _this.btn_share = null;
         _this.chooseView = new ChooseView_1.ChooseView();
         _this.gameTable = new GameTable_1.GameTable();
         return _this;
@@ -43,8 +46,24 @@ var GameScene = (function (_super) {
         this.chooseView.loadFinish();
         this.gameTable.setChooseView(this.chooseView);
         this.gameTable.loadFinish();
+        this.btn_back.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
     };
-    GameScene.prototype.displayResult = function (isSuccess) {
+    GameScene.prototype.onTouchEventListener = function (event) {
+        var eventType = event.type;
+        var eventName = event.target._name;
+        if (eventType != "touchend") {
+            cc.log("EventType is error, it is ", eventType);
+            return;
+        }
+        switch (eventName) {
+            case "btn_back":
+                cc.director.loadScene("LoadingScene");
+                break;
+            case "":
+                break;
+            default:
+                break;
+        }
     };
     __decorate([
         property(cc.Label)
@@ -55,6 +74,15 @@ var GameScene = (function (_super) {
     __decorate([
         property(ChooseView_1.ChooseView)
     ], GameScene.prototype, "chooseView", void 0);
+    __decorate([
+        property(cc.Node)
+    ], GameScene.prototype, "btn_time", void 0);
+    __decorate([
+        property(cc.Node)
+    ], GameScene.prototype, "btn_back", void 0);
+    __decorate([
+        property(cc.Node)
+    ], GameScene.prototype, "btn_share", void 0);
     GameScene = __decorate([
         ccclass()
     ], GameScene);
