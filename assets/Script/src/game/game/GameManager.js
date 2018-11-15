@@ -7,16 +7,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var ccclass = cc._decorator.ccclass;
-var GameManager = (function () {
-    function GameManager() {
+var GameManagerClass = (function () {
+    function GameManagerClass() {
+        this.gameTable = null;
+        this.chooseView = null;
+        this.gameScene = null;
     }
-    GameManager.prototype.onGameStart = function () {
+    GameManagerClass_1 = GameManagerClass;
+    Object.defineProperty(GameManagerClass, "instance", {
+        get: function () {
+            if (this._instance == null) {
+                this._instance = new GameManagerClass_1();
+            }
+            return this._instance;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    GameManagerClass.prototype.setView = function (gameScene, gameTable, chooseView) {
+        this.gameTable = gameTable;
+        this.chooseView = chooseView;
+        this.gameScene = gameScene;
     };
-    GameManager.prototype.onGameOver = function () {
+    GameManagerClass.prototype.onGameStart = function () {
+        this.chooseView.loadFinish();
+        this.gameTable.setChooseView(this.chooseView);
+        this.gameTable.loadFinish();
     };
-    GameManager = __decorate([
+    GameManagerClass.prototype.onGameOver = function () {
+        this.gameTable.onGameOver();
+        this.chooseView.onGameOver();
+        this.gameScene.resetCDTime();
+        this.onGameStart();
+    };
+    var GameManagerClass_1;
+    GameManagerClass = GameManagerClass_1 = __decorate([
         ccclass()
-    ], GameManager);
-    return GameManager;
+    ], GameManagerClass);
+    return GameManagerClass;
 }());
-exports.GameManager = GameManager;
+exports.GameManagerClass = GameManagerClass;
+exports.GameManager = GameManagerClass.instance;

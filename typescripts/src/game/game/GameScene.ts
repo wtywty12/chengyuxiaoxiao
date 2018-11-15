@@ -33,21 +33,19 @@ export class GameScene extends cc.Component {
     private btn_share: cc.Node = null;
 
     /**
-     * 游戏管理器
+     * 定时器函数
      */
-    private gameManager: GameManager = null;
+    private timeCallback: any = null;
 
     /** 构造函数 */
     protected constructor() {
         super();
-        this.gameManager = new GameManager();
-        this.chooseView = new ChooseView();
-        this.gameTable = new GameTable();
     }
 
     /** 类加载 */
     protected onLoad() {
-         this.loadFinish();
+        GameManager.setView(this, this.gameTable, this.chooseView);
+        this.loadFinish();
     }
 
     /** 类销毁 */
@@ -56,10 +54,7 @@ export class GameScene extends cc.Component {
     }
 
     private loadFinish(): void {
-        this.gameManager.onGameStart();
-        this.chooseView.loadFinish();
-        this.gameTable.setChooseView(this.chooseView);
-        this.gameTable.loadFinish();
+        GameManager.onGameStart();
 
         this.btn_back.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
         this.btn_share.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
@@ -81,7 +76,7 @@ export class GameScene extends cc.Component {
                 break;
             case "btn_share":
                 cc.log("分享游戏");
-                this.gameManager.onGameOver();
+                GameManager.onGameOver();
                 break;
             default:
                 break;
@@ -94,16 +89,23 @@ export class GameScene extends cc.Component {
     private createCDTime() {
         var totalTime = 60;
         var nowTime = 60;
-        var timeCallback = function (dt: number) {
+        this.timeCallback = function (dt: number) {
             nowTime--;
             this.lbl_time.string = nowTime.toString();
             if (nowTime == 0) {
-                this.gameManager.onGameOver();
-                this.unschedule(timeCallback);
+                GameManager.onGameOver();
+                this.unschedule(this.timeCallback);
             }
           }
-        this.schedule(timeCallback, 1);
+        this.schedule(this.timeCallback, 1);
     }
 
+    /**
+     * 重置定时器
+     */
+    public resetCDTime() {
+        this.unschedule(this.timeCallback);
+        this.createCDTime();
+    }
     
 }

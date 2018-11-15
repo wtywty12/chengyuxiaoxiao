@@ -81,4 +81,8 @@ export class GameGrid extends cc.Component {
     public getGridString(): string {
         return this.gridText.string;
     }
+
+    public removeSelf() {
+        this.node.removeFromParent();
+    }
 }

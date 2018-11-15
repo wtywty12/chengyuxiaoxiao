@@ -33,28 +33,20 @@ var GameScene = (function (_super) {
         _this.lbl_time = null;
         _this.btn_back = null;
         _this.btn_share = null;
-        _this.gameManager = null;
-        _this.gameManager = new GameManager_1.GameManager();
-        _this.chooseView = new ChooseView_1.ChooseView();
-        _this.gameTable = new GameTable_1.GameTable();
+        _this.timeCallback = null;
         return _this;
     }
     GameScene.prototype.onLoad = function () {
+        GameManager_1.GameManager.setView(this, this.gameTable, this.chooseView);
         this.loadFinish();
     };
     GameScene.prototype.onDestroy = function () {
     };
     GameScene.prototype.loadFinish = function () {
-        this.gameManager.onGameStart();
-        this.chooseView.loadFinish();
-        this.gameTable.setChooseView(this.chooseView);
-        this.gameTable.loadFinish();
+        GameManager_1.GameManager.onGameStart();
         this.btn_back.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
         this.btn_share.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
-<<<<<<< HEAD
         this.createCDTime();
-=======
->>>>>>> e515d6faa6f6ab0e60387463434ecb2388fa31df
     };
     GameScene.prototype.onTouchEventListener = function (event) {
         var eventType = event.type;
@@ -69,10 +61,7 @@ var GameScene = (function (_super) {
                 break;
             case "btn_share":
                 cc.log("分享游戏");
-<<<<<<< HEAD
-                this.gameManager.onGameOver();
-=======
->>>>>>> e515d6faa6f6ab0e60387463434ecb2388fa31df
+                GameManager_1.GameManager.onGameOver();
                 break;
             default:
                 break;
@@ -81,15 +70,19 @@ var GameScene = (function (_super) {
     GameScene.prototype.createCDTime = function () {
         var totalTime = 60;
         var nowTime = 60;
-        var timeCallback = function (dt) {
+        this.timeCallback = function (dt) {
             nowTime--;
             this.lbl_time.string = nowTime.toString();
             if (nowTime == 0) {
-                this.gameManager.onGameOver();
-                this.unschedule(timeCallback);
+                GameManager_1.GameManager.onGameOver();
+                this.unschedule(this.timeCallback);
             }
         };
-        this.schedule(timeCallback, 1);
+        this.schedule(this.timeCallback, 1);
+    };
+    GameScene.prototype.resetCDTime = function () {
+        this.unschedule(this.timeCallback);
+        this.createCDTime();
     };
     __decorate([
         property(GameTable_1.GameTable)

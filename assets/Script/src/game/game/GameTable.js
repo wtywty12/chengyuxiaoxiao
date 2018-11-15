@@ -25,8 +25,6 @@ var GameResult_1 = require("./GameResult");
 var RecordGrid_1 = require("../common/model/RecordGrid");
 var ResourcesManager_1 = require("../../core/common/ResourcesManager");
 var RandomAry_1 = require("./../common/model/RandomAry");
-var GameEngine_1 = require("../common/GameEngine");
-var GameSceneHepler_1 = require("../common/helper/GameSceneHepler");
 var GameTable = (function (_super) {
     __extends(GameTable, _super);
     function GameTable() {
@@ -78,8 +76,6 @@ var GameTable = (function (_super) {
         var gameGrid = node.getComponent("GameGrid");
         gameGrid.setGridString(this.produceAry[index]);
         node.on(cc.Node.EventType.TOUCH_END, function (event) {
-            GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.SETTLE);
-            return;
             var str = this.produceAry[index];
             if (this.checkGridMap(gameGrid) == false) {
                 cc.log("已经存在");
@@ -100,7 +96,7 @@ var GameTable = (function (_super) {
             }
         }, this);
         if (this.node == null || gameGrid == null || gameGrid.node == null) {
-            cc.log("Error in createGameGrid");
+            cc.log("Error in GameTable createGameGrid");
             return;
         }
         this.node.addChild(gameGrid.node);
@@ -114,6 +110,8 @@ var GameTable = (function (_super) {
         return isOk;
     };
     GameTable.prototype.onGameOver = function () {
+        this.node.removeAllChildren();
+        RecordGrid_1.RecordGrid.onGameOver();
     };
     GameTable = __decorate([
         ccclass()

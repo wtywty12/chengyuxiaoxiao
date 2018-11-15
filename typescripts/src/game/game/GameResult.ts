@@ -2,10 +2,12 @@
  * 此类用于游戏结算
  */
 import {GameGrid} from "./GameGrid";
+import {Tools} from "../../utils/Tools";
 import {RandomAry} from "./../common/model/RandomAry";
 import {GameTable} from "./GameTable";
 import {ChooseView} from "./ChooseView";
-import { RecordGrid } from "../common/model/RecordGrid";
+import {GameManager} from "./GameManager";
+import {RecordGrid } from "../common/model/RecordGrid";
 
 export class GameResult{
      /** 随机成语字 */
@@ -58,6 +60,10 @@ export class GameResult{
         cc.log("判定成功");
         /** 清理上方成语 */
         this.clearData();
+        /** 判定胜利 */
+        if (Tools.getMapLength(RecordGrid.getGameTableGridMap()) == 64) {
+            GameManager.onGameOver();
+        };
     }
 
      /**
