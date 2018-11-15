@@ -51,7 +51,10 @@ var GameScene = (function (_super) {
         this.gameTable.loadFinish();
         this.btn_back.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
         this.btn_share.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
+<<<<<<< HEAD
         this.createCDTime();
+=======
+>>>>>>> e515d6faa6f6ab0e60387463434ecb2388fa31df
     };
     GameScene.prototype.onTouchEventListener = function (event) {
         var eventType = event.type;
@@ -66,7 +69,10 @@ var GameScene = (function (_super) {
                 break;
             case "btn_share":
                 cc.log("分享游戏");
+<<<<<<< HEAD
                 this.gameManager.onGameOver();
+=======
+>>>>>>> e515d6faa6f6ab0e60387463434ecb2388fa31df
                 break;
             default:
                 break;

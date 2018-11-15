@@ -48,7 +48,7 @@ export class SettleScene extends cc.Component {
     }
     //点击存入红包
     private onClickDeposit():void{
-
+        GameEngine.shareGame();
     }
     //点击查看我的奖励
     private onClickMyAward():void{

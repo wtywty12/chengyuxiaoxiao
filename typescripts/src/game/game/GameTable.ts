@@ -6,6 +6,9 @@ import {RecordGrid} from "../common/model/RecordGrid";
 import {ResourcesManager} from "../../core/common/ResourcesManager";
 import {RandomAry} from "./../common/model/RandomAry";
 import {ChooseView} from "./../game/ChooseView";
+import { GameScene } from "./GameScene";
+import { GameEngine } from "../common/GameEngine";
+import { GameSceneHepler } from "../common/helper/GameSceneHepler";
 
 @ccclass()
 export class GameTable extends cc.Component {
@@ -88,6 +91,10 @@ export class GameTable extends cc.Component {
         gameGrid.setGridString(this.produceAry[index]);
         node.on(cc.Node.EventType.TOUCH_END,function(event: any)
         {
+            // GameEngine.changeScene(GameSceneHepler.SETTLE);
+            // return;
+
+            
             let str = this.produceAry[index];
             if (this.checkGridMap(gameGrid) == false) {
                 cc.log("已经存在");
@@ -136,6 +143,6 @@ export class GameTable extends cc.Component {
      * 游戏结束
      */
     private onGameOver() {
-        
+
     }
 }

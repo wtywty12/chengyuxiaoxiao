@@ -18,6 +18,16 @@ var GameData = function () {
         this._topscore = 0;
         this._gametime = 0;
     };
+    Object.defineProperty(GameData.prototype, "playerId", {
+        get: function get() {
+            return this._playerId;
+        },
+        set: function set(_playerId) {
+            this._playerId = _playerId;
+        },
+        enumerable: true,
+        configurable: true
+    });
     Object.defineProperty(GameData.prototype, "level", {
         get: function get() {
             return this._level;

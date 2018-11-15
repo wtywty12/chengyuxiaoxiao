@@ -58,7 +58,9 @@ var SettleScene = function (_super) {
         this.btn_back.node.on(cc.Node.EventType.TOUCH_END, this.onClickBack);
     };
     SettleScene.prototype.onDestroy = function () {};
-    SettleScene.prototype.onClickDeposit = function () {};
+    SettleScene.prototype.onClickDeposit = function () {
+        GameEngine_1.GameEngine.shareGame();
+    };
     SettleScene.prototype.onClickMyAward = function () {
         GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.MYINFO);
     };

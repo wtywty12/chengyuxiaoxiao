@@ -5,12 +5,14 @@
  */
 export enum GameSceneHepler {
     LOADING = "LoadingScene",
-    LOGIN = "login",
-    MAIN = "main",
+    // LOGIN = "login",
+    // MAIN = "main",
     GAME = "GameScene",
-    SINGLE_GAME = "single-game",
-    MULTIPLE_GAME = "multiple-game",
+    // SINGLE_GAME = "single-game",
+    // MULTIPLE_GAME = "multiple-game",
     SETTLE = "SettleScene",
-    MYINFO = "MyInfoScene",
-    RANK = "RANK",
+    MYINFO = "MyinfoScene",
+    RANK = "RankScene",
+    READPACK = "RedpackScene",
+    DEPOSIT = "DepositScene",
 }

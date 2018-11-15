@@ -48,11 +48,11 @@ export class SettleScene extends cc.Component {
     }
     //点击拆红包
     private onClickRedPack():void{
-
+        GameEngine.changeScene(GameSceneHepler.READPACK)
     }
     //点击炫耀一下
     private onClickShare():void{
-
+        GameEngine.shareGame();
     }
     //点击继续战斗
     private onClickContinue():void{

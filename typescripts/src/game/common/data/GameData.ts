@@ -14,6 +14,8 @@ export class GameData {
     private _level : number;
     //游戏过关市场
     private _gametime : number;
+    //玩家id
+    private _playerId : number;
 
 
 
@@ -29,6 +31,12 @@ export class GameData {
         this._score = 0;
         this._topscore = 0;
         this._gametime = 0;
+    }
+    get playerId(): number{
+        return this._playerId;
+    }
+    set playerId(_playerId :number) {
+        this._playerId = _playerId;
     }
     get level(): number{
         return this._level;

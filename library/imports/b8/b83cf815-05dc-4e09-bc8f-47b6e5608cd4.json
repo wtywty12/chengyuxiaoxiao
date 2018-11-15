@@ -42,8 +42,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.25390625,
-      "y": 0.25390625,
+      "x": 0.32049368002846734,
+      "y": 0.32049368002846734,
       "z": 1
     },
     "_quat": {
@@ -1681,14 +1681,14 @@
     "_id": "55qM2Cx9lLJLPrg7LJxxfN"
   },
   {
-    "__type__": "7a80dqC0ttPtaiR7v/lxisK",
+    "__type__": "240d07Fq9NHzp9339KsgoDg",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 2
     },
     "_enabled": true,
-    "btn_redpack": {
+    "btn_deposit": {
       "__id__": 27
     },
     "btn_back": {
@@ -1697,12 +1697,12 @@
     "btn_continue": {
       "__id__": 32
     },
-    "btn_share": {
+    "btn_myaward": {
       "__id__": 18
     },
-    "lbl_score": {
+    "lbl_price": {
       "__id__": 20
     },
-    "_id": "84o+gWZUhFlIx0qboVY0VI"
+    "_id": "7fEHi4E9BHf7SBQcec/HSE"
   }
 ]

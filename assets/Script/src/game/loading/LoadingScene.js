@@ -90,6 +90,17 @@ var LoadingScene = (function (_super) {
                         return [4, ResourcesManager_1.ResourcesManager.load()];
                     case 2:
                         _a.sent();
+                        this.btn_myinfo.node.on(cc.Node.EventType.TOUCH_END, function () {
+                            GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.MYINFO);
+                        });
+                        this.btn_rank.node.on(cc.Node.EventType.TOUCH_END, function () {
+                            GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.RANK);
+                        });
+                        this.btn_music.node.on(cc.Node.EventType.TOUCH_END, function () {
+                            if (GameEngine_1.GameEngine.audio.getState() == cc.audioEngine.AudioState.PAUSED) {
+                            }
+                            else { }
+                        });
                         this.setProgress(100);
                         return [4, this.loadFinish()];
                     case 3:
