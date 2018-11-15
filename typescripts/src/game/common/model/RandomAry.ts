@@ -110,4 +110,13 @@ export class RandomAry{
         return produceArray;
     }
 
+    /**
+     * 重新生成散列数组
+     */
+    public resetRandomAry() {
+        this.randomIdiom = [];
+        this.produceArray = [];
+        this.init();
+    }
+
 }

@@ -82,6 +82,11 @@ var RandomAry = function () {
         }
         return produceArray;
     };
+    RandomAry.prototype.resetRandomAry = function () {
+        this.randomIdiom = [];
+        this.produceArray = [];
+        this.init();
+    };
     return RandomAry;
 }();
 exports.RandomAry = RandomAry;

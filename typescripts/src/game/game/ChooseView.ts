@@ -66,6 +66,10 @@ export class ChooseView extends cc.Component {
             RecordGrid.displayGrid(str, vec);
 
         },this);
+        if (this.node == null || gameGrid == null || gameGrid.node == null) {
+            cc.log("Error in ChooseView createGameGrid");
+            return;
+        }
         this.node.addChild(gameGrid.node);
         this.gridAry.push(gameGrid);
     }
@@ -111,5 +115,16 @@ export class ChooseView extends cc.Component {
             let gird = this.gridAry[i];
             gird.setGridString("");
         }
+    }
+
+    /**
+     * 游戏结束
+     */
+    public onGameOver() {
+        /** 清理格子 */
+        this.gridAry.forEach(value => {
+            value.removeSelf();
+        })
+        this.gridAry = [];
     }
 }

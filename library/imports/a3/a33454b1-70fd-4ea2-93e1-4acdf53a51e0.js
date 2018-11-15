@@ -109,7 +109,7 @@ var GameTable = function (_super) {
             }
         }, this);
         if (this.node == null || gameGrid == null || gameGrid.node == null) {
-            cc.log("Error in createGameGrid");
+            cc.log("Error in GameTable createGameGrid");
             return;
         }
         this.node.addChild(gameGrid.node);
@@ -121,6 +121,10 @@ var GameTable = function (_super) {
             isOk = false;
         }
         return isOk;
+    };
+    GameTable.prototype.onGameOver = function () {
+        this.node.removeAllChildren();
+        RecordGrid_1.RecordGrid.onGameOver();
     };
     GameTable = __decorate([ccclass()], GameTable);
     return GameTable;

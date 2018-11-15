@@ -79,6 +79,10 @@ var ChooseView = function (_super) {
             this.gridAry[index].setGridString("");
             RecordGrid_1.RecordGrid.displayGrid(str, vec);
         }, this);
+        if (this.node == null || gameGrid == null || gameGrid.node == null) {
+            cc.log("Error in ChooseView createGameGrid");
+            return;
+        }
         this.node.addChild(gameGrid.node);
         this.gridAry.push(gameGrid);
     };
@@ -110,6 +114,12 @@ var ChooseView = function (_super) {
             var gird = this.gridAry[i];
             gird.setGridString("");
         }
+    };
+    ChooseView.prototype.onGameOver = function () {
+        this.gridAry.forEach(function (value) {
+            value.removeSelf();
+        });
+        this.gridAry = [];
     };
     ChooseView = __decorate([ccclass()], ChooseView);
     return ChooseView;

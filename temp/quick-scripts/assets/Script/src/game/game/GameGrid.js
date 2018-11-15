@@ -84,6 +84,9 @@ var GameGrid = function (_super) {
     GameGrid.prototype.getGridString = function () {
         return this.gridText.string;
     };
+    GameGrid.prototype.removeSelf = function () {
+        this.node.removeFromParent();
+    };
     __decorate([property(cc.Node)], GameGrid.prototype, "gridBorder", void 0);
     __decorate([property(cc.Sprite)], GameGrid.prototype, "gridBg", void 0);
     __decorate([property(cc.Label)], GameGrid.prototype, "gridText", void 0);

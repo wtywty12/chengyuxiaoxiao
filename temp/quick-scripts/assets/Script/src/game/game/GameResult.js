@@ -5,6 +5,8 @@ cc._RF.push(module, '97be37yWVNJZIYOpkjF/kBY', 'GameResult', __filename);
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+var Tools_1 = require("../../utils/Tools");
+var GameManager_1 = require("./GameManager");
 var RecordGrid_1 = require("../common/model/RecordGrid");
 var GameResult = function () {
     function GameResult(gameTable, chooseView) {
@@ -41,6 +43,10 @@ var GameResult = function () {
     GameResult.prototype.onSuccessFul = function () {
         cc.log("判定成功");
         this.clearData();
+        if (Tools_1.Tools.getMapLength(RecordGrid_1.RecordGrid.getGameTableGridMap()) == 64) {
+            GameManager_1.GameManager.onGameOver();
+        }
+        ;
     };
     GameResult.prototype.onFailed = function () {
         cc.log("判定失败");

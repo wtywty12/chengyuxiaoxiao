@@ -49,6 +49,9 @@ var RecordGridClass = (function () {
     };
     RecordGridClass.prototype.clearRecordData = function () {
         this.chooseGridAry = [];
+    };
+    RecordGridClass.prototype.onGameOver = function () {
+        this.clearRecordData();
         this.gameTableGridMap.clear();
     };
     return RecordGridClass;

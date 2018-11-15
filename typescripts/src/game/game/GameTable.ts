@@ -120,7 +120,7 @@ export class GameTable extends cc.Component {
             }
         },this);
         if (this.node == null || gameGrid == null || gameGrid.node == null) {
-            cc.log("Error in createGameGrid");
+            cc.log("Error in GameTable createGameGrid");
             return;
         }
         this.node.addChild(gameGrid.node);
@@ -137,5 +137,14 @@ export class GameTable extends cc.Component {
             isOk = false;
         }
         return isOk;
+    }
+
+    /**
+     * 游戏结束
+     */
+    public onGameOver() {
+        /** 清理所有格子 */
+        this.node.removeAllChildren();
+        RecordGrid.onGameOver();
     }
 }

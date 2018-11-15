@@ -88,7 +88,15 @@ class RecordGridClass{
     public clearRecordData() {
         /** 清理文字数组 */
         this.chooseGridAry = [];
-        /** 清理中心表点击记录 */
+    }
+
+    /**
+     * 游戏结束
+     */
+    public onGameOver() {
+        /** 清理数据 */
+        this.clearRecordData();
+        /** 清理中心表点击记录 结束再清理 用于判定胜利使用 */
         this.gameTableGridMap.clear();
     }
 }

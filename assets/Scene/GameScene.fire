@@ -59,7 +59,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "bg",
+    "_name": "Canvas",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -983,7 +983,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 80,
+      "width": 0,
       "height": 40
     },
     "_anchorPoint": {
@@ -1029,8 +1029,8 @@
     "_srcBlendFactor": 1,
     "_dstBlendFactor": 771,
     "_useOriginalSize": false,
-    "_string": "时间",
-    "_N$string": "时间",
+    "_string": "",
+    "_N$string": "",
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -1185,15 +1185,14 @@
       "__id__": 2
     },
     "_enabled": true,
-    "title": null,
     "gameTable": {
       "__id__": 13
     },
     "chooseView": {
       "__id__": 16
     },
-    "btn_time": {
-      "__id__": 21
+    "lbl_time": {
+      "__id__": 23
     },
     "btn_back": {
       "__id__": 19
