@@ -3,6 +3,7 @@ import {StringUtils} from "./../../utils/StringUtils";
 class ConfigManagerClass {
     private static _instance: ConfigManagerClass;
     private _idiomJson: Map<number, string> = new Map<number, string>();
+    private _levelsJson: Map<number,levels> = new Map<number,levels>();
 
     private constructor() {
     }
@@ -16,6 +17,9 @@ class ConfigManagerClass {
 
     get idiomJsonMap(): Map<number, string> {
         return this._idiomJson;
+    }
+    get levelsJsonMap(): Map<number,levels> {
+        return this._levelsJson;
     }
 
     public load(): Promise<void> {
@@ -32,6 +36,9 @@ class ConfigManagerClass {
                     if (name == "idiom") {
                         this.loadIdiomJson(data.json);
                     }
+                    if (name == "levels"){
+                        this.loadLevelJson(data.json);
+                    }
                 }
                 return fulfill();
             });
@@ -46,6 +53,15 @@ class ConfigManagerClass {
             this._idiomJson.set(Number(idiom.ID), idiom.chengyu);
         }
         cc.log("成语数据", this._idiomJson);
+    }
+    private loadLevelJson(datas:Array<levels>):void{
+        if (datas == null){
+            return;
+        }
+        for (let data of datas){
+            this._levelsJson.set(data.level,data);
+        }
+        cc.log("关卡数据",this._levelsJson);
     }
 }
 

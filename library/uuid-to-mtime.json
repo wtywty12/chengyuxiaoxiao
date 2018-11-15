@@ -235,13 +235,13 @@
     "relativePath": "Scene/SettleScene.fire"
   },
   "29ce233f-ccb7-41be-8610-3aad7b9494fb": {
-    "asset": 1542254266618,
-    "meta": 1542254266624,
+    "asset": 1542270372066,
+    "meta": 1542270372074,
     "relativePath": "Scene/RankScene.fire"
   },
   "42b202ab-7491-4680-9d35-c49ea4ddedf1": {
-    "asset": 1542254837615,
-    "meta": 1542254837621,
+    "asset": 1542270708137,
+    "meta": 1542270708142,
     "relativePath": "Scene/DepositScene.fire"
   },
   "954236ad-b188-40a8-9a51-eaebad6eb6cc": {
@@ -619,11 +619,6 @@
     "meta": 1542266905598,
     "relativePath": "Script/src/game/common/helper/ImageHelper.js"
   },
-  "d77819f8-337d-4982-89ad-b368bd648b2d": {
-    "asset": 1542266788140,
-    "meta": 1542266905616,
-    "relativePath": "Script/src/game/common/model/RandomAry.js"
-  },
   "75122906-ce12-4704-a2f3-7227891c6e9e": {
     "asset": 1542266788101,
     "meta": 1542266905691,
@@ -633,11 +628,6 @@
     "asset": 1542266788200,
     "meta": 1542266906197,
     "relativePath": "Script/src/game/loading/LoadingScene.js"
-  },
-  "fab89146-579d-4e9b-9845-516ae60eac57": {
-    "asset": 1542266788210,
-    "meta": 1542266906227,
-    "relativePath": "Script/src/game/myinfo/MyinfoScene.js"
   },
   "240d0ec5-abd3-47ce-9f77-dfd2ac8280e0": {
     "asset": 1542266788216,
@@ -734,11 +724,6 @@
     "meta": 1542267226824,
     "relativePath": "Script/src/game/game/GameScene.js"
   },
-  "a33454b1-70fd-4ea2-93e1-4acdf53a51e0": {
-    "asset": 1542267199799,
-    "meta": 1542267226824,
-    "relativePath": "Script/src/game/game/GameTable.js"
-  },
   "64cd69d0-ae22-4cad-9587-5804c6d4955b": {
     "asset": 1542267199374,
     "meta": 1542267199339,
@@ -798,5 +783,40 @@
     "asset": 1542267199338,
     "meta": 1542267227049,
     "relativePath": "texture/gameScene/diban.png"
+  },
+  "d77819f8-337d-4982-89ad-b368bd648b2d": {
+    "asset": 1542268392883,
+    "meta": 1542268397825,
+    "relativePath": "Script/src/game/common/model/RandomAry.js"
+  },
+  "a33454b1-70fd-4ea2-93e1-4acdf53a51e0": {
+    "asset": 1542268506329,
+    "meta": 1542268509339,
+    "relativePath": "Script/src/game/game/GameTable.js"
+  },
+  "0f2af2e7-9689-4b28-befc-eac00d5fbdaf": {
+    "asset": 1542270305018,
+    "meta": 1542270305018,
+    "relativePath": "Script/src/game/rank"
+  },
+  "7e99e832-3cd8-4ed7-9802-4302eea05c51": {
+    "asset": 1542270486414,
+    "meta": 1542270486414,
+    "relativePath": "Script/src/game/deposit"
+  },
+  "9070297d-f2b3-42a1-ab61-872e13ec6399": {
+    "asset": 1542270728709,
+    "meta": 1542270733278,
+    "relativePath": "Script/src/game/deposit/DepositScene.js"
+  },
+  "c2a5fc74-59e1-4438-87b2-344285b52944": {
+    "asset": 1542271176898,
+    "meta": 1542271256816,
+    "relativePath": "Script/src/game/rank/RankScene.js"
+  },
+  "fab89146-579d-4e9b-9845-516ae60eac57": {
+    "asset": 1542271333914,
+    "meta": 1542271335300,
+    "relativePath": "Script/src/game/myinfo/MyinfoScene.js"
   }
 }

@@ -91,8 +91,8 @@ export class GameTable extends cc.Component {
         gameGrid.setGridString(this.produceAry[index]);
         node.on(cc.Node.EventType.TOUCH_END,function(event: any)
         {
-            GameEngine.changeScene(GameSceneHepler.SETTLE);
-            return;
+            // GameEngine.changeScene(GameSceneHepler.SETTLE);
+            // return;
 
             
             let str = this.produceAry[index];

@@ -1,5 +1,5 @@
 import {ConfigManager} from "./../ConfigManager";
-import { Tools } from "src/utils/Tools";
+import { Tools } from "./../../../utils/Tools";
 
 /**
  * 此类用于根据成语json随机生成指定的成语配置表

@@ -40,6 +40,12 @@ export class SettleScene extends cc.Component {
     @property(cc.Button)
     private btn_back :cc.Button = null;
     
+    @property(cc.Layout)
+    private tab1 : cc.Layout = null;
+
+    @property(cc.Layout)
+    private tab2 : cc.Layout = null;
+    
     /** 构造函数 */
     protected constructor() {
         super();
@@ -68,13 +74,17 @@ export class SettleScene extends cc.Component {
     }
     //客服
     private onClickTifu():void{
+        GameEngine.shareGame()
     }
     //点击为存入的
     private onClickWaitSave():void{
+        this.tab1.node.active = true;
+        this.tab2.node.active = false;
     }
     //点击已经存入的
     private onClickSaved():void{
-
+        this.tab1.node.active = false;
+        this.tab2.node.active = true;
     }
     private onClickBack():void{
         GameDataManager.gameData.refuseData()

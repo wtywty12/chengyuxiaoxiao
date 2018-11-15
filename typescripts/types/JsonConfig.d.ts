@@ -16,3 +16,12 @@ declare interface Idiom extends IData {
     readonly chengyu: string;
 }
 
+declare interface levelsJson {
+    readonly levelsAry: Array<levels>;
+}
+
+declare interface levels extends IData {
+    readonly level:number;
+    readonly line:number;
+    readonly row:number;
+}

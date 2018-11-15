@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var ConfigManager_1 = require("./../ConfigManager");
-var Tools_1 = require("src/utils/Tools");
+var Tools_1 = require("./../../../utils/Tools");
 var RandomAry = (function () {
     function RandomAry(need) {
         this.needValus = null;
