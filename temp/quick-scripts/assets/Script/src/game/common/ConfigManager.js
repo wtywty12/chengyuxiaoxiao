@@ -9,6 +9,7 @@ var StringUtils_1 = require("./../../utils/StringUtils");
 var ConfigManagerClass = function () {
     function ConfigManagerClass() {
         this._idiomJson = new Map();
+        this._levelsJson = new Map();
     }
     Object.defineProperty(ConfigManagerClass, "instance", {
         get: function get() {
@@ -27,6 +28,13 @@ var ConfigManagerClass = function () {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(ConfigManagerClass.prototype, "levelsJsonMap", {
+        get: function get() {
+            return this._levelsJson;
+        },
+        enumerable: true,
+        configurable: true
+    });
     ConfigManagerClass.prototype.load = function () {
         var _this = this;
         return new Promise(function (fulfill, reject) {
@@ -40,6 +48,9 @@ var ConfigManagerClass = function () {
                     var data = datas[i];
                     if (name_1 == "idiom") {
                         _this.loadIdiomJson(data.json);
+                    }
+                    if (name_1 == "levels") {
+                        _this.loadLevelJson(data.json);
                     }
                 }
                 return fulfill();
@@ -55,6 +66,16 @@ var ConfigManagerClass = function () {
             this._idiomJson.set(Number(idiom.ID), idiom.chengyu);
         }
         cc.log("成语数据", this._idiomJson);
+    };
+    ConfigManagerClass.prototype.loadLevelJson = function (datas) {
+        if (datas == null) {
+            return;
+        }
+        for (var _i = 0, datas_2 = datas; _i < datas_2.length; _i++) {
+            var data = datas_2[_i];
+            this._levelsJson.set(data.level, data);
+        }
+        cc.log("关卡数据", this._levelsJson);
     };
     return ConfigManagerClass;
 }();

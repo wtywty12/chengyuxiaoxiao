@@ -48,14 +48,15 @@ var GameScene = function (_super) {
         _this.lbl_time = null;
         _this.btn_back = null;
         _this.btn_share = null;
-        _this.timeCallback = null;
         return _this;
     }
     GameScene.prototype.onLoad = function () {
         GameManager_1.GameManager.setView(this, this.gameTable, this.chooseView);
         this.loadFinish();
     };
-    GameScene.prototype.onDestroy = function () {};
+    GameScene.prototype.onDestroy = function () {
+        this.unscheduleAllCallbacks();
+    };
     GameScene.prototype.loadFinish = function () {
         GameManager_1.GameManager.onGameStart();
         this.btn_back.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
@@ -82,20 +83,19 @@ var GameScene = function (_super) {
         }
     };
     GameScene.prototype.createCDTime = function () {
-        var totalTime = 60;
         var nowTime = 60;
-        this.timeCallback = function (dt) {
+        var timeCallback = function timeCallback(dt) {
             nowTime--;
             this.lbl_time.string = nowTime.toString();
             if (nowTime == 0) {
                 GameManager_1.GameManager.onGameOver();
-                this.unschedule(this.timeCallback);
+                this.unschedule(timeCallback);
             }
         };
-        this.schedule(this.timeCallback, 1);
+        this.schedule(timeCallback, 1);
     };
     GameScene.prototype.resetCDTime = function () {
-        this.unschedule(this.timeCallback);
+        this.unscheduleAllCallbacks();
         this.createCDTime();
     };
     __decorate([property(GameTable_1.GameTable)], GameScene.prototype, "gameTable", void 0);

@@ -47,9 +47,6 @@ var RandomAry = (function () {
                 randomAry.push(rand);
             }
         }
-        if (randomAry.length == 8) {
-            cc.log("EEE");
-        }
         return randomAry;
     };
     RandomAry.prototype.getRandomAryIdiom = function (arr) {

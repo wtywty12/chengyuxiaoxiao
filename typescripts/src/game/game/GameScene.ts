@@ -32,11 +32,6 @@ export class GameScene extends cc.Component {
     @property(cc.Node)
     private btn_share: cc.Node = null;
 
-    /**
-     * 定时器函数
-     */
-    private timeCallback: any = null;
-
     /** 构造函数 */
     protected constructor() {
         super();
@@ -50,7 +45,7 @@ export class GameScene extends cc.Component {
 
     /** 类销毁 */
     protected onDestroy(): void {
-
+        this.unscheduleAllCallbacks();
     }
 
     private loadFinish(): void {
@@ -86,24 +81,24 @@ export class GameScene extends cc.Component {
     /**
      * 创建倒计时
      */
-    private createCDTime() {
-        var nowTime = 6;
-        this.timeCallback = function (dt: number) {
+    public createCDTime() {
+        var nowTime = 60;
+        var timeCallback = function (dt: number) {
             nowTime--;
             this.lbl_time.string = nowTime.toString();
             if (nowTime == 0) {
                 GameManager.onGameOver();
-                this.unschedule(this.timeCallback);
+                this.unschedule(timeCallback);
             }
           }
-        this.schedule(this.timeCallback, 1);
+        this.schedule(timeCallback, 1);
     }
 
     /**
      * 重置定时器
      */
     public resetCDTime() {
-        this.unschedule(this.timeCallback);
+        this.unscheduleAllCallbacks();
         this.createCDTime();
     }
     
