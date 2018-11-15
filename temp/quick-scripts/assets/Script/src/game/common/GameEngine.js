@@ -13,6 +13,7 @@ var DefaultGameEvent_1 = require("../../core/event/DefaultGameEvent");
 var GameDataManager_1 = require("./data/GameDataManager");
 var Audio_1 = require("../../core/common/Audio");
 var ResourcesManager_1 = require("../../core/common/ResourcesManager");
+var ServerUrls_1 = require("../../utils/ServerUrls");
 var GameEngineClass = function () {
     function GameEngineClass() {
         this.loginServerUrl = "https://liubowen.top/dzk/";
@@ -68,7 +69,12 @@ var GameEngineClass = function () {
         enumerable: true,
         configurable: true
     });
-    GameEngineClass.prototype.showTips = function (message) {};
+    GameEngineClass.prototype.showTips = function (message) {
+        var prefab = ResourcesManager_1.ResourcesManager.getPrefab("tips");
+        var prefabNode = cc.instantiate(prefab);
+        var tipsScript = prefabNode.getComponent("TipsScript");
+        tipsScript.show(message);
+    };
     GameEngineClass.prototype.changeScene = function (scene) {
         cc.director.loadScene(scene);
     };
@@ -92,7 +98,14 @@ var GameEngineClass = function () {
             }
         });
     };
-    GameEngineClass.prototype.shareGame = function () {};
+    GameEngineClass.prototype.shareGame = function () {
+        wx.shareAppMessage({
+            title: "柚子消消乐，越消越赚钱",
+            imageUrl: "",
+            query: "sharePlayerId=" + GameDataManager_1.GameDataManager.userData.playerId
+        });
+        this.doPost(ServerUrls_1.ServerUrls.SHARE_URL, { "playerId": GameDataManager_1.GameDataManager.userData.playerId });
+    };
     GameEngineClass.prototype.showPrefab = function (prefabName) {
         var prefab = ResourcesManager_1.ResourcesManager.getPrefab(prefabName);
         if (!prefab) {

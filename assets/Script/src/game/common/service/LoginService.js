@@ -18,7 +18,6 @@ var LoginService = (function () {
                 cc.log("!res.authSetting['scope.userInfo'] || StringUtils.isEmpty(playerId)  : " + (!res['scope.userInfo'] ||
                     StringUtils_1.StringUtils.isEmpty(playerId)));
                 if (!res.authSetting['scope.userInfo'] || StringUtils_1.StringUtils.isEmpty(playerId)) {
-                    GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.LOGIN);
                 }
                 else {
                     wx.checkSession({

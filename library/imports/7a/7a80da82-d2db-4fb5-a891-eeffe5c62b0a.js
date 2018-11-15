@@ -58,8 +58,12 @@ var SettleScene = function (_super) {
         this.btn_back.node.on(cc.Node.EventType.TOUCH_END, this.onClickBack);
     };
     SettleScene.prototype.onDestroy = function () {};
-    SettleScene.prototype.onClickRedPack = function () {};
-    SettleScene.prototype.onClickShare = function () {};
+    SettleScene.prototype.onClickRedPack = function () {
+        GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.READPACK);
+    };
+    SettleScene.prototype.onClickShare = function () {
+        GameEngine_1.GameEngine.shareGame();
+    };
     SettleScene.prototype.onClickContinue = function () {
         GameDataManager_1.GameDataManager.gameData.refuseData();
         GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.GAME);

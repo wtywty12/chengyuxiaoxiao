@@ -7,6 +7,8 @@ import {DefaultGameEvent} from "../../core/event/DefaultGameEvent";
 import {GameDataManager} from "./data/GameDataManager";
 import {Audio} from "../../core/common/Audio";
 import {ResourcesManager} from "../../core/common/ResourcesManager";
+import {ServerUrls} from "../../utils/ServerUrls";
+import {TipsScript} from "../common/script/TipsScript";
 
 /**
  * @author: liubowen
@@ -63,10 +65,10 @@ class GameEngineClass {
     }
 
     public showTips(message: string): void {
-        // let prefab: cc.Prefab = ResourcesManager.getPrefab("tips");
-        // let prefabNode: cc.Node = cc.instantiate(prefab);
-        // let tipsScript: TipsScript = prefabNode.getComponent("TipsScript");
-        // tipsScript.show(message);
+        let prefab: cc.Prefab = ResourcesManager.getPrefab("tips");
+        let prefabNode: cc.Node = cc.instantiate(prefab);
+        let tipsScript: TipsScript = prefabNode.getComponent("TipsScript");
+        tipsScript.show(message);
     }
 
     public changeScene(scene: GameSceneHepler): void {
@@ -96,17 +98,16 @@ class GameEngineClass {
             }
         });
     }
-
-
     public shareGame(): void {
-        // wx.shareAppMessage({
-        //     title: "养鲲大作战，一起来玩！",
-        //     imageUrl: "",
-        //     query: `sharePlayerId=${GameDataManager.userData.playerId}`
-        // });
-        //
-        // this.doPost(ServerUrls.SHARE_URL, {"playerId": GameDataManager.userData.playerId});
+        wx.shareAppMessage({
+            title: "柚子消消乐，越消越赚钱",
+            imageUrl: "",
+            query: `sharePlayerId=${GameDataManager.userData.playerId}`
+        });
+        
+        this.doPost(ServerUrls.SHARE_URL, {"playerId": GameDataManager.userData.playerId});
     }
+    //播放预加载资源动画
     public showPrefab(prefabName: string): void {
         let prefab = ResourcesManager.getPrefab(prefabName);
         if (!prefab) {

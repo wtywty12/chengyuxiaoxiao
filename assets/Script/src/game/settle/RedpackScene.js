@@ -45,6 +45,7 @@ var SettleScene = (function (_super) {
     SettleScene.prototype.onDestroy = function () {
     };
     SettleScene.prototype.onClickDeposit = function () {
+        GameEngine_1.GameEngine.shareGame();
     };
     SettleScene.prototype.onClickMyAward = function () {
         GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.MYINFO);

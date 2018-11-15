@@ -1,9 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var GameData_1 = require("./GameData");
+var UserData_1 = require("./UserData");
 var GameDataManagerClass = (function () {
     function GameDataManagerClass() {
         this._gameData = new GameData_1.GameData();
+        this._userData = new UserData_1.UserData();
     }
     Object.defineProperty(GameDataManagerClass, "instance", {
         get: function () {
@@ -18,6 +20,13 @@ var GameDataManagerClass = (function () {
     Object.defineProperty(GameDataManagerClass.prototype, "gameData", {
         get: function () {
             return this._gameData;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(GameDataManagerClass.prototype, "userData", {
+        get: function () {
+            return this._userData;
         },
         enumerable: true,
         configurable: true

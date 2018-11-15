@@ -45,6 +45,21 @@ export class LoadingScene extends CommonScene {
         await ConfigManager.load();
         this.setProgress(50);
         await ResourcesManager.load();
+        this.btn_myinfo.node.on(cc.Node.EventType.TOUCH_END,function(){
+            GameEngine.changeScene(GameSceneHepler.MYINFO)
+        })
+        this.btn_rank.node.on(cc.Node.EventType.TOUCH_END,function(){
+            GameEngine.changeScene(GameSceneHepler.RANK)
+        })
+        this.btn_music.node.on(cc.Node.EventType.TOUCH_END,function(){
+            //判断全局 控制声音
+            if(GameEngine.audio.getState() == cc.audioEngine.AudioState.PAUSED)
+            {
+                
+            }
+            else{}
+        })
+        
         this.setProgress(100);
         await this.loadFinish();
     }
@@ -76,16 +91,11 @@ export class LoadingScene extends CommonScene {
         })
         this.btn_start.node.runAction(cc.sequence(action1,callbackFunc));
         
-        // var jumpUp = cc.moveBy(0.5, cc.p(0, 100)).easing(cc.easeCubicActionOut());
-        // var jumpDown = cc.moveBy(0.5, cc.p(0, -100)).easing(cc.easeCubicActionIn());
-        // var jumpMoveRight = cc.moveBy
         var leftCallBack = cc.callFunc(function(){
             self.youzi.node.scaleX = 1
-            // this.youzi.node.runAction(jumpToRight)
         })
         var rightCallBack = cc.callFunc(function(){
             self.youzi.node.scaleX = -1;
-            // this.youzi.node.runAction(jumpToLeft)
         })
         var jumpToRight = cc.jumpTo(2.3,cc.v2(this.youzi.node.x+350,this.youzi.node.y),100,3)
         var jumpToLeft = cc.jumpTo(2.3,cc.v2(this.youzi.node.x-50,this.youzi.node.y),100,3)

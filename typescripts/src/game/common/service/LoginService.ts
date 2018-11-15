@@ -23,7 +23,7 @@ export class LoginService {
 
                 if (!res.authSetting['scope.userInfo'] || StringUtils.isEmpty(playerId)) {
                     // 登陆
-                    GameEngine.changeScene(GameSceneHepler.LOGIN);
+                    // GameEngine.changeScene(GameSceneHepler.LOGIN);
                 } else {
                     // 获取用户信息登陆
                     wx.checkSession({
