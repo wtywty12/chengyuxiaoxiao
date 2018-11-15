@@ -330,8 +330,8 @@
     "relativePath": "Script"
   },
   "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38": {
-    "asset": 1542199159982,
-    "meta": 1542199159994,
+    "asset": 1542250347409,
+    "meta": 1542250347414,
     "relativePath": "Scene/LoadingScene.fire"
   },
   "f94eeb58-d519-4358-8b5f-79b7f80a4afa": {
@@ -549,16 +549,6 @@
     "meta": 1542197489662,
     "relativePath": "Script/src/game/common/helper/ImageHelper.js"
   },
-  "d77819f8-337d-4982-89ad-b368bd648b2d": {
-    "asset": 1542197488098,
-    "meta": 1542197489714,
-    "relativePath": "Script/src/game/common/model/RandomAry.js"
-  },
-  "3e51016d-d842-42d8-a95c-e3ffb316d3c7": {
-    "asset": 1542197488162,
-    "meta": 1542197489793,
-    "relativePath": "Script/src/game/game/ChooseView.js"
-  },
   "03a82ca5-af63-4500-ae03-b0dda3856983": {
     "asset": 1542197488114,
     "meta": 1542197489835,
@@ -594,11 +584,6 @@
     "meta": 1542197490144,
     "relativePath": "Script/src/utils/Vec2.js"
   },
-  "55ba82a3-b236-4690-adbb-afd926249335": {
-    "asset": 1542197691942,
-    "meta": 1542197809160,
-    "relativePath": "Script/src/game/game/GameScene.js"
-  },
   "b3633f1d-5921-4453-a2d4-3d2f735c9fea": {
     "asset": 1542198035713,
     "meta": 1542198068330,
@@ -629,24 +614,89 @@
     "meta": 1542199262432,
     "relativePath": "Script/src/game/common/service/LoginService.js"
   },
-  "a33454b1-70fd-4ea2-93e1-4acdf53a51e0": {
-    "asset": 1542199250726,
-    "meta": 1542199262806,
-    "relativePath": "Script/src/game/game/GameTable.js"
-  },
-  "3009a629-7889-4dd2-ae99-183a53517630": {
-    "asset": 1542199250717,
-    "meta": 1542199262970,
-    "relativePath": "Script/src/game/loading/LoadingScene.js"
-  },
   "240d0ec5-abd3-47ce-9f77-dfd2ac8280e0": {
     "asset": 1542199260151,
     "meta": 1542199262999,
     "relativePath": "Script/src/game/settle/RedpackScene.js"
   },
+  "d77819f8-337d-4982-89ad-b368bd648b2d": {
+    "asset": 1542200797988,
+    "meta": 1542200800285,
+    "relativePath": "Script/src/game/common/model/RandomAry.js"
+  },
+  "55ba82a3-b236-4690-adbb-afd926249335": {
+    "asset": 1542200797995,
+    "meta": 1542200800387,
+    "relativePath": "Script/src/game/game/GameScene.js"
+  },
   "7a80da82-d2db-4fb5-a891-eeffe5c62b0a": {
     "asset": 1542199254824,
-    "meta": 1542199263007,
+    "meta": 1542200800521,
     "relativePath": "Script/src/game/settle/SettleScene.js"
+  },
+  "b70c1e9c-6f74-418c-8997-330ee1f5ec0e": {
+    "asset": 1542200798015,
+    "meta": 1542200800523,
+    "relativePath": "Script/src/utils/Tools.js"
+  },
+  "3e51016d-d842-42d8-a95c-e3ffb316d3c7": {
+    "asset": 1542200876001,
+    "meta": 1542200877200,
+    "relativePath": "Script/src/game/game/ChooseView.js"
+  },
+  "a33454b1-70fd-4ea2-93e1-4acdf53a51e0": {
+    "asset": 1542202334293,
+    "meta": 1542202341231,
+    "relativePath": "Script/src/game/game/GameTable.js"
+  },
+  "9a7de917-f809-49c6-81b4-13c5e2b94449": {
+    "asset": 1542249570880,
+    "meta": 1542249725728,
+    "relativePath": "texture/loadingScene/biaoti.png"
+  },
+  "541a461a-154e-4cd8-8049-616250d7be6e": {
+    "asset": 1542249567329,
+    "meta": 1542249725752,
+    "relativePath": "texture/loadingScene/btn_kaishi.png"
+  },
+  "5bccc62d-6cca-4c0a-8fbb-b9c1db4b8c59": {
+    "asset": 1542249567665,
+    "meta": 1542249725785,
+    "relativePath": "texture/loadingScene/geren.png"
+  },
+  "5c058cef-49ff-43da-a815-2a96ca4f28d4": {
+    "asset": 1542249572789,
+    "meta": 1542249725802,
+    "relativePath": "texture/loadingScene/beijing.png"
+  },
+  "4e78fe3b-b8c6-4c6e-9c3d-6690788e74f9": {
+    "asset": 1542249567331,
+    "meta": 1542249725823,
+    "relativePath": "texture/loadingScene/paihang.png"
+  },
+  "5cdbec33-adf4-48cd-9727-ecd75c01336f": {
+    "asset": 1542249572300,
+    "meta": 1542249725832,
+    "relativePath": "texture/loadingScene/yinxiao.png"
+  },
+  "4085ca54-6009-4d8f-8c51-33b232184418": {
+    "asset": 1542249573752,
+    "meta": 1542249725846,
+    "relativePath": "texture/loadingScene/youzi.png"
+  },
+  "0f7365a6-d7df-4183-829b-f66e61159474": {
+    "asset": 1542241472830,
+    "meta": 1542249725861,
+    "relativePath": "texture/loadingScene/文字-主界面-1.jpg"
+  },
+  "9f4240ea-611d-4701-bd27-00f873b28e85": {
+    "asset": 1542241458413,
+    "meta": 1542249725875,
+    "relativePath": "texture/loadingScene/文字-主界面.jpg"
+  },
+  "3009a629-7889-4dd2-ae99-183a53517630": {
+    "asset": 1542251304904,
+    "meta": 1542251306356,
+    "relativePath": "Script/src/game/loading/LoadingScene.js"
   }
 }

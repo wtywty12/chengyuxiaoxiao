@@ -38,6 +38,9 @@ var ChooseView = (function (_super) {
         this.gridPrefab = ResourcesManager_1.ResourcesManager.getPrefab("GameGrid");
         this.createTable();
     };
+    ChooseView.prototype.getChooseIdiomAry = function () {
+        return this.idiomAry;
+    };
     ChooseView.prototype.setGameTable = function (view) {
         this.gameTable = view;
     };
@@ -56,7 +59,7 @@ var ChooseView = (function (_super) {
         node.setContentSize(cc.size(w_h, w_h));
         var gameGrid = node.getComponent("GameGrid");
         gameGrid.init(null);
-        node.on(cc.Node.EventType.MOUSE_DOWN, function (event) {
+        node.on(cc.Node.EventType.TOUCH_END, function (event) {
             var str = this.idiomAry[index];
             console.log('remove' + str);
             this.idiomAry.splice(index, index + 1);
@@ -79,6 +82,19 @@ var ChooseView = (function (_super) {
                 break;
             }
         }
+    };
+    ChooseView.prototype.restoreIdiom = function () {
+        for (var i = 0; i <= this.idiomAry.length; i++) {
+            var str = this.idiomAry[i];
+            this.gameTable.displayGrid(str);
+        }
+    };
+    ChooseView.prototype.clearIdiom = function () {
+        for (var i = 0; i < this.gridAry.length; i++) {
+            var gird = this.gridAry[i];
+            gird.setGridString("");
+        }
+        this.idiomAry = [];
     };
     ChooseView = __decorate([
         ccclass()

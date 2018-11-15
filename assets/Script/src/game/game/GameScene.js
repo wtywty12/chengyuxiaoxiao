@@ -44,6 +44,8 @@ var GameScene = (function (_super) {
         this.gameTable.setChooseView(this.chooseView);
         this.gameTable.loadFinish();
     };
+    GameScene.prototype.displayResult = function (isSuccess) {
+    };
     __decorate([
         property(cc.Label)
     ], GameScene.prototype, "title", void 0);

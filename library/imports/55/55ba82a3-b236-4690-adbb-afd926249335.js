@@ -58,6 +58,7 @@ var GameScene = function (_super) {
         this.gameTable.setChooseView(this.chooseView);
         this.gameTable.loadFinish();
     };
+    GameScene.prototype.displayResult = function (isSuccess) {};
     __decorate([property(cc.Label)], GameScene.prototype, "title", void 0);
     __decorate([property(GameTable_1.GameTable)], GameScene.prototype, "gameTable", void 0);
     __decorate([property(ChooseView_1.ChooseView)], GameScene.prototype, "chooseView", void 0);

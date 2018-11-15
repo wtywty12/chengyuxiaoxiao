@@ -72,6 +72,7 @@ var LoadingScene = (function (_super) {
         _this.bg_title = null;
         _this.btn_start = null;
         _this.btn_myinfo = null;
+        _this.youzi = null;
         _this.progress = 0;
         return _this;
     }
@@ -111,7 +112,7 @@ var LoadingScene = (function (_super) {
         this.progressBar.node.active = false;
         this.progressLabel.node.active = false;
         var self = this;
-        var action1 = cc.moveBy(0.3, cc.v2(0, cc.view.getVisibleSize().height * 3 / 7));
+        var action1 = cc.moveBy(0.3, cc.v2(0, cc.view.getVisibleSize().height * 3.3 / 7));
         var scaleAction = cc.sequence(cc.scaleTo(0.3, 1.2), cc.scaleTo(0.3, 1));
         var repeatAction = cc.repeatForever(scaleAction);
         var callbackFunc = cc.callFunc(function () {
@@ -120,13 +121,24 @@ var LoadingScene = (function (_super) {
             self.btn_start.node.runAction(repeatAction);
         });
         this.btn_start.node.runAction(cc.sequence(action1, callbackFunc));
-        var action2 = cc.moveBy(0.3, cc.v2(0, cc.view.getVisibleSize().height * 2 / 7));
+        var leftCallBack = cc.callFunc(function () {
+            self.youzi.node.scaleX = 1;
+        });
+        var rightCallBack = cc.callFunc(function () {
+            self.youzi.node.scaleX = -1;
+        });
+        var jumpToRight = cc.jumpTo(2.3, cc.v2(this.youzi.node.x + 350, this.youzi.node.y), 100, 3);
+        var jumpToLeft = cc.jumpTo(2.3, cc.v2(this.youzi.node.x - 50, this.youzi.node.y), 100, 3);
+        var sequence = cc.sequence(leftCallBack, jumpToRight, rightCallBack, jumpToLeft);
+        var repeat = cc.repeatForever(sequence);
+        this.youzi.node.runAction(repeat);
+        var action2 = cc.moveBy(0.5, cc.v2(0, 260));
         this.btn_music.node.runAction(action2);
-        var action3 = cc.moveBy(0.3, cc.v2(0, cc.view.getVisibleSize().height * 2 / 7));
+        var action3 = cc.moveBy(0.5, cc.v2(0, 260));
         this.btn_rank.node.runAction(action3);
-        var action5 = cc.moveBy(0.3, cc.v2(0, cc.view.getVisibleSize().height * 2 / 7));
+        var action5 = cc.moveBy(0.5, cc.v2(0, 260));
         this.btn_myinfo.node.runAction(action5);
-        var action4 = cc.moveBy(0.3, cc.v2(0, cc.view.getVisibleSize().height * 4 / 8));
+        var action4 = cc.moveBy(0.6, cc.v2(0, cc.view.getVisibleSize().height * 3.3 / 8));
         this.bg_title.node.runAction(action4);
     };
     LoadingScene.prototype.startGame = function () {
@@ -153,6 +165,9 @@ var LoadingScene = (function (_super) {
     __decorate([
         property(cc.Button)
     ], LoadingScene.prototype, "btn_myinfo", void 0);
+    __decorate([
+        property(cc.Sprite)
+    ], LoadingScene.prototype, "youzi", void 0);
     LoadingScene = __decorate([
         ccclass()
     ], LoadingScene);

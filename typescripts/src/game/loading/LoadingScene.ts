@@ -34,6 +34,9 @@ export class LoadingScene extends CommonScene {
     @property(cc.Button)
     private btn_myinfo:cc.Button = null;
 
+    @property(cc.Sprite)
+    private youzi :cc.Sprite = null;
+
     //进度
     private progress:number  = 0;
     protected async load() {
@@ -63,7 +66,7 @@ export class LoadingScene extends CommonScene {
         this.progressLabel.node.active = false;
 
         var self = this;
-        var action1 = cc.moveBy(0.3, cc.v2(0, cc.view.getVisibleSize().height *3 / 7));
+        var action1 = cc.moveBy(0.3, cc.v2(0, cc.view.getVisibleSize().height *3.3 / 7));
         var scaleAction = cc.sequence(cc.scaleTo(0.3,1.2),cc.scaleTo(0.3,1));
         var repeatAction = cc.repeatForever(scaleAction);
         var callbackFunc = cc.callFunc(function(){
@@ -73,17 +76,33 @@ export class LoadingScene extends CommonScene {
         })
         this.btn_start.node.runAction(cc.sequence(action1,callbackFunc));
         
+        // var jumpUp = cc.moveBy(0.5, cc.p(0, 100)).easing(cc.easeCubicActionOut());
+        // var jumpDown = cc.moveBy(0.5, cc.p(0, -100)).easing(cc.easeCubicActionIn());
+        // var jumpMoveRight = cc.moveBy
+        var leftCallBack = cc.callFunc(function(){
+            self.youzi.node.scaleX = 1
+            // this.youzi.node.runAction(jumpToRight)
+        })
+        var rightCallBack = cc.callFunc(function(){
+            self.youzi.node.scaleX = -1;
+            // this.youzi.node.runAction(jumpToLeft)
+        })
+        var jumpToRight = cc.jumpTo(2.3,cc.v2(this.youzi.node.x+350,this.youzi.node.y),100,3)
+        var jumpToLeft = cc.jumpTo(2.3,cc.v2(this.youzi.node.x-50,this.youzi.node.y),100,3)
+        var sequence = cc.sequence(leftCallBack,jumpToRight,rightCallBack,jumpToLeft)
+        var repeat = cc.repeatForever(sequence)
+        this.youzi.node.runAction(repeat);
 
-        var action2 = cc.moveBy(0.3, cc.v2(0, cc.view.getVisibleSize().height * 2 / 7));
+        var action2 = cc.moveBy(0.5, cc.v2(0, 260));
         this.btn_music.node.runAction(action2);
 
-        var action3 = cc.moveBy(0.3, cc.v2(0, cc.view.getVisibleSize().height * 2 / 7));
+        var action3 = cc.moveBy(0.5, cc.v2(0, 260));
         this.btn_rank.node.runAction(action3);
 
-        var action5 = cc.moveBy(0.3,cc.v2(0,cc.view.getVisibleSize().height * 2 / 7))
+        var action5 = cc.moveBy(0.5,cc.v2(0,260))
         this.btn_myinfo.node.runAction(action5)
 
-        var action4 = cc.moveBy(0.3,cc.v2(0,cc.view.getVisibleSize().height * 4/8));
+        var action4 = cc.moveBy(0.6,cc.v2(0,cc.view.getVisibleSize().height * 3.3/8));
         this.bg_title.node.runAction(action4);
 
     }

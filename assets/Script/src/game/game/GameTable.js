@@ -74,23 +74,33 @@ var GameTable = (function (_super) {
         var gameGrid = node.getComponent("GameGrid");
         gameGrid.init(vec2);
         gameGrid.setGridString(this.produceAry[index]);
-        node.on(cc.Node.EventType.MOUSE_DOWN, function (event) {
+        node.on(cc.Node.EventType.TOUCH_END, function (event) {
             GameDataManager_1.GameDataManager.gameData.addscore(10);
             GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.SETTLE);
             return;
             var str = this.produceAry[index];
-            if (this.checkGridMap(str) == false) {
+            if (this.checkGridMap(gameGrid) == false) {
                 cc.log("已经存在");
                 return;
             }
-            if (this.checkIsFour() == false) {
+            var length = this.getGridMapLength();
+            if (length == 4) {
                 cc.log("已经4个字");
                 return;
             }
-            console.log('click' + this.produceAry[index]);
+            console.log('click' + str);
             gameGrid.setGridString("");
-            this.gridMap.set(this.produceAry[index], gameGrid);
-            this.chooseView.setGridText(this.produceAry[index]);
+            this.gridMap.set(str, gameGrid);
+            this.chooseView.setGridText(str);
+            if (length == 3) {
+                var ok = this.judgeResult();
+                if (ok) {
+                    this.onSuccessFul();
+                }
+                else {
+                    this.onFailed();
+                }
+            }
         }, this);
         if (this.node == null || gameGrid == null || gameGrid.node == null) {
             cc.log("Error in createGameGrid");
@@ -98,21 +108,20 @@ var GameTable = (function (_super) {
         }
         this.node.addChild(gameGrid.node);
     };
-    GameTable.prototype.checkGridMap = function (str) {
+    GameTable.prototype.checkGridMap = function (grid) {
         var isOk = true;
-        this.gridMap.forEach(function (value, key) {
-            if (key == str) {
-                isOk = false;
-            }
-        });
+        var str = grid.getGridString();
+        if (str == "") {
+            isOk = false;
+        }
         return isOk;
     };
-    GameTable.prototype.checkIsFour = function () {
+    GameTable.prototype.getGridMapLength = function () {
         var index = 0;
         this.gridMap.forEach(function (value) {
             index++;
         });
-        return index <= 4;
+        return index;
     };
     GameTable.prototype.displayGrid = function (str) {
         if (typeof (str) != "string") {
@@ -121,6 +130,40 @@ var GameTable = (function (_super) {
         var grid = this.gridMap.get(str);
         grid.setGridString(str);
         this.gridMap.delete(str);
+    };
+    GameTable.prototype.judgeResult = function () {
+        cc.log("开始判定");
+        var idiomAry = this.randomAry.getRandomIdiom();
+        var chooseAry = this.chooseView.getChooseIdiomAry();
+        var isSussess = false;
+        for (var i = 0; i < idiomAry.length; i++) {
+            var idiom = idiomAry[i];
+            var isEqual = true;
+            for (var j = 0; j < 4; j++) {
+                if (idiom.substring(j, j + 1) != chooseAry[j]) {
+                    isEqual = false;
+                    break;
+                }
+            }
+            if (isEqual) {
+                isSussess = true;
+                break;
+            }
+        }
+        return isSussess;
+    };
+    GameTable.prototype.onSuccessFul = function () {
+        cc.log("判定成功");
+        this.clearData();
+    };
+    GameTable.prototype.onFailed = function () {
+        cc.log("判定失败");
+        this.chooseView.restoreIdiom();
+        this.clearData();
+    };
+    GameTable.prototype.clearData = function () {
+        this.gridMap.clear();
+        this.chooseView.clearIdiom();
     };
     GameTable = __decorate([
         ccclass()

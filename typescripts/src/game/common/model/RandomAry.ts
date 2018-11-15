@@ -12,6 +12,8 @@ export class RandomAry{
     private jsonData: Map<number, string> = new Map<number, string>();
     /** 生成数据 */
     private produceArray: Array<string> = null;
+    /** 获取每个关卡成语数组 */
+    private randomIdiom: Array<string> = null;
 
     public constructor(need: number) {
         this.needValus = need;
@@ -29,9 +31,13 @@ export class RandomAry{
         /** 获取随机数组 */
         let randomAry = this.getRandomAry();
         /** 转化为随机成语 */
-        let randomIdiom = this.getRandomAryIdiom(randomAry);
+        this.randomIdiom = this.getRandomAryIdiom(randomAry);
         /** 拆分随机字 */
-        this.produceArray = this.getSplitArray(randomIdiom);
+        this.produceArray = this.getSplitArray(this.randomIdiom);
+    }
+
+    public getRandomIdiom(): Array<string> {
+        return this.randomIdiom;
     }
 
     public getProduceArray(): Array<string> {
@@ -71,6 +77,7 @@ export class RandomAry{
             let s: string = v.toString();
             idiomAry.push(this.jsonData.get(v));
         }
+        cc.log("关卡成语   =>    ", idiomAry);
         return idiomAry;
     }
 
