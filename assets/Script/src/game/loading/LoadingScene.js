@@ -61,6 +61,7 @@ var ccclass = cc._decorator.ccclass;
 var property = cc._decorator.property;
 var GameEngine_1 = require("../common/GameEngine");
 var GameSceneHepler_1 = require("../common/helper/GameSceneHepler");
+var GameDataManager_1 = require("../common/data/GameDataManager");
 var LoadingScene = (function (_super) {
     __extends(LoadingScene, _super);
     function LoadingScene() {
@@ -101,14 +102,22 @@ var LoadingScene = (function (_super) {
                             }
                             else { }
                         });
+                        this.setProgress(70);
+                        return [4, this.initPlayerData()];
+                    case 3:
+                        _a.sent();
                         this.setProgress(100);
                         return [4, this.loadFinish()];
-                    case 3:
+                    case 4:
                         _a.sent();
                         return [2];
                 }
             });
         });
+    };
+    LoadingScene.prototype.initPlayerData = function () {
+        GameDataManager_1.GameDataManager.gameData.playtimes = 0;
+        GameDataManager_1.GameDataManager.gameData.topscore = 10;
     };
     LoadingScene.prototype.unload = function () {
     };
@@ -124,8 +133,6 @@ var LoadingScene = (function (_super) {
         this.progressLabel.node.active = false;
         var self = this;
         var action1 = cc.moveBy(0.3, cc.v2(0, cc.view.getVisibleSize().height * 3.3 / 7));
-        var scaleAction = cc.sequence(cc.scaleTo(0.3, 1.2), cc.scaleTo(0.3, 1));
-        var repeatAction = cc.repeatForever(scaleAction);
         var callbackFunc = cc.callFunc(function () {
             var scaleAction = cc.sequence(cc.scaleTo(0.7, 1.2), cc.scaleTo(0.7, 1));
             var repeatAction = cc.repeatForever(scaleAction);
@@ -153,6 +160,7 @@ var LoadingScene = (function (_super) {
         this.bg_title.node.runAction(action4);
     };
     LoadingScene.prototype.startGame = function () {
+        GameDataManager_1.GameDataManager.gameData.refuseData();
         GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.GAME);
     };
     __decorate([

@@ -1,18 +1,45 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var ConfigManager_1 = require("../ConfigManager");
 var GameData = (function () {
     function GameData() {
         this._level = 1;
         this._score = 0;
-        this._topscore = 0;
-        this._gametime = 0;
+        this._gametime = 60;
+        this._playtimes = 0;
     }
     GameData.prototype.refuseData = function () {
         this._level = 1;
         this._score = 0;
-        this._topscore = 0;
-        this._gametime = 0;
+        this._gametime = 60;
+        this._playtimes = 0;
     };
+    GameData.prototype.gameStart = function () {
+        this._level = 1;
+        this._score = 0;
+        this._gametime = 60;
+    };
+    GameData.prototype.addlevel = function () {
+        this._level += 1;
+    };
+    GameData.prototype.addscore = function (value) {
+        this._score += value;
+    };
+    GameData.prototype.addgametime = function () {
+        var levelsInfo = ConfigManager_1.ConfigManager.levelsJsonMap.get(this._level);
+        var value = levelsInfo.addtime;
+        this._gametime += value;
+    };
+    Object.defineProperty(GameData.prototype, "playtimes", {
+        get: function () {
+            return this._playtimes;
+        },
+        set: function (_playtimes) {
+            this._playtimes = _playtimes;
+        },
+        enumerable: true,
+        configurable: true
+    });
     Object.defineProperty(GameData.prototype, "playerId", {
         get: function () {
             return this._playerId;
@@ -53,9 +80,6 @@ var GameData = (function () {
         enumerable: true,
         configurable: true
     });
-    GameData.prototype.addscore = function (value) {
-        this._score += value;
-    };
     Object.defineProperty(GameData.prototype, "gametime", {
         get: function () {
             return this._gametime;

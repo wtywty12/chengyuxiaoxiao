@@ -7,37 +7,44 @@
     {
       "level": 1,
       "line": 2,
-      "row": 2
+      "row": 2,
+      "addtime": 15
     },
     {
       "level": 2,
       "line": 2,
-      "row": 4
+      "row": 4,
+      "addtime": 15
     },
     {
       "level": 3,
       "line": 3,
-      "row": 4
+      "row": 4,
+      "addtime": 15
     },
     {
       "level": 4,
       "line": 4,
-      "row": 4
+      "row": 4,
+      "addtime": 15
     },
     {
       "level": 5,
       "line": 4,
-      "row": 5
+      "row": 5,
+      "addtime": 15
     },
     {
       "level": 6,
       "line": 4,
-      "row": 6
+      "row": 6,
+      "addtime": 15
     },
     {
       "level": 7,
       "line": 6,
-      "row": 6
+      "row": 6,
+      "addtime": 15
     }
   ]
 }

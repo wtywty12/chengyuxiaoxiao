@@ -7,6 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var ccclass = cc._decorator.ccclass;
+var GameDataManager_1 = require("./../common/data/GameDataManager");
 var GameManagerClass = (function () {
     function GameManagerClass() {
         this.gameTable = null;
@@ -30,6 +31,16 @@ var GameManagerClass = (function () {
         this.gameScene = gameScene;
     };
     GameManagerClass.prototype.onGameStart = function () {
+        GameDataManager_1.GameDataManager.gameData.gameStart();
+        this.chooseView.loadFinish();
+        this.gameTable.setChooseView(this.chooseView);
+        this.gameTable.loadFinish();
+    };
+    GameManagerClass.prototype.onGameLevelup = function () {
+        GameDataManager_1.GameDataManager.gameData.addgametime();
+        GameDataManager_1.GameDataManager.gameData.addlevel();
+        this.gameTable.onClearAll();
+        this.chooseView.onClearAll();
         this.chooseView.loadFinish();
         this.gameTable.setChooseView(this.chooseView);
         this.gameTable.loadFinish();
@@ -38,7 +49,6 @@ var GameManagerClass = (function () {
         this.gameTable.onGameOver();
         this.chooseView.onGameOver();
         this.gameScene.resetCDTime();
-        this.onGameStart();
     };
     var GameManagerClass_1;
     GameManagerClass = GameManagerClass_1 = __decorate([

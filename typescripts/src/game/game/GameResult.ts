@@ -8,6 +8,8 @@ import {GameTable} from "./GameTable";
 import {ChooseView} from "./ChooseView";
 import {GameManager} from "./GameManager";
 import {RecordGrid } from "../common/model/RecordGrid";
+import { GameDataManager } from "../common/data/GameDataManager";
+import { GameData } from "../common/data/GameData";
 
 export class GameResult{
      /** 随机成语字 */
@@ -61,8 +63,8 @@ export class GameResult{
         /** 清理上方成语 */
         this.clearData();
         /** 判定胜利 */
-        if (Tools.getMapLength(RecordGrid.getGameTableGridMap()) == 64) {
-            GameManager.onGameOver();
+        if (Tools.getMapLength(RecordGrid.getGameTableGridMap()) == this.gameTable.tableWidth * this.gameTable.tableHeight) {
+            GameManager.onGameLevelup();
         };
     }
 
