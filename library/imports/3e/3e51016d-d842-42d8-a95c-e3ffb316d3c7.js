@@ -69,6 +69,7 @@ var ChooseView = function (_super) {
         var w_h = 720 / 6;
         node.setContentSize(cc.size(w_h, w_h));
         var gameGrid = node.getComponent("GameGrid");
+        gameGrid.setClickGridBg();
         node.on(cc.Node.EventType.TOUCH_END, function (event) {
             var vec = gameGrid.getVec();
             var i = gameGrid.getIndex();
