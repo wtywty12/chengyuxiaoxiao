@@ -186,7 +186,7 @@ var LoadingScene = function (_super) {
         var rightCallBack = cc.callFunc(function () {
             self.youzi.node.scaleX = -1;
         });
-        var jumpToRight = cc.jumpTo(2.3, cc.v2(this.youzi.node.x + 300, this.youzi.node.y), 100, 3);
+        var jumpToRight = cc.jumpTo(2.3, cc.v2(this.youzi.node.x + 350, this.youzi.node.y), 100, 3);
         var jumpToLeft = cc.jumpTo(2.3, cc.v2(this.youzi.node.x - 50, this.youzi.node.y), 100, 3);
         var sequence = cc.sequence(leftCallBack, jumpToRight, rightCallBack, jumpToLeft);
         var repeat = cc.repeatForever(sequence);

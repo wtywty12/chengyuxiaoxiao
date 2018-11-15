@@ -330,8 +330,8 @@
     "relativePath": "Script"
   },
   "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38": {
-    "asset": 1542250347409,
-    "meta": 1542250347414,
+    "asset": 1542251667790,
+    "meta": 1542251667795,
     "relativePath": "Scene/LoadingScene.fire"
   },
   "f94eeb58-d519-4358-8b5f-79b7f80a4afa": {
@@ -420,9 +420,9 @@
     "relativePath": "Texture"
   },
   "a6ed62ac-6d2c-4666-896d-59c4c311faa8": {
-    "asset": 1542198675862,
-    "meta": 1542198675880,
-    "relativePath": "Scene/SettleScene.fire"
+    "asset": 1542253459890,
+    "meta": 1542253459900,
+    "relativePath": "Scene/MyinfoScene.fire"
   },
   "67a68164-6931-4f81-9a19-a0bd4d8968c0": {
     "asset": 1542197226776,
@@ -684,19 +684,24 @@
     "meta": 1542249725846,
     "relativePath": "texture/loadingScene/youzi.png"
   },
-  "0f7365a6-d7df-4183-829b-f66e61159474": {
-    "asset": 1542241472830,
-    "meta": 1542249725861,
-    "relativePath": "texture/loadingScene/文字-主界面-1.jpg"
-  },
-  "9f4240ea-611d-4701-bd27-00f873b28e85": {
-    "asset": 1542241458413,
-    "meta": 1542249725875,
-    "relativePath": "texture/loadingScene/文字-主界面.jpg"
-  },
   "3009a629-7889-4dd2-ae99-183a53517630": {
-    "asset": 1542251304904,
-    "meta": 1542251306356,
+    "asset": 1542251319297,
+    "meta": 1542251420231,
     "relativePath": "Script/src/game/loading/LoadingScene.js"
+  },
+  "8e868381-a7b9-47fd-9fe3-354ba31c395d": {
+    "asset": 1542252709360,
+    "meta": 1542252709367,
+    "relativePath": "Scene/SettleScene.fire"
+  },
+  "29ce233f-ccb7-41be-8610-3aad7b9494fb": {
+    "asset": 1542254266618,
+    "meta": 1542254266624,
+    "relativePath": "Scene/RankScene.fire"
+  },
+  "42b202ab-7491-4680-9d35-c49ea4ddedf1": {
+    "asset": 1542254837615,
+    "meta": 1542254837621,
+    "relativePath": "Scene/DepositScene.fire"
   }
 }
