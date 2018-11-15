@@ -37,6 +37,8 @@ var SettleScene = (function (_super) {
         _this.btn_waitsave = null;
         _this.btn_saved = null;
         _this.btn_back = null;
+        _this.tab1 = null;
+        _this.tab2 = null;
         return _this;
     }
     SettleScene.prototype.onLoad = function () {
@@ -55,10 +57,15 @@ var SettleScene = (function (_super) {
         GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.DEPOSIT);
     };
     SettleScene.prototype.onClickTifu = function () {
+        GameEngine_1.GameEngine.shareGame();
     };
     SettleScene.prototype.onClickWaitSave = function () {
+        this.tab1.node.active = true;
+        this.tab2.node.active = false;
     };
     SettleScene.prototype.onClickSaved = function () {
+        this.tab1.node.active = false;
+        this.tab2.node.active = true;
     };
     SettleScene.prototype.onClickBack = function () {
         GameDataManager_1.GameDataManager.gameData.refuseData();
@@ -91,6 +98,12 @@ var SettleScene = (function (_super) {
     __decorate([
         property(cc.Button)
     ], SettleScene.prototype, "btn_back", void 0);
+    __decorate([
+        property(cc.Layout)
+    ], SettleScene.prototype, "tab1", void 0);
+    __decorate([
+        property(cc.Layout)
+    ], SettleScene.prototype, "tab2", void 0);
     SettleScene = __decorate([
         ccclass()
     ], SettleScene);
