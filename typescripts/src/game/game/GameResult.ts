@@ -10,6 +10,7 @@ import {GameManager} from "./GameManager";
 import {RecordGrid } from "../common/model/RecordGrid";
 import { GameDataManager } from "../common/data/GameDataManager";
 import { GameData } from "../common/data/GameData";
+import {GameScene} from "./GameScene";
 
 class GameResultClass{
      /** 随机成语字 */
@@ -18,6 +19,8 @@ class GameResultClass{
      private gameTable: GameTable = null;
      /** 上方表 */
      private chooseView: ChooseView = null;
+     /** 上方表 */
+     private gameScene: GameScene = null;
 
     private constructor () {
     }
@@ -34,6 +37,10 @@ class GameResultClass{
     public setView(gameTable: GameTable, chooseView: ChooseView) {
         this.gameTable = gameTable;
         this.chooseView = chooseView;
+    }
+
+    public setGameScene(scene: GameScene) {
+        this.gameScene = scene;
     }
 
     /**
@@ -79,6 +86,9 @@ class GameResultClass{
         this.clearData();
         /** 显示上方背景格子 */
         this.chooseView.playChooseFadeIn();
+        /** 设置得分 */
+        GameDataManager.gameData.addscore(4);
+        this.gameScene.setScore(GameDataManager.gameData.score.toString());
         /** 判定胜利 */
         if (Tools.getMapLength(RecordGrid.getGameTableGridMap()) == this.gameTable.tableWidth * this.gameTable.tableHeight) {
             GameManager.onGameLevelup();

@@ -26,7 +26,7 @@ var GameData = (function () {
         this._level += 1;
     };
     GameData.prototype.addscore = function (value) {
-        this._score += value;
+        this._score += value * Math.sqrt(this._playtimes || 1);
     };
     GameData.prototype.addgametime = function () {
         var levelsInfo = ConfigManager_1.ConfigManager.levelsJsonMap.get(this._level);

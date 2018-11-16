@@ -6,6 +6,7 @@ import {GameManager} from "./GameManager";
 import { GameDataManager } from "../common/data/GameDataManager";
 import { GameEngine } from "../common/GameEngine";
 import { GameSceneHepler } from "../common/helper/GameSceneHepler";
+import { GameResult } from "./GameResult";
 
 @ccclass()
 export class GameScene extends cc.Component {
@@ -22,6 +23,12 @@ export class GameScene extends cc.Component {
      */
     @property(cc.Label)
     private lbl_time: cc.Label = null;
+
+    /**
+     * 倒计时按钮
+     */
+    @property(cc.Label)
+    private lbl_score: cc.Label = null;
 
     /**
      * 返回按钮
@@ -58,6 +65,7 @@ export class GameScene extends cc.Component {
     }
 
     private loadFinish(): void {
+        GameResult.setGameScene(this);
         GameManager.onGameStart();
 
         this.btn_back.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
@@ -143,6 +151,16 @@ export class GameScene extends cc.Component {
         this.unscheduleAllCallbacks();
         this.createCDTime();
         this.createScheBar();
+    }
+
+    /**
+     * 设置分数
+     */
+    public setScore(score: string) {
+        if (typeof(score) != "string") {
+            return;
+        }
+        this.lbl_score.string = score;
     }
     
 }

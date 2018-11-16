@@ -9,6 +9,7 @@ var GameResultClass = (function () {
         this.randomAry = null;
         this.gameTable = null;
         this.chooseView = null;
+        this.gameScene = null;
     }
     Object.defineProperty(GameResultClass, "instance", {
         get: function () {
@@ -23,6 +24,9 @@ var GameResultClass = (function () {
     GameResultClass.prototype.setView = function (gameTable, chooseView) {
         this.gameTable = gameTable;
         this.chooseView = chooseView;
+    };
+    GameResultClass.prototype.setGameScene = function (scene) {
+        this.gameScene = scene;
     };
     GameResultClass.prototype.startResult = function (idiomAry) {
         cc.log("开始判定");
@@ -55,6 +59,8 @@ var GameResultClass = (function () {
         cc.log("判定成功");
         this.clearData();
         this.chooseView.playChooseFadeIn();
+        GameDataManager_1.GameDataManager.gameData.addscore(4);
+        this.gameScene.setScore(GameDataManager_1.GameDataManager.gameData.score.toString());
         if (Tools_1.Tools.getMapLength(RecordGrid_1.RecordGrid.getGameTableGridMap()) == this.gameTable.tableWidth * this.gameTable.tableHeight) {
             GameManager_1.GameManager.onGameLevelup();
         }

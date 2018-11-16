@@ -52,7 +52,7 @@ export class GameData {
     }
     //增加分数
     public addscore(value :number){
-        this._score += value;
+        this._score += value * Math.sqrt(this._playtimes || 1);
     }
     //增加游戏时间
     public addgametime(){
