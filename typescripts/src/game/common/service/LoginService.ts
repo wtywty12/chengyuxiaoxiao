@@ -53,6 +53,7 @@ export class LoginService {
                     "encryptedData": encryptedData,
                     "iv": iv
                 };
+                cc.log(`wx.getUserInfo res: : `, res);
                 GameEngine.http.httpPost(ServerUrls.GET_USER_URL, params, (response: IResponseDataVo) => {
                     if (!response.success) {
                         GameEngine.showTips(response.message);
