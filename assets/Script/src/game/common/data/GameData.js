@@ -5,21 +5,21 @@ var GameData = (function () {
     function GameData() {
         this._level = 1;
         this._score = 0;
-        this._gametime = 300;
-        this._totalGameTime = 300;
+        this._gametime = 60;
+        this._totalGameTime = 60;
         this._playtimes = 0;
     }
     GameData.prototype.refuseData = function () {
         this._level = 1;
         this._score = 0;
-        this._gametime = 300;
-        this._totalGameTime = 300;
+        this._gametime = 60;
+        this._totalGameTime = 60;
         this._playtimes = 0;
     };
     GameData.prototype.gameStart = function () {
         this._score = 0;
-        this._gametime = 300;
-        this._totalGameTime = 300;
+        this._gametime = 60;
+        this._totalGameTime = 60;
     };
     GameData.prototype.addlevel = function () {
         this._level += 1;

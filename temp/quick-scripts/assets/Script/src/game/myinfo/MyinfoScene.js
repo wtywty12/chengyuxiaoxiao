@@ -54,6 +54,8 @@ var SettleScene = function (_super) {
         _this.btn_back = null;
         _this.tab1 = null;
         _this.tab2 = null;
+        _this.image_head = null;
+        _this.path = null;
         return _this;
     }
     SettleScene.prototype.onLoad = function () {
@@ -67,6 +69,7 @@ var SettleScene = function (_super) {
     SettleScene.prototype.onDestroy = function () {};
     SettleScene.prototype.onClickAddTimes = function () {};
     SettleScene.prototype.onClickTixian = function () {
+        var self = this;
         wx.getUserInfo({
             success: function success(res) {
                 cc.log("res " + res);
@@ -80,12 +83,28 @@ var SettleScene = function (_super) {
                 var province = userInfo.province;
                 var city = userInfo.city;
                 var country = userInfo.country;
+                self.path = avatarUrl;
                 wx.downloadFile({
                     url: res.userInfo.avatarUrl,
-                    success: function success(res) {}
+                    success: function success(res) {
+                        cc.log("tempFile " + res.tempFilePath);
+                    }
                 });
             }
         });
+    };
+    SettleScene.prototype.loadImgurl = function (container, url) {
+        cc.loader.load(url, function (err, texture) {
+            var sprite = new cc.SpriteFrame(texture);
+            container.spriteFrame = sprite;
+        });
+    };
+    SettleScene.prototype.update = function () {
+        if (this.path != null) {
+            this.loadImgurl(this.image_head, this.path);
+        } else {
+            return;
+        }
     };
     SettleScene.prototype.onClickTifu = function () {
         GameEngine_1.GameEngine.shareGame();
@@ -120,6 +139,7 @@ var SettleScene = function (_super) {
     __decorate([property(cc.Button)], SettleScene.prototype, "btn_back", void 0);
     __decorate([property(cc.Layout)], SettleScene.prototype, "tab1", void 0);
     __decorate([property(cc.Layout)], SettleScene.prototype, "tab2", void 0);
+    __decorate([property(cc.Sprite)], SettleScene.prototype, "image_head", void 0);
     SettleScene = __decorate([ccclass()], SettleScene);
     return SettleScene;
 }(cc.Component);

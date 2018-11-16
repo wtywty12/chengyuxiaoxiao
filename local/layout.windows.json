@@ -5,17 +5,10 @@
       "main": true,
       "url": "app://editor/index.html",
       "windowType": "dockable",
-<<<<<<< HEAD
-      "x": 2172,
-      "y": 117,
+      "x": 1977,
+      "y": 38,
       "width": 1567,
       "height": 940,
-=======
-      "x": -255,
-      "y": -1080,
-      "width": 1920,
-      "height": 1080,
->>>>>>> 331a79b979f58b83a59d665deddfd6eb672a4dfb
       "layout": {
         "children": [
           {
@@ -25,94 +18,81 @@
                 "children": [
                   "hierarchy"
                 ],
-<<<<<<< HEAD
                 "height": 406,
-=======
-                "height": 481,
->>>>>>> 331a79b979f58b83a59d665deddfd6eb672a4dfb
                 "type": "panel",
-                "width": 415
+                "width": 341
               },
               {
                 "active": 0,
                 "children": [
                   "assets"
                 ],
-<<<<<<< HEAD
                 "height": 440,
-=======
-                "height": 526.984375,
->>>>>>> 331a79b979f58b83a59d665deddfd6eb672a4dfb
                 "type": "panel",
-                "width": 415
+                "width": 341
               }
             ],
-<<<<<<< HEAD
             "height": 849,
-=======
-            "height": 1011,
->>>>>>> 331a79b979f58b83a59d665deddfd6eb672a4dfb
             "type": "dock-v",
-            "width": 415
+            "width": 341
           },
           {
             "children": [
               {
-                "active": 0,
                 "children": [
-                  "scene"
+                  {
+                    "active": 0,
+                    "children": [
+                      "scene"
+                    ],
+                    "height": 440,
+                    "type": "panel",
+                    "width": 515
+                  },
+                  {
+                    "active": 0,
+                    "children": [
+                      "node-library"
+                    ],
+                    "height": 440,
+                    "type": "panel",
+                    "width": 324
+                  }
                 ],
-<<<<<<< HEAD
                 "height": 440,
                 "type": "dock-h",
                 "width": 842
-=======
-                "height": 708,
-                "type": "panel",
-                "width": 1034.984375
->>>>>>> 331a79b979f58b83a59d665deddfd6eb672a4dfb
               },
               {
-                "active": 1,
+                "active": 0,
                 "children": [
                   "console",
                   "timeline"
                 ],
-<<<<<<< HEAD
                 "height": 406,
-=======
-                "height": 300,
->>>>>>> 331a79b979f58b83a59d665deddfd6eb672a4dfb
                 "type": "panel",
-                "width": 1034.984375
+                "width": 842
               }
             ],
-<<<<<<< HEAD
             "height": 849,
-=======
-            "height": 1011,
->>>>>>> 331a79b979f58b83a59d665deddfd6eb672a4dfb
             "type": "dock-v",
-            "width": 1034.984375
+            "width": 842
           },
           {
             "active": 0,
             "children": [
               "inspector"
             ],
-<<<<<<< HEAD
             "height": 849,
-=======
-            "height": 1011,
->>>>>>> 331a79b979f58b83a59d665deddfd6eb672a4dfb
             "type": "panel",
-            "width": 458
+            "width": 372
           }
         ],
         "type": "dock-h"
       },
       "panels": [
         "hierarchy",
+        "node-library",
         "console",
         "timeline",
         "inspector",
@@ -120,11 +100,7 @@
         "scene"
       ]
     },
-<<<<<<< HEAD
-    "window-1542282303688": {},
-=======
-    "window-1542353213161": {},
->>>>>>> 331a79b979f58b83a59d665deddfd6eb672a4dfb
+    "window-1542364473427": {},
     "worker": {}
   },
   "panels": {
@@ -134,22 +110,17 @@
       "width": 500,
       "height": 522
     },
-    "node-library": {
-      "x": 901,
-      "y": -1038,
-      "width": 300,
-      "height": 502
-    },
     "builder": {
-<<<<<<< HEAD
-      "x": 2098,
-      "y": 285,
-=======
-      "x": 355,
-      "y": 25,
->>>>>>> 331a79b979f58b83a59d665deddfd6eb672a4dfb
+      "x": 1745,
+      "y": 336,
       "width": 654,
       "height": 722
+    },
+    "preferences": {
+      "x": 560,
+      "y": 218,
+      "width": 584,
+      "height": 548
     }
   }
 }

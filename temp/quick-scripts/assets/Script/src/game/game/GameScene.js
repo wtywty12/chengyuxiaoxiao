@@ -88,8 +88,6 @@ var GameScene = function (_super) {
         }
     };
     GameScene.prototype.createCDTime = function () {
-        GameDataManager_1.GameDataManager.gameData.gametime = 6;
-        GameDataManager_1.GameDataManager.gameData.totalGameTime = 6;
         this.lbl_time.string = GameDataManager_1.GameDataManager.gameData.gametime.toString();
         var timeCallback = function timeCallback(dt) {
             cc.log("GameDataManager.gameData.gametime = " + GameDataManager_1.GameDataManager.gameData.gametime);
@@ -97,10 +95,6 @@ var GameScene = function (_super) {
             this.lbl_time.string = GameDataManager_1.GameDataManager.gameData.gametime.toString();
             if (GameDataManager_1.GameDataManager.gameData.gametime < 0) {
                 GameManager_1.GameManager.onGameOver();
-<<<<<<< HEAD
-                this.unschedule(timeCallback);
-=======
->>>>>>> 331a79b979f58b83a59d665deddfd6eb672a4dfb
                 GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.SETTLE);
             }
         };

@@ -7,6 +7,9 @@ import {GameEngine} from "../common/GameEngine";
 import {GameSceneHepler} from "../common/helper/GameSceneHepler";
 import { GameDataManager } from "../common/data/GameDataManager";
 import { LoginService } from "../common/service/LoginService";
+import {DefaultGameEvent} from "../../core/event/DefaultGameEvent";
+import {GameEventTransmitter} from "../../core/event/GameEventTransmitter";
+
 
 /**
  * @author: wangtianye
@@ -42,11 +45,15 @@ export class SettleScene extends cc.Component {
     private btn_back :cc.Button = null;
     
     @property(cc.Layout)
-    private tab1 : cc.Layout = null;
+    private tab1 : cc.Layout = null; 
 
     @property(cc.Layout)
     private tab2 : cc.Layout = null;
+
+    @property(cc.Sprite)
+    private image_head:cc.Sprite = null;
     
+    private path :string = null;
     /** 构造函数 */
     protected constructor() {
         super();
@@ -60,6 +67,7 @@ export class SettleScene extends cc.Component {
         this.btn_back.node.on(cc.Node.EventType.TOUCH_END,this.onClickBack)
         this.btn_waitsave.node.on(cc.Node.EventType.TOUCH_END,this.onClickWaitSave)
         this.btn_saved.node.on(cc.Node.EventType.TOUCH_END,this.onClickSaved)
+
     }
 
     /** 类销毁 */
@@ -71,6 +79,7 @@ export class SettleScene extends cc.Component {
     }
     //点击提现
     private onClickTixian():void{
+        var self = this
         wx.getUserInfo({
             success: function(res:any) {
                 cc.log(`res ${res}`)
@@ -85,16 +94,40 @@ export class SettleScene extends cc.Component {
                 var city = userInfo.city
                 var country = userInfo.country
 
+                self.path = avatarUrl ;
                 wx.downloadFile({
                     url:res.userInfo.avatarUrl,
                     success:(res:any) => {
-                        
+                        cc.log(`tempFile ${res.tempFilePath}`)
+                        // this.path = res.tempFilePath
                     },
                 })
+                // cc.loader.load({url: avatarUrl, type: 'png'}, function(err:any,img:cc.Texture2D){
+                //     cc.log("load png");
+                //     self.image_head.spriteFrame = img;
+                // });
+                // self.loadImgurl(self.image_head,avatarUrl)
+                
             }
             
         })
         // GameEngine.changeScene(GameSceneHepler.DEPOSIT)
+    }
+    private loadImgurl(container:cc.Sprite,url:string):void{
+        cc.loader.load(url, function (err:any, texture:cc.Texture2D) {
+            var sprite  = new cc.SpriteFrame(texture);
+            container.spriteFrame = sprite;
+        });
+    }
+    update()
+    {
+        if(this.path != null)
+        {
+            this.loadImgurl(this.image_head,this.path);
+        }else
+        {
+            return
+        }
     }
     //客服
     private onClickTifu():void{
@@ -116,7 +149,6 @@ export class SettleScene extends cc.Component {
             success: (res: any) => {
                 cc.log(`res--getUserInfo = ${res}`)
                 let tempFilePaths: string = res.tempFilePaths;
-                
             },
         })
         // this.tab1.node.active = false;

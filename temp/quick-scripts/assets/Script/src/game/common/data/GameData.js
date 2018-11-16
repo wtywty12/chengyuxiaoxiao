@@ -10,33 +10,21 @@ var GameData = function () {
     function GameData() {
         this._level = 1;
         this._score = 0;
-<<<<<<< HEAD
-        this._gametime = 300;
-=======
         this._gametime = 60;
         this._totalGameTime = 60;
->>>>>>> 331a79b979f58b83a59d665deddfd6eb672a4dfb
         this._playtimes = 0;
     }
     GameData.prototype.refuseData = function () {
         this._level = 1;
         this._score = 0;
-<<<<<<< HEAD
-        this._gametime = 300;
-=======
         this._gametime = 60;
         this._totalGameTime = 60;
->>>>>>> 331a79b979f58b83a59d665deddfd6eb672a4dfb
         this._playtimes = 0;
     };
     GameData.prototype.gameStart = function () {
         this._score = 0;
-<<<<<<< HEAD
-        this._gametime = 300;
-=======
         this._gametime = 60;
         this._totalGameTime = 60;
->>>>>>> 331a79b979f58b83a59d665deddfd6eb672a4dfb
     };
     GameData.prototype.addlevel = function () {
         this._level += 1;

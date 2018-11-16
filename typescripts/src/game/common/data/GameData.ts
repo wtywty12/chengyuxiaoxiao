@@ -24,8 +24,8 @@ export class GameData {
     constructor() {
         this._level = 1;
         this._score = 0;
-        this._gametime = 300;
-        this._totalGameTime = 300;
+        this._gametime = 60;
+        this._totalGameTime = 60;
         this._playtimes = 0;
     }
 
@@ -33,15 +33,15 @@ export class GameData {
         this._level = 1;
         this._score = 0;
 
-        this._gametime = 300;
-        this._totalGameTime = 300;
+        this._gametime = 60;
+        this._totalGameTime = 60;
         this._playtimes = 0;
     }
     //游戏开始
     public gameStart(){
         this._score = 0;
-        this._gametime = 300;
-        this._totalGameTime = 300;
+        this._gametime = 60;
+        this._totalGameTime = 60;
     }
     //增加等级
     public addlevel(){
