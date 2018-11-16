@@ -35,6 +35,12 @@ export class GameScene extends cc.Component {
     @property(cc.Node)
     private btn_share: cc.Node = null;
 
+    /**
+     * 进度条
+     */
+    @property(cc.ProgressBar)
+    private bar_time: cc.ProgressBar = null;
+
     /** 构造函数 */
     protected constructor() {
         super();
@@ -59,6 +65,8 @@ export class GameScene extends cc.Component {
 
         /** 创建倒计时 */
         this.createCDTime();
+        /** 倒计时进度条 */
+        this.createScheBar();
     }
 
     private onTouchEventListener(event: any) {
@@ -71,12 +79,13 @@ export class GameScene extends cc.Component {
         switch(eventName) {
             case "btn_back":
                 //TODO 
-                GameEngine.changeScene(GameSceneHepler.LOADING)
+                // GameEngine.changeScene(GameSceneHepler.LOADING)
+                GameEngine.loginService.login();
                 break;
             case "btn_share":
                 cc.log("分享游戏");
-                GameManager.onGameOver();
-                GameEngine.changeScene(GameSceneHepler.SETTLE)
+                // GameEngine.changeScene(GameSceneHepler.SETTLE)
+                GameEngine.loginService.getUserInfo();
                 break;
             default:
                 break;
@@ -84,20 +93,34 @@ export class GameScene extends cc.Component {
     }
 
     /**
-     * 创建倒计时
+     * 创建时间倒计时
      */
     public createCDTime() {
-        // var nowTime = GameDataManager.gameData.gametime;
+        this.lbl_time.string = GameDataManager.gameData.gametime.toString();
         var timeCallback = function (dt: number) {
+            cc.log("GameDataManager.gameData.gametime = " + GameDataManager.gameData.gametime);
             GameDataManager.gameData.gametime--;
             this.lbl_time.string = GameDataManager.gameData.gametime.toString();
-            if (GameDataManager.gameData.gametime <= 0) {
+            if (GameDataManager.gameData.gametime < 0) {
                 GameManager.onGameOver();
-                this.unschedule(timeCallback);
                 GameEngine.changeScene(GameSceneHepler.SETTLE)
             }
           }
         this.schedule(timeCallback, 1);
+    }
+
+    /**
+     * 创建进度条进度器
+     */
+    public createScheBar() {
+        var time = GameDataManager.gameData.totalGameTime * 0.01;
+        var times = 100;
+        var barCallback = function (dt: number) {
+            times --;
+            let percent = times * 0.01;
+            this.bar_time.progress = percent;
+          }
+        this.schedule(barCallback, time);
     }
 
     /**
@@ -106,6 +129,7 @@ export class GameScene extends cc.Component {
     public resetCDTime() {
         this.unscheduleAllCallbacks();
         this.createCDTime();
+        this.createScheBar();
     }
     
 }

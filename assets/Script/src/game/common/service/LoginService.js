@@ -43,6 +43,7 @@ var LoginService = (function () {
                     "encryptedData": encryptedData,
                     "iv": iv
                 };
+                cc.log("wx.getUserInfo res: : ", res);
                 GameEngine_1.GameEngine.http.httpPost(ServerUrls_1.ServerUrls.GET_USER_URL, params, function (response) {
                     if (!response.success) {
                         GameEngine_1.GameEngine.showTips(response.message);

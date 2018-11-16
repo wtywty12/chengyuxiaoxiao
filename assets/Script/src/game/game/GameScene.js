@@ -36,6 +36,7 @@ var GameScene = (function (_super) {
         _this.lbl_time = null;
         _this.btn_back = null;
         _this.btn_share = null;
+        _this.bar_time = null;
         return _this;
     }
     GameScene.prototype.onLoad = function () {
@@ -50,6 +51,7 @@ var GameScene = (function (_super) {
         this.btn_back.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
         this.btn_share.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
         this.createCDTime();
+        this.createScheBar();
     };
     GameScene.prototype.onTouchEventListener = function (event) {
         var eventType = event.type;
@@ -60,32 +62,43 @@ var GameScene = (function (_super) {
         }
         switch (eventName) {
             case "btn_back":
-                GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.LOADING);
+                GameEngine_1.GameEngine.loginService.login();
                 break;
             case "btn_share":
                 cc.log("分享游戏");
-                GameManager_1.GameManager.onGameOver();
-                GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.SETTLE);
+                GameEngine_1.GameEngine.loginService.getUserInfo();
                 break;
             default:
                 break;
         }
     };
     GameScene.prototype.createCDTime = function () {
+        this.lbl_time.string = GameDataManager_1.GameDataManager.gameData.gametime.toString();
         var timeCallback = function (dt) {
+            cc.log("GameDataManager.gameData.gametime = " + GameDataManager_1.GameDataManager.gameData.gametime);
             GameDataManager_1.GameDataManager.gameData.gametime--;
             this.lbl_time.string = GameDataManager_1.GameDataManager.gameData.gametime.toString();
-            if (GameDataManager_1.GameDataManager.gameData.gametime <= 0) {
+            if (GameDataManager_1.GameDataManager.gameData.gametime < 0) {
                 GameManager_1.GameManager.onGameOver();
-                this.unschedule(timeCallback);
                 GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.SETTLE);
             }
         };
         this.schedule(timeCallback, 1);
     };
+    GameScene.prototype.createScheBar = function () {
+        var time = GameDataManager_1.GameDataManager.gameData.totalGameTime * 0.01;
+        var times = 100;
+        var barCallback = function (dt) {
+            times--;
+            var percent = times * 0.01;
+            this.bar_time.progress = percent;
+        };
+        this.schedule(barCallback, time);
+    };
     GameScene.prototype.resetCDTime = function () {
         this.unscheduleAllCallbacks();
         this.createCDTime();
+        this.createScheBar();
     };
     __decorate([
         property(GameTable_1.GameTable)
@@ -102,6 +115,9 @@ var GameScene = (function (_super) {
     __decorate([
         property(cc.Node)
     ], GameScene.prototype, "btn_share", void 0);
+    __decorate([
+        property(cc.ProgressBar)
+    ], GameScene.prototype, "bar_time", void 0);
     GameScene = __decorate([
         ccclass()
     ], GameScene);
