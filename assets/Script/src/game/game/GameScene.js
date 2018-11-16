@@ -24,6 +24,9 @@ var property = cc._decorator.property;
 var GameTable_1 = require("./../game/GameTable");
 var ChooseView_1 = require("./../game/ChooseView");
 var GameManager_1 = require("./GameManager");
+var GameDataManager_1 = require("../common/data/GameDataManager");
+var GameEngine_1 = require("../common/GameEngine");
+var GameSceneHepler_1 = require("../common/helper/GameSceneHepler");
 var GameScene = (function (_super) {
     __extends(GameScene, _super);
     function GameScene() {
@@ -57,22 +60,22 @@ var GameScene = (function (_super) {
         }
         switch (eventName) {
             case "btn_back":
-                cc.director.loadScene("LoadingScene");
+                GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.LOADING);
                 break;
             case "btn_share":
                 cc.log("分享游戏");
                 GameManager_1.GameManager.onGameOver();
+                GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.SETTLE);
                 break;
             default:
                 break;
         }
     };
     GameScene.prototype.createCDTime = function () {
-        var nowTime = 60;
         var timeCallback = function (dt) {
-            nowTime--;
-            this.lbl_time.string = nowTime.toString();
-            if (nowTime == 0) {
+            GameDataManager_1.GameDataManager.gameData.gametime--;
+            this.lbl_time.string = GameDataManager_1.GameDataManager.gameData.gametime.toString();
+            if (GameDataManager_1.GameDataManager.gameData.gametime <= 0) {
                 GameManager_1.GameManager.onGameOver();
                 this.unschedule(timeCallback);
             }

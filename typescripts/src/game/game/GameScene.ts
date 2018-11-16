@@ -3,6 +3,9 @@ import property = cc._decorator.property;
 import {GameTable} from "./../game/GameTable";
 import {ChooseView} from "./../game/ChooseView";
 import {GameManager} from "./GameManager";
+import { GameDataManager } from "../common/data/GameDataManager";
+import { GameEngine } from "../common/GameEngine";
+import { GameSceneHepler } from "../common/helper/GameSceneHepler";
 
 @ccclass()
 export class GameScene extends cc.Component {
@@ -67,11 +70,13 @@ export class GameScene extends cc.Component {
         }
         switch(eventName) {
             case "btn_back":
-                cc.director.loadScene("LoadingScene");
+                //TODO 
+                GameEngine.changeScene(GameSceneHepler.LOADING)
                 break;
             case "btn_share":
                 cc.log("分享游戏");
                 GameManager.onGameOver();
+                GameEngine.changeScene(GameSceneHepler.SETTLE)
                 break;
             default:
                 break;
@@ -82,11 +87,11 @@ export class GameScene extends cc.Component {
      * 创建倒计时
      */
     public createCDTime() {
-        var nowTime = 60;
+        // var nowTime = GameDataManager.gameData.gametime;
         var timeCallback = function (dt: number) {
-            nowTime--;
-            this.lbl_time.string = nowTime.toString();
-            if (nowTime == 0) {
+            GameDataManager.gameData.gametime--;
+            this.lbl_time.string = GameDataManager.gameData.gametime.toString();
+            if (GameDataManager.gameData.gametime <= 0) {
                 GameManager.onGameOver();
                 this.unschedule(timeCallback);
             }

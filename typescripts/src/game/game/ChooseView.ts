@@ -129,4 +129,11 @@ export class ChooseView extends cc.Component {
         })
         this.gridAry = [];
     }
+    public onClearAll() {
+        /** 清理格子 */
+        this.gridAry.forEach(value => {
+            value.removeSelf();
+        })
+        this.gridAry = [];
+    }
 }

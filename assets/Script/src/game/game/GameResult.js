@@ -39,8 +39,8 @@ var GameResult = (function () {
     GameResult.prototype.onSuccessFul = function () {
         cc.log("判定成功");
         this.clearData();
-        if (Tools_1.Tools.getMapLength(RecordGrid_1.RecordGrid.getGameTableGridMap()) == 64) {
-            GameManager_1.GameManager.onGameOver();
+        if (Tools_1.Tools.getMapLength(RecordGrid_1.RecordGrid.getGameTableGridMap()) == this.gameTable.tableWidth * this.gameTable.tableHeight) {
+            GameManager_1.GameManager.onGameLevelup();
         }
         ;
     };

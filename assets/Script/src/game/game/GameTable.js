@@ -25,6 +25,8 @@ var GameResult_1 = require("./GameResult");
 var RecordGrid_1 = require("../common/model/RecordGrid");
 var ResourcesManager_1 = require("../../core/common/ResourcesManager");
 var RandomAry_1 = require("./../common/model/RandomAry");
+var ConfigManager_1 = require("./../common/ConfigManager");
+var GameDataManager_1 = require("../common/data/GameDataManager");
 var GameTable = (function (_super) {
     __extends(GameTable, _super);
     function GameTable() {
@@ -37,6 +39,7 @@ var GameTable = (function (_super) {
         _this.produceAry = null;
         _this.chooseView = null;
         _this.gameResult = null;
+        _this.gridDefaultWidth = 120;
         return _this;
     }
     GameTable.prototype.onLoad = function () {
@@ -44,6 +47,11 @@ var GameTable = (function (_super) {
     GameTable.prototype.onDestroy = function () {
     };
     GameTable.prototype.loadFinish = function () {
+        var levelInfo = ConfigManager_1.ConfigManager.levelsJsonMap.get(GameDataManager_1.GameDataManager.gameData.level);
+        if (levelInfo != null) {
+            this.tableWidth = levelInfo.row;
+            this.tableHeight = levelInfo.line;
+        }
         this.randomAry = new RandomAry_1.RandomAry((this.tableWidth * this.tableHeight) * 0.25);
         this.randomIdiom = this.randomAry.getRandomIdiom();
         this.produceAry = this.randomAry.getProduceArray();
@@ -70,8 +78,9 @@ var GameTable = (function (_super) {
             cc.log("GameTable gridPrefab is null");
             return;
         }
+        this.node.setContentSize(this.tableWidth * this.gridDefaultWidth, this.tableHeight * this.gridDefaultWidth);
+        var w_h = this.gridDefaultWidth;
         var node = cc.instantiate(this.gridPrefab);
-        var w_h = 720 / this.tableWidth;
         node.setContentSize(cc.size(w_h, w_h));
         var gameGrid = node.getComponent("GameGrid");
         gameGrid.setGridString(this.produceAry[index]);
@@ -112,6 +121,10 @@ var GameTable = (function (_super) {
     GameTable.prototype.onGameOver = function () {
         this.node.removeAllChildren();
         RecordGrid_1.RecordGrid.onGameOver();
+    };
+    GameTable.prototype.onClearAll = function () {
+        this.node.removeAllChildren();
+        RecordGrid_1.RecordGrid.onClearAll();
     };
     GameTable = __decorate([
         ccclass()

@@ -5,10 +5,17 @@
       "main": true,
       "url": "app://editor/index.html",
       "windowType": "dockable",
+<<<<<<< HEAD
       "x": -255,
       "y": -1057,
       "width": 1920,
       "height": 1057,
+=======
+      "x": 2174,
+      "y": 99,
+      "width": 1567,
+      "height": 940,
+>>>>>>> 304a82ee77ef409e0bb0912986e92e0537d744ca
       "layout": {
         "children": [
           {
@@ -18,34 +25,68 @@
                 "children": [
                   "hierarchy"
                 ],
+<<<<<<< HEAD
                 "height": 459.953125,
+=======
+                "height": 406,
+>>>>>>> 304a82ee77ef409e0bb0912986e92e0537d744ca
                 "type": "panel",
-                "width": 415
+                "width": 341
               },
               {
                 "active": 0,
                 "children": [
                   "assets"
                 ],
+<<<<<<< HEAD
                 "height": 503.046875,
+=======
+                "height": 440,
+>>>>>>> 304a82ee77ef409e0bb0912986e92e0537d744ca
                 "type": "panel",
-                "width": 415
+                "width": 341
               }
             ],
+<<<<<<< HEAD
             "height": 966,
+=======
+            "height": 849,
+>>>>>>> 304a82ee77ef409e0bb0912986e92e0537d744ca
             "type": "dock-v",
-            "width": 415
+            "width": 341
           },
           {
             "children": [
               {
-                "active": 0,
                 "children": [
-                  "scene"
+                  {
+                    "active": 0,
+                    "children": [
+                      "scene"
+                    ],
+                    "height": 440,
+                    "type": "panel",
+                    "width": 515
+                  },
+                  {
+                    "active": 0,
+                    "children": [
+                      "node-library"
+                    ],
+                    "height": 440,
+                    "type": "panel",
+                    "width": 324
+                  }
                 ],
+<<<<<<< HEAD
                 "height": 676.453125,
                 "type": "panel",
                 "width": 1034.984375
+=======
+                "height": 440,
+                "type": "dock-h",
+                "width": 842
+>>>>>>> 304a82ee77ef409e0bb0912986e92e0537d744ca
               },
               {
                 "active": 0,
@@ -53,36 +94,54 @@
                   "console",
                   "timeline"
                 ],
+<<<<<<< HEAD
                 "height": 286.53125,
+=======
+                "height": 406,
+>>>>>>> 304a82ee77ef409e0bb0912986e92e0537d744ca
                 "type": "panel",
-                "width": 1034.984375
+                "width": 842
               }
             ],
+<<<<<<< HEAD
             "height": 966,
+=======
+            "height": 849,
+>>>>>>> 304a82ee77ef409e0bb0912986e92e0537d744ca
             "type": "dock-v",
-            "width": 1034.984375
+            "width": 842
           },
           {
             "active": 0,
             "children": [
               "inspector"
             ],
+<<<<<<< HEAD
             "height": 966,
+=======
+            "height": 849,
+>>>>>>> 304a82ee77ef409e0bb0912986e92e0537d744ca
             "type": "panel",
-            "width": 458
+            "width": 372
           }
         ],
         "type": "dock-h"
       },
       "panels": [
         "hierarchy",
+        "node-library",
         "console",
         "timeline",
         "inspector",
         "assets",
         "scene"
       ]
+<<<<<<< HEAD
     }
+=======
+    },
+    "window-1542281514441": {}
+>>>>>>> 304a82ee77ef409e0bb0912986e92e0537d744ca
   },
   "panels": {
     "sprite-editor": {
@@ -91,17 +150,17 @@
       "width": 500,
       "height": 522
     },
-    "node-library": {
-      "x": 810,
-      "y": 277,
-      "width": 300,
-      "height": 502
-    },
     "builder": {
-      "x": 710,
-      "y": 167,
-      "width": 650,
+      "x": 590,
+      "y": 118,
+      "width": 654,
       "height": 722
+    },
+    "preferences": {
+      "x": 560,
+      "y": 218,
+      "width": 584,
+      "height": 548
     }
   }
 }

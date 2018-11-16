@@ -99,6 +99,14 @@ class RecordGridClass{
         /** 清理中心表点击记录 结束再清理 用于判定胜利使用 */
         this.gameTableGridMap.clear();
     }
+    //清理所有格子
+    public onClearAll()
+    {
+        /** 清理数据 */
+        this.clearRecordData();
+        /** 清理中心表点击记录 结束再清理 用于判定胜利使用 */
+        this.gameTableGridMap.clear();
+    }
 }
 
 export const RecordGrid: RecordGridClass = RecordGridClass.instance;

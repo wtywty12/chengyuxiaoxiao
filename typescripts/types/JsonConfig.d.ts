@@ -24,4 +24,5 @@ declare interface levels extends IData {
     readonly level:number;
     readonly line:number;
     readonly row:number;
+    readonly addtime:number;
 }

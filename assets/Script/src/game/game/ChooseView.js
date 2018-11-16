@@ -106,6 +106,12 @@ var ChooseView = (function (_super) {
         });
         this.gridAry = [];
     };
+    ChooseView.prototype.onClearAll = function () {
+        this.gridAry.forEach(function (value) {
+            value.removeSelf();
+        });
+        this.gridAry = [];
+    };
     ChooseView = __decorate([
         ccclass()
     ], ChooseView);

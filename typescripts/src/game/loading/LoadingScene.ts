@@ -5,6 +5,8 @@ import ccclass = cc._decorator.ccclass;
 import property = cc._decorator.property;
 import {GameEngine} from "../common/GameEngine";
 import {GameSceneHepler} from "../common/helper/GameSceneHepler";
+import { GameDataManager } from "../common/data/GameDataManager";
+import { GameData } from "../common/data/GameData";
 
 /**
  * @author: liubowen
@@ -59,11 +61,19 @@ export class LoadingScene extends CommonScene {
             }
             else{}
         })
-        
+        ////初始化玩家数据 
+        this.setProgress(70);
+        await this.initPlayerData()
         this.setProgress(100);
         await this.loadFinish();
     }
-
+    //初始化玩家信息
+    private initPlayerData():void{
+        //通过后台获取 用户信息 若未授权 提示用户去授权 并拉去玩家信息
+        // GameEngine.loginService.checkLogin();
+        GameDataManager.gameData.playtimes = 0
+        GameDataManager.gameData.topscore = 10
+    }
     protected unload(): void {
     }
     private setProgress(value:number){
@@ -73,8 +83,7 @@ export class LoadingScene extends CommonScene {
     private loadFinish(): void {
         // GameEngine.audio.playBGM("bg");
         this.runAnimation()
-        // GameEngine.loginService.checkLogin();
-        // GameEngine.changeScene(GameSceneHepler.START);
+        
     }
     private runAnimation():void{
         this.progressBar.node.active = false;
@@ -82,8 +91,6 @@ export class LoadingScene extends CommonScene {
 
         var self = this;
         var action1 = cc.moveBy(0.3, cc.v2(0, cc.view.getVisibleSize().height *3.3 / 7));
-        var scaleAction = cc.sequence(cc.scaleTo(0.3,1.2),cc.scaleTo(0.3,1));
-        var repeatAction = cc.repeatForever(scaleAction);
         var callbackFunc = cc.callFunc(function(){
             var scaleAction = cc.sequence(cc.scaleTo(0.7,1.2),cc.scaleTo(0.7,1));
             var repeatAction = cc.repeatForever(scaleAction);
@@ -118,6 +125,7 @@ export class LoadingScene extends CommonScene {
     }
 
     private startGame():void{
+        GameDataManager.gameData.refuseData();
         GameEngine.changeScene(GameSceneHepler.GAME)
     }
 

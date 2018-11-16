@@ -2,6 +2,9 @@ import ccclass = cc._decorator.ccclass;
 import {GameTable} from "./GameTable";
 import {ChooseView} from "./ChooseView";
 import {GameScene} from "./GameScene";
+// import {GameData} from "./../common/data/GameData"
+import {GameDataManager} from "./../common/data/GameDataManager"
+import { GameData } from "../common/data/GameData";
 
 /**
  * 游戏管理器
@@ -35,11 +38,26 @@ export class GameManagerClass {
      * 游戏开始
      */
     public onGameStart() {
+        GameDataManager.gameData.gameStart()
         this.chooseView.loadFinish();
         this.gameTable.setChooseView(this.chooseView);
         this.gameTable.loadFinish();
     }
-
+    /**
+     * 进入下一关
+     */
+    public onGameLevelup(){
+        //先加上当前关卡的奖励时间
+        GameDataManager.gameData.addgametime()
+        GameDataManager.gameData.addlevel()
+        //清除所有
+        this.gameTable.onClearAll();
+        this.chooseView.onClearAll();
+        
+        this.chooseView.loadFinish();
+        this.gameTable.setChooseView(this.chooseView);
+        this.gameTable.loadFinish();
+    }
     /**
      * 游戏结束
      */
@@ -47,9 +65,8 @@ export class GameManagerClass {
         this.gameTable.onGameOver();
         this.chooseView.onGameOver();
         this.gameScene.resetCDTime();
-        this.onGameStart();
+        // this.onGameStart();
     }
-
 }
 
 export const GameManager: GameManagerClass = GameManagerClass.instance;

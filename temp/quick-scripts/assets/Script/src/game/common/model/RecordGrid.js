@@ -59,6 +59,10 @@ var RecordGridClass = function () {
         this.clearRecordData();
         this.gameTableGridMap.clear();
     };
+    RecordGridClass.prototype.onClearAll = function () {
+        this.clearRecordData();
+        this.gameTableGridMap.clear();
+    };
     return RecordGridClass;
 }();
 exports.RecordGrid = RecordGridClass.instance;

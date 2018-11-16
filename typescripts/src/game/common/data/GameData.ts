@@ -16,21 +16,57 @@ export class GameData {
     private _gametime : number;
     //玩家id
     private _playerId : number;
+    //玩家玩的次数
+    private _playtimes:number;
 
 
 
     constructor() {
         this._level = 1;
         this._score = 0;
-        this._topscore = 0;
-        this._gametime = 0;
+        this._gametime = 60;
+        this._playtimes = 0;
     }
 
     public refuseData(){//重制数据
         this._level = 1;
         this._score = 0;
-        this._topscore = 0;
-        this._gametime = 0;
+        this._gametime = 60;
+        this._playtimes = 0;
+    }
+    //游戏开始
+    public gameStart(){
+        this._level = 1;
+        this._score = 0;
+        this._gametime = 60;
+    }
+    //增加等级
+    public addlevel(){
+        this._level += 1;
+    }
+    //增加分数
+    public addscore(value :number){
+        this._score += value;
+    }
+    //增加游戏时间
+    public addgametime(){
+        var levelsInfo = ConfigManager.levelsJsonMap.get(this._level)
+        var value = levelsInfo.addtime
+        this._gametime +=value
+    }
+    // public addgametime(value:number){
+    //     if(value == null)
+    //     {
+    //         var levelsInfo = ConfigManager.levelsJsonMap.get(this._level)
+    //         value = levelsInfo.addtime
+    //     }
+    //     this._gametime +=value
+    // }
+    get playtimes(): number{
+        return this._playtimes;
+    }
+    set playtimes(_playtimes :number) {
+        this._playtimes = _playtimes;
     }
     get playerId(): number{
         return this._playerId;
@@ -55,9 +91,6 @@ export class GameData {
     }
     set score(_score : number) {
         this._score = _score
-    }
-    public addscore(value :number){
-        this._score += value;
     }
     get gametime():number{
         return this._gametime

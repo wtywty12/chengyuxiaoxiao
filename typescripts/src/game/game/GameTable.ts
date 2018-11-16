@@ -6,16 +6,18 @@ import {RecordGrid} from "../common/model/RecordGrid";
 import {ResourcesManager} from "../../core/common/ResourcesManager";
 import {RandomAry} from "./../common/model/RandomAry";
 import {ChooseView} from "./../game/ChooseView";
+import {ConfigManager} from "./../common/ConfigManager";
 import { GameScene } from "./GameScene";
 import { GameEngine } from "../common/GameEngine";
 import { GameSceneHepler } from "../common/helper/GameSceneHepler";
+import { GameDataManager } from "../common/data/GameDataManager";
 
 @ccclass()
 export class GameTable extends cc.Component {
     /** 表宽 */
-    private tableWidth: number = 6;
+    public tableWidth: number = 6;
     /** 表高 */
-    private tableHeight: number = 6;
+    public tableHeight: number = 6;
     /** 格子prefab */
     private gridPrefab: cc.Prefab = null;
     /** 每个关卡成语数组 */
@@ -28,7 +30,8 @@ export class GameTable extends cc.Component {
     private chooseView: ChooseView = null;
     /** 游戏结算 */
     private gameResult: GameResult = null;
-    
+    //格子大小
+    private gridDefaultWidth : number = 120;
     /** 构造函数 */
     public constructor() {
         super();
@@ -46,6 +49,12 @@ export class GameTable extends cc.Component {
 
     /** 异步加载完成 */
     public loadFinish(): void {
+        var levelInfo = ConfigManager.levelsJsonMap.get(GameDataManager.gameData.level)
+        if(levelInfo !=null )
+        {
+            this.tableWidth = levelInfo.row
+            this.tableHeight = levelInfo.line
+        }
         this.randomAry = new RandomAry((this.tableWidth * this.tableHeight) * 0.25);
         this.randomIdiom = this.randomAry.getRandomIdiom();
         this.produceAry = this.randomAry.getProduceArray();
@@ -84,17 +93,16 @@ export class GameTable extends cc.Component {
             cc.log("GameTable gridPrefab is null");
             return
         }
+        this.node.setContentSize(this.tableWidth*this.gridDefaultWidth,this.tableHeight*this.gridDefaultWidth)
+        let w_h = this.gridDefaultWidth//720 / this.tableWidth;
+
         let node: cc.Node = cc.instantiate(this.gridPrefab);
-        let w_h = 720 / this.tableWidth;
         node.setContentSize(cc.size(w_h, w_h));
         let gameGrid: GameGrid = node.getComponent("GameGrid");
         gameGrid.setGridString(this.produceAry[index]);
+        
         node.on(cc.Node.EventType.TOUCH_END,function(event: any)
         {
-            // GameEngine.changeScene(GameSceneHepler.SETTLE);
-            // return;
-
-            
             let str = this.produceAry[index];
             if (this.checkGridMap(gameGrid) == false) {
                 cc.log("已经存在");
@@ -146,5 +154,10 @@ export class GameTable extends cc.Component {
         /** 清理所有格子 */
         this.node.removeAllChildren();
         RecordGrid.onGameOver();
+    }
+    //关卡升级 清理掉所有各自
+    public onClearAll(){
+        this.node.removeAllChildren();
+        RecordGrid.onClearAll();
     }
 }
