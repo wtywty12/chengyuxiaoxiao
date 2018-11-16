@@ -8,6 +8,7 @@ var GameData = (function () {
         this._gametime = 300;
         this._totalGameTime = 300;
         this._playtimes = 0;
+        this._gridEffectTime = 0.5;
     }
     GameData.prototype.refuseData = function () {
         this._level = 1;
@@ -99,6 +100,13 @@ var GameData = (function () {
         },
         set: function (_totalTime) {
             this._totalGameTime = _totalTime;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(GameData.prototype, "gridEffectTime", {
+        get: function () {
+            return this._gridEffectTime;
         },
         enumerable: true,
         configurable: true

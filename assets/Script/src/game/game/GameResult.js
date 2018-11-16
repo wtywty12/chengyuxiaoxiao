@@ -3,15 +3,28 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var Tools_1 = require("../../utils/Tools");
 var GameManager_1 = require("./GameManager");
 var RecordGrid_1 = require("../common/model/RecordGrid");
-var GameResult = (function () {
-    function GameResult(gameTable, chooseView) {
+var GameDataManager_1 = require("../common/data/GameDataManager");
+var GameResultClass = (function () {
+    function GameResultClass() {
         this.randomAry = null;
         this.gameTable = null;
         this.chooseView = null;
+    }
+    Object.defineProperty(GameResultClass, "instance", {
+        get: function () {
+            if (this._instance == null) {
+                this._instance = new GameResultClass();
+            }
+            return this._instance;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    GameResultClass.prototype.setView = function (gameTable, chooseView) {
         this.gameTable = gameTable;
         this.chooseView = chooseView;
-    }
-    GameResult.prototype.startResult = function (idiomAry) {
+    };
+    GameResultClass.prototype.startResult = function (idiomAry) {
         cc.log("开始判定");
         var chooseAry = RecordGrid_1.RecordGrid.getChooseGridAry();
         var isSussess = false;
@@ -30,29 +43,32 @@ var GameResult = (function () {
             }
         }
         if (isSussess) {
-            this.onSuccessFul();
+            this.chooseView.playChooseFadeOut();
+            var cb1 = cc.callFunc(this.onSuccessFul, this);
+            this.gameTable.node.runAction(cc.sequence(cc.delayTime(GameDataManager_1.GameDataManager.gameData.gridEffectTime), cb1));
         }
         else {
             this.onFailed();
         }
     };
-    GameResult.prototype.onSuccessFul = function () {
+    GameResultClass.prototype.onSuccessFul = function () {
         cc.log("判定成功");
         this.clearData();
+        this.chooseView.playChooseFadeIn();
         if (Tools_1.Tools.getMapLength(RecordGrid_1.RecordGrid.getGameTableGridMap()) == this.gameTable.tableWidth * this.gameTable.tableHeight) {
             GameManager_1.GameManager.onGameLevelup();
         }
         ;
     };
-    GameResult.prototype.onFailed = function () {
+    GameResultClass.prototype.onFailed = function () {
         cc.log("判定失败");
         this.chooseView.restoreIdiom();
         this.clearData();
     };
-    GameResult.prototype.clearData = function () {
+    GameResultClass.prototype.clearData = function () {
         RecordGrid_1.RecordGrid.clearRecordData();
         this.chooseView.clearChooseGrid();
     };
-    return GameResult;
+    return GameResultClass;
 }());
-exports.GameResult = GameResult;
+exports.GameResult = GameResultClass.instance;

@@ -11,7 +11,7 @@ import {RecordGrid } from "../common/model/RecordGrid";
 import { GameDataManager } from "../common/data/GameDataManager";
 import { GameData } from "../common/data/GameData";
 
-export class GameResult{
+class GameResultClass{
      /** 随机成语字 */
      private randomAry: RandomAry = null;
      /** 中心表 */
@@ -19,7 +19,19 @@ export class GameResult{
      /** 上方表 */
      private chooseView: ChooseView = null;
 
-    public constructor (gameTable: GameTable, chooseView: ChooseView) {
+    private constructor () {
+    }
+
+    private static _instance: GameResultClass;
+
+    public static get instance(): GameResultClass {
+        if (this._instance == null) {
+            this._instance = new GameResultClass();
+        }
+        return this._instance;
+    }
+
+    public setView(gameTable: GameTable, chooseView: ChooseView) {
         this.gameTable = gameTable;
         this.chooseView = chooseView;
     }
@@ -49,7 +61,10 @@ export class GameResult{
             }
         }
         if (isSussess) {
-            this.onSuccessFul();
+             /** 播放上方表特性 */
+            this.chooseView.playChooseFadeOut();
+            var cb1 = cc.callFunc(this.onSuccessFul, this);
+            this.gameTable.node.runAction(cc.sequence(cc.delayTime(GameDataManager.gameData.gridEffectTime), cb1));
         } else {
             this.onFailed();
         }
@@ -62,6 +77,8 @@ export class GameResult{
         cc.log("判定成功");
         /** 清理上方成语 */
         this.clearData();
+        /** 显示上方背景格子 */
+        this.chooseView.playChooseFadeIn();
         /** 判定胜利 */
         if (Tools.getMapLength(RecordGrid.getGameTableGridMap()) == this.gameTable.tableWidth * this.gameTable.tableHeight) {
             GameManager.onGameLevelup();
@@ -89,3 +106,5 @@ export class GameResult{
         this.chooseView.clearChooseGrid();
      }
 }
+
+export const GameResult: GameResultClass = GameResultClass.instance;

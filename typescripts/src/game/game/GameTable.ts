@@ -28,8 +28,6 @@ export class GameTable extends cc.Component {
     private produceAry: Array<string> = null;
     /** 上方选择表 */
     private chooseView: ChooseView = null;
-    /** 游戏结算 */
-    private gameResult: GameResult = null;
     //格子大小
     private gridDefaultWidth : number = 120;
     /** 构造函数 */
@@ -60,7 +58,7 @@ export class GameTable extends cc.Component {
         this.produceAry = this.randomAry.getProduceArray();
         this.gridPrefab = ResourcesManager.getPrefab("GameGrid");
         this.chooseView.setGameTable(this);
-        this.gameResult = new GameResult(this, this.chooseView);
+        GameResult.setView(this, this.chooseView);
 
         this.createTable();
     }
@@ -124,7 +122,7 @@ export class GameTable extends cc.Component {
             this.chooseView.setGridInfo(index, str);
             if (length == 3) {
                 /** 索引0开始 满足3进行结算判定 */
-                this.gameResult.startResult(this.randomIdiom);
+                GameResult.startResult(this.randomIdiom);
             }
         },this);
         if (this.node == null || gameGrid == null || gameGrid.node == null) {

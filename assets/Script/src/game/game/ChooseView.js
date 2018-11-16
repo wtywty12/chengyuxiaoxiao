@@ -100,6 +100,18 @@ var ChooseView = (function (_super) {
             gird.setGridString("");
         }
     };
+    ChooseView.prototype.playChooseFadeOut = function () {
+        for (var i = 0; i < this.gridAry.length; i++) {
+            var gird = this.gridAry[i];
+            gird.setFadeOut();
+        }
+    };
+    ChooseView.prototype.playChooseFadeIn = function () {
+        for (var i = 0; i < this.gridAry.length; i++) {
+            var gird = this.gridAry[i];
+            gird.setFadeIn();
+        }
+    };
     ChooseView.prototype.onGameOver = function () {
         this.gridAry.forEach(function (value) {
             value.removeSelf();
