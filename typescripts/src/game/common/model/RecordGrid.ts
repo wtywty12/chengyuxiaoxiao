@@ -76,10 +76,12 @@ class RecordGridClass{
      * 显示格子
      */
     public displayGrid(str: string, index: number) {
-        if (typeof(str) != "string" || typeof(index) != "number") {
+        if (typeof(str) != "string" || typeof(index) != "number" || str == "") {
             return;
         }
         this.gameTableGridMap.get(index).setGridString(str);
+        /** 中心表去除点击记录 */
+        this.gameTableGridMap.delete(index);
     }
 
     /**

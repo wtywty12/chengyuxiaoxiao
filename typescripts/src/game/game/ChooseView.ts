@@ -60,8 +60,6 @@ export class ChooseView extends cc.Component {
             console.log('remove' + str);
             /** 数组里删除玩家点击的字 */
             RecordGrid.getChooseGridAry().splice(i, i+1);
-            /** 中心表去除点击记录 */
-            RecordGrid.getGameTableGridMap().delete(vec);
             /** 上方格子清除玩家点击的字 */
             this.gridAry[index].setGridString("");
             /** 中心表显示玩家点击的字 */
