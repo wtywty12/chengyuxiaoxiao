@@ -66,11 +66,27 @@ export class LoadingScene extends CommonScene {
         await this.initPlayerData()
         this.setProgress(100);
         await this.loadFinish();
+
+        let button = wx.createUserInfoButton({
+            type :'text',
+            text:'登录',
+            style: {
+                left: 10,
+                top: 76,
+                width: 200,
+                height: 40,
+                lineHeight: 40,
+                backgroundColor: '#ff0000',
+                color: '#ffffff',
+                textAlign: 'center',
+                fontSize: 16,
+                borderRadius: 4
+            }
+        })
     }
     //初始化玩家信息
     private initPlayerData():void{
         //通过后台获取 用户信息 若未授权 提示用户去授权 并拉去玩家信息
-        // GameEngine.loginService.checkLogin();
         GameDataManager.gameData.playtimes = 0
         GameDataManager.gameData.topscore = 10
     }
@@ -125,6 +141,7 @@ export class LoadingScene extends CommonScene {
     }
 
     private startGame():void{
+        // GameEngine.loginService.checkLogin();
         GameDataManager.gameData.refuseData();
         GameEngine.changeScene(GameSceneHepler.GAME)
     }

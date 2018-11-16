@@ -100,7 +100,8 @@
         "scene"
       ]
     },
-    "window-1542281514441": {}
+    "window-1542282303688": {},
+    "worker": {}
   },
   "panels": {
     "sprite-editor": {
@@ -110,8 +111,8 @@
       "height": 522
     },
     "builder": {
-      "x": 590,
-      "y": 118,
+      "x": 2048,
+      "y": 288,
       "width": 654,
       "height": 722
     },

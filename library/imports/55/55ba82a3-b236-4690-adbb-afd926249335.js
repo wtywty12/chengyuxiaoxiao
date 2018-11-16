@@ -93,6 +93,7 @@ var GameScene = function (_super) {
             if (GameDataManager_1.GameDataManager.gameData.gametime <= 0) {
                 GameManager_1.GameManager.onGameOver();
                 this.unschedule(timeCallback);
+                GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.SETTLE);
             }
         };
         this.schedule(timeCallback, 1);

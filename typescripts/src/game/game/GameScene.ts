@@ -94,6 +94,7 @@ export class GameScene extends cc.Component {
             if (GameDataManager.gameData.gametime <= 0) {
                 GameManager.onGameOver();
                 this.unschedule(timeCallback);
+                GameEngine.changeScene(GameSceneHepler.SETTLE)
             }
           }
         this.schedule(timeCallback, 1);

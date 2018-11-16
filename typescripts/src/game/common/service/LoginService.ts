@@ -21,10 +21,10 @@ export class LoginService {
                 cc.log(`!res.authSetting['scope.userInfo'] || StringUtils.isEmpty(playerId)  : ${!res['scope.userInfo'] ||
                 StringUtils.isEmpty(playerId)}`);
 
-                if (!res.authSetting['scope.userInfo'] || StringUtils.isEmpty(playerId)) {
-                    // 登陆
-                    // GameEngine.changeScene(GameSceneHepler.LOGIN);
-                } else {
+                // if (!res.authSetting['scope.userInfo'] || StringUtils.isEmpty(playerId)) {
+                //     // 登陆
+                //     // GameEngine.changeScene(GameSceneHepler.LOGIN);
+                // } else {
                     // 获取用户信息登陆
                     wx.checkSession({
                         success: (res: any) => {
@@ -36,7 +36,7 @@ export class LoginService {
                             this.login();
                         }
                     });
-                }
+                // }
             }
         });
     }

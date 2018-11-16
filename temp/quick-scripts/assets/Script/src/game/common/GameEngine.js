@@ -87,6 +87,7 @@ var GameEngineClass = function () {
     GameEngineClass.prototype.doPost = function (url, params, eventCode) {
         var _this = this;
         this._http.httpPost(url, params, function (ret) {
+            cc.log("url : " + url + " , ret : ", ret);
             if (!ret.success) {
                 _this.showTips(ret.message);
                 return;
@@ -101,7 +102,7 @@ var GameEngineClass = function () {
     GameEngineClass.prototype.shareGame = function () {
         wx.shareAppMessage({
             title: "柚子消消乐，越消越赚钱",
-            imageUrl: "",
+            imageUrl: "https://liubowen.top/dzk-res/share/70005.png",
             query: "sharePlayerId=" + GameDataManager_1.GameDataManager.userData.playerId
         });
         this.doPost(ServerUrls_1.ServerUrls.SHARE_URL, { "playerId": GameDataManager_1.GameDataManager.userData.playerId });

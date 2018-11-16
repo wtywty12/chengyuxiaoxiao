@@ -85,7 +85,7 @@ class GameEngineClass {
 
     public doPost(url: string, params?: any, eventCode?: number) {
         this._http.httpPost(url, params, (ret: IResponseDataVo) => {
-            // cc.log(`url : ${url} , ret : `, ret);
+            cc.log(`url : ${url} , ret : `, ret);
             if (!ret.success) {
                 this.showTips(ret.message);
                 return;
@@ -101,7 +101,7 @@ class GameEngineClass {
     public shareGame(): void {
         wx.shareAppMessage({
             title: "柚子消消乐，越消越赚钱",
-            imageUrl: "",
+            imageUrl: "https://liubowen.top/dzk-res/share/70005.png",
             query: `sharePlayerId=${GameDataManager.userData.playerId}`
         });
         

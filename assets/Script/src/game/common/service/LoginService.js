@@ -17,20 +17,16 @@ var LoginService = (function () {
                 cc.log("StringUtils.isEmpty(playerId): " + StringUtils_1.StringUtils.isEmpty(playerId) + " ");
                 cc.log("!res.authSetting['scope.userInfo'] || StringUtils.isEmpty(playerId)  : " + (!res['scope.userInfo'] ||
                     StringUtils_1.StringUtils.isEmpty(playerId)));
-                if (!res.authSetting['scope.userInfo'] || StringUtils_1.StringUtils.isEmpty(playerId)) {
-                }
-                else {
-                    wx.checkSession({
-                        success: function (res) {
-                            cc.log("wx.checkSession success , res: ", res);
-                            _this.getUserInfo();
-                        },
-                        fail: function (res) {
-                            cc.log("wx.checkSession fail , res: ", res);
-                            _this.login();
-                        }
-                    });
-                }
+                wx.checkSession({
+                    success: function (res) {
+                        cc.log("wx.checkSession success , res: ", res);
+                        _this.getUserInfo();
+                    },
+                    fail: function (res) {
+                        cc.log("wx.checkSession fail , res: ", res);
+                        _this.login();
+                    }
+                });
             }
         });
     };

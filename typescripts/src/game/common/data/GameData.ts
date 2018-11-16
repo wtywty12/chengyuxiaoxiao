@@ -19,26 +19,23 @@ export class GameData {
     //玩家玩的次数
     private _playtimes:number;
 
-
-
     constructor() {
         this._level = 1;
         this._score = 0;
-        this._gametime = 60;
+        this._gametime = 300;
         this._playtimes = 0;
     }
 
     public refuseData(){//重制数据
         this._level = 1;
         this._score = 0;
-        this._gametime = 60;
+        this._gametime = 300;
         this._playtimes = 0;
     }
     //游戏开始
     public gameStart(){
-        this._level = 1;
         this._score = 0;
-        this._gametime = 60;
+        this._gametime = 300;
     }
     //增加等级
     public addlevel(){
@@ -51,7 +48,7 @@ export class GameData {
     //增加游戏时间
     public addgametime(){
         var levelsInfo = ConfigManager.levelsJsonMap.get(this._level)
-        var value = levelsInfo.addtime
+        var value = levelsInfo.addtime || 60
         this._gametime +=value
     }
     // public addgametime(value:number){

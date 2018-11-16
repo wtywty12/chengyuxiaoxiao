@@ -64,11 +64,6 @@
     "meta": 1542187510346,
     "relativePath": "Texture/loadingScene/loadingbg.png"
   },
-  "96a06c5d-7ce5-4db4-8eef-31d4dc1b93cd": {
-    "asset": 1541421625341,
-    "meta": 1542187510391,
-    "relativePath": "Texture/loadingScene/title_bg.png"
-  },
   "a8027877-d8d6-4645-97a0-52d4a0123dba": {
     "asset": 1542098893624,
     "meta": 1542187510362,
@@ -85,8 +80,8 @@
     "relativePath": "Script"
   },
   "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38": {
-    "asset": 1542251667790,
-    "meta": 1542251667795,
+    "asset": 1542339071471,
+    "meta": 1542339071483,
     "relativePath": "Scene/LoadingScene.fire"
   },
   "f94eeb58-d519-4358-8b5f-79b7f80a4afa": {
@@ -549,11 +544,6 @@
     "meta": 1542270486414,
     "relativePath": "Script/src/game/deposit"
   },
-  "fe977f0a-281a-451a-8b73-95ad8d59c35e": {
-    "asset": 1542276216663,
-    "meta": 1542279205872,
-    "relativePath": "resources/jsons/idiom.json"
-  },
   "222c8c4e-ff5c-4206-a0d5-69280693002a": {
     "asset": 1542276216664,
     "meta": 1542279205873,
@@ -684,11 +674,6 @@
     "meta": 1542279206466,
     "relativePath": "Script/src/game/common/data/UserData.js"
   },
-  "104bad0a-000e-411e-b101-b9633620dd75": {
-    "asset": 1542277200092,
-    "meta": 1542279206472,
-    "relativePath": "Script/src/game/common/GameEngine.js"
-  },
   "6a63b903-9d43-4089-8068-1eb6d97cec18": {
     "asset": 1542277200058,
     "meta": 1542279206535,
@@ -704,45 +689,10 @@
     "meta": 1542279206576,
     "relativePath": "Script/src/game/common/model/RandomAry.js"
   },
-  "c5dc9d69-f6c8-42bc-9400-e531f8d40809": {
-    "asset": 1542277200086,
-    "meta": 1542279206638,
-    "relativePath": "Script/src/game/common/script/TipsScript.js"
-  },
-  "75122906-ce12-4704-a2f3-7227891c6e9e": {
-    "asset": 1542277200069,
-    "meta": 1542279206675,
-    "relativePath": "Script/src/game/common/service/LoginService.js"
-  },
-  "9070297d-f2b3-42a1-ab61-872e13ec6399": {
-    "asset": 1542277200134,
-    "meta": 1542279206739,
-    "relativePath": "Script/src/game/deposit/DepositScene.js"
-  },
   "03a82ca5-af63-4500-ae03-b0dda3856983": {
     "asset": 1542277200120,
     "meta": 1542279206856,
     "relativePath": "Script/src/game/game/GameGrid.js"
-  },
-  "fab89146-579d-4e9b-9845-516ae60eac57": {
-    "asset": 1542277200191,
-    "meta": 1542279207348,
-    "relativePath": "Script/src/game/myinfo/MyinfoScene.js"
-  },
-  "c2a5fc74-59e1-4438-87b2-344285b52944": {
-    "asset": 1542277200194,
-    "meta": 1542279207389,
-    "relativePath": "Script/src/game/rank/RankScene.js"
-  },
-  "240d0ec5-abd3-47ce-9f77-dfd2ac8280e0": {
-    "asset": 1542277200201,
-    "meta": 1542279207422,
-    "relativePath": "Script/src/game/settle/RedpackScene.js"
-  },
-  "7a80da82-d2db-4fb5-a891-eeffe5c62b0a": {
-    "asset": 1542277200205,
-    "meta": 1542279207443,
-    "relativePath": "Script/src/game/settle/SettleScene.js"
   },
   "933aa648-9e1b-41dd-8ffb-3792ac528312": {
     "asset": 1542277200209,
@@ -799,34 +749,79 @@
     "meta": 1542281453310,
     "relativePath": "Script/src/game/common/data/GameDataManager.js"
   },
-  "5ab3a914-1231-4a71-bbe3-63f49e193a70": {
-    "asset": 1542281382493,
-    "meta": 1542281453335,
-    "relativePath": "Script/src/game/game/GameManager.js"
-  },
   "97be3ef2-5953-4964-860e-a648c5fe4058": {
     "asset": 1542281327947,
     "meta": 1542281453368,
     "relativePath": "Script/src/game/game/GameResult.js"
   },
-  "3009a629-7889-4dd2-ae99-183a53517630": {
-    "asset": 1542281327941,
-    "meta": 1542281453483,
-    "relativePath": "Script/src/game/loading/LoadingScene.js"
+  "5ab3a914-1231-4a71-bbe3-63f49e193a70": {
+    "asset": 1542282096174,
+    "meta": 1542282105707,
+    "relativePath": "Script/src/game/game/GameManager.js"
   },
   "b3633f1d-5921-4453-a2d4-3d2f735c9fea": {
-    "asset": 1542281751901,
-    "meta": 1542281755929,
+    "asset": 1542335713513,
+    "meta": 1542338111566,
     "relativePath": "Script/src/game/common/data/GameData.js"
   },
+  "c5dc9d69-f6c8-42bc-9400-e531f8d40809": {
+    "asset": 1542339171667,
+    "meta": 1542339174521,
+    "relativePath": "Script/src/game/common/script/TipsScript.js"
+  },
+  "75122906-ce12-4704-a2f3-7227891c6e9e": {
+    "asset": 1542339171673,
+    "meta": 1542339174562,
+    "relativePath": "Script/src/game/common/service/LoginService.js"
+  },
+  "9070297d-f2b3-42a1-ab61-872e13ec6399": {
+    "asset": 1542339171664,
+    "meta": 1542339174595,
+    "relativePath": "Script/src/game/deposit/DepositScene.js"
+  },
   "55ba82a3-b236-4690-adbb-afd926249335": {
-    "asset": 1542281978029,
-    "meta": 1542281979719,
+    "asset": 1542339171659,
+    "meta": 1542339174660,
     "relativePath": "Script/src/game/game/GameScene.js"
   },
   "a33454b1-70fd-4ea2-93e1-4acdf53a51e0": {
-    "asset": 1542281933684,
-    "meta": 1542281979719,
+    "asset": 1542339171655,
+    "meta": 1542339174733,
     "relativePath": "Script/src/game/game/GameTable.js"
+  },
+  "fab89146-579d-4e9b-9845-516ae60eac57": {
+    "asset": 1542339171642,
+    "meta": 1542339174829,
+    "relativePath": "Script/src/game/myinfo/MyinfoScene.js"
+  },
+  "c2a5fc74-59e1-4438-87b2-344285b52944": {
+    "asset": 1542339171636,
+    "meta": 1542339174874,
+    "relativePath": "Script/src/game/rank/RankScene.js"
+  },
+  "240d0ec5-abd3-47ce-9f77-dfd2ac8280e0": {
+    "asset": 1542339171634,
+    "meta": 1542339174904,
+    "relativePath": "Script/src/game/settle/RedpackScene.js"
+  },
+  "7a80da82-d2db-4fb5-a891-eeffe5c62b0a": {
+    "asset": 1542339171631,
+    "meta": 1542339174913,
+    "relativePath": "Script/src/game/settle/SettleScene.js"
+  },
+  "fe977f0a-281a-451a-8b73-95ad8d59c35e": {
+    "asset": 1542339695101,
+    "meta": 1542282429708,
+    "relativePath": "resources/jsons/idiom.json"
+  },
+  "104bad0a-000e-411e-b101-b9633620dd75": {
+    "asset": 1542340157853,
+    "meta": 1542340983275,
+    "relativePath": "Script/src/game/common/GameEngine.js"
+  },
+  "3009a629-7889-4dd2-ae99-183a53517630": {
+    "asset": 1542347052470,
+    "meta": 1542347055244,
+    "relativePath": "Script/src/game/loading/LoadingScene.js"
   }
 }

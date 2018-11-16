@@ -139,6 +139,7 @@ var LoadingScene = function (_super) {
     }
     LoadingScene.prototype.load = function () {
         return __awaiter(this, void 0, void 0, function () {
+            var button;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -168,6 +169,22 @@ var LoadingScene = function (_super) {
                         return [4, this.loadFinish()];
                     case 4:
                         _a.sent();
+                        button = wx.createUserInfoButton({
+                            type: 'text',
+                            text: '登录',
+                            style: {
+                                left: 10,
+                                top: 76,
+                                width: 200,
+                                height: 40,
+                                lineHeight: 40,
+                                backgroundColor: '#ff0000',
+                                color: '#ffffff',
+                                textAlign: 'center',
+                                fontSize: 16,
+                                borderRadius: 4
+                            }
+                        });
                         return [2];
                 }
             });
