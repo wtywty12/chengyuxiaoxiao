@@ -56,3 +56,221 @@
 2018-11-16T04:33:01.697Z - normal: Watching packages
 2018-11-16T04:33:01.789Z - normal: Run Application
 2018-11-16T04:33:03.082Z - success: preview server running at http://localhost:7456
+2018-11-16T04:47:43.216Z - normal: Start building with options : {
+  "actualPlatform": "wechatgame",
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "apiLevel": "",
+  "appABIs": [],
+  "appKey": "",
+  "appSecret": "",
+  "buildPath": "/Users/linzhang/wegame",
+  "debug": true,
+  "dest": "/Users/linzhang/wegame/wechatgame",
+  "embedWebDebugger": false,
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeAnySDK": false,
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "jailbreakPlatform": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "platform": "wechatgame",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "privateKey": "",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "scenes": [
+    "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38",
+    "4dcd14cd-14a8-4a6e-ae9e-0a4bf6dfa061",
+    "42b202ab-7491-4680-9d35-c49ea4ddedf1",
+    "a6ed62ac-6d2c-4666-896d-59c4c311faa8",
+    "29ce233f-ccb7-41be-8610-3aad7b9494fb",
+    "b83cf815-05dc-4e09-bc8f-47b6e5608cd4",
+    "8e868381-a7b9-47fd-9fe3-354ba31c395d"
+  ],
+  "sourceMaps": false,
+  "startScene": "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38",
+  "template": "link",
+  "title": "chengyuxiaoxiao",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx100b0d9ac9176cb5",
+    "isSubdomain": false,
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "xxteaKey": "d26bfbe9-e497-4d",
+  "zipCompressJs": true,
+  "project": "/Users/linzhang/youyou/chengyuxiaoxiao",
+  "projectName": "chengyuxiaoxiao",
+  "debugBuildWorker": false
+}
+2018-11-16T04:47:43.222Z - normal: Building /Users/linzhang/youyou/chengyuxiaoxiao
+2018-11-16T04:47:43.222Z - normal: Destination /Users/linzhang/wegame/wechatgame
+2018-11-16T04:47:43.806Z - normal: Delete /Users/linzhang/wegame/wechatgame/**/*
+2018-11-16T04:48:37.340Z - normal: Start building assets
+2018-11-16T04:48:37.343Z - normal: Start spawn build-worker
+2018-11-16T04:48:38.113Z - normal: Finish spawn build-worker
+2018-11-16T04:48:38.113Z - normal: Start init build-worker
+2018-11-16T04:48:42.285Z - normal: Finish init build-worker
+2018-11-16T04:48:42.286Z - normal: Start build-assets in worker
+2018-11-16T04:48:43.321Z - normal: Finish build-assets in worker
+2018-11-16T04:48:43.341Z - normal: Finish building assets
+2018-11-16T04:48:43.370Z - normal: Start building plugin scripts
+2018-11-16T04:48:43.413Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
+2018-11-16T04:48:45.007Z - normal: Built to "/Users/linzhang/wegame/wechatgame" successfully
+2018-11-16T04:48:51.633Z - normal: Initializing...
+
+2018-11-16T04:48:51.643Z - normal: idePortFile: /Users/linzhang/Library/Application Support/微信web开发者工具/Default/.ide
+
+2018-11-16T04:48:51.666Z - normal: starting ide...
+
+2018-11-16T04:48:56.730Z - normal: IDE server has started, listening on http://127.0.0.1:23881
+
+2018-11-16T04:48:56.740Z - normal: initialization finished
+
+2018-11-16T04:48:56.972Z - error: StatusCodeError: 400 - "{\"code\":40000,\"error\":\"错误 需要重新登录\"}"
+
+    at Socket.<anonymous> (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/core/wechat-game.js:1:900)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:191:7)
+    at readableAddChunk (_stream_readable.js:178:18)
+    at Socket.Readable.push (_stream_readable.js:136:10)
+    at Pipe.onread (net.js:560:20)
+2018-11-16T05:08:25.509Z - normal: Initializing...
+
+2018-11-16T05:08:25.515Z - normal: idePortFile: /Users/linzhang/Library/Application Support/微信web开发者工具/Default/.ide
+
+2018-11-16T05:08:25.531Z - normal: starting ide...
+
+2018-11-16T05:08:29.647Z - normal: IDE server has started, listening on http://127.0.0.1:44250
+
+2018-11-16T05:08:29.652Z - normal: initialization finished
+
+2018-11-16T05:08:30.483Z - normal: open IDE success
+
+2018-11-16T05:25:41.355Z - normal: Start building with options : {
+  "actualPlatform": "wechatgame",
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "apiLevel": "",
+  "appABIs": [],
+  "appKey": "",
+  "appSecret": "",
+  "buildPath": "/Users/linzhang/wegame",
+  "debug": true,
+  "dest": "/Users/linzhang/wegame/wechatgame",
+  "embedWebDebugger": false,
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeAnySDK": false,
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "jailbreakPlatform": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "platform": "wechatgame",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "privateKey": "",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "scenes": [
+    "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38",
+    "4dcd14cd-14a8-4a6e-ae9e-0a4bf6dfa061",
+    "42b202ab-7491-4680-9d35-c49ea4ddedf1",
+    "a6ed62ac-6d2c-4666-896d-59c4c311faa8",
+    "29ce233f-ccb7-41be-8610-3aad7b9494fb",
+    "b83cf815-05dc-4e09-bc8f-47b6e5608cd4",
+    "8e868381-a7b9-47fd-9fe3-354ba31c395d"
+  ],
+  "sourceMaps": false,
+  "startScene": "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38",
+  "template": "link",
+  "title": "chengyuxiaoxiao",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx100b0d9ac9176cb5",
+    "isSubdomain": false,
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "xxteaKey": "d26bfbe9-e497-4d",
+  "zipCompressJs": true,
+  "project": "/Users/linzhang/youyou/chengyuxiaoxiao",
+  "projectName": "chengyuxiaoxiao",
+  "debugBuildWorker": false
+}
+2018-11-16T05:25:41.359Z - normal: Building /Users/linzhang/youyou/chengyuxiaoxiao
+2018-11-16T05:25:41.360Z - normal: Destination /Users/linzhang/wegame/wechatgame
+2018-11-16T05:25:41.362Z - normal: Delete /Users/linzhang/wegame/wechatgame/**/*
+2018-11-16T05:25:46.749Z - normal: Start building assets
+2018-11-16T05:25:46.750Z - normal: Start spawn build-worker
+2018-11-16T05:25:47.715Z - normal: Finish spawn build-worker
+2018-11-16T05:25:47.716Z - normal: Start init build-worker
+2018-11-16T05:25:53.299Z - normal: Finish init build-worker
+2018-11-16T05:25:53.300Z - normal: Start build-assets in worker
+2018-11-16T05:25:54.268Z - normal: Finish build-assets in worker
+2018-11-16T05:25:54.275Z - normal: Finish building assets
+2018-11-16T05:25:54.291Z - normal: Start building plugin scripts
+2018-11-16T05:25:54.338Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
+2018-11-16T05:25:55.799Z - normal: Built to "/Users/linzhang/wegame/wechatgame" successfully
+2018-11-16T05:26:11.178Z - normal: Initializing...
+
+2018-11-16T05:26:11.186Z - normal: idePortFile: /Users/linzhang/Library/Application Support/微信web开发者工具/Default/.ide
+
+2018-11-16T05:26:11.214Z - normal: IDE server has started, listening on http://127.0.0.1:44250
+
+2018-11-16T05:26:11.215Z - normal: initialization finished
+
+2018-11-16T05:26:11.480Z - normal: open IDE success
+

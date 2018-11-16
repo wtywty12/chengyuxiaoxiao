@@ -12,8 +12,10 @@ export class GameData {
     private _score : number;
     //当前全清了多少次 等级
     private _level : number;
-    //游戏过关市场
+    //游戏过关时间
     private _gametime : number;
+    /** 游戏过关总时间 */
+    private _totalGameTime: number;
     //玩家id
     private _playerId : number;
     //玩家玩的次数
@@ -25,6 +27,7 @@ export class GameData {
         this._level = 1;
         this._score = 0;
         this._gametime = 60;
+        this._totalGameTime = 60;
         this._playtimes = 0;
     }
 
@@ -32,6 +35,7 @@ export class GameData {
         this._level = 1;
         this._score = 0;
         this._gametime = 60;
+        this._totalGameTime = 60;
         this._playtimes = 0;
     }
     //游戏开始
@@ -39,6 +43,7 @@ export class GameData {
         this._level = 1;
         this._score = 0;
         this._gametime = 60;
+        this._totalGameTime = 60;
     }
     //增加等级
     public addlevel(){
@@ -53,6 +58,7 @@ export class GameData {
         var levelsInfo = ConfigManager.levelsJsonMap.get(this._level)
         var value = levelsInfo.addtime
         this._gametime +=value
+        this._totalGameTime += value;
     }
     // public addgametime(value:number){
     //     if(value == null)
@@ -97,6 +103,12 @@ export class GameData {
     }
     set gametime(_gametime : number) {
         this._gametime = _gametime
+    }
+    get totalGameTime(): number{
+        return this._totalGameTime;
+    }
+    set totalGameTime(_totalTime: number) {
+        this._totalGameTime = _totalTime;
     }
  
 

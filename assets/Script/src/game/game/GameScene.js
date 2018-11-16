@@ -36,6 +36,7 @@ var GameScene = (function (_super) {
         _this.lbl_time = null;
         _this.btn_back = null;
         _this.btn_share = null;
+        _this.bar_time = null;
         return _this;
     }
     GameScene.prototype.onLoad = function () {
@@ -64,7 +65,7 @@ var GameScene = (function (_super) {
                 break;
             case "btn_share":
                 cc.log("分享游戏");
-                GameManager_1.GameManager.onGameOver();
+                GameEngine_1.GameEngine.shareGame();
                 GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.SETTLE);
                 break;
             default:
@@ -72,15 +73,24 @@ var GameScene = (function (_super) {
         }
     };
     GameScene.prototype.createCDTime = function () {
+        var dt_times = 0;
         var timeCallback = function (dt) {
-            GameDataManager_1.GameDataManager.gameData.gametime--;
-            this.lbl_time.string = GameDataManager_1.GameDataManager.gameData.gametime.toString();
-            if (GameDataManager_1.GameDataManager.gameData.gametime <= 0) {
+            dt_times++;
+            if (dt_times == 1) {
+                this.lbl_time.string = GameDataManager_1.GameDataManager.gameData.gametime.toString();
+            }
+            GameDataManager_1.GameDataManager.gameData.gametime = GameDataManager_1.GameDataManager.gameData.gametime - 0.01;
+            var percent = GameDataManager_1.GameDataManager.gameData.gametime / GameDataManager_1.GameDataManager.gameData.totalGameTime;
+            this.bar_time.progress = percent;
+            if (dt_times % 100 != 0) {
+                return;
+            }
+            this.lbl_time.string = Math.floor(GameDataManager_1.GameDataManager.gameData.gametime).toString();
+            if (GameDataManager_1.GameDataManager.gameData.gametime <= 1) {
                 GameManager_1.GameManager.onGameOver();
-                this.unschedule(timeCallback);
             }
         };
-        this.schedule(timeCallback, 1);
+        this.schedule(timeCallback, 0.01);
     };
     GameScene.prototype.resetCDTime = function () {
         this.unscheduleAllCallbacks();
@@ -101,6 +111,9 @@ var GameScene = (function (_super) {
     __decorate([
         property(cc.Node)
     ], GameScene.prototype, "btn_share", void 0);
+    __decorate([
+        property(cc.ProgressBar)
+    ], GameScene.prototype, "bar_time", void 0);
     GameScene = __decorate([
         ccclass()
     ], GameScene);

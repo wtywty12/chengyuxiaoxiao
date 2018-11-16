@@ -35,6 +35,12 @@ export class GameScene extends cc.Component {
     @property(cc.Node)
     private btn_share: cc.Node = null;
 
+    /**
+     * 进度条
+     */
+    @property(cc.ProgressBar)
+    private bar_time: cc.ProgressBar = null;
+
     /** 构造函数 */
     protected constructor() {
         super();
@@ -75,7 +81,7 @@ export class GameScene extends cc.Component {
                 break;
             case "btn_share":
                 cc.log("分享游戏");
-                GameManager.onGameOver();
+                GameEngine.shareGame();
                 GameEngine.changeScene(GameSceneHepler.SETTLE)
                 break;
             default:
@@ -87,16 +93,24 @@ export class GameScene extends cc.Component {
      * 创建倒计时
      */
     public createCDTime() {
-        // var nowTime = GameDataManager.gameData.gametime;
+        var dt_times = 0;
         var timeCallback = function (dt: number) {
-            GameDataManager.gameData.gametime--;
-            this.lbl_time.string = GameDataManager.gameData.gametime.toString();
-            if (GameDataManager.gameData.gametime <= 0) {
+            dt_times++;
+            if (dt_times == 1) {
+                this.lbl_time.string = GameDataManager.gameData.gametime.toString();
+            }
+            GameDataManager.gameData.gametime = GameDataManager.gameData.gametime - 0.01;
+            let percent = GameDataManager.gameData.gametime / GameDataManager.gameData.totalGameTime;
+            this.bar_time.progress = percent;
+            if (dt_times % 100 != 0) {
+                return;
+            }
+            this.lbl_time.string = Math.floor(GameDataManager.gameData.gametime).toString();
+            if (GameDataManager.gameData.gametime <= 1) {
                 GameManager.onGameOver();
-                this.unschedule(timeCallback);
             }
           }
-        this.schedule(timeCallback, 1);
+        this.schedule(timeCallback, 0.01);
     }
 
     /**
