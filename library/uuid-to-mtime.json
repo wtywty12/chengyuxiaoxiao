@@ -245,27 +245,27 @@
     "relativePath": "prefab/webview.prefab"
   },
   "1d2cbf7c-017a-4e7f-8cdc-cf9aad656725": {
-    "asset": 1542194114101,
+    "asset": 1542264767727,
     "meta": 1542194114098,
     "relativePath": "resources"
   },
   "659d66da-900d-4d61-9a8b-b62a9ba61812": {
-    "asset": 1542194114101,
+    "asset": 1542278199902,
     "meta": 1542194114100,
     "relativePath": "resources/jsons"
   },
   "5e83d933-b42b-4bdc-91dd-6f1885ea52a9": {
-    "asset": 1542194114102,
+    "asset": 1542268925138,
     "meta": 1542194114101,
     "relativePath": "resources/prefabs"
   },
   "d9a6e235-6007-4485-ade4-813cea6fa487": {
-    "asset": 1542194114095,
+    "asset": 1542259372418,
     "meta": 1542194114093,
     "relativePath": "Texture/loadingScene"
   },
   "29f52784-2fca-467b-92e7-8fd9ef8c57b7": {
-    "asset": 1542194114060,
+    "asset": 1542278124346,
     "meta": 1542194114059,
     "relativePath": "Scene"
   },
@@ -285,77 +285,77 @@
     "relativePath": "Script/src/core"
   },
   "51e47e20-a027-485a-ad87-408f7cd4f54c": {
-    "asset": 1542194114063,
+    "asset": 1542194838242,
     "meta": 1542194114061,
     "relativePath": "Script/src/core/common"
   },
   "eba7d438-165a-438f-9ee5-d57c4974cd6d": {
-    "asset": 1542194114064,
+    "asset": 1542194838245,
     "meta": 1542194114063,
     "relativePath": "Script/src/core/component"
   },
   "cc42b57c-a010-4f51-81a4-68cc5ccf4f81": {
-    "asset": 1542194114069,
+    "asset": 1542194838251,
     "meta": 1542194114064,
     "relativePath": "Script/src/core/event"
   },
   "13db346c-ab0f-44bb-8920-03fb7ba1d382": {
-    "asset": 1542194114074,
+    "asset": 1542194838259,
     "meta": 1542194114069,
     "relativePath": "Script/src/core/net"
   },
   "72df791c-cedf-4bc0-994d-5aaab9f9609b": {
-    "asset": 1542194114075,
+    "asset": 1542194838260,
     "meta": 1542194114074,
     "relativePath": "Script/src/core/service"
   },
   "27837e19-6972-4da7-b9c9-468276b00ef0": {
-    "asset": 1542194114087,
+    "asset": 1542278124349,
     "meta": 1542194114075,
     "relativePath": "Script/src/game"
   },
   "7e435841-2197-487b-a59b-f31d658d246b": {
-    "asset": 1542194114082,
+    "asset": 1542278124347,
     "meta": 1542194114075,
     "relativePath": "Script/src/game/common"
   },
   "298de69f-5cdc-440a-b750-e0a27c8f8a8d": {
-    "asset": 1542194114079,
+    "asset": 1542268925131,
     "meta": 1542194114077,
     "relativePath": "Script/src/game/common/data"
   },
   "7eb5bcc2-13c2-4ab7-b65e-3cdcff6574b5": {
-    "asset": 1542194114081,
+    "asset": 1542268925131,
     "meta": 1542194114079,
     "relativePath": "Script/src/game/common/helper"
   },
   "087ffabb-a02c-4cfc-8fbb-f3f866bd50c4": {
-    "asset": 1542194114082,
+    "asset": 1542278124395,
     "meta": 1542194114081,
     "relativePath": "Script/src/game/common/model"
   },
   "ca47ac0c-900a-4a3e-8ec5-72c361e39a47": {
-    "asset": 1542194114083,
+    "asset": 1542268925132,
     "meta": 1542194114082,
     "relativePath": "Script/src/game/common/service"
   },
   "240c67fa-bd25-4859-aa7f-0bf8c4063e4f": {
-    "asset": 1542194114086,
+    "asset": 1542268925255,
     "meta": 1542194114083,
     "relativePath": "Script/src/game/game"
   },
   "7899b706-dda2-4194-9b1f-1d3a7fb643ac": {
-    "asset": 1542194114087,
+    "asset": 1542268925134,
     "meta": 1542194114086,
     "relativePath": "Script/src/game/loading"
   },
   "5d6ab02f-5146-4115-81f0-92f7f389418b": {
-    "asset": 1542194114091,
+    "asset": 1542200470148,
     "meta": 1542194114087,
     "relativePath": "Script/src/utils"
   },
   "e4aa86bf-e517-4fea-b1a9-aa4e3fffef65": {
-    "asset": 1542194114097,
+    "asset": 1542262228647,
     "meta": 1542194114091,
     "relativePath": "Texture"
   },
@@ -400,7 +400,7 @@
     "relativePath": "Scene/SettleScene.fire"
   },
   "67a68164-6931-4f81-9a19-a0bd4d8968c0": {
-    "asset": 1542259372413,
+    "asset": 1542268925136,
     "meta": 1542259372412,
     "relativePath": "Script/src/game/settle"
   },
@@ -440,7 +440,7 @@
     "relativePath": "Texture/loadingScene/youzi.png"
   },
   "24442bec-e023-4d3d-a934-69ddc9f34bf8": {
-    "asset": 1542262228652,
+    "asset": 1542263695232,
     "meta": 1542262228648,
     "relativePath": "Texture/gameScene"
   },
@@ -525,7 +525,7 @@
     "relativePath": "Script/src/game/common/script"
   },
   "3acc8e52-a84b-4ed2-8bdd-d08f954117d8": {
-    "asset": 1542268925135,
+    "asset": 1542278124348,
     "meta": 1542268925134,
     "relativePath": "Script/src/game/myinfo"
   },
