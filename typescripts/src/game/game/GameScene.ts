@@ -83,9 +83,23 @@ export class GameScene extends cc.Component {
                 GameEngine.loginService.login();
                 break;
             case "btn_share":
-                cc.log("分享游戏");
+                cc.log("获取用户信息");
                 // GameEngine.changeScene(GameSceneHepler.SETTLE)
-                GameEngine.loginService.getUserInfo();
+                wx.getUserInfo({
+                    success: function(res:any) {
+                        cc.log(`res ${res}`)
+                        cc.log(`res -> userInfo`,res.userInfo)
+                        cc.log(`res -> userInfo`,res.userInfo.nickName)
+                        cc.log(`res -> userInfo`,res.userInfo.avatarUrl)
+                        var userInfo = res.userInfo
+                        var nickName = userInfo.nickName
+                        var avatarUrl = userInfo.avatarUrl
+                        var gender = userInfo.gender //性别 0：未知、1：男、2：女
+                        var province = userInfo.province
+                        var city = userInfo.city
+                        var country = userInfo.country
+                    }
+                })
                 break;
             default:
                 break;
@@ -98,7 +112,6 @@ export class GameScene extends cc.Component {
     public createCDTime() {
         this.lbl_time.string = GameDataManager.gameData.gametime.toString();
         var timeCallback = function (dt: number) {
-            cc.log("GameDataManager.gameData.gametime = " + GameDataManager.gameData.gametime);
             GameDataManager.gameData.gametime--;
             this.lbl_time.string = GameDataManager.gameData.gametime.toString();
             if (GameDataManager.gameData.gametime < 0) {

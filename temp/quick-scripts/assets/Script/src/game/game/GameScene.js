@@ -80,27 +80,34 @@ var GameScene = function (_super) {
                 GameEngine_1.GameEngine.loginService.login();
                 break;
             case "btn_share":
-                cc.log("分享游戏");
-                GameEngine_1.GameEngine.loginService.getUserInfo();
+                cc.log("获取用户信息");
+                wx.getUserInfo({
+                    success: function success(res) {
+                        cc.log("res " + res);
+                        cc.log("res -> userInfo", res.userInfo);
+                        cc.log("res -> userInfo", res.userInfo.nickName);
+                        cc.log("res -> userInfo", res.userInfo.avatarUrl);
+                        var userInfo = res.userInfo;
+                        var nickName = userInfo.nickName;
+                        var avatarUrl = userInfo.avatarUrl;
+                        var gender = userInfo.gender;
+                        var province = userInfo.province;
+                        var city = userInfo.city;
+                        var country = userInfo.country;
+                    }
+                });
                 break;
             default:
                 break;
         }
     };
     GameScene.prototype.createCDTime = function () {
-        GameDataManager_1.GameDataManager.gameData.gametime = 6;
-        GameDataManager_1.GameDataManager.gameData.totalGameTime = 6;
         this.lbl_time.string = GameDataManager_1.GameDataManager.gameData.gametime.toString();
         var timeCallback = function timeCallback(dt) {
-            cc.log("GameDataManager.gameData.gametime = " + GameDataManager_1.GameDataManager.gameData.gametime);
             GameDataManager_1.GameDataManager.gameData.gametime--;
             this.lbl_time.string = GameDataManager_1.GameDataManager.gameData.gametime.toString();
             if (GameDataManager_1.GameDataManager.gameData.gametime < 0) {
                 GameManager_1.GameManager.onGameOver();
-<<<<<<< HEAD
-                this.unschedule(timeCallback);
-=======
->>>>>>> 331a79b979f58b83a59d665deddfd6eb672a4dfb
                 GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.SETTLE);
             }
         };
