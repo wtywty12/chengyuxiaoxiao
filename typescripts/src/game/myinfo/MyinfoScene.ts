@@ -6,6 +6,7 @@ import property = cc._decorator.property;
 import {GameEngine} from "../common/GameEngine";
 import {GameSceneHepler} from "../common/helper/GameSceneHepler";
 import { GameDataManager } from "../common/data/GameDataManager";
+import { LoginService } from "../common/service/LoginService";
 
 /**
  * @author: wangtianye
@@ -70,7 +71,30 @@ export class SettleScene extends cc.Component {
     }
     //点击提现
     private onClickTixian():void{
-        GameEngine.changeScene(GameSceneHepler.DEPOSIT)
+        wx.getUserInfo({
+            success: function(res:any) {
+                cc.log(`res ${res}`)
+                cc.log(`res -> userInfo`,res.userInfo)
+                cc.log(`res -> userInfo`,res.userInfo.nickName)
+                cc.log(`res -> userInfo`,res.userInfo.avatarUrl)
+                var userInfo = res.userInfo
+                var nickName = userInfo.nickName
+                var avatarUrl = userInfo.avatarUrl
+                var gender = userInfo.gender //性别 0：未知、1：男、2：女
+                var province = userInfo.province
+                var city = userInfo.city
+                var country = userInfo.country
+
+                wx.downloadFile({
+                    url:res.userInfo.avatarUrl,
+                    success:(res:any) => {
+                        
+                    },
+                })
+            }
+            
+        })
+        // GameEngine.changeScene(GameSceneHepler.DEPOSIT)
     }
     //客服
     private onClickTifu():void{
@@ -78,13 +102,25 @@ export class SettleScene extends cc.Component {
     }
     //点击为存入的
     private onClickWaitSave():void{
-        this.tab1.node.active = true;
-        this.tab2.node.active = false;
+        var userinfo = GameEngine.loginService.getUserInfo();
+        cc.log(`res -> userInfo--onClickWaitSave`,userinfo)
+        // this.tab1.node.active = true;
+        // this.tab2.node.active = false;
     }
     //点击已经存入的
     private onClickSaved():void{
-        this.tab1.node.active = false;
-        this.tab2.node.active = true;
+        wx.chooseImage({
+            count: 1,
+            sizeType: ['original', 'compressed'],
+            sourceType :['album', 'camera'],
+            success: (res: any) => {
+                cc.log(`res--getUserInfo = ${res}`)
+                let tempFilePaths: string = res.tempFilePaths;
+                
+            },
+        })
+        // this.tab1.node.active = false;
+        // this.tab2.node.active = true;
     }
     private onClickBack():void{
         GameDataManager.gameData.refuseData()

@@ -54,18 +54,44 @@ var SettleScene = (function (_super) {
     SettleScene.prototype.onClickAddTimes = function () {
     };
     SettleScene.prototype.onClickTixian = function () {
-        GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.DEPOSIT);
+        wx.getUserInfo({
+            success: function (res) {
+                cc.log("res " + res);
+                cc.log("res -> userInfo", res.userInfo);
+                cc.log("res -> userInfo", res.userInfo.nickName);
+                cc.log("res -> userInfo", res.userInfo.avatarUrl);
+                var userInfo = res.userInfo;
+                var nickName = userInfo.nickName;
+                var avatarUrl = userInfo.avatarUrl;
+                var gender = userInfo.gender;
+                var province = userInfo.province;
+                var city = userInfo.city;
+                var country = userInfo.country;
+                wx.downloadFile({
+                    url: res.userInfo.avatarUrl,
+                    success: function (res) {
+                    },
+                });
+            }
+        });
     };
     SettleScene.prototype.onClickTifu = function () {
         GameEngine_1.GameEngine.shareGame();
     };
     SettleScene.prototype.onClickWaitSave = function () {
-        this.tab1.node.active = true;
-        this.tab2.node.active = false;
+        var userinfo = GameEngine_1.GameEngine.loginService.getUserInfo();
+        cc.log("res -> userInfo--onClickWaitSave", userinfo);
     };
     SettleScene.prototype.onClickSaved = function () {
-        this.tab1.node.active = false;
-        this.tab2.node.active = true;
+        wx.chooseImage({
+            count: 1,
+            sizeType: ['original', 'compressed'],
+            sourceType: ['album', 'camera'],
+            success: function (res) {
+                cc.log("res--getUserInfo = " + res);
+                var tempFilePaths = res.tempFilePaths;
+            },
+        });
     };
     SettleScene.prototype.onClickBack = function () {
         GameDataManager_1.GameDataManager.gameData.refuseData();

@@ -47,10 +47,11 @@ var RecordGridClass = function () {
         return index;
     };
     RecordGridClass.prototype.displayGrid = function (str, index) {
-        if (typeof str != "string" || typeof index != "number") {
+        if (typeof str != "string" || typeof index != "number" || str == "") {
             return;
         }
         this.gameTableGridMap.get(index).setGridString(str);
+        this.gameTableGridMap.delete(index);
     };
     RecordGridClass.prototype.clearRecordData = function () {
         this.chooseGridAry = [];

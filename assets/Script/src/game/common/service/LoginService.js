@@ -32,9 +32,10 @@ var LoginService = (function () {
     };
     LoginService.prototype.getUserInfo = function () {
         wx.getUserInfo({
-            withCredentials: true,
+            withCredentials: false,
             lang: "zh_CN",
             success: function (res) {
+                cc.log("res--getUserInfo = " + res);
                 var encryptedData = res.encryptedData;
                 var iv = res.iv;
                 var params = {

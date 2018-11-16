@@ -81,7 +81,7 @@ interface IWxApi {
     sendSocketMessage?(obj: any): void;
 
     onSocketMessage?(obj: any): void;
-    onSocketMessage
+    
     closeSocket?(obj: any): void;
 
     onSocketClose?(obj: any): void;

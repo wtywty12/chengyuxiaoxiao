@@ -43,9 +43,10 @@ export class LoginService {
 
     public getUserInfo(): void {
         wx.getUserInfo({
-            withCredentials: true,
+            withCredentials: false,
             lang: "zh_CN",
             success: (res: any) => {
+                cc.log(`res--getUserInfo = ${res}`)
                 let encryptedData: string = res.encryptedData;
                 let iv: string = res.iv;
                 let params = {

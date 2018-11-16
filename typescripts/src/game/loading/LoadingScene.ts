@@ -67,22 +67,22 @@ export class LoadingScene extends CommonScene {
         this.setProgress(100);
         await this.loadFinish();
 
-        let button = wx.createUserInfoButton({
-            type :'text',
-            text:'登录',
-            style: {
-                left: 10,
-                top: 76,
-                width: 200,
-                height: 40,
-                lineHeight: 40,
-                backgroundColor: '#ff0000',
-                color: '#ffffff',
-                textAlign: 'center',
-                fontSize: 16,
-                borderRadius: 4
-            }
-        })
+        // let button = wx.createUserInfoButton({
+        //     type :'text',
+        //     image:'登录',
+        //     style: {
+        //         left: 10,
+        //         top: 76,
+        //         width: 200,
+        //         height: 40,
+        //         lineHeight: 40,
+        //         backgroundColor: '#ff0000',
+        //         color: '#ffffff',
+        //         textAlign: 'center',
+        //         fontSize: 16,
+        //         borderRadius: 4
+        //     }
+        // })
     }
     //初始化玩家信息
     private initPlayerData():void{
