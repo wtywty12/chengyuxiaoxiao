@@ -90,7 +90,7 @@ export class GameTable extends cc.Component {
             cc.log("GameTable gridPrefab is null");
             return
         }
-        // this.node.setContentSize(this.tableWidth*this.gridDefaultWidth,this.tableHeight*this.gridDefaultWidth)
+        this.node.setContentSize(this.tableWidth*GameDataManager.gameData.gridGridWidth,this.tableHeight*GameDataManager.gameData.gridGridHeight)
         let node: cc.Node = cc.instantiate(this.gridPrefab);
         node.setContentSize(cc.size(GameDataManager.gameData.gridGridWidth, GameDataManager.gameData.gridGridHeight));
         let gameGrid: GameGrid = node.getComponent("GameGrid");

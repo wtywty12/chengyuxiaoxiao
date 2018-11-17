@@ -77,6 +77,7 @@ var GameTable = (function (_super) {
             cc.log("GameTable gridPrefab is null");
             return;
         }
+        this.node.setContentSize(this.tableWidth * GameDataManager_1.GameDataManager.gameData.gridGridWidth, this.tableHeight * GameDataManager_1.GameDataManager.gameData.gridGridHeight);
         var node = cc.instantiate(this.gridPrefab);
         node.setContentSize(cc.size(GameDataManager_1.GameDataManager.gameData.gridGridWidth, GameDataManager_1.GameDataManager.gameData.gridGridHeight));
         var gameGrid = node.getComponent("GameGrid");
