@@ -82,6 +82,18 @@ var LoadingScene = (function (_super) {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
+                        cc.loader.downloader.loadSubpackage('loadingScene', function (err) {
+                            if (err) {
+                                return console.error(err);
+                            }
+                            console.log('load subpackage successfully.');
+                        });
+                        cc.loader.downloader.loadSubpackage('jsons', function (err) {
+                            if (err) {
+                                return console.error(err);
+                            }
+                            console.log('load subpackage successfully.');
+                        });
                         this.progressLabel.string = "正在加载";
                         this.setProgress(0);
                         return [4, ConfigManager_1.ConfigManager.load()];
@@ -160,6 +172,12 @@ var LoadingScene = (function (_super) {
         this.bg_title.node.runAction(action4);
     };
     LoadingScene.prototype.startGame = function () {
+        cc.loader.downloader.loadSubpackage('gameScene', function (err) {
+            if (err) {
+                return console.error(err);
+            }
+            console.log('load subpackage successfully.');
+        });
         GameDataManager_1.GameDataManager.gameData.refuseData();
         GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.GAME);
     };
