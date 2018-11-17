@@ -50,6 +50,8 @@ export class GameManagerClass {
         //先加上当前关卡的奖励时间
         GameDataManager.gameData.addgametime()
         GameDataManager.gameData.addlevel()
+        //重置倒计时
+        this.gameScene.resetCDTime();
         //清除所有
         this.gameTable.onClearAll();
         this.chooseView.onClearAll();

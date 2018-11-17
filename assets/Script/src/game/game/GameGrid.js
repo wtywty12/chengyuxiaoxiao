@@ -21,7 +21,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var ccclass = cc._decorator.ccclass;
 var property = cc._decorator.property;
-var ResourcesManager_1 = require("../../core/common/ResourcesManager");
 var GameDataManager_1 = require("../common/data/GameDataManager");
 var GameGrid = (function (_super) {
     __extends(GameGrid, _super);
@@ -41,7 +40,6 @@ var GameGrid = (function (_super) {
     GameGrid.prototype.init = function () {
     };
     GameGrid.prototype.setClickGridBg = function () {
-        this.gridBg.spriteFrame = ResourcesManager_1.ResourcesManager.getImage('dati');
     };
     GameGrid.prototype.setIndex = function (index) {
         if (typeof (index) != "number") {

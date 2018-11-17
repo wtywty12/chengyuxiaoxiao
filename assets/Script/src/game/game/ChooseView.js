@@ -22,6 +22,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var ccclass = cc._decorator.ccclass;
 var RecordGrid_1 = require("../common/model/RecordGrid");
 var ResourcesManager_1 = require("../../core/common/ResourcesManager");
+var Tools_1 = require("../../utils/Tools");
+var GameDataManager_1 = require("../common/data/GameDataManager");
 var ChooseView = (function (_super) {
     __extends(ChooseView, _super);
     function ChooseView() {
@@ -51,8 +53,7 @@ var ChooseView = (function (_super) {
             return;
         }
         var node = cc.instantiate(this.gridPrefab);
-        var w_h = 720 / 6;
-        node.setContentSize(cc.size(w_h, w_h));
+        node.setContentSize(cc.size(GameDataManager_1.GameDataManager.gameData.gridGridWidth, GameDataManager_1.GameDataManager.gameData.gridGridHeight));
         var gameGrid = node.getComponent("GameGrid");
         gameGrid.setClickGridBg();
         node.on(cc.Node.EventType.TOUCH_END, function (event) {
@@ -60,7 +61,7 @@ var ChooseView = (function (_super) {
             var i = gameGrid.getIndex();
             var str = gameGrid.getGridString();
             console.log('remove' + str);
-            RecordGrid_1.RecordGrid.getChooseGridAry().splice(i, i + 1);
+            RecordGrid_1.RecordGrid.getChooseGridMap().delete(i);
             this.gridAry[index].setGridString("");
             RecordGrid_1.RecordGrid.displayGrid(str, vec);
         }, this);
@@ -72,7 +73,7 @@ var ChooseView = (function (_super) {
         this.gridAry.push(gameGrid);
     };
     ChooseView.prototype.setGridInfo = function (vec, str) {
-        if (RecordGrid_1.RecordGrid.getChooseGridAry().length >= 4) {
+        if (Tools_1.Tools.getMapLength(RecordGrid_1.RecordGrid.getChooseGridMap()) >= 4) {
             cc.log("已经满字 点击无效");
             return;
         }
@@ -82,17 +83,16 @@ var ChooseView = (function (_super) {
                 grid.setGridString(str);
                 grid.setVec(vec);
                 grid.setIndex(i);
-                RecordGrid_1.RecordGrid.setChooseGridAry(grid);
-                cc.log("RecordGrid.setChooseGridAry => ", RecordGrid_1.RecordGrid.getChooseGridAry());
+                RecordGrid_1.RecordGrid.setChooseGridMap(i, grid);
+                cc.log("RecordGrid.setChooseGridAry => ", RecordGrid_1.RecordGrid.getChooseGridMap());
                 break;
             }
         }
     };
     ChooseView.prototype.restoreIdiom = function () {
-        for (var i = 0; i < RecordGrid_1.RecordGrid.getChooseGridAry().length; i++) {
-            var grid = RecordGrid_1.RecordGrid.getChooseGridAry()[i];
-            RecordGrid_1.RecordGrid.displayGrid(grid.getGridString(), grid.getVec());
-        }
+        RecordGrid_1.RecordGrid.getChooseGridMap().forEach(function (value) {
+            RecordGrid_1.RecordGrid.displayGrid(value.getGridString(), value.getVec());
+        });
     };
     ChooseView.prototype.clearChooseGrid = function () {
         for (var i = 0; i < this.gridAry.length; i++) {

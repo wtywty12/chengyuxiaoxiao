@@ -42,6 +42,7 @@ var ResourcesManager_1 = require("../../core/common/ResourcesManager");
 var RandomAry_1 = require("./../common/model/RandomAry");
 var ConfigManager_1 = require("./../common/ConfigManager");
 var GameDataManager_1 = require("../common/data/GameDataManager");
+var Tools_1 = require("../../utils/Tools");
 var GameTable = function (_super) {
     __extends(GameTable, _super);
     function GameTable() {
@@ -53,7 +54,6 @@ var GameTable = function (_super) {
         _this.randomAry = null;
         _this.produceAry = null;
         _this.chooseView = null;
-        _this.gridDefaultWidth = 120;
         return _this;
     }
     GameTable.prototype.onLoad = function () {};
@@ -90,29 +90,24 @@ var GameTable = function (_super) {
             cc.log("GameTable gridPrefab is null");
             return;
         }
-        this.node.setContentSize(this.tableWidth * this.gridDefaultWidth, this.tableHeight * this.gridDefaultWidth);
-        var w_h = this.gridDefaultWidth;
         var node = cc.instantiate(this.gridPrefab);
-        node.setContentSize(cc.size(w_h, w_h));
+        node.setContentSize(cc.size(GameDataManager_1.GameDataManager.gameData.gridGridWidth, GameDataManager_1.GameDataManager.gameData.gridGridHeight));
         var gameGrid = node.getComponent("GameGrid");
         gameGrid.setGridString(this.produceAry[index]);
+        node.on(cc.Node.EventType.TOUCH_START, this.onTouchEventListener, this);
         node.on(cc.Node.EventType.TOUCH_END, function (event) {
             var str = this.produceAry[index];
             if (this.checkGridMap(gameGrid) == false) {
                 cc.log("已经存在");
                 return;
             }
-            var length = RecordGrid_1.RecordGrid.getGridMapLength();
-            if (length == 4) {
-                cc.log("已经4个字");
-                return;
-            }
+            this.chooseView.setGridInfo(index, str);
+            var length = Tools_1.Tools.getMapLength(RecordGrid_1.RecordGrid.getChooseGridMap());
             console.log('click' + str);
+            RecordGrid_1.RecordGrid.setGameTableGridMap(index, gameGrid);
             gameGrid.setGridString("");
             gameGrid.setVec(index);
-            RecordGrid_1.RecordGrid.setGameTableGridMap(index, gameGrid);
-            this.chooseView.setGridInfo(index, str);
-            if (length == 3) {
+            if (length == 4) {
                 GameResult_1.GameResult.startResult(this.randomIdiom);
             }
         }, this);
@@ -121,6 +116,20 @@ var GameTable = function (_super) {
             return;
         }
         this.node.addChild(gameGrid.node);
+    };
+    GameTable.prototype.onTouchEventListener = function (event) {
+        var eventType = event.type;
+        var eventName = event.target._name;
+        if (eventType != "touchend") {
+            cc.log("EventType is error, it is ", eventType);
+            return;
+        }
+        switch (eventName) {
+            case "btn_back":
+                break;
+            default:
+                break;
+        }
     };
     GameTable.prototype.checkGridMap = function (grid) {
         var isOk = true;

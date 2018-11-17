@@ -14,6 +14,8 @@ var GameData = function () {
         this._totalGameTime = 300;
         this._playtimes = 0;
         this._gridEffectTime = 0.5;
+        this._gridWidth = 109;
+        this._gridHeight = 109;
     }
     GameData.prototype.refuseData = function () {
         this._level = 1;
@@ -112,6 +114,20 @@ var GameData = function () {
     Object.defineProperty(GameData.prototype, "gridEffectTime", {
         get: function get() {
             return this._gridEffectTime;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(GameData.prototype, "gridGridWidth", {
+        get: function get() {
+            return this._gridWidth;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(GameData.prototype, "gridGridHeight", {
+        get: function get() {
+            return this._gridHeight;
         },
         enumerable: true,
         configurable: true

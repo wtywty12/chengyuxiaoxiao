@@ -11,6 +11,7 @@ import { GameScene } from "./GameScene";
 import { GameEngine } from "../common/GameEngine";
 import { GameSceneHepler } from "../common/helper/GameSceneHepler";
 import { GameDataManager } from "../common/data/GameDataManager";
+import { Tools } from "../../utils/Tools";
 
 @ccclass()
 export class GameTable extends cc.Component {
@@ -28,8 +29,6 @@ export class GameTable extends cc.Component {
     private produceAry: Array<string> = null;
     /** 上方选择表 */
     private chooseView: ChooseView = null;
-    //格子大小
-    private gridDefaultWidth : number = 120;
     /** 构造函数 */
     public constructor() {
         super();
@@ -91,14 +90,12 @@ export class GameTable extends cc.Component {
             cc.log("GameTable gridPrefab is null");
             return
         }
-        this.node.setContentSize(this.tableWidth*this.gridDefaultWidth,this.tableHeight*this.gridDefaultWidth)
-        let w_h = this.gridDefaultWidth//720 / this.tableWidth;
-
+        // this.node.setContentSize(this.tableWidth*this.gridDefaultWidth,this.tableHeight*this.gridDefaultWidth)
         let node: cc.Node = cc.instantiate(this.gridPrefab);
-        node.setContentSize(cc.size(w_h, w_h));
+        node.setContentSize(cc.size(GameDataManager.gameData.gridGridWidth, GameDataManager.gameData.gridGridHeight));
         let gameGrid: GameGrid = node.getComponent("GameGrid");
         gameGrid.setGridString(this.produceAry[index]);
-        
+        node.on(cc.Node.EventType.TOUCH_START, this.onTouchEventListener, this);
         node.on(cc.Node.EventType.TOUCH_END,function(event: any)
         {
             let str = this.produceAry[index];
@@ -106,22 +103,18 @@ export class GameTable extends cc.Component {
                 cc.log("已经存在");
                 return;
             }
-            let length = RecordGrid.getGridMapLength();
-            if (length == 4) {
-                cc.log("已经4个字");
-                return;
-            }
+            /** 上方表设置格子字和索引 */
+            this.chooseView.setGridInfo(index, str);
+            let length = Tools.getMapLength(RecordGrid.getChooseGridMap());
             console.log('click' + str);
+            /** 记录玩家点击格子和索引 */
+            RecordGrid.setGameTableGridMap(index, gameGrid);
             /** 中心表格子设置空白 */
             gameGrid.setGridString("");
             /** 设置格子索引 */
             gameGrid.setVec(index);
-            /** 记录玩家点击格子和索引 */
-            RecordGrid.setGameTableGridMap(index, gameGrid);
-            /** 上方表设置格子字和索引 */
-            this.chooseView.setGridInfo(index, str);
-            if (length == 3) {
-                /** 索引0开始 满足3进行结算判定 */
+            if (length == 4) {
+                /** 满足4进行结算判定 */
                 GameResult.startResult(this.randomIdiom);
             }
         },this);
@@ -130,6 +123,25 @@ export class GameTable extends cc.Component {
             return;
         }
         this.node.addChild(gameGrid.node);
+    }
+
+    /**
+     * 格子点击事件
+     */
+    private onTouchEventListener(event: any) {
+        var eventType = event.type;
+        var eventName = event.target._name;
+        if (eventType != "touchend") {
+            cc.log("EventType is error, it is ", eventType);
+            return;
+        }
+        switch(eventName) {
+            case "btn_back":
+                
+                break;
+            default:
+                break;
+        }
     }
 
     /**
@@ -153,7 +165,7 @@ export class GameTable extends cc.Component {
         this.node.removeAllChildren();
         RecordGrid.onGameOver();
     }
-    //关卡升级 清理掉所有各自
+    //关卡升级 清理掉所有格子
     public onClearAll(){
         this.node.removeAllChildren();
         RecordGrid.onClearAll();

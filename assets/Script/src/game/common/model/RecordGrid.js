@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var RecordGridClass = (function () {
     function RecordGridClass() {
-        this.chooseGridAry = [];
+        this.chooseGridMap = new Map();
         this.gameTableGridMap = new Map();
     }
     Object.defineProperty(RecordGridClass, "instance", {
@@ -23,23 +23,13 @@ var RecordGridClass = (function () {
     RecordGridClass.prototype.getGameTableGridMap = function () {
         return this.gameTableGridMap;
     };
-    RecordGridClass.prototype.setChooseGridAry = function (grid) {
+    RecordGridClass.prototype.setChooseGridMap = function (index, grid) {
         if (typeof (grid) != null) {
-            this.chooseGridAry.push(grid);
+            this.chooseGridMap.set(index, grid);
         }
     };
-    RecordGridClass.prototype.getChooseGridAry = function () {
-        return this.chooseGridAry;
-    };
-    RecordGridClass.prototype.getChooseGridByIndex = function (index) {
-        return null;
-    };
-    RecordGridClass.prototype.getGridMapLength = function () {
-        var index = 0;
-        this.chooseGridAry.forEach(function (value) {
-            index++;
-        });
-        return index;
+    RecordGridClass.prototype.getChooseGridMap = function () {
+        return this.chooseGridMap;
     };
     RecordGridClass.prototype.displayGrid = function (str, index) {
         if (typeof (str) != "string" || typeof (index) != "number" || str == "") {
@@ -49,7 +39,7 @@ var RecordGridClass = (function () {
         this.gameTableGridMap.delete(index);
     };
     RecordGridClass.prototype.clearRecordData = function () {
-        this.chooseGridAry = [];
+        this.chooseGridMap.clear();
     };
     RecordGridClass.prototype.onGameOver = function () {
         this.clearRecordData();

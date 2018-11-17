@@ -50,14 +50,14 @@ class GameResultClass{
      */
     public startResult(idiomAry: Array<string>) {
         cc.log("开始判定");
-        let chooseAry = RecordGrid.getChooseGridAry();
+        let chooseMap = RecordGrid.getChooseGridMap();
         /** 判定结果 */
         let isSussess = false;
         for (var i=0; i<idiomAry.length; i++) {
             let idiom = idiomAry[i];
             let isEqual = true;
             for (var j=0; j<4; j++) {
-                if (idiom.substring(j, j+1) != chooseAry[j].getGridString()) {
+                if (idiom.substring(j, j+1) != chooseMap.get(j).getGridString()) {
                     isEqual = false;
                     break;
                 }
