@@ -42,6 +42,7 @@ var GameManager_1 = require("./GameManager");
 var GameDataManager_1 = require("../common/data/GameDataManager");
 var GameEngine_1 = require("../common/GameEngine");
 var GameSceneHepler_1 = require("../common/helper/GameSceneHepler");
+var GameResult_1 = require("./GameResult");
 var GameScene = function (_super) {
     __extends(GameScene, _super);
     function GameScene() {
@@ -49,6 +50,7 @@ var GameScene = function (_super) {
         _this.gameTable = null;
         _this.chooseView = null;
         _this.lbl_time = null;
+        _this.lbl_score = null;
         _this.btn_back = null;
         _this.btn_share = null;
         _this.bar_time = null;
@@ -62,6 +64,7 @@ var GameScene = function (_super) {
         this.unscheduleAllCallbacks();
     };
     GameScene.prototype.loadFinish = function () {
+        GameResult_1.GameResult.setGameScene(this);
         GameManager_1.GameManager.onGameStart();
         this.btn_back.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
         this.btn_share.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
@@ -77,11 +80,11 @@ var GameScene = function (_super) {
         }
         switch (eventName) {
             case "btn_back":
-                GameEngine_1.GameEngine.loginService.login();
+                GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.LOADING);
                 break;
             case "btn_share":
-                cc.log("分享游戏");
-                GameEngine_1.GameEngine.loginService.getUserInfo();
+                cc.log("获取用户信息");
+                GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.SETTLE);
                 break;
             default:
                 break;
@@ -90,7 +93,6 @@ var GameScene = function (_super) {
     GameScene.prototype.createCDTime = function () {
         this.lbl_time.string = GameDataManager_1.GameDataManager.gameData.gametime.toString();
         var timeCallback = function timeCallback(dt) {
-            cc.log("GameDataManager.gameData.gametime = " + GameDataManager_1.GameDataManager.gameData.gametime);
             GameDataManager_1.GameDataManager.gameData.gametime--;
             this.lbl_time.string = GameDataManager_1.GameDataManager.gameData.gametime.toString();
             if (GameDataManager_1.GameDataManager.gameData.gametime < 0) {
@@ -115,9 +117,16 @@ var GameScene = function (_super) {
         this.createCDTime();
         this.createScheBar();
     };
+    GameScene.prototype.setScore = function (score) {
+        if (typeof score != "string") {
+            return;
+        }
+        this.lbl_score.string = score;
+    };
     __decorate([property(GameTable_1.GameTable)], GameScene.prototype, "gameTable", void 0);
     __decorate([property(ChooseView_1.ChooseView)], GameScene.prototype, "chooseView", void 0);
     __decorate([property(cc.Label)], GameScene.prototype, "lbl_time", void 0);
+    __decorate([property(cc.Label)], GameScene.prototype, "lbl_score", void 0);
     __decorate([property(cc.Node)], GameScene.prototype, "btn_back", void 0);
     __decorate([property(cc.Node)], GameScene.prototype, "btn_share", void 0);
     __decorate([property(cc.ProgressBar)], GameScene.prototype, "bar_time", void 0);

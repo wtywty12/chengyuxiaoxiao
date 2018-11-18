@@ -38,7 +38,6 @@ var GameTable = (function (_super) {
         _this.randomAry = null;
         _this.produceAry = null;
         _this.chooseView = null;
-        _this.gameResult = null;
         _this.gridDefaultWidth = 120;
         return _this;
     }
@@ -57,7 +56,7 @@ var GameTable = (function (_super) {
         this.produceAry = this.randomAry.getProduceArray();
         this.gridPrefab = ResourcesManager_1.ResourcesManager.getPrefab("GameGrid");
         this.chooseView.setGameTable(this);
-        this.gameResult = new GameResult_1.GameResult(this, this.chooseView);
+        GameResult_1.GameResult.setView(this, this.chooseView);
         this.createTable();
     };
     GameTable.prototype.setChooseView = function (view) {
@@ -101,7 +100,7 @@ var GameTable = (function (_super) {
             RecordGrid_1.RecordGrid.setGameTableGridMap(index, gameGrid);
             this.chooseView.setGridInfo(index, str);
             if (length == 3) {
-                this.gameResult.startResult(this.randomIdiom);
+                GameResult_1.GameResult.startResult(this.randomIdiom);
             }
         }, this);
         if (this.node == null || gameGrid == null || gameGrid.node == null) {

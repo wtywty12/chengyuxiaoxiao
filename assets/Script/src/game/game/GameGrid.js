@@ -22,6 +22,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var ccclass = cc._decorator.ccclass;
 var property = cc._decorator.property;
 var ResourcesManager_1 = require("../../core/common/ResourcesManager");
+var GameDataManager_1 = require("../common/data/GameDataManager");
 var GameGrid = (function (_super) {
     __extends(GameGrid, _super);
     function GameGrid() {
@@ -74,6 +75,15 @@ var GameGrid = (function (_super) {
     };
     GameGrid.prototype.removeSelf = function () {
         this.node.removeFromParent();
+    };
+    GameGrid.prototype.setFadeOut = function () {
+        var scaleTo = cc.scaleTo(GameDataManager_1.GameDataManager.gameData.gridEffectTime, 1.5);
+        var fadeOut = cc.fadeOut(GameDataManager_1.GameDataManager.gameData.gridEffectTime);
+        this.node.runAction(cc.spawn(scaleTo, fadeOut));
+    };
+    GameGrid.prototype.setFadeIn = function () {
+        this.node.opacity = 255;
+        this.node.scale = 1;
     };
     __decorate([
         property(cc.Node)

@@ -118,6 +118,26 @@ export class ChooseView extends cc.Component {
     }
 
     /**
+     * 判定成功隐身效果
+     */
+    public playChooseFadeOut() {
+        for (var i=0; i<this.gridAry.length; i++){
+            let gird: GameGrid = this.gridAry[i];
+            gird.setFadeOut();
+        }
+    }
+
+    /**
+     * 判定成功显示
+     */
+    public playChooseFadeIn() {
+        for (var i=0; i<this.gridAry.length; i++){
+            let gird: GameGrid = this.gridAry[i];
+            gird.setFadeIn();
+        }
+    }
+
+    /**
      * 游戏结束
      */
     public onGameOver() {

@@ -1048,7 +1048,7 @@ declare module cc {
 	@param d duration in seconds
 	
 	@example 
-	```js
+	```js–
 	// example
 	var action = cc.fadeOut(1.0);
 	``` 

@@ -20,6 +20,8 @@ export class GameData {
     private _playerId : number;
     //玩家玩的次数
     private _playtimes:number;
+    /** 判定动画消除时间 */
+    private _gridEffectTime: number;
 
     constructor() {
         this._level = 1;
@@ -27,6 +29,7 @@ export class GameData {
         this._gametime = 60;
         this._totalGameTime = 60;
         this._playtimes = 0;
+        this._gridEffectTime = 0.5;
     }
 
     public refuseData(){//重制数据
@@ -49,7 +52,7 @@ export class GameData {
     }
     //增加分数
     public addscore(value :number){
-        this._score += value;
+        this._score += value * Math.sqrt(this._playtimes || 1);
     }
     //增加游戏时间
     public addgametime(){
@@ -108,6 +111,8 @@ export class GameData {
     set totalGameTime(_totalTime: number) {
         this._totalGameTime = _totalTime;
     }
- 
+    get gridEffectTime(): number{
+        return this._gridEffectTime;
+    }
 
 }

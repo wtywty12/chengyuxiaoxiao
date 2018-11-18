@@ -2,6 +2,7 @@ import ccclass = cc._decorator.ccclass;
 import property = cc._decorator.property;
 import {Vec2} from "./../../utils/Vec2";
 import {ResourcesManager} from "../../core/common/ResourcesManager";
+import { GameDataManager } from "../common/data/GameDataManager";
 
 @ccclass()
 export class GameGrid extends cc.Component {
@@ -84,5 +85,16 @@ export class GameGrid extends cc.Component {
 
     public removeSelf() {
         this.node.removeFromParent();
+    }
+
+    public setFadeOut() {
+        let scaleTo = cc.scaleTo(GameDataManager.gameData.gridEffectTime, 1.5);
+        let fadeOut = cc.fadeOut(GameDataManager.gameData.gridEffectTime);
+        this.node.runAction(cc.spawn(scaleTo, fadeOut));
+    }
+
+    public setFadeIn() {
+        this.node.opacity = 255;
+        this.node.scale = 1;
     }
 }

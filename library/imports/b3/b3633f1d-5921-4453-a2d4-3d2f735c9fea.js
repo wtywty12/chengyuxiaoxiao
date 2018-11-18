@@ -13,6 +13,7 @@ var GameData = function () {
         this._gametime = 60;
         this._totalGameTime = 60;
         this._playtimes = 0;
+        this._gridEffectTime = 0.5;
     }
     GameData.prototype.refuseData = function () {
         this._level = 1;
@@ -30,7 +31,7 @@ var GameData = function () {
         this._level += 1;
     };
     GameData.prototype.addscore = function (value) {
-        this._score += value;
+        this._score += value * Math.sqrt(this._playtimes || 1);
     };
     GameData.prototype.addgametime = function () {
         var levelsInfo = ConfigManager_1.ConfigManager.levelsJsonMap.get(this._level);
@@ -104,6 +105,13 @@ var GameData = function () {
         },
         set: function set(_totalTime) {
             this._totalGameTime = _totalTime;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(GameData.prototype, "gridEffectTime", {
+        get: function get() {
+            return this._gridEffectTime;
         },
         enumerable: true,
         configurable: true
