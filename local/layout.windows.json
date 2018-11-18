@@ -18,7 +18,11 @@
                 "children": [
                   "hierarchy"
                 ],
+<<<<<<< HEAD
                 "height": 406,
+=======
+                "height": 459.515625,
+>>>>>>> f4055a6507bd2b3338e443a92d4d90ad2c05dae9
                 "type": "panel",
                 "width": 341
               },
@@ -27,12 +31,20 @@
                 "children": [
                   "assets"
                 ],
+<<<<<<< HEAD
                 "height": 440,
+=======
+                "height": 503.46875,
+>>>>>>> f4055a6507bd2b3338e443a92d4d90ad2c05dae9
                 "type": "panel",
                 "width": 341
               }
             ],
+<<<<<<< HEAD
             "height": 849,
+=======
+            "height": 966,
+>>>>>>> f4055a6507bd2b3338e443a92d4d90ad2c05dae9
             "type": "dock-v",
             "width": 341
           },
@@ -59,9 +71,15 @@
                     "width": 324
                   }
                 ],
+<<<<<<< HEAD
                 "height": 440,
                 "type": "dock-h",
                 "width": 842
+=======
+                "height": 676.390625,
+                "type": "panel",
+                "width": 1034.984375
+>>>>>>> f4055a6507bd2b3338e443a92d4d90ad2c05dae9
               },
               {
                 "active": 0,
@@ -69,12 +87,20 @@
                   "console",
                   "timeline"
                 ],
+<<<<<<< HEAD
                 "height": 406,
+=======
+                "height": 286.609375,
+>>>>>>> f4055a6507bd2b3338e443a92d4d90ad2c05dae9
                 "type": "panel",
                 "width": 842
               }
             ],
+<<<<<<< HEAD
             "height": 849,
+=======
+            "height": 966,
+>>>>>>> f4055a6507bd2b3338e443a92d4d90ad2c05dae9
             "type": "dock-v",
             "width": 842
           },
@@ -83,7 +109,11 @@
             "children": [
               "inspector"
             ],
+<<<<<<< HEAD
             "height": 849,
+=======
+            "height": 966,
+>>>>>>> f4055a6507bd2b3338e443a92d4d90ad2c05dae9
             "type": "panel",
             "width": 372
           }
@@ -100,15 +130,19 @@
         "scene"
       ]
     },
+<<<<<<< HEAD
     "window-1542364473427": {},
+=======
+    "window-1542444163736": {},
+>>>>>>> f4055a6507bd2b3338e443a92d4d90ad2c05dae9
     "worker": {}
   },
   "panels": {
     "sprite-editor": {
-      "x": 590,
-      "y": 218,
-      "width": 500,
-      "height": 522
+      "x": -255,
+      "y": -1080,
+      "width": 1920,
+      "height": 1080
     },
     "builder": {
       "x": 55,

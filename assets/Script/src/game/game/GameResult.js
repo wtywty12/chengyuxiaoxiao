@@ -30,13 +30,13 @@ var GameResultClass = (function () {
     };
     GameResultClass.prototype.startResult = function (idiomAry) {
         cc.log("开始判定");
-        var chooseAry = RecordGrid_1.RecordGrid.getChooseGridAry();
+        var chooseMap = RecordGrid_1.RecordGrid.getChooseGridMap();
         var isSussess = false;
         for (var i = 0; i < idiomAry.length; i++) {
             var idiom = idiomAry[i];
             var isEqual = true;
             for (var j = 0; j < 4; j++) {
-                if (idiom.substring(j, j + 1) != chooseAry[j].getGridString()) {
+                if (idiom.substring(j, j + 1) != chooseMap.get(j).getGridString()) {
                     isEqual = false;
                     break;
                 }

@@ -22,6 +22,10 @@ export class GameData {
     private _playtimes:number;
     /** 判定动画消除时间 */
     private _gridEffectTime: number;
+    /** 格子宽 */
+    private _gridWidth: number;
+    /** 格子高 */
+    private _gridHeight: number;
 
     constructor() {
         this._level = 1;
@@ -30,6 +34,8 @@ export class GameData {
         this._totalGameTime = 60;
         this._playtimes = 0;
         this._gridEffectTime = 0.5;
+        this._gridWidth = 109;
+        this._gridHeight = 109;
     }
 
     public refuseData(){//重制数据
@@ -113,6 +119,12 @@ export class GameData {
     }
     get gridEffectTime(): number{
         return this._gridEffectTime;
+    }
+    get gridGridWidth(): number{
+        return this._gridWidth;
+    }
+    get gridGridHeight(): number{
+        return this._gridHeight;
     }
 
 }

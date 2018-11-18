@@ -1,7 +1,7 @@
 {
   "ver": "1.0.1",
   "uuid": "24442bec-e023-4d3d-a934-69ddc9f34bf8",
-  "isSubpackage": false,
-  "subpackageName": "",
+  "isSubpackage": true,
+  "subpackageName": "gameScene",
   "subMetas": {}
 }

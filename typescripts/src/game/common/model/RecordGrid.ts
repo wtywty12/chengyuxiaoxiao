@@ -5,7 +5,7 @@ import {GameGrid} from "../../game/GameGrid";
 
 class RecordGridClass{
     /** 选择文字数组 */
-    private chooseGridAry: Array<GameGrid> = [];
+    private chooseGridMap: Map<number, GameGrid> = new Map<number, GameGrid>();
     /** 记录中心表点击vec和grid */
     private gameTableGridMap: Map<number, GameGrid> = new Map<number, GameGrid>();
 
@@ -40,36 +40,17 @@ class RecordGridClass{
     /**
      * 设置上方表数组
      */
-    public setChooseGridAry(grid: GameGrid) {
+    public setChooseGridMap(index: number, grid: GameGrid) {
         if (typeof(grid) != null) {
-            this.chooseGridAry.push(grid);
+            this.chooseGridMap.set(index, grid);
         }
     }
 
     /**
      * 返回上方表数组
      */
-    public getChooseGridAry(): Array<GameGrid> {
-        return this.chooseGridAry;
-    }
-
-    /**
-     * 返回上方表grid通过index
-     * 传入的索引
-     */
-    public getChooseGridByIndex(index: number): GameGrid {
-        return null;
-    }
-
-     /**
-     * 获取有效选择格子数
-     */
-    public getGridMapLength(): number {
-        let index = 0;
-        this.chooseGridAry.forEach(value=>{
-            index++;
-        })
-        return index;
+    public getChooseGridMap(): Map<number, GameGrid> {
+        return this.chooseGridMap;
     }
 
     /**
@@ -89,7 +70,7 @@ class RecordGridClass{
      */
     public clearRecordData() {
         /** 清理文字数组 */
-        this.chooseGridAry = [];
+        this.chooseGridMap.clear();
     }
 
     /**

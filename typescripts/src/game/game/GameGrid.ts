@@ -44,7 +44,7 @@ export class GameGrid extends cc.Component {
      * 设置点击格子背景
      */
     public setClickGridBg() {
-        this.gridBg.spriteFrame = ResourcesManager.getImage('dati');
+        // this.gridBg.spriteFrame = ResourcesManager.getImage('dati');
     }
 
     public setIndex(index: number) {

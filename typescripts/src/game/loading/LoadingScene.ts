@@ -42,6 +42,18 @@ export class LoadingScene extends CommonScene {
     //进度
     private progress:number  = 0;
     protected async load() {
+        cc.loader.downloader.loadSubpackage('loadingScene', function (err: any) {
+            if (err) {
+                return console.error(err);
+            }
+            console.log('load subpackage successfully.');
+        });
+        cc.loader.downloader.loadSubpackage('jsons', function (err: any) {
+            if (err) {
+                return console.error(err);
+            }
+            console.log('load subpackage successfully.');
+        });
         this.progressLabel.string = "正在加载";
         this.setProgress(0);
         await ConfigManager.load();
@@ -142,6 +154,12 @@ export class LoadingScene extends CommonScene {
 
     private startGame():void{
         // GameEngine.loginService.checkLogin();
+        cc.loader.downloader.loadSubpackage('gameScene', function (err: any) {
+            if (err) {
+                return console.error(err);
+            }
+            console.log('load subpackage successfully.');
+        });
         GameDataManager.gameData.refuseData();
         GameEngine.changeScene(GameSceneHepler.GAME)
     }

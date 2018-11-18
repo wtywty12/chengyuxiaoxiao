@@ -3,6 +3,8 @@ import {GameGrid} from "./GameGrid";
 import {GameTable} from "./GameTable";
 import {RecordGrid} from "../common/model/RecordGrid";
 import {ResourcesManager} from "../../core/common/ResourcesManager";
+import { Tools } from "../../utils/Tools";
+import { GameDataManager } from "../common/data/GameDataManager";
 
 @ccclass()
 export class ChooseView extends cc.Component {
@@ -47,8 +49,7 @@ export class ChooseView extends cc.Component {
             return
         }
         let node: cc.Node = cc.instantiate(this.gridPrefab);
-        let w_h = 720 / 6;
-        node.setContentSize(cc.size(w_h, w_h));
+        node.setContentSize(cc.size(GameDataManager.gameData.gridGridWidth, GameDataManager.gameData.gridGridHeight));
         let gameGrid: GameGrid = node.getComponent("GameGrid");
         gameGrid.setClickGridBg();
         node.on(cc.Node.EventType.TOUCH_END,function(event: any)
@@ -58,8 +59,8 @@ export class ChooseView extends cc.Component {
             let i = gameGrid.getIndex();
             let str = gameGrid.getGridString();
             console.log('remove' + str);
-            /** 数组里删除玩家点击的字 */
-            RecordGrid.getChooseGridAry().splice(i, i+1);
+            /** 数组里删除玩家点击的字  中心表不能删除 中心表记录判定胜负 */
+            RecordGrid.getChooseGridMap().delete(i);
             /** 上方格子清除玩家点击的字 */
             this.gridAry[index].setGridString("");
             /** 中心表显示玩家点击的字 */
@@ -78,7 +79,7 @@ export class ChooseView extends cc.Component {
      * 根据下方选择填充字体
      */
     public setGridInfo(vec: number, str: string): void {
-        if (RecordGrid.getChooseGridAry().length >= 4) {
+        if (Tools.getMapLength(RecordGrid.getChooseGridMap()) >= 4) {
             cc.log("已经满字 点击无效")
             return;
         }
@@ -90,8 +91,8 @@ export class ChooseView extends cc.Component {
                 grid.setVec(vec);
                 grid.setIndex(i);
                 /** 设置中心表到上方表玩家点击的字 */
-                RecordGrid.setChooseGridAry(grid);
-                cc.log("RecordGrid.setChooseGridAry => ", RecordGrid.getChooseGridAry());
+                RecordGrid.setChooseGridMap(i, grid);
+                cc.log("RecordGrid.setChooseGridAry => ", RecordGrid.getChooseGridMap());
                 break;
             }
         }
@@ -101,10 +102,9 @@ export class ChooseView extends cc.Component {
      * 还原成语
      */
     public restoreIdiom() {
-        for (var i=0; i<RecordGrid.getChooseGridAry().length; i++) {
-            let grid = RecordGrid.getChooseGridAry()[i];
-            RecordGrid.displayGrid(grid.getGridString(), grid.getVec());
-        }
+        RecordGrid.getChooseGridMap().forEach(value => {
+            RecordGrid.displayGrid(value.getGridString(), value.getVec());
+        })
     }
 
     /**
