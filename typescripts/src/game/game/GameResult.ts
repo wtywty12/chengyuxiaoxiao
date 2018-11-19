@@ -91,8 +91,13 @@ class GameResultClass{
         this.gameScene.setScore(GameDataManager.gameData.score.toString());
         /** 判定胜利 */
         if (Tools.getMapLength(RecordGrid.getGameTableGridMap()) == this.gameTable.tableWidth * this.gameTable.tableHeight) {
+            GameDataManager.gameData.gametime = GameDataManager.gameData.totalGameTime;
             GameManager.onGameLevelup();
-        };
+        }
+        else {
+            /** 答对一个加两秒 */
+            GameDataManager.gameData.gametime = GameDataManager.gameData.gametime + 2;
+        }
     }
 
      /**

@@ -66,9 +66,11 @@ var GameResultClass = function () {
         GameDataManager_1.GameDataManager.gameData.addscore(4);
         this.gameScene.setScore(GameDataManager_1.GameDataManager.gameData.score.toString());
         if (Tools_1.Tools.getMapLength(RecordGrid_1.RecordGrid.getGameTableGridMap()) == this.gameTable.tableWidth * this.gameTable.tableHeight) {
+            GameDataManager_1.GameDataManager.gameData.gametime = GameDataManager_1.GameDataManager.gameData.totalGameTime;
             GameManager_1.GameManager.onGameLevelup();
+        } else {
+            GameDataManager_1.GameDataManager.gameData.gametime = GameDataManager_1.GameDataManager.gameData.gametime + 2;
         }
-        ;
     };
     GameResultClass.prototype.onFailed = function () {
         cc.log("判定失败");
