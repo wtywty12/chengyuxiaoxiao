@@ -145,11 +145,15 @@ var GameTable = function (_super) {
         return isOk;
     };
     GameTable.prototype.onGameOver = function () {
-        this.node.removeAllChildren();
+        if (this.node) {
+            this.node.removeAllChildren();
+        }
         RecordGrid_1.RecordGrid.onGameOver();
     };
     GameTable.prototype.onClearAll = function () {
-        this.node.removeAllChildren();
+        if (this.node) {
+            this.node.removeAllChildren();
+        }
         RecordGrid_1.RecordGrid.onClearAll();
     };
     GameTable = __decorate([ccclass()], GameTable);

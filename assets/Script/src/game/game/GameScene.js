@@ -48,6 +48,7 @@ var GameScene = (function (_super) {
         this.loadFinish();
     };
     GameScene.prototype.onDestroy = function () {
+        GameDataManager_1.GameDataManager.gameData.refuseData();
         this.audio.stopAll();
         this.unscheduleAllCallbacks();
     };
@@ -70,10 +71,12 @@ var GameScene = (function (_super) {
         }
         switch (eventName) {
             case "btn_back":
+                GameManager_1.GameManager.onGameOver();
                 GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.LOADING);
                 break;
             case "btn_share":
                 cc.log("获取用户信息");
+                GameManager_1.GameManager.onGameOver();
                 GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.SETTLE);
                 break;
             default:
@@ -86,6 +89,7 @@ var GameScene = (function (_super) {
             GameDataManager_1.GameDataManager.gameData.gametime--;
             this.lbl_time.string = GameDataManager_1.GameDataManager.gameData.gametime.toString();
             if (GameDataManager_1.GameDataManager.gameData.gametime < 0) {
+                GameDataManager_1.GameDataManager.gameData.refuseData();
                 GameManager_1.GameManager.onGameOver();
                 GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.SETTLE);
             }

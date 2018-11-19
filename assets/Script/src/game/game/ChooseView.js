@@ -128,12 +128,18 @@ var ChooseView = (function (_super) {
         }
     };
     ChooseView.prototype.onGameOver = function () {
+        if (this.gridAry == null && this.gridAry != []) {
+            return;
+        }
         this.gridAry.forEach(function (value) {
             value.removeSelf();
         });
         this.gridAry = [];
     };
     ChooseView.prototype.onClearAll = function () {
+        if (this.gridAry == null && this.gridAry != []) {
+            return;
+        }
         this.gridAry.forEach(function (value) {
             value.removeSelf();
         });

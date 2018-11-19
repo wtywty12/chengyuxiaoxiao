@@ -167,6 +167,9 @@ export class ChooseView extends cc.Component {
      */
     public onGameOver() {
         /** 清理格子 */
+        if (this.gridAry == null && this.gridAry != []) {
+            return;
+        }
         this.gridAry.forEach(value => {
             value.removeSelf();
         })
@@ -174,6 +177,9 @@ export class ChooseView extends cc.Component {
     }
     public onClearAll() {
         /** 清理格子 */
+        if (this.gridAry == null && this.gridAry != []) {
+            return;
+        }
         this.gridAry.forEach(value => {
             value.removeSelf();
         })

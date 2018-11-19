@@ -170,12 +170,16 @@ export class GameTable extends cc.Component {
      */
     public onGameOver() {
         /** 清理所有格子 */
-        this.node.removeAllChildren();
+        if (this.node) {
+            this.node.removeAllChildren();
+        }
         RecordGrid.onGameOver();
     }
     //关卡升级 清理掉所有格子
     public onClearAll(){
-        this.node.removeAllChildren();
+        if (this.node) {
+            this.node.removeAllChildren();
+        }
         RecordGrid.onClearAll();
     }
 }

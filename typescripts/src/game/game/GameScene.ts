@@ -67,6 +67,7 @@ export class GameScene extends cc.Component {
 
     /** 类销毁 */
     protected onDestroy(): void {
+        GameDataManager.gameData.refuseData()
         this.audio.stopAll();
         this.unscheduleAllCallbacks();
     }
@@ -97,11 +98,13 @@ export class GameScene extends cc.Component {
         switch(eventName) {
             case "btn_back":
                 //TODO 
+                GameManager.onGameOver();
                 GameEngine.changeScene(GameSceneHepler.LOADING)
                 // GameEngine.loginService.login();
                 break;
             case "btn_share":
                 cc.log("获取用户信息");
+                GameManager.onGameOver();
                 GameEngine.changeScene(GameSceneHepler.SETTLE)
                 // wx.getUserInfo({
                 //     success: function(res:any) {
@@ -133,6 +136,7 @@ export class GameScene extends cc.Component {
             GameDataManager.gameData.gametime--;
             this.lbl_time.string = GameDataManager.gameData.gametime.toString();
             if (GameDataManager.gameData.gametime < 0) {
+                GameDataManager.gameData.refuseData()
                 GameManager.onGameOver();
                 GameEngine.changeScene(GameSceneHepler.SETTLE)
             }
