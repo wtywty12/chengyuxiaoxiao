@@ -71,7 +71,6 @@ export class ChooseView extends cc.Component {
             let vec = gameGrid.getVec();
             let i = gameGrid.getIndex();
             let str = gameGrid.getGridString();
-            console.log('remove' + str);
             /** 数组里删除玩家点击的字  中心表不能删除 中心表记录判定胜负 */
             RecordGrid.getChooseGridMap().delete(i);
             /** 上方格子清除玩家点击的字 */
@@ -105,7 +104,7 @@ export class ChooseView extends cc.Component {
                 grid.setIndex(i);
                 /** 设置中心表到上方表玩家点击的字 */
                 RecordGrid.setChooseGridMap(i, grid);
-                cc.log("RecordGrid.setChooseGridAry => ", RecordGrid.getChooseGridMap());
+                // cc.log("RecordGrid.setChooseGridAry => ", RecordGrid.getChooseGridMap());
                 break;
             }
         }

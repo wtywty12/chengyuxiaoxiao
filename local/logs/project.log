@@ -1,76 +1,58 @@
-2018-11-19T12:33:22.205Z - normal: Load ~/.CocosCreator/settings.json
-2018-11-19T12:33:22.208Z - normal: checking language setting...
-2018-11-19T12:33:22.208Z - normal: Language: zh
-2018-11-19T12:33:23.432Z - success: protocol editor-framework registered
-2018-11-19T12:33:23.432Z - success: protocol app registered
-2018-11-19T12:33:23.433Z - success: protocol theme registered
-2018-11-19T12:33:23.433Z - success: protocol packages registered
-2018-11-19T12:33:23.434Z - success: protocol unpack registerred
-2018-11-19T12:33:23.434Z - success: protocol disable-commonjs registerred
-2018-11-19T12:33:23.570Z - normal: connected!
-2018-11-19T12:33:23.576Z - normal: Check project /Users/linzhang/youyou/chengyuxiaoxiao
-2018-11-19T12:33:23.581Z - normal: Initializing project /Users/linzhang/youyou/chengyuxiaoxiao
-2018-11-19T12:33:23.588Z - normal: Initializing Cocos2d
-2018-11-19T12:33:24.578Z - normal: Initializing Asset Database
-2018-11-19T12:33:24.654Z - success: protocol uuid registerred
-2018-11-19T12:33:24.654Z - success: protocol db registerred
-2018-11-19T12:33:24.654Z - success: protocol thumbnail registerred
-2018-11-19T12:33:24.654Z - normal: Loading editor/builtin packages
-2018-11-19T12:33:24.922Z - success: assets loaded
-2018-11-19T12:33:24.930Z - success: builder loaded
-2018-11-19T12:33:24.934Z - success: cocos-analytics loaded
-2018-11-19T12:33:24.943Z - success: console loaded
-2018-11-19T12:33:24.983Z - success: fb-instant-games loaded
-2018-11-19T12:33:24.986Z - success: google-instant-games loaded
-2018-11-19T12:33:24.998Z - success: hierarchy loaded
-2018-11-19T12:33:25.005Z - success: inspector loaded
-2018-11-19T12:33:25.009Z - success: keystore loaded
-2018-11-19T12:33:25.022Z - success: node-library loaded
-2018-11-19T12:33:25.026Z - success: package-asset loaded
-2018-11-19T12:33:25.029Z - success: preferences loaded
-2018-11-19T12:33:25.034Z - success: project-exporter loaded
-2018-11-19T12:33:25.064Z - success: project-importer loaded
-2018-11-19T12:33:25.069Z - success: project-settings loaded
-2018-11-19T12:33:25.077Z - success: ui-kit loaded
-2018-11-19T12:33:25.083Z - success: scene loaded
-2018-11-19T12:33:25.088Z - success: sprite-editor loaded
-2018-11-19T12:33:25.097Z - success: store loaded
-2018-11-19T12:33:25.107Z - success: timeline loaded
-2018-11-19T12:33:25.107Z - normal: Loading builtin packages
-2018-11-19T12:33:25.116Z - success: asset-db-debugger loaded
-2018-11-19T12:33:25.119Z - success: color-picker loaded
-2018-11-19T12:33:25.325Z - success: google-play-instant loaded
-2018-11-19T12:33:25.328Z - success: jsb-adapter loaded
-2018-11-19T12:33:25.338Z - success: oppo-runtime loaded
-2018-11-19T12:33:25.350Z - success: package-manager loaded
-2018-11-19T12:33:25.705Z - success: qqplay-adapter loaded
-2018-11-19T12:33:25.721Z - success: sdkbox loaded
-2018-11-19T12:33:25.733Z - success: tester loaded
-2018-11-19T12:33:25.741Z - success: ui-grid loaded
-2018-11-19T12:33:25.750Z - success: ui-kit-preview-extra loaded
-2018-11-19T12:33:25.758Z - success: ui-kit-preview loaded
-2018-11-19T12:33:25.767Z - success: ui-tree loaded
-2018-11-19T12:33:25.773Z - success: vivo-runtime loaded
-2018-11-19T12:33:25.776Z - success: weapp-adapter loaded
-2018-11-19T12:33:27.764Z - normal: Loading packages
-2018-11-19T12:33:27.772Z - normal: Watching packages
-2018-11-19T12:33:27.862Z - normal: Run Application
-2018-11-19T12:33:29.293Z - success: preview server running at http://localhost:7456
-2018-11-19T14:11:10.970Z - error: TypeError: Cannot read property 'match' of undefined
-    at Vue._getAPILevel (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/builder/panel/builder.js:1:5237)
-    at Vue._getAPILevel (app://bower_components/vue/dist/vue.js:220:54)
-    at Vue._build (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/builder/panel/builder.js:1:6773)
-    at Vue._build (app://bower_components/vue/dist/vue.js:220:72)
-    at Editor.Ipc.sendToPanel (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/builder/panel/builder.js:1:6275)
-    at EventEmitter.o.on.n (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:3753)
-    at emitMany (events.js:127:13)
-    at EventEmitter.emit (events.js:204:7)
-2018-11-19T14:11:56.538Z - error: TypeError: Cannot read property 'match' of undefined
-    at Vue._getAPILevel (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/builder/panel/builder.js:1:5237)
-    at Vue._getAPILevel (app://bower_components/vue/dist/vue.js:220:54)
-    at Vue._build (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/builder/panel/builder.js:1:6773)
-    at Vue._build (app://bower_components/vue/dist/vue.js:220:72)
-    at Editor.Ipc.sendToPanel (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/builder/panel/builder.js:1:6275)
-    at EventEmitter.o.on.n (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:3753)
-    at emitMany (events.js:127:13)
-    at EventEmitter.emit (events.js:204:7)
+2018-11-19T15:06:08.205Z - normal: Load ~/.CocosCreator/settings.json
+2018-11-19T15:06:08.211Z - normal: checking language setting...
+2018-11-19T15:06:08.211Z - normal: Language: zh
+2018-11-19T15:06:09.363Z - success: protocol editor-framework registered
+2018-11-19T15:06:09.364Z - success: protocol app registered
+2018-11-19T15:06:09.364Z - success: protocol theme registered
+2018-11-19T15:06:09.364Z - success: protocol packages registered
+2018-11-19T15:06:09.365Z - success: protocol unpack registerred
+2018-11-19T15:06:09.365Z - success: protocol disable-commonjs registerred
+2018-11-19T15:06:09.566Z - normal: connected!
+2018-11-19T15:06:09.571Z - normal: Check project /Users/linzhang/youyou/chengyuxiaoxiao
+2018-11-19T15:06:09.575Z - normal: Initializing project /Users/linzhang/youyou/chengyuxiaoxiao
+2018-11-19T15:06:09.581Z - normal: Initializing Cocos2d
+2018-11-19T15:06:10.708Z - normal: Initializing Asset Database
+2018-11-19T15:06:10.785Z - success: protocol uuid registerred
+2018-11-19T15:06:10.786Z - success: protocol db registerred
+2018-11-19T15:06:10.786Z - success: protocol thumbnail registerred
+2018-11-19T15:06:10.786Z - normal: Loading editor/builtin packages
+2018-11-19T15:06:11.074Z - success: assets loaded
+2018-11-19T15:06:11.082Z - success: builder loaded
+2018-11-19T15:06:11.087Z - success: cocos-analytics loaded
+2018-11-19T15:06:11.097Z - success: console loaded
+2018-11-19T15:06:11.148Z - success: fb-instant-games loaded
+2018-11-19T15:06:11.151Z - success: google-instant-games loaded
+2018-11-19T15:06:11.162Z - success: hierarchy loaded
+2018-11-19T15:06:11.169Z - success: inspector loaded
+2018-11-19T15:06:11.171Z - success: keystore loaded
+2018-11-19T15:06:11.184Z - success: node-library loaded
+2018-11-19T15:06:11.188Z - success: package-asset loaded
+2018-11-19T15:06:11.190Z - success: preferences loaded
+2018-11-19T15:06:11.194Z - success: project-exporter loaded
+2018-11-19T15:06:11.217Z - success: project-importer loaded
+2018-11-19T15:06:11.222Z - success: project-settings loaded
+2018-11-19T15:06:11.228Z - success: ui-kit loaded
+2018-11-19T15:06:11.234Z - success: scene loaded
+2018-11-19T15:06:11.237Z - success: sprite-editor loaded
+2018-11-19T15:06:11.246Z - success: store loaded
+2018-11-19T15:06:11.256Z - success: timeline loaded
+2018-11-19T15:06:11.256Z - normal: Loading builtin packages
+2018-11-19T15:06:11.265Z - success: asset-db-debugger loaded
+2018-11-19T15:06:11.268Z - success: color-picker loaded
+2018-11-19T15:06:11.447Z - success: google-play-instant loaded
+2018-11-19T15:06:11.450Z - success: jsb-adapter loaded
+2018-11-19T15:06:11.457Z - success: oppo-runtime loaded
+2018-11-19T15:06:11.466Z - success: package-manager loaded
+2018-11-19T15:06:11.727Z - success: qqplay-adapter loaded
+2018-11-19T15:06:11.738Z - success: sdkbox loaded
+2018-11-19T15:06:11.749Z - success: tester loaded
+2018-11-19T15:06:11.761Z - success: ui-grid loaded
+2018-11-19T15:06:11.770Z - success: ui-kit-preview-extra loaded
+2018-11-19T15:06:11.779Z - success: ui-kit-preview loaded
+2018-11-19T15:06:11.788Z - success: ui-tree loaded
+2018-11-19T15:06:11.794Z - success: vivo-runtime loaded
+2018-11-19T15:06:11.797Z - success: weapp-adapter loaded
+2018-11-19T15:06:14.326Z - normal: Loading packages
+2018-11-19T15:06:14.331Z - normal: Watching packages
+2018-11-19T15:06:14.456Z - normal: Run Application
+2018-11-19T15:06:15.992Z - success: preview server running at http://localhost:7456

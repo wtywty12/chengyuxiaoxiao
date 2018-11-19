@@ -29,7 +29,6 @@ var GameResultClass = (function () {
         this.gameScene = scene;
     };
     GameResultClass.prototype.startResult = function (idiomAry) {
-        cc.log("开始判定");
         var chooseMap = RecordGrid_1.RecordGrid.getChooseGridMap();
         var isSussess = false;
         for (var i = 0; i < idiomAry.length; i++) {
@@ -56,7 +55,6 @@ var GameResultClass = (function () {
         }
     };
     GameResultClass.prototype.onSuccessFul = function () {
-        cc.log("判定成功");
         this.clearData();
         this.chooseView.playChooseFadeIn();
         GameDataManager_1.GameDataManager.gameData.addscore(4);
@@ -70,7 +68,6 @@ var GameResultClass = (function () {
         }
     };
     GameResultClass.prototype.onFailed = function () {
-        cc.log("判定失败");
         this.gameScene.playJudgeErrorEffect();
         this.chooseView.restoreIdiom();
         this.clearData();

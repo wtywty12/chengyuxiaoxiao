@@ -69,7 +69,6 @@ var ChooseView = (function (_super) {
             var vec = gameGrid.getVec();
             var i = gameGrid.getIndex();
             var str = gameGrid.getGridString();
-            console.log('remove' + str);
             RecordGrid_1.RecordGrid.getChooseGridMap().delete(i);
             this.gridAry[index].setGridString("");
             RecordGrid_1.RecordGrid.displayGrid(str, vec);
@@ -93,7 +92,6 @@ var ChooseView = (function (_super) {
                 grid.setVec(vec);
                 grid.setIndex(i);
                 RecordGrid_1.RecordGrid.setChooseGridMap(i, grid);
-                cc.log("RecordGrid.setChooseGridAry => ", RecordGrid_1.RecordGrid.getChooseGridMap());
                 break;
             }
         }

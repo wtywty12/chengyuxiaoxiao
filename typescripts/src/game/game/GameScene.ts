@@ -67,6 +67,7 @@ export class GameScene extends cc.Component {
 
     /** 类销毁 */
     protected onDestroy(): void {
+        this.audio.stopAll();
         this.unscheduleAllCallbacks();
     }
 

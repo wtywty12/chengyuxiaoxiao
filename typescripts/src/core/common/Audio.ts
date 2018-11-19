@@ -85,4 +85,8 @@ export class Audio {
         cc.audioEngine.resumeAll();
     }
 
+    public stopAll(): void {
+        cc.audioEngine.stopAll();
+    }
+
 }

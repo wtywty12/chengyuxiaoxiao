@@ -115,7 +115,6 @@ export class GameTable extends cc.Component {
             /** 上方表设置格子字和索引 */
             this.chooseView.setGridInfo(index, str);
             let length = Tools.getMapLength(RecordGrid.getChooseGridMap());
-            console.log('click' + str);
             /** 记录玩家点击格子和索引 */
             RecordGrid.setGameTableGridMap(index, gameGrid);
             /** 中心表格子设置空白 */
@@ -141,7 +140,7 @@ export class GameTable extends cc.Component {
         var eventType = event.type;
         var eventName = event.target._name;
         if (eventType != "touchend") {
-            cc.log("EventType is error, it is ", eventType);
+            // cc.log("EventType is error, it is ", eventType);
             return;
         }
         switch(eventName) {

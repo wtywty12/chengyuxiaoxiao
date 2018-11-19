@@ -48,6 +48,7 @@ var GameScene = (function (_super) {
         this.loadFinish();
     };
     GameScene.prototype.onDestroy = function () {
+        this.audio.stopAll();
         this.unscheduleAllCallbacks();
     };
     GameScene.prototype.loadFinish = function () {

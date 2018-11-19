@@ -97,7 +97,6 @@ var GameTable = (function (_super) {
             this.gameScene.playClickGridEffect();
             this.chooseView.setGridInfo(index, str);
             var length = Tools_1.Tools.getMapLength(RecordGrid_1.RecordGrid.getChooseGridMap());
-            console.log('click' + str);
             RecordGrid_1.RecordGrid.setGameTableGridMap(index, gameGrid);
             gameGrid.setGridString("");
             gameGrid.setVec(index);
@@ -115,7 +114,6 @@ var GameTable = (function (_super) {
         var eventType = event.type;
         var eventName = event.target._name;
         if (eventType != "touchend") {
-            cc.log("EventType is error, it is ", eventType);
             return;
         }
         switch (eventName) {

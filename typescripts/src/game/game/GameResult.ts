@@ -49,7 +49,7 @@ class GameResultClass{
      * @param chooseAry 玩家选择的成语数组
      */
     public startResult(idiomAry: Array<string>) {
-        cc.log("开始判定");
+        // cc.log("开始判定");
         let chooseMap = RecordGrid.getChooseGridMap();
         /** 判定结果 */
         let isSussess = false;
@@ -81,7 +81,7 @@ class GameResultClass{
      * 判定成功
      */
     private onSuccessFul() {
-        cc.log("判定成功");
+        // cc.log("判定成功");
         /** 清理上方成语 */
         this.clearData();
         /** 显示上方背景格子 */
@@ -104,7 +104,7 @@ class GameResultClass{
       * 判定失败
       */
      private onFailed() {
-        cc.log("判定失败");
+        // cc.log("判定失败");
         /** 播放音效 */
         this.gameScene.playJudgeErrorEffect();
         /** 还原成语字 */
