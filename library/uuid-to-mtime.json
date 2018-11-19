@@ -964,11 +964,6 @@
     "meta": 1542644515637,
     "relativePath": "Script/src/game/game/GameTable.js"
   },
-  "55ba82a3-b236-4690-adbb-afd926249335": {
-    "asset": 1542644570350,
-    "meta": 1542644577574,
-    "relativePath": "Script/src/game/game/GameScene.js"
-  },
   "b3633f1d-5921-4453-a2d4-3d2f735c9fea": {
     "asset": 1542644794508,
     "meta": 1542644819560,
@@ -978,5 +973,10 @@
     "asset": 1542644818049,
     "meta": 1542644819560,
     "relativePath": "Script/src/game/game/GameResult.js"
+  },
+  "55ba82a3-b236-4690-adbb-afd926249335": {
+    "asset": 1542645427422,
+    "meta": 1542645439254,
+    "relativePath": "Script/src/game/game/GameScene.js"
   }
 }

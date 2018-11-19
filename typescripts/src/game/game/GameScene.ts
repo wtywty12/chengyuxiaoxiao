@@ -136,7 +136,6 @@ export class GameScene extends cc.Component {
             GameDataManager.gameData.gametime--;
             this.lbl_time.string = GameDataManager.gameData.gametime.toString();
             if (GameDataManager.gameData.gametime < 0) {
-                GameDataManager.gameData.refuseData()
                 GameManager.onGameOver();
                 GameEngine.changeScene(GameSceneHepler.SETTLE)
             }

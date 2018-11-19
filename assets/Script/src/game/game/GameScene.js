@@ -89,7 +89,6 @@ var GameScene = (function (_super) {
             GameDataManager_1.GameDataManager.gameData.gametime--;
             this.lbl_time.string = GameDataManager_1.GameDataManager.gameData.gametime.toString();
             if (GameDataManager_1.GameDataManager.gameData.gametime < 0) {
-                GameDataManager_1.GameDataManager.gameData.refuseData();
                 GameManager_1.GameManager.onGameOver();
                 GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.SETTLE);
             }
