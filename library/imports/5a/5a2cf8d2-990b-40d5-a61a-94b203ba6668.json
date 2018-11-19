@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "huojiangjilu",
+    "texture": "fe15f8bc-5276-4000-aaab-f03ca4106bf2",
+    "atlas": "",
+    "rect": [
+      1,
+      2,
+      270,
+      78
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      272,
+      81
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -80,38 +80,38 @@ export class SettleScene extends cc.Component {
     //点击提现
     private onClickTixian():void{
         var self = this
-        wx.getUserInfo({
-            success: function(res:any) {
-                cc.log(`res ${res}`)
-                cc.log(`res -> userInfo`,res.userInfo)
-                cc.log(`res -> userInfo`,res.userInfo.nickName)
-                cc.log(`res -> userInfo`,res.userInfo.avatarUrl)
-                var userInfo = res.userInfo
-                var nickName = userInfo.nickName
-                var avatarUrl = userInfo.avatarUrl
-                var gender = userInfo.gender //性别 0：未知、1：男、2：女
-                var province = userInfo.province
-                var city = userInfo.city
-                var country = userInfo.country
+        // wx.getUserInfo({
+        //     success: function(res:any) {
+        //         cc.log(`res ${res}`)
+        //         cc.log(`res -> userInfo`,res.userInfo)
+        //         cc.log(`res -> userInfo`,res.userInfo.nickName)
+        //         cc.log(`res -> userInfo`,res.userInfo.avatarUrl)
+        //         var userInfo = res.userInfo
+        //         var nickName = userInfo.nickName
+        //         var avatarUrl = userInfo.avatarUrl
+        //         var gender = userInfo.gender //性别 0：未知、1：男、2：女
+        //         var province = userInfo.province
+        //         var city = userInfo.city
+        //         var country = userInfo.country
 
-                self.path = avatarUrl ;
-                wx.downloadFile({
-                    url:res.userInfo.avatarUrl,
-                    success:(res:any) => {
-                        cc.log(`tempFile ${res.tempFilePath}`)
-                        // this.path = res.tempFilePath
-                    },
-                })
-                // cc.loader.load({url: avatarUrl, type: 'png'}, function(err:any,img:cc.Texture2D){
-                //     cc.log("load png");
-                //     self.image_head.spriteFrame = img;
-                // });
-                // self.loadImgurl(self.image_head,avatarUrl)
+        //         self.path = avatarUrl ;
+        //         wx.downloadFile({
+        //             url:res.userInfo.avatarUrl,
+        //             success:(res:any) => {
+        //                 cc.log(`tempFile ${res.tempFilePath}`)
+        //                 // this.path = res.tempFilePath
+        //             },
+        //         })
+        //         // cc.loader.load({url: avatarUrl, type: 'png'}, function(err:any,img:cc.Texture2D){
+        //         //     cc.log("load png");
+        //         //     self.image_head.spriteFrame = img;
+        //         // });
+        //         // self.loadImgurl(self.image_head,avatarUrl)
                 
-            }
+        //     }
             
-        })
-        // GameEngine.changeScene(GameSceneHepler.DEPOSIT)
+        // })
+        GameEngine.changeScene(GameSceneHepler.DEPOSIT)
     }
     private loadImgurl(container:cc.Sprite,url:string):void{
         cc.loader.load(url, function (err:any, texture:cc.Texture2D) {
