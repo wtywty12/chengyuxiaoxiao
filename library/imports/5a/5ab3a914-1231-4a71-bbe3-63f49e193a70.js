@@ -41,9 +41,7 @@ var GameManagerClass = function () {
     };
     GameManagerClass.prototype.onGameStart = function () {
         GameDataManager_1.GameDataManager.gameData.gameStart();
-        this.chooseView.loadFinish();
-        this.gameTable.setChooseView(this.chooseView);
-        this.gameTable.loadFinish();
+        this.loadGameFinish();
     };
     GameManagerClass.prototype.onGameLevelup = function () {
         GameDataManager_1.GameDataManager.gameData.addgametime();
@@ -51,8 +49,12 @@ var GameManagerClass = function () {
         this.gameScene.resetCDTime();
         this.gameTable.onClearAll();
         this.chooseView.onClearAll();
+        this.loadGameFinish();
+    };
+    GameManagerClass.prototype.loadGameFinish = function () {
         this.chooseView.loadFinish();
         this.gameTable.setChooseView(this.chooseView);
+        this.gameTable.setGameScene(this.gameScene);
         this.gameTable.loadFinish();
     };
     GameManagerClass.prototype.onGameOver = function () {

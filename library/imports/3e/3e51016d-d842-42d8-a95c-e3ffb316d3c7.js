@@ -46,6 +46,7 @@ var ChooseView = function (_super) {
         _this.gridPrefab = null;
         _this.gridAry = null;
         _this.gameTable = null;
+        _this.gameScene = null;
         _this.gridAry = [];
         return _this;
     }
@@ -56,6 +57,9 @@ var ChooseView = function (_super) {
     };
     ChooseView.prototype.setGameTable = function (view) {
         this.gameTable = view;
+    };
+    ChooseView.prototype.setGameScene = function (scene) {
+        this.gameScene = scene;
     };
     ChooseView.prototype.createTable = function () {
         for (var x = 0; x < 4; x++) {
@@ -72,6 +76,11 @@ var ChooseView = function (_super) {
         var gameGrid = node.getComponent("GameGrid");
         gameGrid.setClickGridBg();
         node.on(cc.Node.EventType.TOUCH_END, function (event) {
+            if (this.checkGridMap(gameGrid) == false) {
+                cc.log("已经存在");
+                return;
+            }
+            this.gameScene.playClickGridEffect();
             var vec = gameGrid.getVec();
             var i = gameGrid.getIndex();
             var str = gameGrid.getGridString();
@@ -103,6 +112,14 @@ var ChooseView = function (_super) {
                 break;
             }
         }
+    };
+    ChooseView.prototype.checkGridMap = function (grid) {
+        var isOk = true;
+        var str = grid.getGridString();
+        if (str == "") {
+            isOk = false;
+        }
+        return isOk;
     };
     ChooseView.prototype.restoreIdiom = function () {
         RecordGrid_1.RecordGrid.getChooseGridMap().forEach(function (value) {

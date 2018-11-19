@@ -74,6 +74,7 @@ var GameResultClass = function () {
     };
     GameResultClass.prototype.onFailed = function () {
         cc.log("判定失败");
+        this.gameScene.playJudgeErrorEffect();
         this.chooseView.restoreIdiom();
         this.clearData();
     };

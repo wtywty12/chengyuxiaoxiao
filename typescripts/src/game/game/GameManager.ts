@@ -39,9 +39,7 @@ export class GameManagerClass {
      */
     public onGameStart() {
         GameDataManager.gameData.gameStart()
-        this.chooseView.loadFinish();
-        this.gameTable.setChooseView(this.chooseView);
-        this.gameTable.loadFinish();
+        this.loadGameFinish();
     }
     /**
      * 进入下一关
@@ -56,8 +54,15 @@ export class GameManagerClass {
         this.gameTable.onClearAll();
         this.chooseView.onClearAll();
         
+        this.loadGameFinish();
+    }
+    /**
+     * 加载游戏
+     */
+    private loadGameFinish(){
         this.chooseView.loadFinish();
         this.gameTable.setChooseView(this.chooseView);
+        this.gameTable.setGameScene(this.gameScene);
         this.gameTable.loadFinish();
     }
     /**

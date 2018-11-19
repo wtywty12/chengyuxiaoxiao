@@ -64,8 +64,7 @@
         "scene"
       ]
     },
-    "window-1542614815064": {},
-    "worker": {}
+    "window-1542636684709": {}
   },
   "panels": {
     "builder": {
@@ -81,10 +80,10 @@
       "height": 522
     },
     "console": {
-      "x": 520,
-      "y": 245,
-      "width": 404,
-      "height": 322
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
     }
   }
 }

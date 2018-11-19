@@ -105,6 +105,8 @@ class GameResultClass{
       */
      private onFailed() {
         cc.log("判定失败");
+        /** 播放音效 */
+        this.gameScene.playJudgeErrorEffect();
         /** 还原成语字 */
         this.chooseView.restoreIdiom();
         /** 清理数据 */

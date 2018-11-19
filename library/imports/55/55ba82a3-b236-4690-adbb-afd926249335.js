@@ -43,6 +43,7 @@ var GameDataManager_1 = require("../common/data/GameDataManager");
 var GameEngine_1 = require("../common/GameEngine");
 var GameSceneHepler_1 = require("../common/helper/GameSceneHepler");
 var GameResult_1 = require("./GameResult");
+var Audio_1 = require("../../core/common/Audio");
 var GameScene = function (_super) {
     __extends(GameScene, _super);
     function GameScene() {
@@ -54,6 +55,7 @@ var GameScene = function (_super) {
         _this.btn_back = null;
         _this.btn_share = null;
         _this.bar_time = null;
+        _this.audio = null;
         return _this;
     }
     GameScene.prototype.onLoad = function () {
@@ -64,6 +66,8 @@ var GameScene = function (_super) {
         this.unscheduleAllCallbacks();
     };
     GameScene.prototype.loadFinish = function () {
+        this.audio = new Audio_1.Audio(1, 101);
+        this.audio.playBGM("bgMusic");
         GameResult_1.GameResult.setGameScene(this);
         GameManager_1.GameManager.onGameStart();
         this.btn_back.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
@@ -122,6 +126,12 @@ var GameScene = function (_super) {
             return;
         }
         this.lbl_score.string = score;
+    };
+    GameScene.prototype.playClickGridEffect = function () {
+        this.audio.playSFX("click", 1);
+    };
+    GameScene.prototype.playJudgeErrorEffect = function () {
+        this.audio.playSFX("error", 1);
     };
     __decorate([property(GameTable_1.GameTable)], GameScene.prototype, "gameTable", void 0);
     __decorate([property(ChooseView_1.ChooseView)], GameScene.prototype, "chooseView", void 0);

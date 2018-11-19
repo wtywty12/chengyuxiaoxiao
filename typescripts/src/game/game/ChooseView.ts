@@ -5,6 +5,7 @@ import {RecordGrid} from "../common/model/RecordGrid";
 import {ResourcesManager} from "../../core/common/ResourcesManager";
 import { Tools } from "../../utils/Tools";
 import { GameDataManager } from "../common/data/GameDataManager";
+import { GameScene } from "./GameScene";
 
 @ccclass()
 export class ChooseView extends cc.Component {
@@ -14,6 +15,8 @@ export class ChooseView extends cc.Component {
     private gridAry: Array<GameGrid> = null;
     /** GameTable */
     private gameTable: GameTable = null;
+    /** GameScene */
+    private gameScene: GameScene = null;
 
     public constructor() {
         super();
@@ -27,6 +30,10 @@ export class ChooseView extends cc.Component {
 
     public setGameTable(view: GameTable) {
         this.gameTable = view;
+    }
+
+    public setGameScene(scene: GameScene) {
+        this.gameScene = scene;
     }
 
     /**
@@ -54,6 +61,12 @@ export class ChooseView extends cc.Component {
         gameGrid.setClickGridBg();
         node.on(cc.Node.EventType.TOUCH_END,function(event: any)
         {
+            if (this.checkGridMap(gameGrid) == false) {
+                cc.log("已经存在");
+                return;
+            }
+            /** 播放音效 */
+            this.gameScene.playClickGridEffect();
             /** vec 中心表格子索引  i 上方表格子索引 */
             let vec = gameGrid.getVec();
             let i = gameGrid.getIndex();
@@ -96,6 +109,19 @@ export class ChooseView extends cc.Component {
                 break;
             }
         }
+    }
+
+    /**
+     * 检查是否重复
+     * 根据格子是否有字判定
+     */
+    private checkGridMap(grid: GameGrid): boolean {
+        let isOk = true;
+        let str = grid.getGridString();
+        if (str == "") {
+            isOk = false;
+        }
+        return isOk;
     }
 
     /**

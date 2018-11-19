@@ -1,24 +1,5 @@
 {
   "actualPlatform": "wechatgame",
-  "apiLevel": "",
-  "appABIs": [],
-<<<<<<< HEAD
-  "buildPath": "/Users/wangtianye/svn/wechat",
-  "debug": true,
-=======
   "buildPath": "/Users/linzhang/wegame",
-  "debug": false,
->>>>>>> f4055a6507bd2b3338e443a92d4d90ad2c05dae9
-  "embedWebDebugger": false,
-  "keystoreAlias": "",
-  "keystoreAliasPassword": "",
-  "keystorePassword": "",
-  "keystorePath": "",
-  "platform": "wechatgame",
-  "previewHeight": "720",
-  "previewWidth": "1280",
-  "sourceMaps": false,
-  "template": "link",
-  "useDebugKeystore": true,
-  "vsVersion": "auto"
+  "platform": "wechatgame"
 }

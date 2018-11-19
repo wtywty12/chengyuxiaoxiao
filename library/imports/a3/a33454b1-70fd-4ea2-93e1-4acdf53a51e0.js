@@ -54,6 +54,7 @@ var GameTable = function (_super) {
         _this.randomAry = null;
         _this.produceAry = null;
         _this.chooseView = null;
+        _this.gameScene = null;
         return _this;
     }
     GameTable.prototype.onLoad = function () {};
@@ -69,8 +70,12 @@ var GameTable = function (_super) {
         this.produceAry = this.randomAry.getProduceArray();
         this.gridPrefab = ResourcesManager_1.ResourcesManager.getPrefab("GameGrid");
         this.chooseView.setGameTable(this);
+        this.chooseView.setGameScene(this.gameScene);
         GameResult_1.GameResult.setView(this, this.chooseView);
         this.createTable();
+    };
+    GameTable.prototype.setGameScene = function (scene) {
+        this.gameScene = scene;
     };
     GameTable.prototype.setChooseView = function (view) {
         this.chooseView = view;
@@ -102,6 +107,7 @@ var GameTable = function (_super) {
                 cc.log("已经存在");
                 return;
             }
+            this.gameScene.playClickGridEffect();
             this.chooseView.setGridInfo(index, str);
             var length = Tools_1.Tools.getMapLength(RecordGrid_1.RecordGrid.getChooseGridMap());
             console.log('click' + str);
