@@ -435,18 +435,18 @@
     "relativePath": "Scene/LoadingScene.fire"
   },
   "a6ed62ac-6d2c-4666-896d-59c4c311faa8": {
-    "asset": 1542610520619,
-    "meta": 1542610520632,
+    "asset": 1542691948351,
+    "meta": 1542691948381,
     "relativePath": "Scene/MyinfoScene.fire"
   },
   "29ce233f-ccb7-41be-8610-3aad7b9494fb": {
-    "asset": 1542560833188,
-    "meta": 1542593097431,
+    "asset": 1542685559080,
+    "meta": 1542685559106,
     "relativePath": "Scene/RankScene.fire"
   },
   "b83cf815-05dc-4e09-bc8f-47b6e5608cd4": {
-    "asset": 1542268925127,
-    "meta": 1542593097434,
+    "asset": 1542691800714,
+    "meta": 1542691800738,
     "relativePath": "Scene/RedpackScene.fire"
   },
   "8e868381-a7b9-47fd-9fe3-354ba31c395d": {
@@ -506,7 +506,7 @@
   },
   "c68d00c3-d21c-4d7f-9ac7-10c295f90799": {
     "asset": 1542439251296,
-    "meta": 1542593100084,
+    "meta": 1542691677451,
     "relativePath": "Texture/gameScene/shijian.png"
   },
   "9a7de917-f809-49c6-81b4-13c5e2b94449": {
@@ -978,5 +978,105 @@
     "asset": 1542683607374,
     "meta": 1542683630603,
     "relativePath": "Script/src/game/game/GameTable.js"
+  },
+  "0d508a25-02f1-43b3-a45b-8b54dafd2134": {
+    "asset": 1542684083558,
+    "meta": 1542684083554,
+    "relativePath": "Texture/rankScene"
+  },
+  "21be78a4-eef1-456b-b290-de7a7bfb787d": {
+    "asset": 1542684018619,
+    "meta": 1542684083773,
+    "relativePath": "Texture/rankScene/btn_fanhui.png"
+  },
+  "b995a101-16a0-4b36-8a89-8fe2029e53c2": {
+    "asset": 1542684018950,
+    "meta": 1542684083774,
+    "relativePath": "Texture/rankScene/btn_yaoqinghaoyou.png"
+  },
+  "1dfa6219-c1f2-4c09-b6df-cb4a1fba1812": {
+    "asset": 1542684018615,
+    "meta": 1542684083791,
+    "relativePath": "Texture/rankScene/paihangbang.png"
+  },
+  "7f7526b1-c7bb-4dbe-88a4-cca95ea999c4": {
+    "asset": 1542684018951,
+    "meta": 1542684083798,
+    "relativePath": "Texture/rankScene/di.png"
+  },
+  "b06ba737-badc-4a7a-95be-f3d93e327489": {
+    "asset": 1542685685284,
+    "meta": 1542685729418,
+    "relativePath": "Texture/redPackScene"
+  },
+  "2a3a2c41-ce3b-4f60-b73b-693e6454ed5e": {
+    "asset": 1542685650017,
+    "meta": 1542685844489,
+    "relativePath": "Texture/redPackScene/btn_chakanjiangli.png"
+  },
+  "3d75e034-2d5d-4f53-9cc1-125c87c19168": {
+    "asset": 1542685651513,
+    "meta": 1542685844492,
+    "relativePath": "Texture/redPackScene/01.png"
+  },
+  "808519b0-e8fa-4ae3-b11a-d51b2cd47fc0": {
+    "asset": 1542685650016,
+    "meta": 1542685844513,
+    "relativePath": "Texture/redPackScene/btn_cuqian.png"
+  },
+  "79dc632a-0ab2-406e-a433-2e51af0d0bd4": {
+    "asset": 1542685650033,
+    "meta": 1542685844517,
+    "relativePath": "Texture/redPackScene/btn_jixu.png"
+  },
+  "f72b57e2-580b-44c6-9b3a-63702cac53a3": {
+    "asset": 1542685650355,
+    "meta": 1542685844543,
+    "relativePath": "Texture/redPackScene/btn_wenhao.png"
+  },
+  "4c7a6ec3-557e-447d-a8ba-6a9bbbfdc2bc": {
+    "asset": 1542685651171,
+    "meta": 1542685844547,
+    "relativePath": "Texture/redPackScene/btn_xuanyao.png"
+  },
+  "6b137d14-0760-4980-9071-9eefb08c34c3": {
+    "asset": 1542685651171,
+    "meta": 1542685844568,
+    "relativePath": "Texture/redPackScene/caidai_1.png"
+  },
+  "27c34b55-591a-47bc-82ee-3890c5eb5e34": {
+    "asset": 1542685651176,
+    "meta": 1542685844578,
+    "relativePath": "Texture/redPackScene/caidai_2.png"
+  },
+  "ecc4e16d-84e1-4dec-b948-4f7a9816d063": {
+    "asset": 1542685651513,
+    "meta": 1542685844583,
+    "relativePath": "Texture/redPackScene/dian.png"
+  },
+  "0568da3a-e6d2-47e2-bac9-785e0b0b4b99": {
+    "asset": 1542685652336,
+    "meta": 1542685844602,
+    "relativePath": "Texture/redPackScene/hongba.png"
+  },
+  "caf5ad96-8921-4d98-b07c-a931939b9be6": {
+    "asset": 1542685652643,
+    "meta": 1542685844618,
+    "relativePath": "Texture/redPackScene/zhandoujiesuan.png"
+  },
+  "5e38dbc4-c7fb-4f62-aed6-16fddffd8bc7": {
+    "asset": 1542685662758,
+    "meta": 1542685844634,
+    "relativePath": "Texture/redPackScene/hongbao_da.png"
+  },
+  "733ce42b-e4ac-4992-981f-dae1564596bd": {
+    "asset": 1542646986227,
+    "meta": 1542685844678,
+    "relativePath": "Texture/redPackScene/文字-战斗结算-2.png"
+  },
+  "01e22f75-d6ed-4038-91d7-e6f3676e4399": {
+    "asset": 1542647385032,
+    "meta": 1542690799890,
+    "relativePath": "Texture/redPackScene/文字-战斗结算-红包.jpg"
   }
 }

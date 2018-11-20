@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btn_xuanyao",
+    "texture": "4c7a6ec3-557e-447d-a8ba-6a9bbbfdc2bc",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      236,
+      69
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      236,
+      69
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

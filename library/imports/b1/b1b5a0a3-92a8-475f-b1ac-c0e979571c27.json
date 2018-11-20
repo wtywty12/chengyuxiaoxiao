@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "zhandoujiesuan",
+    "texture": "caf5ad96-8921-4d98-b07c-a931939b9be6",
+    "atlas": "",
+    "rect": [
+      0,
+      1,
+      266,
+      81
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      266,
+      82
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

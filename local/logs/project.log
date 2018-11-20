@@ -456,3 +456,8 @@
 
 2018-11-20T03:14:53.492Z - normal: open IDE success
 
+2018-11-20T03:48:49.384Z - warn: [db-task][sync-changes] Backup unused meta file: db://assets/Texture/未命名文件夹.meta
+2018-11-20T05:20:28.824Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:49000
+2018-11-20T05:22:18.107Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:49980
+2018-11-20T05:24:05.456Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:50879
+2018-11-20T05:30:55.878Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:54199

@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "733ce42b-e4ac-4992-981f-dae1564596bd",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "文字-战斗结算-2": {
+      "ver": "1.0.3",
+      "uuid": "6ae8440e-1a1e-4aa8-a083-371152d4e979",
+      "rawTextureUuid": "733ce42b-e4ac-4992-981f-dae1564596bd",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 479,
+      "height": 857,
+      "rawWidth": 479,
+      "rawHeight": 857,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

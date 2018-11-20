@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "01e22f75-d6ed-4038-91d7-e6f3676e4399",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "文字-战斗结算-红包": {
+      "ver": "1.0.3",
+      "uuid": "302e5584-5aae-45cf-87ca-bd7ed448a911",
+      "rawTextureUuid": "01e22f75-d6ed-4038-91d7-e6f3676e4399",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 720,
+      "height": 1280,
+      "rawWidth": 720,
+      "rawHeight": 1280,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
