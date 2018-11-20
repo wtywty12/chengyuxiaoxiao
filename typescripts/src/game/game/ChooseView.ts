@@ -6,6 +6,7 @@ import {ResourcesManager} from "../../core/common/ResourcesManager";
 import { Tools } from "../../utils/Tools";
 import { GameDataManager } from "../common/data/GameDataManager";
 import { GameScene } from "./GameScene";
+import { GameResult } from "./GameResult";
 
 @ccclass()
 export class ChooseView extends cc.Component {
@@ -95,6 +96,10 @@ export class ChooseView extends cc.Component {
             cc.log("已经满字 点击无效")
             return;
         }
+        if (GameResult.getIsStartResult() == true) {
+            RecordGrid.settempChooseGridMap(vec, str);
+            return;
+        }
         /** 遍历查找有不带字的grid 对其设置 */
         for (var i=0; i<this.gridAry.length; i++) {
             let grid = this.gridAry[i];
@@ -160,6 +165,17 @@ export class ChooseView extends cc.Component {
             let gird: GameGrid = this.gridAry[i];
             gird.setFadeIn();
         }
+    }
+
+    /**
+     * 判定成功恢复数据
+     */
+    public resetTempData() {
+        var tempChooseGridMap = RecordGrid.gettempChooseGridMap();
+        tempChooseGridMap.forEach((value, key) => {
+            this.setGridInfo(key, value);
+        })
+        RecordGrid.clearTempRecordData();
     }
 
     /**

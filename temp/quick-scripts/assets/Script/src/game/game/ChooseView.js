@@ -39,6 +39,7 @@ var RecordGrid_1 = require("../common/model/RecordGrid");
 var ResourcesManager_1 = require("../../core/common/ResourcesManager");
 var Tools_1 = require("../../utils/Tools");
 var GameDataManager_1 = require("../common/data/GameDataManager");
+var GameResult_1 = require("./GameResult");
 var ChooseView = function (_super) {
     __extends(ChooseView, _super);
     function ChooseView() {
@@ -100,6 +101,10 @@ var ChooseView = function (_super) {
             cc.log("已经满字 点击无效");
             return;
         }
+        if (GameResult_1.GameResult.getIsStartResult() == true) {
+            RecordGrid_1.RecordGrid.settempChooseGridMap(vec, str);
+            return;
+        }
         for (var i = 0; i < this.gridAry.length; i++) {
             var grid = this.gridAry[i];
             if (grid.getGridString() == "") {
@@ -141,6 +146,14 @@ var ChooseView = function (_super) {
             var gird = this.gridAry[i];
             gird.setFadeIn();
         }
+    };
+    ChooseView.prototype.resetTempData = function () {
+        var _this = this;
+        var tempChooseGridMap = RecordGrid_1.RecordGrid.gettempChooseGridMap();
+        tempChooseGridMap.forEach(function (value, key) {
+            _this.setGridInfo(key, value);
+        });
+        RecordGrid_1.RecordGrid.clearTempRecordData();
     };
     ChooseView.prototype.onGameOver = function () {
         if (this.gridAry == null && this.gridAry != []) {

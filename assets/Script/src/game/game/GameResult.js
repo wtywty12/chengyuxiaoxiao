@@ -10,6 +10,7 @@ var GameResultClass = (function () {
         this.gameTable = null;
         this.chooseView = null;
         this.gameScene = null;
+        this.isStartResult = false;
     }
     Object.defineProperty(GameResultClass, "instance", {
         get: function () {
@@ -28,7 +29,11 @@ var GameResultClass = (function () {
     GameResultClass.prototype.setGameScene = function (scene) {
         this.gameScene = scene;
     };
+    GameResultClass.prototype.getIsStartResult = function () {
+        return this.isStartResult;
+    };
     GameResultClass.prototype.startResult = function (idiomAry) {
+        this.isStartResult = true;
         var chooseMap = RecordGrid_1.RecordGrid.getChooseGridMap();
         var isSussess = false;
         for (var i = 0; i < idiomAry.length; i++) {
@@ -47,6 +52,7 @@ var GameResultClass = (function () {
         }
         if (isSussess) {
             this.chooseView.playChooseFadeOut();
+            RecordGrid_1.RecordGrid.clearRecordData();
             var cb1 = cc.callFunc(this.onSuccessFul, this);
             this.gameTable.node.runAction(cc.sequence(cc.delayTime(GameDataManager_1.GameDataManager.gameData.gridEffectTime), cb1));
         }
@@ -55,10 +61,12 @@ var GameResultClass = (function () {
         }
     };
     GameResultClass.prototype.onSuccessFul = function () {
-        this.clearData();
+        this.chooseView.clearChooseGrid();
         this.chooseView.playChooseFadeIn();
         GameDataManager_1.GameDataManager.gameData.addscore(4);
         this.gameScene.setScore(GameDataManager_1.GameDataManager.gameData.score.toString());
+        this.isStartResult = false;
+        this.chooseView.resetTempData();
         if (Tools_1.Tools.getMapLength(RecordGrid_1.RecordGrid.getGameTableGridMap()) == this.gameTable.tableWidth * this.gameTable.tableHeight) {
             GameDataManager_1.GameDataManager.gameData.gametime = GameDataManager_1.GameDataManager.gameData.totalGameTime;
             GameManager_1.GameManager.onGameLevelup();
@@ -71,6 +79,7 @@ var GameResultClass = (function () {
         this.gameScene.playJudgeErrorEffect();
         this.chooseView.restoreIdiom();
         this.clearData();
+        this.isStartResult = false;
     };
     GameResultClass.prototype.clearData = function () {
         RecordGrid_1.RecordGrid.clearRecordData();

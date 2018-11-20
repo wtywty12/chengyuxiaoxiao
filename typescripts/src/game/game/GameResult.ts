@@ -21,6 +21,8 @@ class GameResultClass{
      private chooseView: ChooseView = null;
      /** 上方表 */
      private gameScene: GameScene = null;
+     /** 是否开始判定 */
+     private isStartResult: boolean = false;
 
     private constructor () {
     }
@@ -43,6 +45,10 @@ class GameResultClass{
         this.gameScene = scene;
     }
 
+    public getIsStartResult(): boolean {
+        return this.isStartResult;
+    }
+
     /**
      * 判定结果
      * @param idiomAry 每个关卡的成语数组
@@ -50,6 +56,7 @@ class GameResultClass{
      */
     public startResult(idiomAry: Array<string>) {
         // cc.log("开始判定");
+        this.isStartResult = true;
         let chooseMap = RecordGrid.getChooseGridMap();
         /** 判定结果 */
         let isSussess = false;
@@ -70,6 +77,8 @@ class GameResultClass{
         if (isSussess) {
              /** 播放上方表特性 */
             this.chooseView.playChooseFadeOut();
+            /** 清理记录 */
+            RecordGrid.clearRecordData();
             var cb1 = cc.callFunc(this.onSuccessFul, this);
             this.gameTable.node.runAction(cc.sequence(cc.delayTime(GameDataManager.gameData.gridEffectTime), cb1));
         } else {
@@ -83,12 +92,16 @@ class GameResultClass{
     private onSuccessFul() {
         // cc.log("判定成功");
         /** 清理上方成语 */
-        this.clearData();
+        this.chooseView.clearChooseGrid();
         /** 显示上方背景格子 */
         this.chooseView.playChooseFadeIn();
         /** 设置得分 */
         GameDataManager.gameData.addscore(4);
         this.gameScene.setScore(GameDataManager.gameData.score.toString());
+        /** 设置结束判定 */
+        this.isStartResult = false;
+        /** 恢复数据 */
+        this.chooseView.resetTempData();
         /** 判定胜利 */
         if (Tools.getMapLength(RecordGrid.getGameTableGridMap()) == this.gameTable.tableWidth * this.gameTable.tableHeight) {
             GameDataManager.gameData.gametime = GameDataManager.gameData.totalGameTime;
@@ -111,6 +124,8 @@ class GameResultClass{
         this.chooseView.restoreIdiom();
         /** 清理数据 */
         this.clearData();
+        /** 设置结束判定 */
+        this.isStartResult = false;
      }
 
      /**

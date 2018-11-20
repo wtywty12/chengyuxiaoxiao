@@ -399,11 +399,6 @@
     "meta": 1542592882247,
     "relativePath": "Texture/loadingScene"
   },
-  "fe977f0a-281a-451a-8b73-95ad8d59c35e": {
-    "asset": 1542592882249,
-    "meta": 1542593097303,
-    "relativePath": "resources/jsons/idiom.json"
-  },
   "6f6d8f17-615b-4ad4-a5fa-2d2739448db2": {
     "asset": 1542444375148,
     "meta": 1542593097320,
@@ -859,11 +854,6 @@
     "meta": 1542641912522,
     "relativePath": "Script/src/game/common/model/RandomAry.js"
   },
-  "ae8dda00-8480-4e5c-a929-9a09af63bfd5": {
-    "asset": 1542641908349,
-    "meta": 1542641912637,
-    "relativePath": "Script/src/game/common/model/RecordGrid.js"
-  },
   "c5dc9d69-f6c8-42bc-9400-e531f8d40809": {
     "asset": 1542641908259,
     "meta": 1542641912698,
@@ -883,11 +873,6 @@
     "asset": 1542641908333,
     "meta": 1542641913116,
     "relativePath": "Script/src/game/game/GameGrid.js"
-  },
-  "5ab3a914-1231-4a71-bbe3-63f49e193a70": {
-    "asset": 1542641908401,
-    "meta": 1542641913159,
-    "relativePath": "Script/src/game/game/GameManager.js"
   },
   "c9b6e7c2-4507-4920-8d47-d362cbd8cdc1": {
     "asset": 1542641908464,
@@ -954,29 +939,44 @@
     "meta": 1542641913726,
     "relativePath": "Script/src/utils/Vec2.js"
   },
-  "3e51016d-d842-42d8-a95c-e3ffb316d3c7": {
-    "asset": 1542644504053,
-    "meta": 1542644515637,
-    "relativePath": "Script/src/game/game/ChooseView.js"
-  },
-  "a33454b1-70fd-4ea2-93e1-4acdf53a51e0": {
-    "asset": 1542644514215,
-    "meta": 1542644515637,
-    "relativePath": "Script/src/game/game/GameTable.js"
-  },
   "b3633f1d-5921-4453-a2d4-3d2f735c9fea": {
     "asset": 1542644794508,
     "meta": 1542644819560,
     "relativePath": "Script/src/game/common/data/GameData.js"
   },
-  "97be3ef2-5953-4964-860e-a648c5fe4058": {
-    "asset": 1542644818049,
-    "meta": 1542644819560,
-    "relativePath": "Script/src/game/game/GameResult.js"
+  "fe977f0a-281a-451a-8b73-95ad8d59c35e": {
+    "asset": 1542645719121,
+    "meta": 1542645721418,
+    "relativePath": "resources/jsons/idiom.json"
+  },
+  "5ab3a914-1231-4a71-bbe3-63f49e193a70": {
+    "asset": 1542683299799,
+    "meta": 1542683476806,
+    "relativePath": "Script/src/game/game/GameManager.js"
   },
   "55ba82a3-b236-4690-adbb-afd926249335": {
-    "asset": 1542645427422,
-    "meta": 1542645439254,
+    "asset": 1542683299827,
+    "meta": 1542683477208,
     "relativePath": "Script/src/game/game/GameScene.js"
+  },
+  "ae8dda00-8480-4e5c-a929-9a09af63bfd5": {
+    "asset": 1542683612856,
+    "meta": 1542683630453,
+    "relativePath": "Script/src/game/common/model/RecordGrid.js"
+  },
+  "3e51016d-d842-42d8-a95c-e3ffb316d3c7": {
+    "asset": 1542683626537,
+    "meta": 1542683630485,
+    "relativePath": "Script/src/game/game/ChooseView.js"
+  },
+  "97be3ef2-5953-4964-860e-a648c5fe4058": {
+    "asset": 1542683607380,
+    "meta": 1542683630602,
+    "relativePath": "Script/src/game/game/GameResult.js"
+  },
+  "a33454b1-70fd-4ea2-93e1-4acdf53a51e0": {
+    "asset": 1542683607374,
+    "meta": 1542683630603,
+    "relativePath": "Script/src/game/game/GameTable.js"
   }
 }

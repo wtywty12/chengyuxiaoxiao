@@ -64,14 +64,15 @@
         "scene"
       ]
     },
-    "window-1542644872376": {}
+    "window-1542645797934": {},
+    "worker": {}
   },
   "panels": {
     "builder": {
-      "x": 0,
-      "y": 0,
-      "width": 1440,
-      "height": 900
+      "x": 30,
+      "y": 63,
+      "width": 654,
+      "height": 561
     },
     "sprite-editor": {
       "x": 470,

@@ -252,3 +252,207 @@
 
 2018-11-19T16:28:19.632Z - normal: open IDE success
 
+2018-11-19T16:43:23.498Z - normal: Start building with options : {
+  "actualPlatform": "wechatgame",
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "apiLevel": "",
+  "appABIs": [],
+  "appKey": "",
+  "appSecret": "",
+  "buildPath": "/Users/linzhang/wegame",
+  "debug": false,
+  "dest": "/Users/linzhang/wegame/wechatgame",
+  "embedWebDebugger": false,
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeAnySDK": false,
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": false,
+  "jailbreakPlatform": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "optimizeHotUpdate": true,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "platform": "wechatgame",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "privateKey": "",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "scenes": [
+    "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38",
+    "4dcd14cd-14a8-4a6e-ae9e-0a4bf6dfa061",
+    "42b202ab-7491-4680-9d35-c49ea4ddedf1",
+    "a6ed62ac-6d2c-4666-896d-59c4c311faa8",
+    "29ce233f-ccb7-41be-8610-3aad7b9494fb",
+    "b83cf815-05dc-4e09-bc8f-47b6e5608cd4",
+    "8e868381-a7b9-47fd-9fe3-354ba31c395d"
+  ],
+  "sourceMaps": false,
+  "startScene": "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38",
+  "template": "link",
+  "title": "chengyuxiaoxiao",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx100b0d9ac9176cb5",
+    "isSubdomain": false,
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "xxteaKey": "d26bfbe9-e497-4d",
+  "zipCompressJs": true,
+  "project": "/Users/linzhang/youyou/chengyuxiaoxiao",
+  "projectName": "chengyuxiaoxiao",
+  "debugBuildWorker": false
+}
+2018-11-19T16:43:23.503Z - normal: Building /Users/linzhang/youyou/chengyuxiaoxiao
+2018-11-19T16:43:23.503Z - normal: Destination /Users/linzhang/wegame/wechatgame
+2018-11-19T16:43:23.504Z - normal: Delete /Users/linzhang/wegame/wechatgame/**/*
+2018-11-19T16:43:25.134Z - warn: Already has sub package /Users/linzhang/youyou/chengyuxiaoxiao/assets/Texture/gameScene, ignore sub package /Users/linzhang/youyou/chengyuxiaoxiao/assets/Texture/gameScene
+2018-11-19T16:43:25.135Z - warn: Already has sub package /Users/linzhang/youyou/chengyuxiaoxiao/assets/Texture/loadingScene, ignore sub package /Users/linzhang/youyou/chengyuxiaoxiao/assets/Texture/loadingScene
+2018-11-19T16:43:25.135Z - warn: Already has sub package /Users/linzhang/youyou/chengyuxiaoxiao/assets/Texture/loadingScene, ignore sub package /Users/linzhang/youyou/chengyuxiaoxiao/assets/Texture/loadingScene
+2018-11-19T16:43:27.674Z - normal: Start building assets
+2018-11-19T16:43:27.674Z - normal: Start spawn build-worker
+2018-11-19T16:43:28.437Z - normal: Finish spawn build-worker
+2018-11-19T16:43:28.437Z - normal: Start init build-worker
+2018-11-19T16:43:31.827Z - normal: Finish init build-worker
+2018-11-19T16:43:31.831Z - normal: Start build-assets in worker
+2018-11-19T16:43:32.843Z - normal: Finish build-assets in worker
+2018-11-19T16:43:32.847Z - normal: Finish building assets
+2018-11-19T16:43:32.866Z - normal: Start building plugin scripts
+2018-11-19T16:43:32.903Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
+2018-11-19T16:43:34.090Z - normal: Built to "/Users/linzhang/wegame/wechatgame" successfully
+2018-11-19T16:43:36.153Z - normal: Initializing...
+
+2018-11-19T16:43:36.158Z - normal: idePortFile: /Users/linzhang/Library/Application Support/微信web开发者工具/Default/.ide
+
+2018-11-19T16:43:36.176Z - normal: IDE server has started, listening on http://127.0.0.1:20369
+
+2018-11-19T16:43:36.177Z - normal: initialization finished
+
+2018-11-19T16:43:36.420Z - normal: open IDE success
+
+2018-11-20T03:14:34.326Z - normal: Start building with options : {
+  "actualPlatform": "wechatgame",
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "apiLevel": "",
+  "appABIs": [],
+  "appKey": "",
+  "appSecret": "",
+  "buildPath": "/Users/linzhang/wegame",
+  "debug": false,
+  "dest": "/Users/linzhang/wegame/wechatgame",
+  "embedWebDebugger": false,
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeAnySDK": false,
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": false,
+  "jailbreakPlatform": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "optimizeHotUpdate": true,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "platform": "wechatgame",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "privateKey": "",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "scenes": [
+    "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38",
+    "4dcd14cd-14a8-4a6e-ae9e-0a4bf6dfa061",
+    "42b202ab-7491-4680-9d35-c49ea4ddedf1",
+    "a6ed62ac-6d2c-4666-896d-59c4c311faa8",
+    "29ce233f-ccb7-41be-8610-3aad7b9494fb",
+    "b83cf815-05dc-4e09-bc8f-47b6e5608cd4",
+    "8e868381-a7b9-47fd-9fe3-354ba31c395d"
+  ],
+  "sourceMaps": false,
+  "startScene": "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38",
+  "template": "link",
+  "title": "chengyuxiaoxiao",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx100b0d9ac9176cb5",
+    "isSubdomain": false,
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "xxteaKey": "d26bfbe9-e497-4d",
+  "zipCompressJs": true,
+  "project": "/Users/linzhang/youyou/chengyuxiaoxiao",
+  "projectName": "chengyuxiaoxiao",
+  "debugBuildWorker": false
+}
+2018-11-20T03:14:34.332Z - normal: Building /Users/linzhang/youyou/chengyuxiaoxiao
+2018-11-20T03:14:34.333Z - normal: Destination /Users/linzhang/wegame/wechatgame
+2018-11-20T03:14:34.335Z - normal: Delete /Users/linzhang/wegame/wechatgame/**/*
+2018-11-20T03:14:36.481Z - warn: Already has sub package /Users/linzhang/youyou/chengyuxiaoxiao/assets/Texture/gameScene, ignore sub package /Users/linzhang/youyou/chengyuxiaoxiao/assets/Texture/gameScene
+2018-11-20T03:14:36.481Z - warn: Already has sub package /Users/linzhang/youyou/chengyuxiaoxiao/assets/Texture/loadingScene, ignore sub package /Users/linzhang/youyou/chengyuxiaoxiao/assets/Texture/loadingScene
+2018-11-20T03:14:36.482Z - warn: Already has sub package /Users/linzhang/youyou/chengyuxiaoxiao/assets/Texture/loadingScene, ignore sub package /Users/linzhang/youyou/chengyuxiaoxiao/assets/Texture/loadingScene
+2018-11-20T03:14:40.932Z - normal: Start building assets
+2018-11-20T03:14:40.932Z - normal: Start spawn build-worker
+2018-11-20T03:14:41.916Z - normal: Finish spawn build-worker
+2018-11-20T03:14:41.916Z - normal: Start init build-worker
+2018-11-20T03:14:47.147Z - normal: Finish init build-worker
+2018-11-20T03:14:47.148Z - normal: Start build-assets in worker
+2018-11-20T03:14:48.763Z - normal: Finish build-assets in worker
+2018-11-20T03:14:48.767Z - normal: Finish building assets
+2018-11-20T03:14:48.796Z - normal: Start building plugin scripts
+2018-11-20T03:14:48.836Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
+2018-11-20T03:14:50.339Z - normal: Built to "/Users/linzhang/wegame/wechatgame" successfully
+2018-11-20T03:14:53.238Z - normal: Initializing...
+
+2018-11-20T03:14:53.248Z - normal: idePortFile: /Users/linzhang/Library/Application Support/微信web开发者工具/Default/.ide
+
+2018-11-20T03:14:53.272Z - normal: IDE server has started, listening on http://127.0.0.1:20369
+
+2018-11-20T03:14:53.273Z - normal: initialization finished
+
+2018-11-20T03:14:53.492Z - normal: open IDE success
+
