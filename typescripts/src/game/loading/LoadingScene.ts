@@ -7,6 +7,7 @@ import {GameEngine} from "../common/GameEngine";
 import {GameSceneHepler} from "../common/helper/GameSceneHepler";
 import { GameDataManager } from "../common/data/GameDataManager";
 import { GameData } from "../common/data/GameData";
+import {GameAudio} from "../common/helper/GameAudio";
 
 /**
  * @author: liubowen
@@ -44,15 +45,15 @@ export class LoadingScene extends CommonScene {
     protected async load() {
         cc.loader.downloader.loadSubpackage('loadingScene', function (err: any) {
             if (err) {
-                return console.error(err);
+                return ;
             }
-            console.log('load subpackage successfully.');
+            console.log('load loadingScene subpackage successfully.');
         });
         cc.loader.downloader.loadSubpackage('jsons', function (err: any) {
             if (err) {
-                return console.error(err);
+                return ;
             }
-            console.log('load subpackage successfully.');
+            console.log('load jsons subpackage successfully.');
         });
         this.progressLabel.string = "正在加载";
         this.setProgress(0);
@@ -60,13 +61,16 @@ export class LoadingScene extends CommonScene {
         this.setProgress(50);
         await ResourcesManager.load();
         this.btn_myinfo.node.on(cc.Node.EventType.TOUCH_END,function(){
+            GameAudio.playBtnEffect();
             GameEngine.changeScene(GameSceneHepler.MYINFO)
         })
         this.btn_rank.node.on(cc.Node.EventType.TOUCH_END,function(){
+            GameAudio.playBtnEffect();
             GameEngine.changeScene(GameSceneHepler.RANK)
         })
         this.btn_music.node.on(cc.Node.EventType.TOUCH_END,function(){
             //判断全局 控制声音
+            GameAudio.playBtnEffect();
             if(GameEngine.audio.getState() == cc.audioEngine.AudioState.PAUSED)
             {
                 
@@ -100,7 +104,7 @@ export class LoadingScene extends CommonScene {
     private initPlayerData():void{
         //通过后台获取 用户信息 若未授权 提示用户去授权 并拉去玩家信息
         GameDataManager.gameData.playtimes = 0
-        GameDataManager.gameData.topscore = 10
+        // GameDataManager.gameData.topscore = 10
     }
     protected unload(): void {
     }
@@ -154,14 +158,15 @@ export class LoadingScene extends CommonScene {
 
     private startGame():void{
         // GameEngine.loginService.checkLogin();
+        
         cc.loader.downloader.loadSubpackage('gameScene', function (err: any) {
             if (err) {
-                return console.error(err);
+                return;
             }
-            console.log('load subpackage successfully.');
+            console.log('load gameScene subpackage successfully.');
         });
+        GameAudio.playBtnEffect();
         GameDataManager.gameData.refuseData();
         GameEngine.changeScene(GameSceneHepler.GAME)
     }
-
 }

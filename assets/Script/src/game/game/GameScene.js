@@ -29,6 +29,8 @@ var GameEngine_1 = require("../common/GameEngine");
 var GameSceneHepler_1 = require("../common/helper/GameSceneHepler");
 var GameResult_1 = require("./GameResult");
 var Audio_1 = require("../../core/common/Audio");
+var GameAudio_1 = require("../common/helper/GameAudio");
+var StorageInfo_1 = require("../common/data/StorageInfo");
 var GameScene = (function (_super) {
     __extends(GameScene, _super);
     function GameScene() {
@@ -37,10 +39,12 @@ var GameScene = (function (_super) {
         _this.chooseView = null;
         _this.lbl_time = null;
         _this.lbl_score = null;
+        _this.lbl_topScore = null;
         _this.btn_back = null;
         _this.btn_share = null;
         _this.bar_time = null;
         _this.audio = null;
+        _this.scheTimes = 0;
         return _this;
     }
     GameScene.prototype.onLoad = function () {
@@ -55,6 +59,7 @@ var GameScene = (function (_super) {
     GameScene.prototype.loadFinish = function () {
         this.audio = new Audio_1.Audio(1, 101);
         this.audio.playBGM("bgMusic");
+        this.setTopScore();
         GameResult_1.GameResult.setGameScene(this);
         GameManager_1.GameManager.onGameStart();
         this.btn_back.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
@@ -65,6 +70,7 @@ var GameScene = (function (_super) {
     GameScene.prototype.onTouchEventListener = function (event) {
         var eventType = event.type;
         var eventName = event.target._name;
+        GameAudio_1.GameAudio.playBtnEffect();
         if (eventType != "touchend") {
             cc.log("EventType is error, it is ", eventType);
             return;
@@ -97,13 +103,19 @@ var GameScene = (function (_super) {
     };
     GameScene.prototype.createScheBar = function () {
         var time = GameDataManager_1.GameDataManager.gameData.totalGameTime * 0.01;
-        var times = 100;
+        this.scheTimes = 100;
         var barCallback = function (dt) {
-            times--;
-            var percent = times * 0.01;
+            this.scheTimes--;
+            var percent = this.scheTimes * 0.01;
             this.bar_time.progress = percent;
         };
         this.schedule(barCallback, time);
+    };
+    GameScene.prototype.addScheTimes = function (score) {
+        if (typeof (score) == "number") {
+            var percent = score / GameDataManager_1.GameDataManager.gameData.totalGameTime * 100;
+            this.scheTimes += score;
+        }
     };
     GameScene.prototype.resetCDTime = function () {
         this.unscheduleAllCallbacks();
@@ -115,6 +127,9 @@ var GameScene = (function (_super) {
             return;
         }
         this.lbl_score.string = score;
+    };
+    GameScene.prototype.setTopScore = function () {
+        this.lbl_topScore.string = StorageInfo_1.StorageInfo.getTopScore().toString();
     };
     GameScene.prototype.playClickGridEffect = function () {
         this.audio.playSFX("click", 1);
@@ -134,6 +149,9 @@ var GameScene = (function (_super) {
     __decorate([
         property(cc.Label)
     ], GameScene.prototype, "lbl_score", void 0);
+    __decorate([
+        property(cc.Label)
+    ], GameScene.prototype, "lbl_topScore", void 0);
     __decorate([
         property(cc.Node)
     ], GameScene.prototype, "btn_back", void 0);

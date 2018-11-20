@@ -8,6 +8,8 @@ import { GameEngine } from "../common/GameEngine";
 import { GameSceneHepler } from "../common/helper/GameSceneHepler";
 import { GameResult } from "./GameResult";
 import {Audio} from "../../core/common/Audio";
+import {GameAudio} from "../common/helper/GameAudio";
+import { StorageInfo } from "../common/data/StorageInfo";
 
 @ccclass()
 export class GameScene extends cc.Component {
@@ -26,10 +28,16 @@ export class GameScene extends cc.Component {
     private lbl_time: cc.Label = null;
 
     /**
-     * 倒计时按钮
+     * 倒计时
      */
     @property(cc.Label)
     private lbl_score: cc.Label = null;
+
+    /**
+     * 最高分
+     */
+    @property(cc.Label)
+    private lbl_topScore: cc.Label = null;
 
     /**
      * 返回按钮
@@ -54,6 +62,11 @@ export class GameScene extends cc.Component {
      */
     private audio: Audio = null;
 
+    /**
+     * 进度条次数 用于判定成功+2秒进度条显示
+     */
+    private scheTimes: number = 0;
+
     /** 构造函数 */
     protected constructor() {
         super();
@@ -75,6 +88,7 @@ export class GameScene extends cc.Component {
     private loadFinish(): void {
         this.audio = new Audio(1, 101);
         this.audio.playBGM("bgMusic");
+        this.setTopScore();
 
         GameResult.setGameScene(this);
         GameManager.onGameStart();
@@ -91,6 +105,7 @@ export class GameScene extends cc.Component {
     private onTouchEventListener(event: any) {
         var eventType = event.type;
         var eventName = event.target._name;
+        GameAudio.playBtnEffect();
         if (eventType != "touchend") {
             cc.log("EventType is error, it is ", eventType);
             return;
@@ -148,13 +163,23 @@ export class GameScene extends cc.Component {
      */
     public createScheBar() {
         var time = GameDataManager.gameData.totalGameTime * 0.01;
-        var times = 100;
+        this.scheTimes = 100;
         var barCallback = function (dt: number) {
-            times --;
-            let percent = times * 0.01;
+            this.scheTimes --;
+            let percent = this.scheTimes * 0.01;
             this.bar_time.progress = percent;
           }
         this.schedule(barCallback, time);
+    }
+
+    /**
+     * 答对增加进度条百分比
+     */
+    public addScheTimes(score: number) {
+        if (typeof(score) == "number") {
+            var percent = score / GameDataManager.gameData.totalGameTime * 100;
+            this.scheTimes += score;
+        }
     }
 
     /**
@@ -174,6 +199,13 @@ export class GameScene extends cc.Component {
             return;
         }
         this.lbl_score.string = score;
+    }
+
+    /**
+     * 设置最高分
+     */
+    public setTopScore() {
+        this.lbl_topScore.string = StorageInfo.getTopScore().toString();
     }
 
     /**

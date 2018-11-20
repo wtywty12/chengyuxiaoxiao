@@ -24,6 +24,8 @@ var property = cc._decorator.property;
 var GameEngine_1 = require("../common/GameEngine");
 var GameSceneHepler_1 = require("../common/helper/GameSceneHepler");
 var GameDataManager_1 = require("../common/data/GameDataManager");
+var StorageInfo_1 = require("../common/data/StorageInfo");
+var GameAudio_1 = require("../common/helper/GameAudio");
 var SettleScene = (function (_super) {
     __extends(SettleScene, _super);
     function SettleScene() {
@@ -36,39 +38,48 @@ var SettleScene = (function (_super) {
         return _this;
     }
     SettleScene.prototype.onLoad = function () {
-        this.lbl_price.string = Math.random().toString();
-        this.btn_deposit.node.on(cc.Node.EventType.TOUCH_END, this.onClickDeposit);
-        this.btn_myaward.node.on(cc.Node.EventType.TOUCH_END, this.onClickMyAward);
-        this.btn_continue.node.on(cc.Node.EventType.TOUCH_END, this.onClickContinue);
-        this.btn_back.node.on(cc.Node.EventType.TOUCH_END, this.onClickBack);
+        var money = this.getRedPackMoney();
+        StorageInfo_1.StorageInfo.setRedPackMoney(money);
+        this.lbl_price.string = money.toFixed(2);
+        this.btn_deposit.on(cc.Node.EventType.TOUCH_END, this.onClickDeposit);
+        this.btn_myaward.on(cc.Node.EventType.TOUCH_END, this.onClickMyAward);
+        this.btn_continue.on(cc.Node.EventType.TOUCH_END, this.onClickContinue);
+        this.btn_back.on(cc.Node.EventType.TOUCH_END, this.onClickBack);
     };
     SettleScene.prototype.onDestroy = function () {
     };
     SettleScene.prototype.onClickDeposit = function () {
+        GameAudio_1.GameAudio.playBtnEffect();
         GameEngine_1.GameEngine.shareGame();
     };
     SettleScene.prototype.onClickMyAward = function () {
+        GameAudio_1.GameAudio.playBtnEffect();
         GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.MYINFO);
     };
     SettleScene.prototype.onClickContinue = function () {
+        GameAudio_1.GameAudio.playBtnEffect();
         GameDataManager_1.GameDataManager.gameData.refuseData();
         GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.GAME);
     };
     SettleScene.prototype.onClickBack = function () {
+        GameAudio_1.GameAudio.playBtnEffect();
         GameDataManager_1.GameDataManager.gameData.refuseData();
         GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.LOADING);
     };
+    SettleScene.prototype.getRedPackMoney = function () {
+        return Number(Math.random() * 0.05) || 0.01;
+    };
     __decorate([
-        property(cc.Button)
+        property(cc.Node)
     ], SettleScene.prototype, "btn_deposit", void 0);
     __decorate([
-        property(cc.Button)
+        property(cc.Node)
     ], SettleScene.prototype, "btn_back", void 0);
     __decorate([
-        property(cc.Button)
+        property(cc.Node)
     ], SettleScene.prototype, "btn_continue", void 0);
     __decorate([
-        property(cc.Button)
+        property(cc.Node)
     ], SettleScene.prototype, "btn_myaward", void 0);
     __decorate([
         property(cc.Label)

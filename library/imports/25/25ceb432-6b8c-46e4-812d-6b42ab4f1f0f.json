@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "diban_jiugongge",
+    "texture": "d79c6b59-9a58-4d0d-8d29-fd542dcd7d79",
+    "atlas": "",
+    "rect": [
+      1,
+      0,
+      62,
+      63
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      64,
+      64
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

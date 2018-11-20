@@ -65,7 +65,8 @@ var GameTable = function (_super) {
             this.tableWidth = levelInfo.row;
             this.tableHeight = levelInfo.line;
         }
-        this.randomAry = new RandomAry_1.RandomAry(this.tableWidth * this.tableHeight * 0.25);
+        var gridNumber = Tools_1.Tools.getGridNumber(this.tableWidth, this.tableHeight);
+        this.randomAry = new RandomAry_1.RandomAry(gridNumber);
         this.randomIdiom = this.randomAry.getRandomIdiom();
         this.produceAry = this.randomAry.getProduceArray();
         this.gridPrefab = ResourcesManager_1.ResourcesManager.getPrefab("GameGrid");

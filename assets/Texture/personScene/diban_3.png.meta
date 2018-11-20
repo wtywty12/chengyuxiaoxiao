@@ -8,7 +8,7 @@
   "subMetas": {
     "diban_3": {
       "ver": "1.0.3",
-      "uuid": "19e828ce-3caa-4996-9e66-b31e212d7a0f",
+      "uuid": "ab2c777a-6045-4034-93bc-7aab4ab51a7e",
       "rawTextureUuid": "8a649e87-da00-4f43-a70f-0c14f9e5682b",
       "trimType": "auto",
       "trimThreshold": 1,
@@ -21,10 +21,10 @@
       "height": 197,
       "rawWidth": 60,
       "rawHeight": 198,
-      "borderTop": 2,
-      "borderBottom": 2,
-      "borderLeft": 2,
-      "borderRight": 2,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
       "subMetas": {}
     }
   }

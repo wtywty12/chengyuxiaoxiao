@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btn_yaoqinghaoyou",
+    "texture": "7c5c1e90-4db4-4081-92d2-b9370bf8b1a5",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      236,
+      69
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      236,
+      69
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

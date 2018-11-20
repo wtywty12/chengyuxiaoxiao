@@ -24,6 +24,8 @@ var property = cc._decorator.property;
 var GameEngine_1 = require("../common/GameEngine");
 var GameSceneHepler_1 = require("../common/helper/GameSceneHepler");
 var GameDataManager_1 = require("../common/data/GameDataManager");
+var StorageInfo_1 = require("../common/data/StorageInfo");
+var GameAudio_1 = require("../common/helper/GameAudio");
 var SettleScene = (function (_super) {
     __extends(SettleScene, _super);
     function SettleScene() {
@@ -50,12 +52,16 @@ var SettleScene = (function (_super) {
         this.btn_back.node.on(cc.Node.EventType.TOUCH_END, this.onClickBack);
         this.btn_waitsave.node.on(cc.Node.EventType.TOUCH_END, this.onClickWaitSave);
         this.btn_saved.node.on(cc.Node.EventType.TOUCH_END, this.onClickSaved);
+        this.label_price.string = StorageInfo_1.StorageInfo.getRedPackMoney().toFixed(2);
+        this.label_playtimes.string = GameDataManager_1.GameDataManager.gameData.playtimes.toString();
     };
     SettleScene.prototype.onDestroy = function () {
     };
     SettleScene.prototype.onClickAddTimes = function () {
+        GameAudio_1.GameAudio.playBtnEffect();
     };
     SettleScene.prototype.onClickTixian = function () {
+        GameAudio_1.GameAudio.playBtnEffect();
         var self = this;
         GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.DEPOSIT);
     };
@@ -74,13 +80,16 @@ var SettleScene = (function (_super) {
         }
     };
     SettleScene.prototype.onClickTifu = function () {
+        GameAudio_1.GameAudio.playBtnEffect();
         GameEngine_1.GameEngine.shareGame();
     };
     SettleScene.prototype.onClickWaitSave = function () {
+        GameAudio_1.GameAudio.playBtnEffect();
         var userinfo = GameEngine_1.GameEngine.loginService.getUserInfo();
         cc.log("res -> userInfo--onClickWaitSave", userinfo);
     };
     SettleScene.prototype.onClickSaved = function () {
+        GameAudio_1.GameAudio.playBtnEffect();
         wx.chooseImage({
             count: 1,
             sizeType: ['original', 'compressed'],
@@ -92,6 +101,7 @@ var SettleScene = (function (_super) {
         });
     };
     SettleScene.prototype.onClickBack = function () {
+        GameAudio_1.GameAudio.playBtnEffect();
         GameDataManager_1.GameDataManager.gameData.refuseData();
         GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.LOADING);
     };

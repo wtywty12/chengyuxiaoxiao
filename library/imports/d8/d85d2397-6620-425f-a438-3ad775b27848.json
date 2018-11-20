@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btn_jixu",
+    "texture": "cf4a3504-cd6d-4926-9d1e-dadb6e2cf126",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      236,
+      69
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      236,
+      69
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

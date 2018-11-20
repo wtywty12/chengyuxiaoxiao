@@ -10,6 +10,8 @@ import { LoginService } from "../common/service/LoginService";
 import {DefaultGameEvent} from "../../core/event/DefaultGameEvent";
 import {GameEventTransmitter} from "../../core/event/GameEventTransmitter";
 import { ImageHelper } from "../common/helper/ImageHelper";
+import {StorageInfo} from "../common/data/StorageInfo";
+import {GameAudio} from "../common/helper/GameAudio";
 
 
 /**
@@ -68,7 +70,10 @@ export class SettleScene extends cc.Component {
         this.btn_back.node.on(cc.Node.EventType.TOUCH_END,this.onClickBack)
         this.btn_waitsave.node.on(cc.Node.EventType.TOUCH_END,this.onClickWaitSave)
         this.btn_saved.node.on(cc.Node.EventType.TOUCH_END,this.onClickSaved)
-
+        /** 设置红包总金额 */
+        this.label_price.string = StorageInfo.getRedPackMoney().toFixed(2);
+        /** 设置游戏次数 */
+        this.label_playtimes.string = GameDataManager.gameData.playtimes.toString();
     }
 
     /** 类销毁 */
@@ -77,9 +82,11 @@ export class SettleScene extends cc.Component {
     }
     //点击增加次数
     private onClickAddTimes():void{
+        GameAudio.playBtnEffect();
     }
     //点击提现
     private onClickTixian():void{
+        GameAudio.playBtnEffect();
         var self = this
         wx.getUserInfo({
             success: function(res:any) {
@@ -121,10 +128,12 @@ export class SettleScene extends cc.Component {
     }
     //客服
     private onClickTifu():void{
+        GameAudio.playBtnEffect();
         GameEngine.shareGame()
     }
     //点击为存入的
     private onClickWaitSave():void{
+        GameAudio.playBtnEffect();
         var userinfo = GameEngine.loginService.getUserInfo();
         cc.log(`res -> userInfo--onClickWaitSave`,userinfo)
         // this.tab1.node.active = true;
@@ -132,6 +141,7 @@ export class SettleScene extends cc.Component {
     }
     //点击已经存入的
     private onClickSaved():void{
+        GameAudio.playBtnEffect();
         wx.chooseImage({
             count: 1,
             sizeType: ['original', 'compressed'],
@@ -145,6 +155,7 @@ export class SettleScene extends cc.Component {
         // this.tab2.node.active = true;
     }
     private onClickBack():void{
+        GameAudio.playBtnEffect();
         GameDataManager.gameData.refuseData()
         GameEngine.changeScene(GameSceneHepler.LOADING)
     }

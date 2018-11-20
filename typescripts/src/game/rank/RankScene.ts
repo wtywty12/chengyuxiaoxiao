@@ -6,6 +6,7 @@ import property = cc._decorator.property;
 import {GameEngine} from "../common/GameEngine";
 import {GameSceneHepler} from "../common/helper/GameSceneHepler";
 import { GameDataManager } from "../common/data/GameDataManager";
+import {GameAudio} from "../common/helper/GameAudio";
 
 /**
  * @author: wangtianye
@@ -43,6 +44,7 @@ export class RankScene extends cc.Component {
     }
    
     private onClickBack():void{
+        GameAudio.playBtnEffect();
         GameDataManager.gameData.refuseData()
         GameEngine.changeScene(GameSceneHepler.LOADING)
     }

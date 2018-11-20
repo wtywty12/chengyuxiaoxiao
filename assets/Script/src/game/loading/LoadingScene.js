@@ -62,6 +62,7 @@ var property = cc._decorator.property;
 var GameEngine_1 = require("../common/GameEngine");
 var GameSceneHepler_1 = require("../common/helper/GameSceneHepler");
 var GameDataManager_1 = require("../common/data/GameDataManager");
+var GameAudio_1 = require("../common/helper/GameAudio");
 var LoadingScene = (function (_super) {
     __extends(LoadingScene, _super);
     function LoadingScene() {
@@ -84,15 +85,15 @@ var LoadingScene = (function (_super) {
                     case 0:
                         cc.loader.downloader.loadSubpackage('loadingScene', function (err) {
                             if (err) {
-                                return console.error(err);
+                                return;
                             }
-                            console.log('load subpackage successfully.');
+                            console.log('load loadingScene subpackage successfully.');
                         });
                         cc.loader.downloader.loadSubpackage('jsons', function (err) {
                             if (err) {
-                                return console.error(err);
+                                return;
                             }
-                            console.log('load subpackage successfully.');
+                            console.log('load jsons subpackage successfully.');
                         });
                         this.progressLabel.string = "正在加载";
                         this.setProgress(0);
@@ -104,12 +105,15 @@ var LoadingScene = (function (_super) {
                     case 2:
                         _a.sent();
                         this.btn_myinfo.node.on(cc.Node.EventType.TOUCH_END, function () {
+                            GameAudio_1.GameAudio.playBtnEffect();
                             GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.MYINFO);
                         });
                         this.btn_rank.node.on(cc.Node.EventType.TOUCH_END, function () {
+                            GameAudio_1.GameAudio.playBtnEffect();
                             GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.RANK);
                         });
                         this.btn_music.node.on(cc.Node.EventType.TOUCH_END, function () {
+                            GameAudio_1.GameAudio.playBtnEffect();
                             if (GameEngine_1.GameEngine.audio.getState() == cc.audioEngine.AudioState.PAUSED) {
                             }
                             else { }
@@ -129,7 +133,6 @@ var LoadingScene = (function (_super) {
     };
     LoadingScene.prototype.initPlayerData = function () {
         GameDataManager_1.GameDataManager.gameData.playtimes = 0;
-        GameDataManager_1.GameDataManager.gameData.topscore = 10;
     };
     LoadingScene.prototype.unload = function () {
     };
@@ -174,10 +177,11 @@ var LoadingScene = (function (_super) {
     LoadingScene.prototype.startGame = function () {
         cc.loader.downloader.loadSubpackage('gameScene', function (err) {
             if (err) {
-                return console.error(err);
+                return;
             }
-            console.log('load subpackage successfully.');
+            console.log('load gameScene subpackage successfully.');
         });
+        GameAudio_1.GameAudio.playBtnEffect();
         GameDataManager_1.GameDataManager.gameData.refuseData();
         GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.GAME);
     };
