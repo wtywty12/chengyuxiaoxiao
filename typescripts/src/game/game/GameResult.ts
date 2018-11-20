@@ -100,6 +100,8 @@ class GameResultClass{
         /** 设置得分 */
         GameDataManager.gameData.addscore(4);
         this.gameScene.setScore(GameDataManager.gameData.score.toString());
+        /** 设置最高分 */
+        this.gameScene.setTopScore();
         /** 设置结束判定 */
         this.isStartResult = false;
         /** 恢复数据 */

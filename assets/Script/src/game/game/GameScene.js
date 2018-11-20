@@ -30,6 +30,7 @@ var GameSceneHepler_1 = require("../common/helper/GameSceneHepler");
 var GameResult_1 = require("./GameResult");
 var Audio_1 = require("../../core/common/Audio");
 var GameAudio_1 = require("../common/helper/GameAudio");
+var StorageInfo_1 = require("../common/data/StorageInfo");
 var GameScene = (function (_super) {
     __extends(GameScene, _super);
     function GameScene() {
@@ -58,6 +59,7 @@ var GameScene = (function (_super) {
     GameScene.prototype.loadFinish = function () {
         this.audio = new Audio_1.Audio(1, 101);
         this.audio.playBGM("bgMusic");
+        this.setTopScore();
         GameResult_1.GameResult.setGameScene(this);
         GameManager_1.GameManager.onGameStart();
         this.btn_back.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
@@ -126,11 +128,8 @@ var GameScene = (function (_super) {
         }
         this.lbl_score.string = score;
     };
-    GameScene.prototype.setTopScore = function (score) {
-        if (typeof (score) != "string") {
-            return;
-        }
-        this.lbl_topScore.string = score;
+    GameScene.prototype.setTopScore = function () {
+        this.lbl_topScore.string = StorageInfo_1.StorageInfo.getTopScore().toString();
     };
     GameScene.prototype.playClickGridEffect = function () {
         this.audio.playSFX("click", 1);

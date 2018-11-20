@@ -6,6 +6,7 @@ cc._RF.push(module, 'b36338dWSFEU6LUPS9zXJ/q', 'GameData');
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var ConfigManager_1 = require("../ConfigManager");
+var StorageInfo_1 = require("./StorageInfo");
 var GameData = function () {
     function GameData() {
         this._level = 1;
@@ -35,6 +36,7 @@ var GameData = function () {
     };
     GameData.prototype.addscore = function (value) {
         this._score += Math.floor(value * Math.sqrt(this._playtimes || 1));
+        StorageInfo_1.StorageInfo.setTopScore(this._score);
     };
     GameData.prototype.addgametime = function () {
         var levelsInfo = ConfigManager_1.ConfigManager.levelsJsonMap.get(this._level);
@@ -78,6 +80,7 @@ var GameData = function () {
         },
         set: function set(_score) {
             this._score = _score;
+            StorageInfo_1.StorageInfo.setTopScore(_score);
         },
         enumerable: true,
         configurable: true

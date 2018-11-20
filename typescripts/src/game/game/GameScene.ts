@@ -9,6 +9,7 @@ import { GameSceneHepler } from "../common/helper/GameSceneHepler";
 import { GameResult } from "./GameResult";
 import {Audio} from "../../core/common/Audio";
 import {GameAudio} from "../common/helper/GameAudio";
+import { StorageInfo } from "../common/data/StorageInfo";
 
 @ccclass()
 export class GameScene extends cc.Component {
@@ -87,6 +88,7 @@ export class GameScene extends cc.Component {
     private loadFinish(): void {
         this.audio = new Audio(1, 101);
         this.audio.playBGM("bgMusic");
+        this.setTopScore();
 
         GameResult.setGameScene(this);
         GameManager.onGameStart();
@@ -200,13 +202,10 @@ export class GameScene extends cc.Component {
     }
 
     /**
-     * 设置分数
+     * 设置最高分
      */
-    public setTopScore(score: string) {
-        if (typeof(score) != "string") {
-            return;
-        }
-        this.lbl_topScore.string = score;
+    public setTopScore() {
+        this.lbl_topScore.string = StorageInfo.getTopScore().toString();
     }
 
     /**

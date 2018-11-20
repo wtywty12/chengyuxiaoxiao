@@ -68,6 +68,7 @@ var GameResultClass = (function () {
         this.chooseView.playChooseFadeIn();
         GameDataManager_1.GameDataManager.gameData.addscore(4);
         this.gameScene.setScore(GameDataManager_1.GameDataManager.gameData.score.toString());
+        this.gameScene.setTopScore();
         this.isStartResult = false;
         this.chooseView.resetTempData();
         var redPackTimes = StorageInfo_1.StorageInfo.getRedPackTimes();

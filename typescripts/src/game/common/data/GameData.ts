@@ -4,6 +4,7 @@
  * @description:
  */
 import {ConfigManager} from "../ConfigManager";
+import {StorageInfo} from "./StorageInfo";
 
 export class GameData {
     //最高分 改为存本地缓存
@@ -63,6 +64,7 @@ export class GameData {
     //增加分数
     public addscore(value :number){
         this._score += Math.floor(value * Math.sqrt(this._playtimes || 1));
+        StorageInfo.setTopScore(this._score);
     }
     //增加游戏时间
     public addgametime(){
@@ -108,6 +110,7 @@ export class GameData {
     }
     set score(_score : number) {
         this._score = _score
+        StorageInfo.setTopScore(_score);
     }
     get tempScore(): number{
         return this._tempScore;
