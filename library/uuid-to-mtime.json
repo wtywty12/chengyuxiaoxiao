@@ -275,8 +275,8 @@
     "relativePath": "resources/prefabs"
   },
   "222c8c4e-ff5c-4206-a0d5-69280693002a": {
-    "asset": 1542442995920,
-    "meta": 1542695162831,
+    "asset": 1542697567274,
+    "meta": 1542697567283,
     "relativePath": "resources/prefabs/GameGrid.prefab"
   },
   "824f2131-30a5-48e0-a78a-56aaa91b9d7d": {
@@ -293,11 +293,6 @@
     "asset": 1542439244385,
     "meta": 1542695162843,
     "relativePath": "resources/images/di_1.png"
-  },
-  "efd426bd-456f-4408-83a2-280a62edfd10": {
-    "asset": 1542631289214,
-    "meta": 1542695162849,
-    "relativePath": "resources/sounds/bgMusic.wav"
   },
   "114ababa-7c69-4d16-bccc-29de29e89be1": {
     "asset": 1542635264753,
@@ -335,8 +330,8 @@
     "relativePath": "Scene/RankScene.fire"
   },
   "a6ed62ac-6d2c-4666-896d-59c4c311faa8": {
-    "asset": 1542696781333,
-    "meta": 1542696781347,
+    "asset": 1542697528227,
+    "meta": 1542697528259,
     "relativePath": "Scene/MyinfoScene.fire"
   },
   "b83cf815-05dc-4e09-bc8f-47b6e5608cd4": {
@@ -1065,8 +1060,13 @@
     "relativePath": "Script/src/utils/Vec2.js"
   },
   "3009a629-7889-4dd2-ae99-183a53517630": {
-    "asset": 1542696920050,
-    "meta": 1542696922176,
+    "asset": 1542697242942,
+    "meta": 1542697296567,
     "relativePath": "Script/src/game/loading/LoadingScene.js"
+  },
+  "efd426bd-456f-4408-83a2-280a62edfd10": {
+    "asset": 1542696850482,
+    "meta": 1542697296581,
+    "relativePath": "resources/sounds/bgMusic.wav"
   }
 }
