@@ -616,3 +616,103 @@ Missing uuid: "410fb916-8721-4663-bab8-34397391ace7"
 2018-11-20T07:06:34.813Z - normal: Building /Users/linzhang/youyou/chengyuxiaoxiao
 2018-11-20T07:06:34.813Z - normal: Destination /Users/linzhang/wegame/wechatgame
 2018-11-20T07:06:34.816Z - normal: Delete /Users/linzhang/wegame/wechatgame/**/*
+2018-11-20T07:06:41.500Z - normal: Start building assets
+2018-11-20T07:06:41.500Z - normal: Start spawn build-worker
+2018-11-20T07:06:42.287Z - normal: Finish spawn build-worker
+2018-11-20T07:06:42.288Z - normal: Start init build-worker
+2018-11-20T07:06:46.389Z - normal: Finish init build-worker
+2018-11-20T07:06:46.390Z - normal: Start build-assets in worker
+2018-11-20T07:06:47.745Z - normal: Finish build-assets in worker
+2018-11-20T07:06:47.750Z - normal: Finish building assets
+2018-11-20T07:06:47.781Z - normal: Start building plugin scripts
+2018-11-20T07:06:47.821Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
+2018-11-20T07:06:50.307Z - normal: Built to "/Users/linzhang/wegame/wechatgame" successfully
+2018-11-20T07:10:26.343Z - normal: Start building with options : {
+  "actualPlatform": "wechatgame",
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "apiLevel": "",
+  "appABIs": [],
+  "appKey": "",
+  "appSecret": "",
+  "buildPath": "/Users/linzhang/wegame",
+  "debug": false,
+  "dest": "/Users/linzhang/wegame/wechatgame",
+  "embedWebDebugger": false,
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeAnySDK": false,
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": false,
+  "jailbreakPlatform": false,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "optimizeHotUpdate": true,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.helloworld",
+  "platform": "wechatgame",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "privateKey": "",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait"
+  },
+  "scenes": [
+    "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38",
+    "4dcd14cd-14a8-4a6e-ae9e-0a4bf6dfa061",
+    "42b202ab-7491-4680-9d35-c49ea4ddedf1",
+    "a6ed62ac-6d2c-4666-896d-59c4c311faa8",
+    "29ce233f-ccb7-41be-8610-3aad7b9494fb",
+    "b83cf815-05dc-4e09-bc8f-47b6e5608cd4",
+    "8e868381-a7b9-47fd-9fe3-354ba31c395d"
+  ],
+  "sourceMaps": false,
+  "startScene": "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38",
+  "template": "link",
+  "title": "chengyuxiaoxiao",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx100b0d9ac9176cb5",
+    "isSubdomain": false,
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "xxteaKey": "d26bfbe9-e497-4d",
+  "zipCompressJs": true,
+  "project": "/Users/linzhang/youyou/chengyuxiaoxiao",
+  "projectName": "chengyuxiaoxiao",
+  "debugBuildWorker": false
+}
+2018-11-20T07:10:26.348Z - normal: Building /Users/linzhang/youyou/chengyuxiaoxiao
+2018-11-20T07:10:26.348Z - normal: Destination /Users/linzhang/wegame/wechatgame
+2018-11-20T07:10:26.349Z - normal: Delete /Users/linzhang/wegame/wechatgame/**/*
+2018-11-20T07:10:31.369Z - normal: Start building assets
+2018-11-20T07:10:31.370Z - normal: Start spawn build-worker
+2018-11-20T07:10:32.303Z - normal: Finish spawn build-worker
+2018-11-20T07:10:32.303Z - normal: Start init build-worker
+2018-11-20T07:10:36.276Z - normal: Finish init build-worker
+2018-11-20T07:10:36.277Z - normal: Start build-assets in worker
+2018-11-20T07:10:37.427Z - normal: Finish build-assets in worker
+2018-11-20T07:10:37.431Z - normal: Finish building assets
+2018-11-20T07:10:37.450Z - normal: Start building plugin scripts
+2018-11-20T07:10:37.490Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
+2018-11-20T07:10:38.816Z - normal: Built to "/Users/linzhang/wegame/wechatgame" successfully

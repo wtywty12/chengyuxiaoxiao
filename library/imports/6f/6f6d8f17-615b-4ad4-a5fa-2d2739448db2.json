@@ -6,243 +6,243 @@
   "json": [
     {
       "level": 1,
-      "line": 2,
-      "row": 2,
-      "addtime": 4
+      "line": 5,
+      "row": 6,
+      "addtime": 2
     },
     {
       "level": 2,
       "line": 2,
       "row": 4,
-      "addtime": 8
+      "addtime": 4
     },
     {
       "level": 3,
       "line": 3,
       "row": 4,
-      "addtime": 12
+      "addtime": 6
     },
     {
       "level": 4,
       "line": 2,
       "row": 4,
-      "addtime": 8
+      "addtime": 4
     },
     {
       "level": 5,
       "line": 3,
       "row": 4,
-      "addtime": 12
+      "addtime": 6
     },
     {
       "level": 6,
       "line": 4,
       "row": 4,
-      "addtime": 16
+      "addtime": 8
     },
     {
       "level": 7,
       "line": 3,
       "row": 4,
-      "addtime": 12
+      "addtime": 6
     },
     {
       "level": 8,
       "line": 4,
       "row": 4,
-      "addtime": 16
+      "addtime": 8
     },
     {
       "level": 9,
       "line": 4,
       "row": 5,
-      "addtime": 20
+      "addtime": 10
     },
     {
       "level": 10,
       "line": 4,
       "row": 4,
-      "addtime": 16
+      "addtime": 8
     },
     {
       "level": 11,
       "line": 4,
       "row": 5,
-      "addtime": 20
+      "addtime": 10
     },
     {
       "level": 12,
       "line": 4,
       "row": 6,
-      "addtime": 24
+      "addtime": 12
     },
     {
       "level": 13,
       "line": 4,
       "row": 5,
-      "addtime": 20
+      "addtime": 10
     },
     {
       "level": 14,
       "line": 4,
       "row": 6,
-      "addtime": 24
+      "addtime": 12
     },
     {
       "level": 15,
       "line": 5,
       "row": 6,
-      "addtime": 28
+      "addtime": 14
     },
     {
       "level": 16,
       "line": 4,
       "row": 6,
-      "addtime": 24
+      "addtime": 12
     },
     {
       "level": 17,
       "line": 5,
       "row": 6,
-      "addtime": 28
+      "addtime": 14
     },
     {
       "level": 18,
       "line": 6,
       "row": 6,
-      "addtime": 32
+      "addtime": 16
     },
     {
       "level": 19,
       "line": 5,
       "row": 6,
-      "addtime": 28
+      "addtime": 14
     },
     {
       "level": 20,
       "line": 6,
       "row": 6,
-      "addtime": 32
+      "addtime": 16
     },
     {
       "level": 21,
       "line": 6,
       "row": 6,
-      "addtime": 36
+      "addtime": 18
     },
     {
       "level": 22,
       "line": 6,
       "row": 6,
-      "addtime": 32
+      "addtime": 16
     },
     {
       "level": 23,
       "line": 6,
       "row": 6,
-      "addtime": 36
+      "addtime": 18
     },
     {
       "level": 24,
       "line": 6,
       "row": 6,
-      "addtime": 34
+      "addtime": 16
     },
     {
       "level": 25,
       "line": 6,
       "row": 6,
-      "addtime": 32
+      "addtime": 14
     },
     {
       "level": 26,
       "line": 6,
       "row": 6,
-      "addtime": 30
+      "addtime": 12
     },
     {
       "level": 27,
       "line": 6,
       "row": 6,
-      "addtime": 28
+      "addtime": 10
     },
     {
       "level": 28,
       "line": 6,
       "row": 6,
-      "addtime": 26
+      "addtime": 8
     },
     {
       "level": 29,
       "line": 6,
       "row": 6,
-      "addtime": 24
+      "addtime": 6
     },
     {
       "level": 30,
       "line": 6,
       "row": 6,
-      "addtime": 22
+      "addtime": 4
     },
     {
       "level": 31,
       "line": 6,
       "row": 6,
-      "addtime": 20
+      "addtime": 2
     },
     {
       "level": 32,
       "line": 6,
       "row": 6,
-      "addtime": 18
+      "addtime": 0
     },
     {
       "level": 33,
       "line": 6,
       "row": 6,
-      "addtime": 16
+      "addtime": 0
     },
     {
       "level": 34,
       "line": 6,
       "row": 6,
-      "addtime": 14
+      "addtime": 0
     },
     {
       "level": 35,
       "line": 6,
       "row": 6,
-      "addtime": 12
+      "addtime": 0
     },
     {
       "level": 36,
       "line": 6,
       "row": 6,
-      "addtime": 10
+      "addtime": 0
     },
     {
       "level": 37,
       "line": 6,
       "row": 6,
-      "addtime": 8
+      "addtime": 0
     },
     {
       "level": 38,
       "line": 6,
       "row": 6,
-      "addtime": 6
+      "addtime": 0
     },
     {
       "level": 39,
       "line": 6,
       "row": 6,
-      "addtime": 4
+      "addtime": 0
     },
     {
       "level": 40,
       "line": 6,
       "row": 6,
-      "addtime": 2
+      "addtime": 0
     },
     {
       "level": 41,
@@ -297,6 +297,12 @@
       "line": 6,
       "row": 6,
       "addtime": 0
+    },
+    {
+      "level": "null",
+      "line": "null",
+      "row": "null",
+      "addtime": "null"
     }
   ]
 }
