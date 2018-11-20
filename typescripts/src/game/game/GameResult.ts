@@ -9,7 +9,9 @@ import {ChooseView} from "./ChooseView";
 import {GameManager} from "./GameManager";
 import {RecordGrid } from "../common/model/RecordGrid";
 import { GameDataManager } from "../common/data/GameDataManager";
-import { GameData } from "../common/data/GameData";
+import { GameEngine } from "../common/GameEngine";
+import { GameSceneHepler } from "../common/helper/GameSceneHepler";
+import {StorageInfo} from "../common/data/StorageInfo"
 import {GameScene} from "./GameScene";
 
 class GameResultClass{
@@ -102,8 +104,16 @@ class GameResultClass{
         this.isStartResult = false;
         /** 恢复数据 */
         this.chooseView.resetTempData();
+        /** 判定 弹出红包界面 */
+        var redPackTimes = StorageInfo.getRedPackTimes();
+        if (redPackTimes < 5) {
+            StorageInfo.setRedPackTimes(1);
+            GameManager.onGameOver();
+            GameEngine.changeScene(GameSceneHepler.SETTLE)
+        }
         /** 判定胜利 */
-        if (Tools.getMapLength(RecordGrid.getGameTableGridMap()) == this.gameTable.tableWidth * this.gameTable.tableHeight) {
+        cc.log(Tools.getGridNumber(this.gameTable.tableWidth, this.gameTable.tableHeight))
+        if (Tools.getMapLength(RecordGrid.getGameTableGridMap()) == 4 * Tools.getGridNumber(this.gameTable.tableWidth, this.gameTable.tableHeight)) {
             GameDataManager.gameData.gametime = GameDataManager.gameData.totalGameTime;
             GameManager.onGameLevelup();
         }

@@ -7,6 +7,7 @@ import {GameEngine} from "../common/GameEngine";
 import {GameSceneHepler} from "../common/helper/GameSceneHepler";
 import { GameDataManager } from "../common/data/GameDataManager";
 import { GameData } from "../common/data/GameData";
+import {GameAudio} from "../common/helper/GameAudio";
 
 /**
  * @author: liubowen
@@ -60,13 +61,16 @@ export class LoadingScene extends CommonScene {
         this.setProgress(50);
         await ResourcesManager.load();
         this.btn_myinfo.node.on(cc.Node.EventType.TOUCH_END,function(){
+            GameAudio.playBtnEffect();
             GameEngine.changeScene(GameSceneHepler.MYINFO)
         })
         this.btn_rank.node.on(cc.Node.EventType.TOUCH_END,function(){
+            GameAudio.playBtnEffect();
             GameEngine.changeScene(GameSceneHepler.RANK)
         })
         this.btn_music.node.on(cc.Node.EventType.TOUCH_END,function(){
             //判断全局 控制声音
+            GameAudio.playBtnEffect();
             if(GameEngine.audio.getState() == cc.audioEngine.AudioState.PAUSED)
             {
                 
@@ -161,8 +165,8 @@ export class LoadingScene extends CommonScene {
             }
             console.log('load gameScene subpackage successfully.');
         });
+        GameAudio.playBtnEffect();
         GameDataManager.gameData.refuseData();
         GameEngine.changeScene(GameSceneHepler.GAME)
     }
-
 }

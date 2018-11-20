@@ -29,6 +29,7 @@ var GameEngine_1 = require("../common/GameEngine");
 var GameSceneHepler_1 = require("../common/helper/GameSceneHepler");
 var GameResult_1 = require("./GameResult");
 var Audio_1 = require("../../core/common/Audio");
+var GameAudio_1 = require("../common/helper/GameAudio");
 var GameScene = (function (_super) {
     __extends(GameScene, _super);
     function GameScene() {
@@ -37,6 +38,7 @@ var GameScene = (function (_super) {
         _this.chooseView = null;
         _this.lbl_time = null;
         _this.lbl_score = null;
+        _this.lbl_topScore = null;
         _this.btn_back = null;
         _this.btn_share = null;
         _this.bar_time = null;
@@ -66,6 +68,7 @@ var GameScene = (function (_super) {
     GameScene.prototype.onTouchEventListener = function (event) {
         var eventType = event.type;
         var eventName = event.target._name;
+        GameAudio_1.GameAudio.playBtnEffect();
         if (eventType != "touchend") {
             cc.log("EventType is error, it is ", eventType);
             return;
@@ -123,6 +126,12 @@ var GameScene = (function (_super) {
         }
         this.lbl_score.string = score;
     };
+    GameScene.prototype.setTopScore = function (score) {
+        if (typeof (score) != "string") {
+            return;
+        }
+        this.lbl_topScore.string = score;
+    };
     GameScene.prototype.playClickGridEffect = function () {
         this.audio.playSFX("click", 1);
     };
@@ -141,6 +150,9 @@ var GameScene = (function (_super) {
     __decorate([
         property(cc.Label)
     ], GameScene.prototype, "lbl_score", void 0);
+    __decorate([
+        property(cc.Label)
+    ], GameScene.prototype, "lbl_topScore", void 0);
     __decorate([
         property(cc.Node)
     ], GameScene.prototype, "btn_back", void 0);

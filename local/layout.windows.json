@@ -6,9 +6,9 @@
       "url": "app://editor/index.html",
       "windowType": "dockable",
       "x": 0,
-      "y": 28,
+      "y": 0,
       "width": 1440,
-      "height": 817,
+      "height": 900,
       "layout": {
         "children": [
           {
@@ -83,7 +83,8 @@
         "scene"
       ]
     },
-    "window-1542697301216": {}
+    "window-1542697301216": {},
+    "worker": {}
   },
   "panels": {
     "builder": {

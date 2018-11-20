@@ -10,6 +10,8 @@ export class GameData {
     // private _topscore : number;
     //当前分数
     private _score : number;
+    /** 临时分数 用于红包显示分数 */
+    private _tempScore: number;
     //当前全清了多少次 等级
     private _level : number;
     //游戏过关时间
@@ -30,6 +32,7 @@ export class GameData {
     constructor() {
         this._level = 1;
         this._score = 0;
+        this._tempScore = 0;
         this._gametime = 60;
         this._totalGameTime = 60;
         this._playtimes = 0;
@@ -40,11 +43,12 @@ export class GameData {
 
     public refuseData(){//重制数据
         this._level = 1;
+        this._tempScore = this._score;
         this._score = 0;
 
         this._gametime = 60;
         this._totalGameTime = 60;
-        this._playtimes = 0;
+        // this._playtimes = 0;//个人中心记录次数 此处不能清零
     }
     //游戏开始
     public gameStart(){
@@ -104,6 +108,12 @@ export class GameData {
     }
     set score(_score : number) {
         this._score = _score
+    }
+    get tempScore(): number{
+        return this._tempScore;
+    }
+    set tempScore(_score: number) {
+        this._tempScore = _score;
     }
     get gametime():number{
         return this._gametime

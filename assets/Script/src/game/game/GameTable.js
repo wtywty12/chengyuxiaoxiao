@@ -52,12 +52,7 @@ var GameTable = (function (_super) {
             this.tableWidth = levelInfo.row;
             this.tableHeight = levelInfo.line;
         }
-        var totalNumber = this.tableWidth * this.tableHeight;
-        var reduceNumber = 0;
-        if (totalNumber % 4 != 0) {
-            reduceNumber = -1;
-        }
-        var gridNumber = totalNumber * 0.25 + reduceNumber;
+        var gridNumber = Tools_1.Tools.getGridNumber(this.tableWidth, this.tableHeight);
         this.randomAry = new RandomAry_1.RandomAry(gridNumber);
         this.randomIdiom = this.randomAry.getRandomIdiom();
         this.produceAry = this.randomAry.getProduceArray();

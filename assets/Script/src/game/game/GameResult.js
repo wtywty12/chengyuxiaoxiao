@@ -4,6 +4,9 @@ var Tools_1 = require("../../utils/Tools");
 var GameManager_1 = require("./GameManager");
 var RecordGrid_1 = require("../common/model/RecordGrid");
 var GameDataManager_1 = require("../common/data/GameDataManager");
+var GameEngine_1 = require("../common/GameEngine");
+var GameSceneHepler_1 = require("../common/helper/GameSceneHepler");
+var StorageInfo_1 = require("../common/data/StorageInfo");
 var GameResultClass = (function () {
     function GameResultClass() {
         this.randomAry = null;
@@ -67,7 +70,14 @@ var GameResultClass = (function () {
         this.gameScene.setScore(GameDataManager_1.GameDataManager.gameData.score.toString());
         this.isStartResult = false;
         this.chooseView.resetTempData();
-        if (Tools_1.Tools.getMapLength(RecordGrid_1.RecordGrid.getGameTableGridMap()) == this.gameTable.tableWidth * this.gameTable.tableHeight) {
+        var redPackTimes = StorageInfo_1.StorageInfo.getRedPackTimes();
+        if (redPackTimes < 5) {
+            StorageInfo_1.StorageInfo.setRedPackTimes(1);
+            GameManager_1.GameManager.onGameOver();
+            GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.SETTLE);
+        }
+        cc.log(Tools_1.Tools.getGridNumber(this.gameTable.tableWidth, this.gameTable.tableHeight));
+        if (Tools_1.Tools.getMapLength(RecordGrid_1.RecordGrid.getGameTableGridMap()) == 4 * Tools_1.Tools.getGridNumber(this.gameTable.tableWidth, this.gameTable.tableHeight)) {
             GameDataManager_1.GameDataManager.gameData.gametime = GameDataManager_1.GameDataManager.gameData.totalGameTime;
             GameManager_1.GameManager.onGameLevelup();
         }

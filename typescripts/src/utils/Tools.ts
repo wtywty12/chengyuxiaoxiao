@@ -6,4 +6,13 @@ export class Tools {
         })
         return length;
     }
+
+    public static getGridNumber(tableWidth: number, tableHeight: number): number {
+        let totalNumber = tableWidth * tableHeight;
+        let reduceNumber = 0;
+        if (totalNumber % 4 != 0) {
+            reduceNumber = -1;
+        }
+        return Math.floor(totalNumber * 0.25 + reduceNumber);
+    }
 }

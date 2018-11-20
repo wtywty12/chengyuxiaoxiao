@@ -6,6 +6,7 @@ import property = cc._decorator.property;
 import {GameEngine} from "../common/GameEngine";
 import {GameSceneHepler} from "../common/helper/GameSceneHepler";
 import { GameDataManager } from "../common/data/GameDataManager";
+import {GameAudio} from "../common/helper/GameAudio";
 
 /**
  * @author: wangtianye
@@ -35,7 +36,7 @@ export class SettleScene extends cc.Component {
 
     /** 类加载 */
     protected onLoad() {
-        this.lbl_score.string = GameDataManager.gameData.score.toString()
+        this.lbl_score.string = GameDataManager.gameData.tempScore.toString()
         this.btn_redpack.node.on(cc.Node.EventType.TOUCH_END,this.onClickRedPack);
         this.btn_share.node.on(cc.Node.EventType.TOUCH_END,this.onClickShare);
         this.btn_continue.node.on(cc.Node.EventType.TOUCH_END,this.onClickContinue)
@@ -48,18 +49,22 @@ export class SettleScene extends cc.Component {
     }
     //点击拆红包
     private onClickRedPack():void{
+        GameAudio.playBtnEffect();
         GameEngine.changeScene(GameSceneHepler.READPACK)
     }
     //点击炫耀一下
     private onClickShare():void{
+        GameAudio.playBtnEffect();
         GameEngine.shareGame();
     }
     //点击继续战斗
     private onClickContinue():void{
+        GameAudio.playBtnEffect();
         GameDataManager.gameData.refuseData()
         GameEngine.changeScene(GameSceneHepler.GAME);
     }
     private onClickBack():void{
+        GameAudio.playBtnEffect();
         GameDataManager.gameData.refuseData()
         GameEngine.changeScene(GameSceneHepler.LOADING)
     }

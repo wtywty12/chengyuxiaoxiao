@@ -10,6 +10,14 @@ var Tools = (function () {
         });
         return length;
     };
+    Tools.getGridNumber = function (tableWidth, tableHeight) {
+        var totalNumber = tableWidth * tableHeight;
+        var reduceNumber = 0;
+        if (totalNumber % 4 != 0) {
+            reduceNumber = -1;
+        }
+        return Math.floor(totalNumber * 0.25 + reduceNumber);
+    };
     return Tools;
 }());
 exports.Tools = Tools;

@@ -10,6 +10,7 @@ var GameData = function () {
     function GameData() {
         this._level = 1;
         this._score = 0;
+        this._tempScore = 0;
         this._gametime = 60;
         this._totalGameTime = 60;
         this._playtimes = 0;
@@ -19,10 +20,10 @@ var GameData = function () {
     }
     GameData.prototype.refuseData = function () {
         this._level = 1;
+        this._tempScore = this._score;
         this._score = 0;
         this._gametime = 60;
         this._totalGameTime = 60;
-        this._playtimes = 0;
     };
     GameData.prototype.gameStart = function () {
         this._score = 0;
@@ -77,6 +78,16 @@ var GameData = function () {
         },
         set: function set(_score) {
             this._score = _score;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(GameData.prototype, "tempScore", {
+        get: function get() {
+            return this._tempScore;
+        },
+        set: function set(_score) {
+            this._tempScore = _score;
         },
         enumerable: true,
         configurable: true

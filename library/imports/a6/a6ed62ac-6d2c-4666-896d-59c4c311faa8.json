@@ -42,8 +42,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.559375,
-      "y": 0.559375,
+      "x": 0.31875,
+      "y": 0.31875,
       "z": 1
     },
     "_quat": {
@@ -1134,8 +1134,8 @@
     "_srcBlendFactor": 1,
     "_dstBlendFactor": 771,
     "_useOriginalSize": false,
-    "_string": "4次",
-    "_N$string": "4次",
+    "_string": "0次",
+    "_N$string": "0次",
     "_fontSize": 24,
     "_lineHeight": 40,
     "_enableWrapText": true,

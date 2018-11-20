@@ -55,12 +55,7 @@ export class GameTable extends cc.Component {
             this.tableHeight = levelInfo.line
         }
         /** 判定格子数是否是4的倍数 如不是 向下取整 */
-        let totalNumber = this.tableWidth * this.tableHeight;
-        let reduceNumber = 0;
-        if (totalNumber % 4 != 0) {
-            reduceNumber = -1;
-        }
-        let gridNumber = totalNumber * 0.25 + reduceNumber;
+        let gridNumber = Tools.getGridNumber(this.tableWidth, this.tableHeight);
         this.randomAry = new RandomAry(gridNumber);
         this.randomIdiom = this.randomAry.getRandomIdiom();
         this.produceAry = this.randomAry.getProduceArray();

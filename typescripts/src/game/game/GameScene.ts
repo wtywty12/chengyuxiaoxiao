@@ -8,6 +8,7 @@ import { GameEngine } from "../common/GameEngine";
 import { GameSceneHepler } from "../common/helper/GameSceneHepler";
 import { GameResult } from "./GameResult";
 import {Audio} from "../../core/common/Audio";
+import {GameAudio} from "../common/helper/GameAudio";
 
 @ccclass()
 export class GameScene extends cc.Component {
@@ -26,10 +27,16 @@ export class GameScene extends cc.Component {
     private lbl_time: cc.Label = null;
 
     /**
-     * 倒计时按钮
+     * 倒计时
      */
     @property(cc.Label)
     private lbl_score: cc.Label = null;
+
+    /**
+     * 最高分
+     */
+    @property(cc.Label)
+    private lbl_topScore: cc.Label = null;
 
     /**
      * 返回按钮
@@ -96,6 +103,7 @@ export class GameScene extends cc.Component {
     private onTouchEventListener(event: any) {
         var eventType = event.type;
         var eventName = event.target._name;
+        GameAudio.playBtnEffect();
         if (eventType != "touchend") {
             cc.log("EventType is error, it is ", eventType);
             return;
@@ -189,6 +197,16 @@ export class GameScene extends cc.Component {
             return;
         }
         this.lbl_score.string = score;
+    }
+
+    /**
+     * 设置分数
+     */
+    public setTopScore(score: string) {
+        if (typeof(score) != "string") {
+            return;
+        }
+        this.lbl_topScore.string = score;
     }
 
     /**

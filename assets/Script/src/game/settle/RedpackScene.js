@@ -24,6 +24,8 @@ var property = cc._decorator.property;
 var GameEngine_1 = require("../common/GameEngine");
 var GameSceneHepler_1 = require("../common/helper/GameSceneHepler");
 var GameDataManager_1 = require("../common/data/GameDataManager");
+var StorageInfo_1 = require("../common/data/StorageInfo");
+var GameAudio_1 = require("../common/helper/GameAudio");
 var SettleScene = (function (_super) {
     __extends(SettleScene, _super);
     function SettleScene() {
@@ -36,7 +38,9 @@ var SettleScene = (function (_super) {
         return _this;
     }
     SettleScene.prototype.onLoad = function () {
-        this.lbl_price.string = Number(Math.random() * 0.05).toFixed(2).toString();
+        var money = this.getRedPackMoney();
+        StorageInfo_1.StorageInfo.setRedPackMoney(money);
+        this.lbl_price.string = money.toFixed(2);
         this.btn_deposit.on(cc.Node.EventType.TOUCH_END, this.onClickDeposit);
         this.btn_myaward.on(cc.Node.EventType.TOUCH_END, this.onClickMyAward);
         this.btn_continue.on(cc.Node.EventType.TOUCH_END, this.onClickContinue);
@@ -45,18 +49,25 @@ var SettleScene = (function (_super) {
     SettleScene.prototype.onDestroy = function () {
     };
     SettleScene.prototype.onClickDeposit = function () {
+        GameAudio_1.GameAudio.playBtnEffect();
         GameEngine_1.GameEngine.shareGame();
     };
     SettleScene.prototype.onClickMyAward = function () {
+        GameAudio_1.GameAudio.playBtnEffect();
         GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.MYINFO);
     };
     SettleScene.prototype.onClickContinue = function () {
+        GameAudio_1.GameAudio.playBtnEffect();
         GameDataManager_1.GameDataManager.gameData.refuseData();
         GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.GAME);
     };
     SettleScene.prototype.onClickBack = function () {
+        GameAudio_1.GameAudio.playBtnEffect();
         GameDataManager_1.GameDataManager.gameData.refuseData();
         GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.LOADING);
+    };
+    SettleScene.prototype.getRedPackMoney = function () {
+        return Number(Math.random() * 0.05) || 0.01;
     };
     __decorate([
         property(cc.Node)

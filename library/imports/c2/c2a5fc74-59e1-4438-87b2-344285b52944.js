@@ -39,6 +39,7 @@ var property = cc._decorator.property;
 var GameEngine_1 = require("../common/GameEngine");
 var GameSceneHepler_1 = require("../common/helper/GameSceneHepler");
 var GameDataManager_1 = require("../common/data/GameDataManager");
+var GameAudio_1 = require("../common/helper/GameAudio");
 var RankScene = function (_super) {
     __extends(RankScene, _super);
     function RankScene() {
@@ -51,6 +52,7 @@ var RankScene = function (_super) {
     };
     RankScene.prototype.onDestroy = function () {};
     RankScene.prototype.onClickBack = function () {
+        GameAudio_1.GameAudio.playBtnEffect();
         GameDataManager_1.GameDataManager.gameData.refuseData();
         GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.LOADING);
     };
