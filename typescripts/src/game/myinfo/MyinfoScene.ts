@@ -9,6 +9,7 @@ import { GameDataManager } from "../common/data/GameDataManager";
 import { LoginService } from "../common/service/LoginService";
 import {DefaultGameEvent} from "../../core/event/DefaultGameEvent";
 import {GameEventTransmitter} from "../../core/event/GameEventTransmitter";
+import { ImageHelper } from "../common/helper/ImageHelper";
 
 
 /**
@@ -95,18 +96,7 @@ export class SettleScene extends cc.Component {
                 var country = userInfo.country
 
                 self.path = avatarUrl ;
-                wx.downloadFile({
-                    url:res.userInfo.avatarUrl,
-                    success:(res:any) => {
-                        cc.log(`tempFile ${res.tempFilePath}`)
-                        // this.path = res.tempFilePath
-                    },
-                })
-                // cc.loader.load({url: avatarUrl, type: 'png'}, function(err:any,img:cc.Texture2D){
-                //     cc.log("load png");
-                //     self.image_head.spriteFrame = img;
-                // });
-                // self.loadImgurl(self.image_head,avatarUrl)
+                ImageHelper.loadImage(avatarUrl,this.image_head)
                 
             }
             

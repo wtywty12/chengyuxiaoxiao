@@ -8,9 +8,11 @@ class RecordGridClass{
     private chooseGridMap: Map<number, GameGrid> = new Map<number, GameGrid>();
     /** 记录中心表点击vec和grid */
     private gameTableGridMap: Map<number, GameGrid> = new Map<number, GameGrid>();
+    /** 判定动画时临时记录vec和grid */
+    private tempChooseGridMap: Map<number, string> = new Map<number, string>();
 
     private constructor () {
-    }
+    } 
 
     private static _instance: RecordGridClass;
 
@@ -53,6 +55,24 @@ class RecordGridClass{
         return this.chooseGridMap;
     }
 
+
+    /**
+     * 设置上方表数组
+     */
+    public settempChooseGridMap(index: number, str: string) {
+        if (typeof(str) != null) {
+            this.tempChooseGridMap.set(index, str);
+        }
+    }
+
+    /**
+     * 返回上方表数组
+     */
+    public gettempChooseGridMap(): Map<number, string> {
+        return this.tempChooseGridMap;
+    }
+
+
     /**
      * 显示格子
      */
@@ -71,6 +91,14 @@ class RecordGridClass{
     public clearRecordData() {
         /** 清理文字数组 */
         this.chooseGridMap.clear();
+    }
+
+    /**
+     * 判定结束清理临时数据
+     */
+    public clearTempRecordData() {
+        /** 清理文字数组 */
+        this.tempChooseGridMap.clear();
     }
 
     /**

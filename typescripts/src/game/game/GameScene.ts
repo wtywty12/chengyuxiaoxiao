@@ -7,6 +7,7 @@ import { GameDataManager } from "../common/data/GameDataManager";
 import { GameEngine } from "../common/GameEngine";
 import { GameSceneHepler } from "../common/helper/GameSceneHepler";
 import { GameResult } from "./GameResult";
+import {Audio} from "../../core/common/Audio";
 
 @ccclass()
 export class GameScene extends cc.Component {
@@ -48,6 +49,11 @@ export class GameScene extends cc.Component {
     @property(cc.ProgressBar)
     private bar_time: cc.ProgressBar = null;
 
+    /**
+     * 声音类
+     */
+    private audio: Audio = null;
+
     /** 构造函数 */
     protected constructor() {
         super();
@@ -61,10 +67,15 @@ export class GameScene extends cc.Component {
 
     /** 类销毁 */
     protected onDestroy(): void {
+        GameDataManager.gameData.refuseData()
+        this.audio.stopAll();
         this.unscheduleAllCallbacks();
     }
 
     private loadFinish(): void {
+        this.audio = new Audio(1, 101);
+        this.audio.playBGM("bgMusic");
+
         GameResult.setGameScene(this);
         GameManager.onGameStart();
 
@@ -87,11 +98,13 @@ export class GameScene extends cc.Component {
         switch(eventName) {
             case "btn_back":
                 //TODO 
+                GameManager.onGameOver();
                 GameEngine.changeScene(GameSceneHepler.LOADING)
                 // GameEngine.loginService.login();
                 break;
             case "btn_share":
                 cc.log("获取用户信息");
+                GameManager.onGameOver();
                 GameEngine.changeScene(GameSceneHepler.SETTLE)
                 // wx.getUserInfo({
                 //     success: function(res:any) {
@@ -161,6 +174,20 @@ export class GameScene extends cc.Component {
             return;
         }
         this.lbl_score.string = score;
+    }
+
+    /**
+     * 点击格子音效
+     */
+    public playClickGridEffect() {
+        this.audio.playSFX("click", 1);
+    }
+
+    /**
+     * 判定失败音效
+     */
+    public playJudgeErrorEffect() {
+        this.audio.playSFX("error", 1);
     }
     
 }

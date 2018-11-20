@@ -70,28 +70,7 @@ var SettleScene = function (_super) {
     SettleScene.prototype.onClickAddTimes = function () {};
     SettleScene.prototype.onClickTixian = function () {
         var self = this;
-        wx.getUserInfo({
-            success: function success(res) {
-                cc.log("res " + res);
-                cc.log("res -> userInfo", res.userInfo);
-                cc.log("res -> userInfo", res.userInfo.nickName);
-                cc.log("res -> userInfo", res.userInfo.avatarUrl);
-                var userInfo = res.userInfo;
-                var nickName = userInfo.nickName;
-                var avatarUrl = userInfo.avatarUrl;
-                var gender = userInfo.gender;
-                var province = userInfo.province;
-                var city = userInfo.city;
-                var country = userInfo.country;
-                self.path = avatarUrl;
-                wx.downloadFile({
-                    url: res.userInfo.avatarUrl,
-                    success: function success(res) {
-                        cc.log("tempFile " + res.tempFilePath);
-                    }
-                });
-            }
-        });
+        GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.DEPOSIT);
     };
     SettleScene.prototype.loadImgurl = function (container, url) {
         cc.loader.load(url, function (err, texture) {

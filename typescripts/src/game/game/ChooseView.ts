@@ -5,6 +5,8 @@ import {RecordGrid} from "../common/model/RecordGrid";
 import {ResourcesManager} from "../../core/common/ResourcesManager";
 import { Tools } from "../../utils/Tools";
 import { GameDataManager } from "../common/data/GameDataManager";
+import { GameScene } from "./GameScene";
+import { GameResult } from "./GameResult";
 
 @ccclass()
 export class ChooseView extends cc.Component {
@@ -14,6 +16,8 @@ export class ChooseView extends cc.Component {
     private gridAry: Array<GameGrid> = null;
     /** GameTable */
     private gameTable: GameTable = null;
+    /** GameScene */
+    private gameScene: GameScene = null;
 
     public constructor() {
         super();
@@ -27,6 +31,10 @@ export class ChooseView extends cc.Component {
 
     public setGameTable(view: GameTable) {
         this.gameTable = view;
+    }
+
+    public setGameScene(scene: GameScene) {
+        this.gameScene = scene;
     }
 
     /**
@@ -54,11 +62,16 @@ export class ChooseView extends cc.Component {
         gameGrid.setClickGridBg();
         node.on(cc.Node.EventType.TOUCH_END,function(event: any)
         {
+            if (this.checkGridMap(gameGrid) == false) {
+                cc.log("已经存在");
+                return;
+            }
+            /** 播放音效 */
+            this.gameScene.playClickGridEffect();
             /** vec 中心表格子索引  i 上方表格子索引 */
             let vec = gameGrid.getVec();
             let i = gameGrid.getIndex();
             let str = gameGrid.getGridString();
-            console.log('remove' + str);
             /** 数组里删除玩家点击的字  中心表不能删除 中心表记录判定胜负 */
             RecordGrid.getChooseGridMap().delete(i);
             /** 上方格子清除玩家点击的字 */
@@ -83,6 +96,10 @@ export class ChooseView extends cc.Component {
             cc.log("已经满字 点击无效")
             return;
         }
+        if (GameResult.getIsStartResult() == true) {
+            RecordGrid.settempChooseGridMap(vec, str);
+            return;
+        }
         /** 遍历查找有不带字的grid 对其设置 */
         for (var i=0; i<this.gridAry.length; i++) {
             let grid = this.gridAry[i];
@@ -92,10 +109,23 @@ export class ChooseView extends cc.Component {
                 grid.setIndex(i);
                 /** 设置中心表到上方表玩家点击的字 */
                 RecordGrid.setChooseGridMap(i, grid);
-                cc.log("RecordGrid.setChooseGridAry => ", RecordGrid.getChooseGridMap());
+                // cc.log("RecordGrid.setChooseGridAry => ", RecordGrid.getChooseGridMap());
                 break;
             }
         }
+    }
+
+    /**
+     * 检查是否重复
+     * 根据格子是否有字判定
+     */
+    private checkGridMap(grid: GameGrid): boolean {
+        let isOk = true;
+        let str = grid.getGridString();
+        if (str == "") {
+            isOk = false;
+        }
+        return isOk;
     }
 
     /**
@@ -138,10 +168,24 @@ export class ChooseView extends cc.Component {
     }
 
     /**
+     * 判定成功恢复数据
+     */
+    public resetTempData() {
+        var tempChooseGridMap = RecordGrid.gettempChooseGridMap();
+        tempChooseGridMap.forEach((value, key) => {
+            this.setGridInfo(key, value);
+        })
+        RecordGrid.clearTempRecordData();
+    }
+
+    /**
      * 游戏结束
      */
     public onGameOver() {
         /** 清理格子 */
+        if (this.gridAry == null && this.gridAry != []) {
+            return;
+        }
         this.gridAry.forEach(value => {
             value.removeSelf();
         })
@@ -149,6 +193,9 @@ export class ChooseView extends cc.Component {
     }
     public onClearAll() {
         /** 清理格子 */
+        if (this.gridAry == null && this.gridAry != []) {
+            return;
+        }
         this.gridAry.forEach(value => {
             value.removeSelf();
         })

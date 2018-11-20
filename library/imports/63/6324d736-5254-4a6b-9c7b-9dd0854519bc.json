@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btn_shenqingtixian",
+    "texture": "8a2c4cab-28cd-4bde-8541-ca412b5e8bcc",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      236,
+      69
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      236,
+      69
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

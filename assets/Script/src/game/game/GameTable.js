@@ -39,6 +39,7 @@ var GameTable = (function (_super) {
         _this.randomAry = null;
         _this.produceAry = null;
         _this.chooseView = null;
+        _this.gameScene = null;
         return _this;
     }
     GameTable.prototype.onLoad = function () {
@@ -56,8 +57,12 @@ var GameTable = (function (_super) {
         this.produceAry = this.randomAry.getProduceArray();
         this.gridPrefab = ResourcesManager_1.ResourcesManager.getPrefab("GameGrid");
         this.chooseView.setGameTable(this);
+        this.chooseView.setGameScene(this.gameScene);
         GameResult_1.GameResult.setView(this, this.chooseView);
         this.createTable();
+    };
+    GameTable.prototype.setGameScene = function (scene) {
+        this.gameScene = scene;
     };
     GameTable.prototype.setChooseView = function (view) {
         this.chooseView = view;
@@ -89,9 +94,9 @@ var GameTable = (function (_super) {
                 cc.log("已经存在");
                 return;
             }
+            this.gameScene.playClickGridEffect();
             this.chooseView.setGridInfo(index, str);
             var length = Tools_1.Tools.getMapLength(RecordGrid_1.RecordGrid.getChooseGridMap());
-            console.log('click' + str);
             RecordGrid_1.RecordGrid.setGameTableGridMap(index, gameGrid);
             gameGrid.setGridString("");
             gameGrid.setVec(index);
@@ -109,7 +114,6 @@ var GameTable = (function (_super) {
         var eventType = event.type;
         var eventName = event.target._name;
         if (eventType != "touchend") {
-            cc.log("EventType is error, it is ", eventType);
             return;
         }
         switch (eventName) {
@@ -128,11 +132,15 @@ var GameTable = (function (_super) {
         return isOk;
     };
     GameTable.prototype.onGameOver = function () {
-        this.node.removeAllChildren();
+        if (this.node) {
+            this.node.removeAllChildren();
+        }
         RecordGrid_1.RecordGrid.onGameOver();
     };
     GameTable.prototype.onClearAll = function () {
-        this.node.removeAllChildren();
+        if (this.node) {
+            this.node.removeAllChildren();
+        }
         RecordGrid_1.RecordGrid.onClearAll();
     };
     GameTable = __decorate([

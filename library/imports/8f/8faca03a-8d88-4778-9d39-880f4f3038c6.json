@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btn_lianxi",
+    "texture": "ce317509-c0f7-4009-8f0e-2a640fc642bc",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      130,
+      65
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      130,
+      65
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

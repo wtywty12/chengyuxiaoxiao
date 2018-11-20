@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tixian_shuru",
+    "texture": "20ccdfc0-c521-42f6-af8a-b79641673aec",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      440,
+      73
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      440,
+      74
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

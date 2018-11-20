@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "mutiao",
+    "texture": "e705da62-6d26-4708-bdc7-4d976f50b857",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      720,
+      64
+    ],
+    "offset": [
+      0,
+      1
+    ],
+    "originalSize": [
+      720,
+      66
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

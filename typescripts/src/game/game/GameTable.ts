@@ -29,6 +29,8 @@ export class GameTable extends cc.Component {
     private produceAry: Array<string> = null;
     /** 上方选择表 */
     private chooseView: ChooseView = null;
+    /** 游戏场景 */
+    private gameScene: GameScene = null;
     /** 构造函数 */
     public constructor() {
         super();
@@ -57,9 +59,14 @@ export class GameTable extends cc.Component {
         this.produceAry = this.randomAry.getProduceArray();
         this.gridPrefab = ResourcesManager.getPrefab("GameGrid");
         this.chooseView.setGameTable(this);
+        this.chooseView.setGameScene(this.gameScene);
         GameResult.setView(this, this.chooseView);
 
         this.createTable();
+    }
+
+    public setGameScene(scene: GameScene): void{
+        this.gameScene = scene;
     }
 
     public setChooseView(view: ChooseView): void{
@@ -103,10 +110,11 @@ export class GameTable extends cc.Component {
                 cc.log("已经存在");
                 return;
             }
+            /** 播放音效 */
+            this.gameScene.playClickGridEffect();
             /** 上方表设置格子字和索引 */
             this.chooseView.setGridInfo(index, str);
             let length = Tools.getMapLength(RecordGrid.getChooseGridMap());
-            console.log('click' + str);
             /** 记录玩家点击格子和索引 */
             RecordGrid.setGameTableGridMap(index, gameGrid);
             /** 中心表格子设置空白 */
@@ -132,7 +140,7 @@ export class GameTable extends cc.Component {
         var eventType = event.type;
         var eventName = event.target._name;
         if (eventType != "touchend") {
-            cc.log("EventType is error, it is ", eventType);
+            // cc.log("EventType is error, it is ", eventType);
             return;
         }
         switch(eventName) {
@@ -162,12 +170,16 @@ export class GameTable extends cc.Component {
      */
     public onGameOver() {
         /** 清理所有格子 */
-        this.node.removeAllChildren();
+        if (this.node) {
+            this.node.removeAllChildren();
+        }
         RecordGrid.onGameOver();
     }
     //关卡升级 清理掉所有格子
     public onClearAll(){
-        this.node.removeAllChildren();
+        if (this.node) {
+            this.node.removeAllChildren();
+        }
         RecordGrid.onClearAll();
     }
 }

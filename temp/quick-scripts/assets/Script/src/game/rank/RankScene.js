@@ -44,10 +44,21 @@ var RankScene = function (_super) {
     function RankScene() {
         var _this = _super.call(this) || this;
         _this.btn_back = null;
+        _this.tex = null;
         return _this;
     }
+    RankScene.prototype.start = function () {
+        this.tex = new cc.Texture2D();
+    };
     RankScene.prototype.onLoad = function () {
         this.btn_back.node.on(cc.Node.EventType.TOUCH_END, this.onClickBack);
+        cc.log("rank");
+        var openDataContext = wx.getOpenDataContext();
+        cc.log("openDataContext " + openDataContext);
+        wx.getOpenDataContext().postMessage({
+            messageType: 1,
+            MAIN_MENU_NUM: 1
+        });
     };
     RankScene.prototype.onDestroy = function () {};
     RankScene.prototype.onClickBack = function () {

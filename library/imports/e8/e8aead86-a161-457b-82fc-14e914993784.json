@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btn_zengjia",
+    "texture": "eca38a27-b863-4a35-9bcb-06a6bcdce569",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      130,
+      65
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      130,
+      65
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

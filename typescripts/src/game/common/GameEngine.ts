@@ -101,7 +101,7 @@ class GameEngineClass {
     public shareGame(): void {
         wx.shareAppMessage({
             title: "柚子消消乐，越消越赚钱",
-            imageUrl: "https://liubowen.top/dzk-res/share/70005.png",
+            imageUrl: "https://liubowen.top/dzk-res/share/70001.png",
             query: `sharePlayerId=${GameDataManager.userData.playerId}`
         });
         

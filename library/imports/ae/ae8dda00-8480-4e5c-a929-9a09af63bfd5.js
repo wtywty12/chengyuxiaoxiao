@@ -9,6 +9,7 @@ var RecordGridClass = function () {
     function RecordGridClass() {
         this.chooseGridMap = new Map();
         this.gameTableGridMap = new Map();
+        this.tempChooseGridMap = new Map();
     }
     Object.defineProperty(RecordGridClass, "instance", {
         get: function get() {
@@ -36,6 +37,14 @@ var RecordGridClass = function () {
     RecordGridClass.prototype.getChooseGridMap = function () {
         return this.chooseGridMap;
     };
+    RecordGridClass.prototype.settempChooseGridMap = function (index, str) {
+        if (typeof str != null) {
+            this.tempChooseGridMap.set(index, str);
+        }
+    };
+    RecordGridClass.prototype.gettempChooseGridMap = function () {
+        return this.tempChooseGridMap;
+    };
     RecordGridClass.prototype.displayGrid = function (str, index) {
         if (typeof str != "string" || typeof index != "number" || str == "") {
             return;
@@ -45,6 +54,9 @@ var RecordGridClass = function () {
     };
     RecordGridClass.prototype.clearRecordData = function () {
         this.chooseGridMap.clear();
+    };
+    RecordGridClass.prototype.clearTempRecordData = function () {
+        this.tempChooseGridMap.clear();
     };
     RecordGridClass.prototype.onGameOver = function () {
         this.clearRecordData();

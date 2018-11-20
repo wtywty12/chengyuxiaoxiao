@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tixian_diban_3",
+    "texture": "fa90bf1c-7278-46bb-bb2c-00afcf8e83ef",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      44,
+      44
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      44,
+      44
+    ],
+    "capInsets": [
+      4,
+      4,
+      5,
+      4
+    ]
+  }
+}

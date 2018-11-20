@@ -54,6 +54,9 @@ var Audio = (function () {
     Audio.prototype.resumeAll = function () {
         cc.audioEngine.resumeAll();
     };
+    Audio.prototype.stopAll = function () {
+        cc.audioEngine.stopAll();
+    };
     return Audio;
 }());
 exports.Audio = Audio;
