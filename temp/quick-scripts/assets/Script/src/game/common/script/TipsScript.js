@@ -44,7 +44,7 @@ var TipsScript = function (_super) {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.message = null;
         _this.bg = null;
-        _this.speed = 1;
+        _this.speed = 10;
         _this.finalY = 0;
         return _this;
     }
@@ -53,14 +53,15 @@ var TipsScript = function (_super) {
             return;
         }
         this.message.string = message;
-        this.bg.setContentSize(this.message.string.length * 30 + 50, this.bg.getContentSize().height);
-        cc.log("bg width", this.bg.getContentSize().width);
-        this.finalY = this.node.y + 100;
+        this.bg.setContentSize(this.message.string.length * 50 + 50, this.bg.getContentSize().height);
+        this.finalY = this.node.y + 80;
+        this.node.setPosition(0, 0);
         GameEngine_1.GameEngine.currentSceneNode().addChild(this.node);
-        cc.log("mesnodesage x : " + this.node.getPosition().x + " , y : " + this.node.getPosition().y);
     };
     TipsScript.prototype.close = function () {
-        this.node.removeFromParent(true);
+        if (this.node.parent != null) {
+            this.node.removeFromParent(true);
+        }
     };
     TipsScript.prototype.update = function (dt) {
         if (this.node.y < this.finalY) {

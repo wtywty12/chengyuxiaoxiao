@@ -68,6 +68,7 @@ var GameTable = function (_super) {
         var gridNumber = Tools_1.Tools.getGridNumber(this.tableWidth, this.tableHeight);
         this.randomAry = new RandomAry_1.RandomAry(gridNumber);
         this.randomIdiom = this.randomAry.getRandomIdiom();
+        RecordGrid_1.RecordGrid.initLastIdiomAry(this.randomIdiom);
         this.produceAry = this.randomAry.getProduceArray();
         this.gridPrefab = ResourcesManager_1.ResourcesManager.getPrefab("GameGrid");
         this.chooseView.setGameTable(this);
@@ -80,6 +81,9 @@ var GameTable = function (_super) {
     };
     GameTable.prototype.setChooseView = function (view) {
         this.chooseView = view;
+    };
+    GameTable.prototype.getRandomIdiom = function () {
+        return this.randomIdiom;
     };
     GameTable.prototype.createTable = function () {
         var index = 0;

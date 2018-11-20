@@ -41,8 +41,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.2900748751757879,
-      "y": 0.2900748751757879,
+      "x": 0.31875,
+      "y": 0.31875,
       "z": 1
     },
     "_quat": {
@@ -1181,7 +1181,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "btn_share",
+    "_name": "btn_tishi",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -1857,7 +1857,7 @@
     "btn_back": {
       "__id__": 21
     },
-    "btn_share": {
+    "btn_tishi": {
       "__id__": 27
     },
     "bar_time": {

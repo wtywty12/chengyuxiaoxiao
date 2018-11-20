@@ -58,6 +58,7 @@ export class GameTable extends cc.Component {
         let gridNumber = Tools.getGridNumber(this.tableWidth, this.tableHeight);
         this.randomAry = new RandomAry(gridNumber);
         this.randomIdiom = this.randomAry.getRandomIdiom();
+        RecordGrid.initLastIdiomAry(this.randomIdiom);
         this.produceAry = this.randomAry.getProduceArray();
         this.gridPrefab = ResourcesManager.getPrefab("GameGrid");
         this.chooseView.setGameTable(this);
@@ -73,6 +74,13 @@ export class GameTable extends cc.Component {
 
     public setChooseView(view: ChooseView): void{
         this.chooseView = view;
+    }
+
+    /**
+     * 获取还没有答出的成语数组 提示用
+     */
+    public getRandomIdiom(): Array<string> {
+        return this.randomIdiom;
     }
 
     /**

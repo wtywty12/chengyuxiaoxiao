@@ -64,11 +64,12 @@ class GameEngineClass {
         return this._playerIdKey;
     }
 
-    public showTips(message: string): void {
+    public showTips(message: string): TipsScript {
         let prefab: cc.Prefab = ResourcesManager.getPrefab("tips");
         let prefabNode: cc.Node = cc.instantiate(prefab);
         let tipsScript: TipsScript = prefabNode.getComponent("TipsScript");
         tipsScript.show(message);
+        return tipsScript;
     }
 
     public changeScene(scene: GameSceneHepler): void {
