@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "hongba",
+    "texture": "f670b500-57fb-41d2-a110-c0b32fa46420",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      156,
+      186
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      156,
+      186
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
