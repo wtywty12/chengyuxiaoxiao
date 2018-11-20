@@ -280,8 +280,8 @@
     "relativePath": "resources/prefabs/GameGrid.prefab"
   },
   "824f2131-30a5-48e0-a78a-56aaa91b9d7d": {
-    "asset": 1542268925137,
-    "meta": 1542695162836,
+    "asset": 1542696714675,
+    "meta": 1542696714700,
     "relativePath": "resources/prefabs/tips.prefab"
   },
   "3098dfc0-4ebc-4cac-970c-ec222265d796": {
@@ -330,23 +330,23 @@
     "relativePath": "Scene/LoadingScene.fire"
   },
   "29ce233f-ccb7-41be-8610-3aad7b9494fb": {
-    "asset": 1542695806274,
-    "meta": 1542695806284,
+    "asset": 1542696418052,
+    "meta": 1542696418063,
     "relativePath": "Scene/RankScene.fire"
   },
   "a6ed62ac-6d2c-4666-896d-59c4c311faa8": {
-    "asset": 1542695783151,
-    "meta": 1542695783180,
+    "asset": 1542696781333,
+    "meta": 1542696781347,
     "relativePath": "Scene/MyinfoScene.fire"
   },
   "b83cf815-05dc-4e09-bc8f-47b6e5608cd4": {
-    "asset": 1542695901201,
-    "meta": 1542695901232,
+    "asset": 1542696423724,
+    "meta": 1542696423732,
     "relativePath": "Scene/RedpackScene.fire"
   },
   "8e868381-a7b9-47fd-9fe3-354ba31c395d": {
-    "asset": 1542695968249,
-    "meta": 1542695968257,
+    "asset": 1542696796539,
+    "meta": 1542696796549,
     "relativePath": "Scene/SettleScene.fire"
   },
   "c94207a3-a037-40fc-b8af-cfa074ab0787": {
@@ -1065,8 +1065,8 @@
     "relativePath": "Script/src/utils/Vec2.js"
   },
   "3009a629-7889-4dd2-ae99-183a53517630": {
-    "asset": 1542695996252,
-    "meta": 1542695997553,
+    "asset": 1542696920050,
+    "meta": 1542696922176,
     "relativePath": "Script/src/game/loading/LoadingScene.js"
   }
 }

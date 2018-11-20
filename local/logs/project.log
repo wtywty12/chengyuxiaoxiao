@@ -431,3 +431,8 @@ Node path: "Canvas/panel_defen/image_icon"
 Asset url: "db://assets/Scene/SettleScene.fire"
 Missing uuid: "c8b6e1e1-ce97-4357-809c-3415dcd15b50"
 
+2018-11-20T06:50:39.164Z - warn: The Asset used by component "cc.Sprite" in prefab "tips.prefab" is missing. Detailed information:
+Node path: "tips/bg"
+Asset url: "db://assets/resources/prefabs/tips.prefab"
+Missing uuid: "410fb916-8721-4663-bab8-34397391ace7"
+

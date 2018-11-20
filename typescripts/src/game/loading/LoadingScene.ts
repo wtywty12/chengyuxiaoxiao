@@ -44,15 +44,15 @@ export class LoadingScene extends CommonScene {
     protected async load() {
         cc.loader.downloader.loadSubpackage('loadingScene', function (err: any) {
             if (err) {
-                return console.error(err);
+                return ;
             }
-            console.log('load subpackage successfully.');
+            console.log('load loadingScene subpackage successfully.');
         });
         cc.loader.downloader.loadSubpackage('jsons', function (err: any) {
             if (err) {
-                return console.error(err);
+                return ;
             }
-            console.log('load subpackage successfully.');
+            console.log('load jsons subpackage successfully.');
         });
         this.progressLabel.string = "正在加载";
         this.setProgress(0);
@@ -154,11 +154,12 @@ export class LoadingScene extends CommonScene {
 
     private startGame():void{
         // GameEngine.loginService.checkLogin();
+        
         cc.loader.downloader.loadSubpackage('gameScene', function (err: any) {
             if (err) {
-                return console.error(err);
+                return;
             }
-            console.log('load subpackage successfully.');
+            console.log('load gameScene subpackage successfully.');
         });
         GameDataManager.gameData.refuseData();
         GameEngine.changeScene(GameSceneHepler.GAME)
