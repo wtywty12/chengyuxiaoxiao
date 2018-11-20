@@ -56,6 +56,7 @@ var GameScene = function (_super) {
         _this.btn_share = null;
         _this.bar_time = null;
         _this.audio = null;
+        _this.scheTimes = 0;
         return _this;
     }
     GameScene.prototype.onLoad = function () {
@@ -112,13 +113,19 @@ var GameScene = function (_super) {
     };
     GameScene.prototype.createScheBar = function () {
         var time = GameDataManager_1.GameDataManager.gameData.totalGameTime * 0.01;
-        var times = 100;
+        this.scheTimes = 100;
         var barCallback = function barCallback(dt) {
-            times--;
-            var percent = times * 0.01;
+            this.scheTimes--;
+            var percent = this.scheTimes * 0.01;
             this.bar_time.progress = percent;
         };
         this.schedule(barCallback, time);
+    };
+    GameScene.prototype.addScheTimes = function (score) {
+        if (typeof score == "number") {
+            var percent = score / GameDataManager_1.GameDataManager.gameData.totalGameTime * 100;
+            this.scheTimes += score;
+        }
     };
     GameScene.prototype.resetCDTime = function () {
         this.unscheduleAllCallbacks();

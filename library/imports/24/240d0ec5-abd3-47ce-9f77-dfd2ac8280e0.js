@@ -51,11 +51,11 @@ var SettleScene = function (_super) {
         return _this;
     }
     SettleScene.prototype.onLoad = function () {
-        this.lbl_price.string = Math.random().toString();
-        this.btn_deposit.node.on(cc.Node.EventType.TOUCH_END, this.onClickDeposit);
-        this.btn_myaward.node.on(cc.Node.EventType.TOUCH_END, this.onClickMyAward);
-        this.btn_continue.node.on(cc.Node.EventType.TOUCH_END, this.onClickContinue);
-        this.btn_back.node.on(cc.Node.EventType.TOUCH_END, this.onClickBack);
+        this.lbl_price.string = Number(Math.random() * 0.05).toFixed(2).toString();
+        this.btn_deposit.on(cc.Node.EventType.TOUCH_END, this.onClickDeposit);
+        this.btn_myaward.on(cc.Node.EventType.TOUCH_END, this.onClickMyAward);
+        this.btn_continue.on(cc.Node.EventType.TOUCH_END, this.onClickContinue);
+        this.btn_back.on(cc.Node.EventType.TOUCH_END, this.onClickBack);
     };
     SettleScene.prototype.onDestroy = function () {};
     SettleScene.prototype.onClickDeposit = function () {
@@ -72,10 +72,10 @@ var SettleScene = function (_super) {
         GameDataManager_1.GameDataManager.gameData.refuseData();
         GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.LOADING);
     };
-    __decorate([property(cc.Button)], SettleScene.prototype, "btn_deposit", void 0);
-    __decorate([property(cc.Button)], SettleScene.prototype, "btn_back", void 0);
-    __decorate([property(cc.Button)], SettleScene.prototype, "btn_continue", void 0);
-    __decorate([property(cc.Button)], SettleScene.prototype, "btn_myaward", void 0);
+    __decorate([property(cc.Node)], SettleScene.prototype, "btn_deposit", void 0);
+    __decorate([property(cc.Node)], SettleScene.prototype, "btn_back", void 0);
+    __decorate([property(cc.Node)], SettleScene.prototype, "btn_continue", void 0);
+    __decorate([property(cc.Node)], SettleScene.prototype, "btn_myaward", void 0);
     __decorate([property(cc.Label)], SettleScene.prototype, "lbl_price", void 0);
     SettleScene = __decorate([ccclass()], SettleScene);
     return SettleScene;

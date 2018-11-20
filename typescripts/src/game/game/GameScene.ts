@@ -54,6 +54,11 @@ export class GameScene extends cc.Component {
      */
     private audio: Audio = null;
 
+    /**
+     * 进度条次数 用于判定成功+2秒进度条显示
+     */
+    private scheTimes: number = 0;
+
     /** 构造函数 */
     protected constructor() {
         super();
@@ -148,13 +153,23 @@ export class GameScene extends cc.Component {
      */
     public createScheBar() {
         var time = GameDataManager.gameData.totalGameTime * 0.01;
-        var times = 100;
+        this.scheTimes = 100;
         var barCallback = function (dt: number) {
-            times --;
-            let percent = times * 0.01;
+            this.scheTimes --;
+            let percent = this.scheTimes * 0.01;
             this.bar_time.progress = percent;
           }
         this.schedule(barCallback, time);
+    }
+
+    /**
+     * 答对增加进度条百分比
+     */
+    public addScheTimes(score: number) {
+        if (typeof(score) == "number") {
+            var percent = score / GameDataManager.gameData.totalGameTime * 100;
+            this.scheTimes += score;
+        }
     }
 
     /**

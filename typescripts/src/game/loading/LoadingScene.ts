@@ -100,7 +100,7 @@ export class LoadingScene extends CommonScene {
     private initPlayerData():void{
         //通过后台获取 用户信息 若未授权 提示用户去授权 并拉去玩家信息
         GameDataManager.gameData.playtimes = 0
-        GameDataManager.gameData.topscore = 10
+        // GameDataManager.gameData.topscore = 10
     }
     protected unload(): void {
     }

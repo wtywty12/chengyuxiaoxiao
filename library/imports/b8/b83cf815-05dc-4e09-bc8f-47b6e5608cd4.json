@@ -42,8 +42,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.559375,
-      "y": 0.559375,
+      "x": 0.31875,
+      "y": 0.31875,
       "z": 1
     },
     "_quat": {
@@ -1540,13 +1540,21 @@
       "__id__": 2
     },
     "_enabled": true,
-    "btn_deposit": null,
-    "btn_back": {
-      "__id__": 30
+    "btn_deposit": {
+      "__id__": 18
     },
-    "btn_continue": null,
-    "btn_myaward": null,
-    "lbl_price": null,
+    "btn_back": {
+      "__id__": 28
+    },
+    "btn_continue": {
+      "__id__": 16
+    },
+    "btn_myaward": {
+      "__id__": 20
+    },
+    "lbl_price": {
+      "__id__": 27
+    },
     "_id": "7fEHi4E9BHf7SBQcec/HSE"
   }
 ]

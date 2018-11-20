@@ -187,7 +187,6 @@ var LoadingScene = function (_super) {
     };
     LoadingScene.prototype.initPlayerData = function () {
         GameDataManager_1.GameDataManager.gameData.playtimes = 0;
-        GameDataManager_1.GameDataManager.gameData.topscore = 10;
     };
     LoadingScene.prototype.unload = function () {};
     LoadingScene.prototype.setProgress = function (value) {

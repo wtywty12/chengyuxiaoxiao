@@ -28,7 +28,7 @@ var GameData = (function () {
         this._level += 1;
     };
     GameData.prototype.addscore = function (value) {
-        this._score += value * Math.sqrt(this._playtimes || 1);
+        this._score += Math.floor(value * Math.sqrt(this._playtimes || 1));
     };
     GameData.prototype.addgametime = function () {
         var levelsInfo = ConfigManager_1.ConfigManager.levelsJsonMap.get(this._level);
@@ -62,16 +62,6 @@ var GameData = (function () {
         },
         set: function (_level) {
             this._level = _level;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(GameData.prototype, "topscore", {
-        get: function () {
-            return this._topscore;
-        },
-        set: function (_topscore) {
-            this._topscore = _topscore;
         },
         enumerable: true,
         configurable: true

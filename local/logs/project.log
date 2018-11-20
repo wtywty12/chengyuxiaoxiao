@@ -716,3 +716,75 @@ Missing uuid: "410fb916-8721-4663-bab8-34397391ace7"
 2018-11-20T07:10:37.450Z - normal: Start building plugin scripts
 2018-11-20T07:10:37.490Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
 2018-11-20T07:10:38.816Z - normal: Built to "/Users/linzhang/wegame/wechatgame" successfully
+2018-11-20T09:17:40.950Z - failed: [db-task][sync-changes] Failed to import asset /Users/linzhang/youyou/chengyuxiaoxiao/assets/resources/jsons/idiom.json, message: SyntaxError: /Users/linzhang/youyou/chengyuxiaoxiao/assets/resources/jsons/idiom.json: Unexpected token ] in JSON at position 37609
+    at JSON.parse (<anonymous>)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/fire-fs/node_modules/jsonfile/index.js:36:18
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/graceful-fs/graceful-fs.js:90:16
+    at tryToString (fs.js:449:3)
+    at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:436:12)
+2018-11-20T10:10:56.034Z - warn: Error: Ipc will not have a callback. message: scene@renderer:38241
+2018-11-20T10:10:56.037Z - warn: Error: Ipc will not have a callback. message: scene@renderer:38242
+2018-11-20T10:10:56.100Z - error: Failed to reset layout: Error: Failed to close panel scene
+    at Object.e._unloadAll (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:2087)
+    at r.waterfall.e (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/utils/dock-utils.js:1:5916)
+    at fn (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:746:34)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:1213:16
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:166:37
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:706:43
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:167:37
+    at Object.async.waterfall (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:710:44)
+    at Object.e.reset (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/utils/dock-utils.js:1:5899)
+    at EventEmitter.t.ipcRenderer.on (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/utils/dock-utils.js:1:8429)
+    at e.reset.e (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/utils/dock-utils.js:1:8453)
+    at r.waterfall.e (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/utils/dock-utils.js:1:7375)
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:52:16
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:696:30
+    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:167:37
+    at Immediate.<anonymous> (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:1206:34)
+    at runCallback (timers.js:672:20)
+    at tryOnImmediate (timers.js:645:5)
+    at processImmediate [as _immediateCallback] (timers.js:617:5)
+2018-11-20T10:10:56.173Z - error: Failed to load meta a38db66f-c912-4a7d-90cf-ee8d9e294e75: Failed to query meta info by a38db66f-c912-4a7d-90cf-ee8d9e294e75
+    at asset.e._loadMeta (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/inspector/panel/index.js:1:6371)
+    at Object.Editor.assetdb.queryMetaInfoByUuid [as callback] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/inspector/panel/index.js:1:9021)
+    at Object.e._closeAllSessions (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2534)
+    at EventEmitter.t.ipcRenderer.on (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/utils/dock-utils.js:1:8407)
+    at emitTwo (events.js:111:20)
+    at EventEmitter.emit (events.js:194:7)
+2018-11-20T10:10:56.197Z - warn: Failed to send ipc message scene:query-animation-list to panel scene, panel not found
+2018-11-20T10:13:28.537Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:39206
+2018-11-20T10:13:28.540Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:39209
+2018-11-20T10:13:28.540Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:39210
+2018-11-20T10:13:28.541Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:39211
+2018-11-20T10:13:56.929Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:39515
+2018-11-20T10:19:26.635Z - normal: Introduced global variable while editing: abc
+2018-11-20T10:28:25.512Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:28:28.648Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:28:29.333Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:28:42.176Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:28:47.722Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:28:49.736Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:28:52.927Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:28:53.453Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:28:54.605Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:28:57.610Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:29:09.202Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:29:10.953Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:29:11.939Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:29:13.442Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:30:55.445Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:31:02.881Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:31:04.479Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:31:05.860Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:31:11.933Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:31:12.479Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:31:14.522Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:31:15.844Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:31:16.410Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:31:19.485Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:31:20.463Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
+2018-11-20T10:42:52.800Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:56552
+2018-11-20T10:43:08.468Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:56610
+2018-11-20T10:43:08.470Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:56614
+2018-11-20T10:45:21.025Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:58433
+2018-11-20T10:45:32.829Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:58546

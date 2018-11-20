@@ -109,7 +109,9 @@ class GameResultClass{
         }
         else {
             /** 答对一个加两秒 */
-            GameDataManager.gameData.gametime = GameDataManager.gameData.gametime + 2;
+            var rewardTime = 2;
+            GameDataManager.gameData.gametime = GameDataManager.gameData.gametime + rewardTime;
+            this.gameScene.addScheTimes(rewardTime);
         }
     }
 

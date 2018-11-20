@@ -6,8 +6,8 @@
 import {ConfigManager} from "../ConfigManager";
 
 export class GameData {
-    //最高分
-    private _topscore : number;
+    //最高分 改为存本地缓存
+    // private _topscore : number;
     //当前分数
     private _score : number;
     //当前全清了多少次 等级
@@ -58,7 +58,7 @@ export class GameData {
     }
     //增加分数
     public addscore(value :number){
-        this._score += value * Math.sqrt(this._playtimes || 1);
+        this._score += Math.floor(value * Math.sqrt(this._playtimes || 1));
     }
     //增加游戏时间
     public addgametime(){
@@ -93,12 +93,12 @@ export class GameData {
     set level(_level :number) {
         this._level = _level;
     }
-    get topscore():number{
-        return this._topscore
-    }
-    set topscore(_topscore : number) {
-        this._topscore = _topscore
-    }
+    // get topscore():number{
+    //     return this._topscore
+    // }
+    // set topscore(_topscore : number) {
+    //     this._topscore = _topscore
+    // }
     get score():number{
         return this._score
     }

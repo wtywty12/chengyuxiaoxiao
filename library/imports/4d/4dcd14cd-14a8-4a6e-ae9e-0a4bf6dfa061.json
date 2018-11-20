@@ -42,8 +42,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.559375,
-      "y": 0.559375,
+      "x": 0.2900748751757873,
+      "y": 0.2900748751757873,
       "z": 1
     },
     "_quat": {
@@ -1411,7 +1411,7 @@
     "_spriteFrame": {
       "__uuid__": "8ff616a5-5cfe-4dd6-b9ef-f00ef2ae5bdc"
     },
-    "_type": 1,
+    "_type": 3,
     "_sizeMode": 0,
     "_fillType": 0,
     "_fillCenter": {
@@ -1420,7 +1420,7 @@
       "y": 0
     },
     "_fillStart": 0,
-    "_fillRange": 0,
+    "_fillRange": 1,
     "_isTrimmedMode": true,
     "_state": 0,
     "_atlas": null,
@@ -1462,11 +1462,11 @@
       "__id__": 29
     },
     "_enabled": true,
-    "_N$totalLength": 440,
+    "_N$totalLength": 1,
     "_N$barSprite": {
       "__id__": 31
     },
-    "_N$mode": 0,
+    "_N$mode": 2,
     "_N$progress": 1,
     "_N$reverse": false,
     "_id": "752gX6MB5M8a7ho6XEoK+H"
