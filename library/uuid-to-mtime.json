@@ -1059,14 +1059,14 @@
     "meta": 1542697296581,
     "relativePath": "resources/sounds/bgMusic.wav"
   },
-  "a33454b1-70fd-4ea2-93e1-4acdf53a51e0": {
-    "asset": 1542703080831,
-    "meta": 1542703112472,
-    "relativePath": "Script/src/game/game/GameTable.js"
-  },
   "6f6d8f17-615b-4ad4-a5fa-2d2739448db2": {
-    "asset": 1542703404660,
-    "meta": 1542703408009,
+    "asset": 1542703475510,
+    "meta": 1542703511514,
     "relativePath": "resources/jsons/levels.json"
+  },
+  "a33454b1-70fd-4ea2-93e1-4acdf53a51e0": {
+    "asset": 1542703789063,
+    "meta": 1542703791360,
+    "relativePath": "Script/src/game/game/GameTable.js"
   }
 }

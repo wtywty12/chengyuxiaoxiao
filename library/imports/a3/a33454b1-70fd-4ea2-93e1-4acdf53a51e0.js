@@ -66,7 +66,10 @@ var GameTable = function (_super) {
             this.tableHeight = levelInfo.line;
         }
         var totalNumber = this.tableWidth * this.tableHeight;
-        var reduceNumber = totalNumber % 4 == 0 && 0 || -1;
+        var reduceNumber = 0;
+        if (totalNumber % 4 != 0) {
+            reduceNumber = -1;
+        }
         var gridNumber = totalNumber * 0.25 + reduceNumber;
         this.randomAry = new RandomAry_1.RandomAry(gridNumber);
         this.randomIdiom = this.randomAry.getRandomIdiom();
