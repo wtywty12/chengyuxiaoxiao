@@ -41,8 +41,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.559375,
-      "y": 0.559375,
+      "x": 0.31875,
+      "y": 0.31875,
       "z": 1
     },
     "_quat": {
@@ -740,8 +740,8 @@
     "_srcBlendFactor": 1,
     "_dstBlendFactor": 771,
     "_useOriginalSize": false,
-    "_string": "1",
-    "_N$string": "1",
+    "_string": "2",
+    "_N$string": "2",
     "_fontSize": 60,
     "_lineHeight": 70,
     "_enableWrapText": true,
