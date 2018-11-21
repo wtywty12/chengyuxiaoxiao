@@ -118,7 +118,6 @@ class GameResultClass{
         /** 判定胜利 */
         cc.log(Tools.getGridNumber(this.gameTable.tableWidth, this.gameTable.tableHeight))
         if (Tools.getMapLength(RecordGrid.getGameTableGridMap()) == 4 * Tools.getGridNumber(this.gameTable.tableWidth, this.gameTable.tableHeight)) {
-            GameDataManager.gameData.gametime = GameDataManager.gameData.totalGameTime;
             GameManager.onGameLevelup();
         }
         else {

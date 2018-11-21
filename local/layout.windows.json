@@ -6,9 +6,9 @@
       "url": "app://editor/index.html",
       "windowType": "dockable",
       "x": 0,
-      "y": 23,
+      "y": 0,
       "width": 1440,
-      "height": 821,
+      "height": 900,
       "layout": {
         "children": [
           {
@@ -82,14 +82,16 @@
         "assets",
         "scene"
       ]
-    }
+    },
+    "window-1542807232142": {},
+    "worker": {}
   },
   "panels": {
     "builder": {
-      "x": 30,
-      "y": 63,
-      "width": 654,
-      "height": 605
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
     },
     "sprite-editor": {
       "x": 0,

@@ -115,7 +115,7 @@ var GameScene = (function (_super) {
         var timeCallback = function (dt) {
             GameDataManager_1.GameDataManager.gameData.gametime--;
             this.lbl_time.string = Tools_1.Tools.numberToDate(GameDataManager_1.GameDataManager.gameData.gametime);
-            if (GameDataManager_1.GameDataManager.gameData.gametime < 0) {
+            if (GameDataManager_1.GameDataManager.gameData.gametime <= 0) {
                 GameManager_1.GameManager.onGameOver();
                 GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.SETTLE);
             }
@@ -123,18 +123,21 @@ var GameScene = (function (_super) {
         this.schedule(timeCallback, 1);
     };
     GameScene.prototype.createScheBar = function () {
-        var time = GameDataManager_1.GameDataManager.gameData.totalGameTime * 0.01;
+        var time = GameDataManager_1.GameDataManager.gameData.gametime * 0.01;
         this.scheTimes = 100;
         var barCallback = function (dt) {
             this.scheTimes--;
             var percent = this.scheTimes * 0.01;
             this.bar_time.progress = percent;
         };
+        if (time < 0) {
+            return;
+        }
         this.schedule(barCallback, time);
     };
     GameScene.prototype.addScheTimes = function (score) {
         if (typeof (score) == "number") {
-            var percent = score / GameDataManager_1.GameDataManager.gameData.totalGameTime * 100;
+            var percent = score / GameDataManager_1.GameDataManager.gameData.gametime * 100;
             this.scheTimes += score;
         }
     };

@@ -40,7 +40,6 @@ var GameManagerClass = (function () {
     GameManagerClass.prototype.onGameLevelup = function () {
         GameDataManager_1.GameDataManager.gameData.addgametime();
         GameDataManager_1.GameDataManager.gameData.addlevel();
-        this.gameScene.resetCDTime();
         this.gameTable.onClearAll();
         this.chooseView.onClearAll();
         this.loadGameFinish();

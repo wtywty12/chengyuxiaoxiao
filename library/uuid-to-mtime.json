@@ -924,11 +924,6 @@
     "meta": 1542798889110,
     "relativePath": "Script/src/game/common/data/Base.js"
   },
-  "9c42013f-3acb-44c5-8940-993be7214bf0": {
-    "asset": 1542798837114,
-    "meta": 1542798889180,
-    "relativePath": "Script/src/game/common/data/GameDataManager.js"
-  },
   "057c07aa-adff-4651-b7b2-fb2eaaa19d82": {
     "asset": 1542798837088,
     "meta": 1542798889215,
@@ -1084,11 +1079,6 @@
     "meta": 1542800234581,
     "relativePath": "resources/sounds/right.wav"
   },
-  "5ab3a914-1231-4a71-bbe3-63f49e193a70": {
-    "asset": 1542800352852,
-    "meta": 1542800502290,
-    "relativePath": "Script/src/game/game/GameManager.js"
-  },
   "a082f365-5122-4bda-a7a4-4573400c2a96": {
     "asset": 1542800987441,
     "meta": 1542801238300,
@@ -1104,11 +1094,6 @@
     "meta": 1542801238816,
     "relativePath": "Script/src/game/game/GameTable.js"
   },
-  "3009a629-7889-4dd2-ae99-183a53517630": {
-    "asset": 1542801230187,
-    "meta": 1542801238887,
-    "relativePath": "Script/src/game/loading/LoadingScene.js"
-  },
   "fab89146-579d-4e9b-9845-516ae60eac57": {
     "asset": 1542800987469,
     "meta": 1542801238948,
@@ -1119,39 +1104,54 @@
     "meta": 1542801238977,
     "relativePath": "Script/src/game/rank/RankScene.js"
   },
-  "240d0ec5-abd3-47ce-9f77-dfd2ac8280e0": {
-    "asset": 1542800987453,
-    "meta": 1542801239045,
-    "relativePath": "Script/src/game/settle/RedpackScene.js"
-  },
-  "7a80da82-d2db-4fb5-a891-eeffe5c62b0a": {
-    "asset": 1542800987447,
-    "meta": 1542801239046,
-    "relativePath": "Script/src/game/settle/SettleScene.js"
-  },
-  "55ba82a3-b236-4690-adbb-afd926249335": {
-    "asset": 1542801300868,
-    "meta": 1542801302755,
-    "relativePath": "Script/src/game/game/GameScene.js"
-  },
-  "97be3ef2-5953-4964-860e-a648c5fe4058": {
-    "asset": 1542801757433,
-    "meta": 1542801828756,
-    "relativePath": "Script/src/game/game/GameResult.js"
-  },
   "6f6d8f17-615b-4ad4-a5fa-2d2739448db2": {
     "asset": 1542803764704,
     "meta": 1542803834344,
     "relativePath": "resources/jsons/levels.json"
   },
-  "b3633f1d-5921-4453-a2d4-3d2f735c9fea": {
-    "asset": 1542804035449,
-    "meta": 1542804092543,
-    "relativePath": "Script/src/game/common/data/GameData.js"
+  "9c42013f-3acb-44c5-8940-993be7214bf0": {
+    "asset": 1542804660148,
+    "meta": 1542804772349,
+    "relativePath": "Script/src/game/common/data/GameDataManager.js"
+  },
+  "3009a629-7889-4dd2-ae99-183a53517630": {
+    "asset": 1542804660139,
+    "meta": 1542804772652,
+    "relativePath": "Script/src/game/loading/LoadingScene.js"
+  },
+  "97be3ef2-5953-4964-860e-a648c5fe4058": {
+    "asset": 1542805292011,
+    "meta": 1542805313618,
+    "relativePath": "Script/src/game/game/GameResult.js"
+  },
+  "5ab3a914-1231-4a71-bbe3-63f49e193a70": {
+    "asset": 1542806773948,
+    "meta": 1542806814172,
+    "relativePath": "Script/src/game/game/GameManager.js"
+  },
+  "240d0ec5-abd3-47ce-9f77-dfd2ac8280e0": {
+    "asset": 1542806808947,
+    "meta": 1542806814388,
+    "relativePath": "Script/src/game/settle/RedpackScene.js"
+  },
+  "7a80da82-d2db-4fb5-a891-eeffe5c62b0a": {
+    "asset": 1542806805183,
+    "meta": 1542806814452,
+    "relativePath": "Script/src/game/settle/SettleScene.js"
   },
   "b70c1e9c-6f74-418c-8997-330ee1f5ec0e": {
-    "asset": 1542804052382,
-    "meta": 1542804092545,
+    "asset": 1542807066690,
+    "meta": 1542807070666,
     "relativePath": "Script/src/utils/Tools.js"
+  },
+  "b3633f1d-5921-4453-a2d4-3d2f735c9fea": {
+    "asset": 1542807156339,
+    "meta": 1542807165521,
+    "relativePath": "Script/src/game/common/data/GameData.js"
+  },
+  "55ba82a3-b236-4690-adbb-afd926249335": {
+    "asset": 1542807204827,
+    "meta": 1542807210703,
+    "relativePath": "Script/src/game/game/GameScene.js"
   }
 }

@@ -76,7 +76,6 @@ var GameResultClass = (function () {
         this.chooseView.resetTempData();
         cc.log(Tools_1.Tools.getGridNumber(this.gameTable.tableWidth, this.gameTable.tableHeight));
         if (Tools_1.Tools.getMapLength(RecordGrid_1.RecordGrid.getGameTableGridMap()) == 4 * Tools_1.Tools.getGridNumber(this.gameTable.tableWidth, this.gameTable.tableHeight)) {
-            GameDataManager_1.GameDataManager.gameData.gametime = GameDataManager_1.GameDataManager.gameData.totalGameTime;
             GameManager_1.GameManager.onGameLevelup();
         }
         else {

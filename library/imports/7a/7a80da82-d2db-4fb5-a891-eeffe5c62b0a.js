@@ -74,7 +74,6 @@ var SettleScene = function (_super) {
     };
     SettleScene.prototype.onClickContinue = function () {
         GameAudio_1.GameAudio.playBtnEffect();
-        GameDataManager_1.GameDataManager.gameData.refuseData();
         GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.GAME);
     };
     SettleScene.prototype.onClickBack = function () {

@@ -15,15 +15,18 @@ var GameData = (function () {
         this._gridWidth = 109;
         this._gridHeight = 109;
         this._redPackTimes = 3;
+        this._lastTime = 0;
     }
     GameData.prototype.refuseData = function () {
         this._tempLevel = this._level;
         this._level = 1;
         this._tempScore = this._score;
         this._score = 0;
+        this._lastTime = 0;
         this._gametime = this._totalGameTime;
     };
     GameData.prototype.gameStart = function () {
+        this._score = 0;
         this._gametime = this._totalGameTime;
     };
     GameData.prototype.addlevel = function () {
@@ -37,7 +40,6 @@ var GameData = (function () {
         var levelsInfo = ConfigManager_1.ConfigManager.levelsJsonMap.get(this._level);
         var value = levelsInfo.addtime || 0;
         this._gametime += value;
-        this._totalGameTime += value;
     };
     Object.defineProperty(GameData.prototype, "playtimes", {
         get: function () {
@@ -147,6 +149,16 @@ var GameData = (function () {
         },
         set: function (times) {
             this._redPackTimes = times;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(GameData.prototype, "lastTime", {
+        get: function () {
+            return this._lastTime;
+        },
+        set: function (times) {
+            this._lastTime = times;
         },
         enumerable: true,
         configurable: true

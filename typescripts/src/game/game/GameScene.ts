@@ -168,7 +168,7 @@ export class GameScene extends cc.Component {
         var timeCallback = function (dt: number) {
             GameDataManager.gameData.gametime--;
             this.lbl_time.string = Tools.numberToDate(GameDataManager.gameData.gametime);
-            if (GameDataManager.gameData.gametime < 0) {
+            if (GameDataManager.gameData.gametime <= 0) {
                 GameManager.onGameOver();
                 GameEngine.changeScene(GameSceneHepler.SETTLE)
             }
@@ -180,13 +180,16 @@ export class GameScene extends cc.Component {
      * 创建进度条进度器
      */
     public createScheBar() {
-        var time = GameDataManager.gameData.totalGameTime * 0.01;
+        var time = GameDataManager.gameData.gametime * 0.01;
         this.scheTimes = 100;
         var barCallback = function (dt: number) {
             this.scheTimes --;
             let percent = this.scheTimes * 0.01;
             this.bar_time.progress = percent;
           }
+        if (time < 0) {
+            return;
+        }
         this.schedule(barCallback, time);
     }
 
@@ -195,7 +198,7 @@ export class GameScene extends cc.Component {
      */
     public addScheTimes(score: number) {
         if (typeof(score) == "number") {
-            var percent = score / GameDataManager.gameData.totalGameTime * 100;
+            var percent = score / GameDataManager.gameData.gametime * 100;
             this.scheTimes += score;
         }
     }

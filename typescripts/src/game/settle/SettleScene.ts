@@ -65,7 +65,7 @@ export class SettleScene extends cc.Component {
     //点击继续战斗
     private onClickContinue():void{
         GameAudio.playBtnEffect();
-        GameDataManager.gameData.refuseData()
+        // GameDataManager.gameData.refuseData()
         GameEngine.changeScene(GameSceneHepler.GAME);
     }
     private onClickBack():void{

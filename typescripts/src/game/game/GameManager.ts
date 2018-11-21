@@ -53,7 +53,7 @@ export class GameManagerClass {
         GameDataManager.gameData.addgametime()
         GameDataManager.gameData.addlevel()
         //重置倒计时
-        this.gameScene.resetCDTime();
+        // this.gameScene.resetCDTime();
         //清除所有
         this.gameTable.onClearAll();
         this.chooseView.onClearAll();
@@ -76,7 +76,6 @@ export class GameManagerClass {
         this.gameTable.onGameOver();
         this.chooseView.onGameOver();
         this.gameScene.resetCDTime();
-        // this.onGameStart();
     }
 }
 

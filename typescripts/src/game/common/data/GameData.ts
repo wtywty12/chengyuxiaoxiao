@@ -33,6 +33,8 @@ export class GameData {
     private _gridHeight: number;
     /** 每日红包次数 */
     private _redPackTimes: number;
+    /** 游戏过关剩余时间 */
+    private _lastTime: number;
 
     constructor() {
         this._level = 1;
@@ -46,6 +48,7 @@ export class GameData {
         this._gridWidth = 109;
         this._gridHeight = 109;
         this._redPackTimes = 3;
+        this._lastTime = 0;
     }
 
     public refuseData(){//重制数据
@@ -53,16 +56,15 @@ export class GameData {
         this._level = 1;
         this._tempScore = this._score;
         this._score = 0;
-
+        this._lastTime = 0;
         this._gametime = this._totalGameTime;
         // this._totalGameTime = 60;
         // this._playtimes = 0;//个人中心记录次数 此处不能清零
     }
     //游戏开始
     public gameStart(){
-        // this._score = 0;
+        this._score = 0;
         this._gametime = this._totalGameTime;
-        // this._totalGameTime = 60;
     }
     //增加等级
     public addlevel(){
@@ -78,7 +80,6 @@ export class GameData {
         var levelsInfo = ConfigManager.levelsJsonMap.get(this._level)
         var value = levelsInfo.addtime || 0;
         this._gametime += value
-        this._totalGameTime += value;
     }
     // public addgametime(value:number){
     //     if(value == null)
@@ -158,5 +159,10 @@ export class GameData {
     get redPackTimes() {
         return this._redPackTimes;
     }
-
+    set lastTime(times: number) {
+        this._lastTime = times;
+    }
+    get lastTime() {
+        return this._lastTime;
+    }
 }

@@ -32,7 +32,11 @@ var Tools = function () {
         var hour = 60;
         var timeStr = "";
         if (num < second) {
-            return "00:" + num.toString();
+            var numStr = num.toString();
+            if (num < 10) {
+                numStr = "0" + num.toString();
+            }
+            return "00:" + numStr;
         } else if (num < second * minute) {
             var sec = Math.floor(num % second);
             var min = Math.floor(num / second);
