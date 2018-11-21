@@ -16,8 +16,26 @@ var GameAudioClass = (function () {
         enumerable: true,
         configurable: true
     });
+    GameAudioClass.prototype.playGameMusic = function () {
+        this.audio.playBGM("bgMusic");
+    };
     GameAudioClass.prototype.playBtnEffect = function () {
         this.audio.playSFX("btnEffect", 1);
+    };
+    GameAudioClass.prototype.playClickGridEffect = function () {
+        this.audio.playSFX("click", 1);
+    };
+    GameAudioClass.prototype.playJudgeRightEffect = function () {
+        this.audio.playSFX("right", 1);
+    };
+    GameAudioClass.prototype.playJudgeErrorEffect = function () {
+        this.audio.playSFX("error", 1);
+    };
+    GameAudioClass.prototype.changeBGMVolume = function (volume, force) {
+        this.audio.changeBGMVolume(volume, force);
+    };
+    GameAudioClass.prototype.changeSFXVolume = function (volume) {
+        this.audio.changeSFXVolume(volume);
     };
     GameAudioClass.prototype.pauseAll = function () {
         cc.audioEngine.pauseAll();

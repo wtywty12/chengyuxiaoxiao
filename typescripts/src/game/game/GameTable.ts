@@ -12,6 +12,7 @@ import { GameEngine } from "../common/GameEngine";
 import { GameSceneHepler } from "../common/helper/GameSceneHepler";
 import { GameDataManager } from "../common/data/GameDataManager";
 import { Tools } from "../../utils/Tools";
+import { GameAudio } from "../common/helper/GameAudio";
 
 @ccclass()
 export class GameTable extends cc.Component {
@@ -121,7 +122,7 @@ export class GameTable extends cc.Component {
                 return;
             }
             /** 播放音效 */
-            this.gameScene.playClickGridEffect();
+            GameAudio.playClickGridEffect();
             /** 上方表设置格子字和索引 */
             this.chooseView.setGridInfo(index, str);
             let length = Tools.getMapLength(RecordGrid.getChooseGridMap());

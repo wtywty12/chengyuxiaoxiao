@@ -46,13 +46,13 @@ export class Tools {
             var min = Math.floor(num / second);
             var secStr = "";
             if (sec < 10) {
-                secStr = "0" + secStr.toString();
+                secStr = "0" + sec.toString();
             }
             var minStr = "";
             if (min < 10) {
-                minStr = "0" + minStr.toString();
+                minStr = "0" + min.toString();
             }
-            return minStr + ":" + minStr;
+            return minStr + ":" + secStr;
         } else {
             /** 更大的数有需求再做 */
             return num.toString();

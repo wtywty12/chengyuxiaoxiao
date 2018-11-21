@@ -132,11 +132,13 @@ var LoadingScene = (function (_super) {
                             cc.log(status);
                             if (status == "resume" || status == null) {
                                 StorageInfo_1.StorageInfo.setGameAudioStatus("pause");
-                                GameAudio_1.GameAudio.pauseAll();
+                                GameAudio_1.GameAudio.changeBGMVolume(0, true);
+                                GameAudio_1.GameAudio.changeSFXVolume(0);
                             }
                             else if (status == "pause") {
                                 StorageInfo_1.StorageInfo.setGameAudioStatus("resume");
-                                GameAudio_1.GameAudio.resumeAll();
+                                GameAudio_1.GameAudio.changeBGMVolume(60, true);
+                                GameAudio_1.GameAudio.changeSFXVolume(60);
                             }
                         });
                         this.setProgress(70);

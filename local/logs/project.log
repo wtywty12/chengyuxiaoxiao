@@ -1,564 +1,62 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-2018-11-20T03:21:55.044Z - normal: Load ~/.CocosCreator/settings.json
-2018-11-20T03:21:55.046Z - normal: checking language setting...
-2018-11-20T03:21:55.046Z - normal: Language: zh
-2018-11-20T03:21:55.523Z - success: protocol editor-framework registered
-2018-11-20T03:21:55.523Z - success: protocol app registered
-2018-11-20T03:21:55.523Z - success: protocol theme registered
-2018-11-20T03:21:55.524Z - success: protocol packages registered
-2018-11-20T03:21:55.524Z - success: protocol unpack registerred
-2018-11-20T03:21:55.524Z - success: protocol disable-commonjs registerred
-2018-11-20T03:21:55.998Z - normal: connected!
-2018-11-20T03:21:56.002Z - normal: Check project /Users/wangtianye/svn/wxgame_chengyuxiaoxiao
-2018-11-20T03:21:56.005Z - normal: Initializing project /Users/wangtianye/svn/wxgame_chengyuxiaoxiao
-2018-11-20T03:21:56.010Z - normal: Initializing Cocos2d
-2018-11-20T03:21:56.476Z - normal: Initializing Asset Database
-2018-11-20T03:21:56.509Z - success: protocol uuid registerred
-2018-11-20T03:21:56.510Z - success: protocol db registerred
-2018-11-20T03:21:56.510Z - success: protocol thumbnail registerred
-2018-11-20T03:21:56.510Z - normal: Loading editor/builtin packages
-2018-11-20T03:21:56.628Z - success: assets loaded
-2018-11-20T03:21:56.631Z - success: builder loaded
-2018-11-20T03:21:56.633Z - success: cocos-analytics loaded
-2018-11-20T03:21:56.638Z - success: console loaded
-2018-11-20T03:21:56.665Z - success: fb-instant-games loaded
-2018-11-20T03:21:56.667Z - success: google-instant-games loaded
-2018-11-20T03:21:56.673Z - success: hierarchy loaded
-2018-11-20T03:21:56.676Z - success: inspector loaded
-2018-11-20T03:21:56.678Z - success: keystore loaded
-2018-11-20T03:21:56.683Z - success: node-library loaded
-2018-11-20T03:21:56.686Z - success: package-asset loaded
-2018-11-20T03:21:56.687Z - success: preferences loaded
-2018-11-20T03:21:56.691Z - success: project-exporter loaded
-2018-11-20T03:21:56.704Z - success: project-importer loaded
-2018-11-20T03:21:56.707Z - success: project-settings loaded
-2018-11-20T03:21:56.714Z - success: ui-kit loaded
-2018-11-20T03:21:56.718Z - success: scene loaded
-2018-11-20T03:21:56.720Z - success: sprite-editor loaded
-2018-11-20T03:21:56.724Z - success: store loaded
-2018-11-20T03:21:56.729Z - success: timeline loaded
-2018-11-20T03:21:56.730Z - normal: Loading builtin packages
-2018-11-20T03:21:56.736Z - success: asset-db-debugger loaded
-2018-11-20T03:21:56.738Z - success: color-picker loaded
-2018-11-20T03:21:56.823Z - success: google-play-instant loaded
-2018-11-20T03:21:56.826Z - success: jsb-adapter loaded
-2018-11-20T03:21:56.833Z - success: package-manager loaded
-2018-11-20T03:21:56.965Z - success: qqplay-adapter loaded
-2018-11-20T03:21:56.973Z - success: sdkbox loaded
-2018-11-20T03:21:56.978Z - success: tester loaded
-2018-11-20T03:21:56.982Z - success: ui-grid loaded
-2018-11-20T03:21:56.988Z - success: ui-kit-preview-extra loaded
-2018-11-20T03:21:56.994Z - success: ui-kit-preview loaded
-2018-11-20T03:21:56.999Z - success: ui-tree loaded
-2018-11-20T03:21:57.000Z - success: weapp-adapter loaded
-2018-11-20T03:21:57.639Z - normal: Loading packages
-2018-11-20T03:21:57.644Z - normal: Watching packages
-2018-11-20T03:21:57.694Z - normal: Run Application
-2018-11-20T03:21:58.741Z - success: preview server running at http://localhost:7456
-=======
-2018-11-19T15:06:08.205Z - normal: Load ~/.CocosCreator/settings.json
-2018-11-19T15:06:08.211Z - normal: checking language setting...
-2018-11-19T15:06:08.211Z - normal: Language: zh
-2018-11-19T15:06:09.363Z - success: protocol editor-framework registered
-2018-11-19T15:06:09.364Z - success: protocol app registered
-2018-11-19T15:06:09.364Z - success: protocol theme registered
-2018-11-19T15:06:09.364Z - success: protocol packages registered
-2018-11-19T15:06:09.365Z - success: protocol unpack registerred
-2018-11-19T15:06:09.365Z - success: protocol disable-commonjs registerred
-2018-11-19T15:06:09.566Z - normal: connected!
-2018-11-19T15:06:09.571Z - normal: Check project /Users/linzhang/youyou/chengyuxiaoxiao
-2018-11-19T15:06:09.575Z - normal: Initializing project /Users/linzhang/youyou/chengyuxiaoxiao
-2018-11-19T15:06:09.581Z - normal: Initializing Cocos2d
-2018-11-19T15:06:10.708Z - normal: Initializing Asset Database
-2018-11-19T15:06:10.785Z - success: protocol uuid registerred
-2018-11-19T15:06:10.786Z - success: protocol db registerred
-2018-11-19T15:06:10.786Z - success: protocol thumbnail registerred
-2018-11-19T15:06:10.786Z - normal: Loading editor/builtin packages
-2018-11-19T15:06:11.074Z - success: assets loaded
-2018-11-19T15:06:11.082Z - success: builder loaded
-2018-11-19T15:06:11.087Z - success: cocos-analytics loaded
-2018-11-19T15:06:11.097Z - success: console loaded
-2018-11-19T15:06:11.148Z - success: fb-instant-games loaded
-2018-11-19T15:06:11.151Z - success: google-instant-games loaded
-2018-11-19T15:06:11.162Z - success: hierarchy loaded
-2018-11-19T15:06:11.169Z - success: inspector loaded
-2018-11-19T15:06:11.171Z - success: keystore loaded
-2018-11-19T15:06:11.184Z - success: node-library loaded
-2018-11-19T15:06:11.188Z - success: package-asset loaded
-2018-11-19T15:06:11.190Z - success: preferences loaded
-2018-11-19T15:06:11.194Z - success: project-exporter loaded
-2018-11-19T15:06:11.217Z - success: project-importer loaded
-2018-11-19T15:06:11.222Z - success: project-settings loaded
-2018-11-19T15:06:11.228Z - success: ui-kit loaded
-2018-11-19T15:06:11.234Z - success: scene loaded
-2018-11-19T15:06:11.237Z - success: sprite-editor loaded
-2018-11-19T15:06:11.246Z - success: store loaded
-2018-11-19T15:06:11.256Z - success: timeline loaded
-2018-11-19T15:06:11.256Z - normal: Loading builtin packages
-2018-11-19T15:06:11.265Z - success: asset-db-debugger loaded
-2018-11-19T15:06:11.268Z - success: color-picker loaded
-2018-11-19T15:06:11.447Z - success: google-play-instant loaded
-2018-11-19T15:06:11.450Z - success: jsb-adapter loaded
-2018-11-19T15:06:11.457Z - success: oppo-runtime loaded
-2018-11-19T15:06:11.466Z - success: package-manager loaded
-2018-11-19T15:06:11.727Z - success: qqplay-adapter loaded
-2018-11-19T15:06:11.738Z - success: sdkbox loaded
-2018-11-19T15:06:11.749Z - success: tester loaded
-2018-11-19T15:06:11.761Z - success: ui-grid loaded
-2018-11-19T15:06:11.770Z - success: ui-kit-preview-extra loaded
-2018-11-19T15:06:11.779Z - success: ui-kit-preview loaded
-2018-11-19T15:06:11.788Z - success: ui-tree loaded
-2018-11-19T15:06:11.794Z - success: vivo-runtime loaded
-2018-11-19T15:06:11.797Z - success: weapp-adapter loaded
-2018-11-19T15:06:14.326Z - normal: Loading packages
-2018-11-19T15:06:14.331Z - normal: Watching packages
-2018-11-19T15:06:14.456Z - normal: Run Application
-2018-11-19T15:06:15.992Z - success: preview server running at http://localhost:7456
-2018-11-19T15:54:32.757Z - normal: Start building with options : {
-=======
-2018-11-20T06:27:05.303Z - normal: Load ~/.CocosCreator/settings.json
-2018-11-20T06:27:05.308Z - normal: checking language setting...
-2018-11-20T06:27:05.309Z - normal: Language: zh
-2018-11-20T06:27:06.362Z - success: protocol editor-framework registered
-2018-11-20T06:27:06.362Z - success: protocol app registered
-2018-11-20T06:27:06.363Z - success: protocol theme registered
-2018-11-20T06:27:06.363Z - success: protocol packages registered
-2018-11-20T06:27:06.363Z - success: protocol unpack registerred
-2018-11-20T06:27:06.364Z - success: protocol disable-commonjs registerred
-2018-11-20T06:27:06.559Z - normal: connected!
-2018-11-20T06:27:06.564Z - normal: Check project /Users/linzhang/youyou/chengyuxiaoxiao
-2018-11-20T06:27:06.568Z - normal: Initializing project /Users/linzhang/youyou/chengyuxiaoxiao
-2018-11-20T06:27:06.574Z - normal: Initializing Cocos2d
-2018-11-20T06:27:07.766Z - normal: Initializing Asset Database
-2018-11-20T06:27:07.845Z - success: protocol uuid registerred
-2018-11-20T06:27:07.846Z - success: protocol db registerred
-2018-11-20T06:27:07.846Z - success: protocol thumbnail registerred
-2018-11-20T06:27:07.846Z - normal: Loading editor/builtin packages
-2018-11-20T06:27:08.086Z - success: assets loaded
-2018-11-20T06:27:08.094Z - success: builder loaded
-2018-11-20T06:27:08.097Z - success: cocos-analytics loaded
-2018-11-20T06:27:08.108Z - success: console loaded
-2018-11-20T06:27:08.162Z - success: fb-instant-games loaded
-2018-11-20T06:27:08.165Z - success: google-instant-games loaded
-2018-11-20T06:27:08.176Z - success: hierarchy loaded
-2018-11-20T06:27:08.184Z - success: inspector loaded
-2018-11-20T06:27:08.187Z - success: keystore loaded
-2018-11-20T06:27:08.199Z - success: node-library loaded
-2018-11-20T06:27:08.202Z - success: package-asset loaded
-2018-11-20T06:27:08.206Z - success: preferences loaded
-2018-11-20T06:27:08.213Z - success: project-exporter loaded
-2018-11-20T06:27:08.244Z - success: project-importer loaded
-2018-11-20T06:27:08.250Z - success: project-settings loaded
-2018-11-20T06:27:08.264Z - success: ui-kit loaded
-2018-11-20T06:27:08.271Z - success: scene loaded
-2018-11-20T06:27:08.274Z - success: sprite-editor loaded
-2018-11-20T06:27:08.281Z - success: store loaded
-2018-11-20T06:27:08.292Z - success: timeline loaded
-2018-11-20T06:27:08.293Z - normal: Loading builtin packages
-2018-11-20T06:27:08.303Z - success: asset-db-debugger loaded
-2018-11-20T06:27:08.307Z - success: color-picker loaded
-2018-11-20T06:27:08.510Z - success: google-play-instant loaded
-2018-11-20T06:27:08.515Z - success: jsb-adapter loaded
-2018-11-20T06:27:08.527Z - success: oppo-runtime loaded
-2018-11-20T06:27:08.541Z - success: package-manager loaded
-2018-11-20T06:27:08.872Z - success: qqplay-adapter loaded
-2018-11-20T06:27:08.888Z - success: sdkbox loaded
-2018-11-20T06:27:08.900Z - success: tester loaded
-2018-11-20T06:27:08.912Z - success: ui-grid loaded
-2018-11-20T06:27:08.923Z - success: ui-kit-preview-extra loaded
-2018-11-20T06:27:08.933Z - success: ui-kit-preview loaded
-2018-11-20T06:27:08.943Z - success: ui-tree loaded
-2018-11-20T06:27:08.953Z - success: vivo-runtime loaded
-2018-11-20T06:27:08.958Z - success: weapp-adapter loaded
-2018-11-20T06:27:11.044Z - normal: Loading packages
-2018-11-20T06:27:11.053Z - normal: Watching packages
-2018-11-20T06:27:11.206Z - normal: Run Application
-2018-11-20T06:27:12.990Z - success: preview server running at http://localhost:7456
-2018-11-20T06:27:25.604Z - warn: The Asset used by component "cc.Sprite" in scene "SettleScene.fire" is missing. Detailed information:
-Node path: "Canvas/zhandoujiesuan"
-Asset url: "db://assets/Scene/SettleScene.fire"
-Missing uuid: "b1b5a0a3-92a8-475f-b1ac-c0e979571c27"
-
-2018-11-20T06:27:25.610Z - warn: The Asset used by component "cc.Sprite" in scene "SettleScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_defen/caidai_2"
-Asset url: "db://assets/Scene/SettleScene.fire"
-Missing uuid: "3fe2d706-d0d9-435b-8276-c539a538f441"
-
-2018-11-20T06:27:25.611Z - warn: The Asset used by component "cc.Sprite" in scene "SettleScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_defen/caidai_1"
-Asset url: "db://assets/Scene/SettleScene.fire"
-Missing uuid: "9c8907e1-3296-4af1-8ff2-b41f341ace88"
-
-2018-11-20T06:27:25.614Z - warn: The Asset used by component "cc.Sprite" in scene "SettleScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_defen/btn_share"
-Asset url: "db://assets/Scene/SettleScene.fire"
-Missing uuid: "e89eaeb6-7d4c-4a7c-baa5-5c6b318d8a2a"
-
-2018-11-20T06:27:25.615Z - warn: The Asset used by component "cc.Button" in scene "SettleScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_defen/btn_share"
-Asset url: "db://assets/Scene/SettleScene.fire"
-Missing uuid: "e89eaeb6-7d4c-4a7c-baa5-5c6b318d8a2a"
-
-2018-11-20T06:27:25.622Z - warn: The Asset used by component "cc.Sprite" in scene "SettleScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_defen/btn_chai"
-Asset url: "db://assets/Scene/SettleScene.fire"
-Missing uuid: "da213bc6-54b4-4d5e-9c57-d5ed2169a82d"
-
-2018-11-20T06:27:25.626Z - warn: The Asset used by component "cc.Button" in scene "SettleScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_defen/btn_chai"
-Asset url: "db://assets/Scene/SettleScene.fire"
-Missing uuid: "da213bc6-54b4-4d5e-9c57-d5ed2169a82d"
-
-2018-11-20T06:27:25.629Z - warn: The Asset used by component "cc.Sprite" in scene "SettleScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_defen/image_icon"
-Asset url: "db://assets/Scene/SettleScene.fire"
-Missing uuid: "c8b6e1e1-ce97-4357-809c-3415dcd15b50"
-
-2018-11-20T06:27:29.202Z - warn: The Asset used by component "cc.Sprite" in scene "LoadingScene.fire" is missing. Detailed information:
-Node path: "Canvas/bg"
-Asset url: "db://assets/Scene/LoadingScene.fire"
-Missing uuid: "c15cfe4e-c4ce-4955-b037-d2b9cba0e3ab"
-
-2018-11-20T06:27:29.206Z - warn: The Asset used by component "cc.Sprite" in scene "LoadingScene.fire" is missing. Detailed information:
-Node path: "Canvas/youzi"
-Asset url: "db://assets/Scene/LoadingScene.fire"
-Missing uuid: "4eaa247e-33be-4ff1-a62f-a4b7f776d336"
-
-2018-11-20T06:27:29.208Z - warn: The Asset used by component "cc.Sprite" in scene "LoadingScene.fire" is missing. Detailed information:
-Node path: "Canvas/progressBar/bar"
-Asset url: "db://assets/Scene/LoadingScene.fire"
-Missing uuid: "14470ae5-c278-45ab-b001-44783857e953"
-
-2018-11-20T06:27:29.209Z - warn: The Asset used by component "cc.Sprite" in scene "LoadingScene.fire" is missing. Detailed information:
-Node path: "Canvas/progressBar"
-Asset url: "db://assets/Scene/LoadingScene.fire"
-Missing uuid: "410fb916-8721-4663-bab8-34397391ace7"
-
-2018-11-20T06:27:29.210Z - warn: The Asset used by component "cc.Sprite" in scene "LoadingScene.fire" is missing. Detailed information:
-Node path: "Canvas/btn_music"
-Asset url: "db://assets/Scene/LoadingScene.fire"
-Missing uuid: "81449878-6ff4-48c2-bbee-3c05e8a0d3d8"
-
-2018-11-20T06:27:29.211Z - warn: The Asset used by component "cc.Button" in scene "LoadingScene.fire" is missing. Detailed information:
-Node path: "Canvas/btn_music"
-Asset url: "db://assets/Scene/LoadingScene.fire"
-Missing uuid: "81449878-6ff4-48c2-bbee-3c05e8a0d3d8"
-
-2018-11-20T06:27:29.211Z - warn: The Asset used by component "cc.Button" in scene "LoadingScene.fire" is missing. Detailed information:
-Node path: "Canvas/btn_music"
-Asset url: "db://assets/Scene/LoadingScene.fire"
-Missing uuid: "81449878-6ff4-48c2-bbee-3c05e8a0d3d8"
-
-2018-11-20T06:27:29.211Z - warn: The Asset used by component "cc.Button" in scene "LoadingScene.fire" is missing. Detailed information:
-Node path: "Canvas/btn_music"
-Asset url: "db://assets/Scene/LoadingScene.fire"
-Missing uuid: "81449878-6ff4-48c2-bbee-3c05e8a0d3d8"
-
-2018-11-20T06:27:29.212Z - warn: The Asset used by component "cc.Button" in scene "LoadingScene.fire" is missing. Detailed information:
-Node path: "Canvas/btn_music"
-Asset url: "db://assets/Scene/LoadingScene.fire"
-Missing uuid: "81449878-6ff4-48c2-bbee-3c05e8a0d3d8"
-
-2018-11-20T06:27:29.212Z - warn: The Asset used by component "cc.Sprite" in scene "LoadingScene.fire" is missing. Detailed information:
-Node path: "Canvas/btn_rank"
-Asset url: "db://assets/Scene/LoadingScene.fire"
-Missing uuid: "e17bb2f8-8da4-4459-a9ba-b91de0e412ed"
-
-2018-11-20T06:27:29.213Z - warn: The Asset used by component "cc.Button" in scene "LoadingScene.fire" is missing. Detailed information:
-Node path: "Canvas/btn_rank"
-Asset url: "db://assets/Scene/LoadingScene.fire"
-Missing uuid: "e17bb2f8-8da4-4459-a9ba-b91de0e412ed"
-
-2018-11-20T06:27:29.213Z - warn: The Asset used by component "cc.Button" in scene "LoadingScene.fire" is missing. Detailed information:
-Node path: "Canvas/btn_rank"
-Asset url: "db://assets/Scene/LoadingScene.fire"
-Missing uuid: "e17bb2f8-8da4-4459-a9ba-b91de0e412ed"
-
-2018-11-20T06:27:29.213Z - warn: The Asset used by component "cc.Button" in scene "LoadingScene.fire" is missing. Detailed information:
-Node path: "Canvas/btn_rank"
-Asset url: "db://assets/Scene/LoadingScene.fire"
-Missing uuid: "e17bb2f8-8da4-4459-a9ba-b91de0e412ed"
-
-2018-11-20T06:27:29.214Z - warn: The Asset used by component "cc.Button" in scene "LoadingScene.fire" is missing. Detailed information:
-Node path: "Canvas/btn_rank"
-Asset url: "db://assets/Scene/LoadingScene.fire"
-Missing uuid: "e17bb2f8-8da4-4459-a9ba-b91de0e412ed"
-
-2018-11-20T06:27:29.214Z - warn: The Asset used by component "cc.Sprite" in scene "LoadingScene.fire" is missing. Detailed information:
-Node path: "Canvas/bg_title"
-Asset url: "db://assets/Scene/LoadingScene.fire"
-Missing uuid: "1d71b8b5-cba7-48bd-b640-9739989c4460"
-
-2018-11-20T06:27:29.215Z - warn: The Asset used by component "cc.Sprite" in scene "LoadingScene.fire" is missing. Detailed information:
-Node path: "Canvas/btn_myinfo"
-Asset url: "db://assets/Scene/LoadingScene.fire"
-Missing uuid: "1b3b7e62-cd78-43ca-b125-2cf02f7836d1"
-
-2018-11-20T06:27:29.216Z - warn: The Asset used by component "cc.Button" in scene "LoadingScene.fire" is missing. Detailed information:
-Node path: "Canvas/btn_myinfo"
-Asset url: "db://assets/Scene/LoadingScene.fire"
-Missing uuid: "1b3b7e62-cd78-43ca-b125-2cf02f7836d1"
-
-2018-11-20T06:27:29.217Z - warn: The Asset used by component "cc.Button" in scene "LoadingScene.fire" is missing. Detailed information:
-Node path: "Canvas/btn_myinfo"
-Asset url: "db://assets/Scene/LoadingScene.fire"
-Missing uuid: "1b3b7e62-cd78-43ca-b125-2cf02f7836d1"
-
-2018-11-20T06:27:29.217Z - warn: The Asset used by component "cc.Button" in scene "LoadingScene.fire" is missing. Detailed information:
-Node path: "Canvas/btn_myinfo"
-Asset url: "db://assets/Scene/LoadingScene.fire"
-Missing uuid: "1b3b7e62-cd78-43ca-b125-2cf02f7836d1"
-
-2018-11-20T06:27:29.218Z - warn: The Asset used by component "cc.Button" in scene "LoadingScene.fire" is missing. Detailed information:
-Node path: "Canvas/btn_myinfo"
-Asset url: "db://assets/Scene/LoadingScene.fire"
-Missing uuid: "1b3b7e62-cd78-43ca-b125-2cf02f7836d1"
-
-2018-11-20T06:27:29.219Z - warn: The Asset used by component "cc.Sprite" in scene "LoadingScene.fire" is missing. Detailed information:
-Node path: "Canvas/btn_start"
-Asset url: "db://assets/Scene/LoadingScene.fire"
-Missing uuid: "b442d708-811b-4bca-9b0d-11b3236d4f8d"
-
-2018-11-20T06:30:36.419Z - warn: The Asset used by component "cc.Sprite" in scene "DepositScene.fire" is missing. Detailed information:
-Node path: "Canvas/tixian"
-Asset url: "db://assets/Scene/DepositScene.fire"
-Missing uuid: "d6a1d8c0-26dc-4db5-8535-44fcf26ac43a"
-
-2018-11-20T06:30:36.421Z - warn: The Asset used by component "cc.Sprite" in scene "DepositScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_up/btn_desposit_record"
-Asset url: "db://assets/Scene/DepositScene.fire"
-Missing uuid: "a6bbb72b-dd34-4a91-998d-2471aa150ccb"
-
-2018-11-20T06:30:36.422Z - warn: The Asset used by component "cc.Button" in scene "DepositScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_up/btn_desposit_record"
-Asset url: "db://assets/Scene/DepositScene.fire"
-Missing uuid: "a6bbb72b-dd34-4a91-998d-2471aa150ccb"
-
-2018-11-20T06:30:36.423Z - warn: The Asset used by component "cc.Sprite" in scene "DepositScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_up/editbox/BACKGROUND_SPRITE"
-Asset url: "db://assets/Scene/DepositScene.fire"
-Missing uuid: "bd94f34d-df41-4be8-8702-92211c1141a9"
-
-2018-11-20T06:30:36.427Z - warn: The Asset used by component "cc.EditBox" in scene "DepositScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_up/editbox"
-Asset url: "db://assets/Scene/DepositScene.fire"
-Missing uuid: "bd94f34d-df41-4be8-8702-92211c1141a9"
-
-2018-11-20T06:30:36.427Z - warn: The Asset used by component "cc.Sprite" in scene "DepositScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_bottom/btn_request_desposit"
-Asset url: "db://assets/Scene/DepositScene.fire"
-Missing uuid: "6324d736-5254-4a6b-9c7b-9dd0854519bc"
-
-2018-11-20T06:30:36.428Z - warn: The Asset used by component "cc.Button" in scene "DepositScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_bottom/btn_request_desposit"
-Asset url: "db://assets/Scene/DepositScene.fire"
-Missing uuid: "6324d736-5254-4a6b-9c7b-9dd0854519bc"
-
-2018-11-20T06:30:36.428Z - warn: The Asset used by component "cc.Sprite" in scene "DepositScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_bottom/btn_continue"
-Asset url: "db://assets/Scene/DepositScene.fire"
-Missing uuid: "86bc62ff-cfb9-447f-ae4b-73eb77157e39"
-
-2018-11-20T06:30:36.428Z - warn: The Asset used by component "cc.Button" in scene "DepositScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_bottom/btn_continue"
-Asset url: "db://assets/Scene/DepositScene.fire"
-Missing uuid: "86bc62ff-cfb9-447f-ae4b-73eb77157e39"
-
-2018-11-20T06:32:05.769Z - warn: The Asset used by component "cc.Sprite" in scene "GameScene.fire" is missing. Detailed information:
-Node path: "Canvas/biaoti"
-Asset url: "db://assets/Scene/GameScene.fire"
-Missing uuid: "4a7d8fb9-bafc-4c77-afc7-932b33b2d946"
-
-2018-11-20T06:32:05.771Z - warn: The Asset used by component "cc.Sprite" in scene "GameScene.fire" is missing. Detailed information:
-Node path: "Canvas/btn_share"
-Asset url: "db://assets/Scene/GameScene.fire"
-Missing uuid: "19d14bbb-f542-4dad-a7ec-bb5da5c56f76"
-
-2018-11-20T06:32:05.772Z - warn: The Asset used by component "cc.Sprite" in scene "GameScene.fire" is missing. Detailed information:
-Node path: "Canvas/progressBar/bar"
-Asset url: "db://assets/Scene/GameScene.fire"
-Missing uuid: "b593e429-91dd-42ec-9a69-f7d76da6584d"
-
-2018-11-20T06:32:05.772Z - warn: The Asset used by component "cc.Sprite" in scene "GameScene.fire" is missing. Detailed information:
-Node path: "Canvas/progressBar"
-Asset url: "db://assets/Scene/GameScene.fire"
-Missing uuid: "68c68db6-df36-45ff-a285-370e8a0a58aa"
-
-2018-11-20T06:33:13.774Z - warn: The Asset used by component "cc.Sprite" in scene "MyinfoScene.fire" is missing. Detailed information:
-Node path: "Canvas/image_title"
-Asset url: "db://assets/Scene/MyinfoScene.fire"
-Missing uuid: "789d7c9f-457a-4c8c-9c2f-f809172d5ca0"
-
-2018-11-20T06:33:13.775Z - warn: The Asset used by component "cc.Sprite" in scene "MyinfoScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_up/mutiao"
-Asset url: "db://assets/Scene/MyinfoScene.fire"
-Missing uuid: "b5270591-31f8-41f9-b38e-f0f5d3fd9f6a"
-
-2018-11-20T06:33:13.777Z - warn: The Asset used by component "cc.Sprite" in scene "MyinfoScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_up/panel_up_1/btn_addtimes"
-Asset url: "db://assets/Scene/MyinfoScene.fire"
-Missing uuid: "e8aead86-a161-457b-82fc-14e914993784"
-
-2018-11-20T06:33:13.777Z - warn: The Asset used by component "cc.Button" in scene "MyinfoScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_up/panel_up_1/btn_addtimes"
-Asset url: "db://assets/Scene/MyinfoScene.fire"
-Missing uuid: "e8aead86-a161-457b-82fc-14e914993784"
-
-2018-11-20T06:33:13.778Z - warn: The Asset used by component "cc.Sprite" in scene "MyinfoScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_up/panel_up_1"
-Asset url: "db://assets/Scene/MyinfoScene.fire"
-Missing uuid: "f20edbfa-ffe7-4a85-b500-4ed04a6e34c1"
-
-2018-11-20T06:33:13.778Z - warn: The Asset used by component "cc.Sprite" in scene "MyinfoScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_up/panel_up_2/btn_tixian"
-Asset url: "db://assets/Scene/MyinfoScene.fire"
-Missing uuid: "82aef041-5d36-4f6e-bf63-44aef4e02980"
-
-2018-11-20T06:33:13.778Z - warn: The Asset used by component "cc.Button" in scene "MyinfoScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_up/panel_up_2/btn_tixian"
-Asset url: "db://assets/Scene/MyinfoScene.fire"
-Missing uuid: "82aef041-5d36-4f6e-bf63-44aef4e02980"
-
-2018-11-20T06:33:13.779Z - warn: The Asset used by component "cc.Sprite" in scene "MyinfoScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_up/panel_up_2"
-Asset url: "db://assets/Scene/MyinfoScene.fire"
-Missing uuid: "f20edbfa-ffe7-4a85-b500-4ed04a6e34c1"
-
-2018-11-20T06:33:13.779Z - warn: The Asset used by component "cc.Sprite" in scene "MyinfoScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_up/panel_up_3/btn_kefu"
-Asset url: "db://assets/Scene/MyinfoScene.fire"
-Missing uuid: "8faca03a-8d88-4778-9d39-880f4f3038c6"
-
-2018-11-20T06:33:13.780Z - warn: The Asset used by component "cc.Button" in scene "MyinfoScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_up/panel_up_3/btn_kefu"
-Asset url: "db://assets/Scene/MyinfoScene.fire"
-Missing uuid: "8faca03a-8d88-4778-9d39-880f4f3038c6"
-
-2018-11-20T06:33:13.780Z - warn: The Asset used by component "cc.Sprite" in scene "MyinfoScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_up/panel_up_3"
-Asset url: "db://assets/Scene/MyinfoScene.fire"
-Missing uuid: "f20edbfa-ffe7-4a85-b500-4ed04a6e34c1"
-
-2018-11-20T06:33:13.781Z - warn: The Asset used by component "cc.Sprite" in scene "MyinfoScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_bottom/huojiangjilu"
-Asset url: "db://assets/Scene/MyinfoScene.fire"
-Missing uuid: "5a2cf8d2-990b-40d5-a61a-94b203ba6668"
-
-2018-11-20T06:33:13.782Z - warn: The Asset used by component "cc.Sprite" in scene "MyinfoScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_bottom/btn_waitsave"
-Asset url: "db://assets/Scene/MyinfoScene.fire"
-Missing uuid: "a36d1583-b4ca-419e-b7b6-2dfb343d9916"
-
-2018-11-20T06:33:13.782Z - warn: The Asset used by component "cc.Button" in scene "MyinfoScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_bottom/btn_waitsave"
-Asset url: "db://assets/Scene/MyinfoScene.fire"
-Missing uuid: "a36d1583-b4ca-419e-b7b6-2dfb343d9916"
-
-2018-11-20T06:33:13.783Z - warn: The Asset used by component "cc.Sprite" in scene "MyinfoScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_bottom/btn_saved"
-Asset url: "db://assets/Scene/MyinfoScene.fire"
-Missing uuid: "43a96341-7465-4f91-9dab-ee9fe5142485"
-
-2018-11-20T06:33:13.784Z - warn: The Asset used by component "cc.Button" in scene "MyinfoScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_bottom/btn_saved"
-Asset url: "db://assets/Scene/MyinfoScene.fire"
-Missing uuid: "43a96341-7465-4f91-9dab-ee9fe5142485"
-
-2018-11-20T06:33:13.784Z - warn: The Asset used by component "cc.Sprite" in scene "MyinfoScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_bottom/panel_tab1/jiangjin"
-Asset url: "db://assets/Scene/MyinfoScene.fire"
-Missing uuid: "58cf6129-279e-44a8-bb40-597305d5ecab"
-
-2018-11-20T06:33:13.784Z - warn: The Asset used by component "cc.Sprite" in scene "MyinfoScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_bottom/panel_tab1/ren"
-Asset url: "db://assets/Scene/MyinfoScene.fire"
-Missing uuid: "b27cd810-e429-4fe3-ad6e-9fb48f97ed29"
-
-2018-11-20T06:33:13.785Z - warn: The Asset used by component "cc.Sprite" in scene "MyinfoScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_bottom/panel_tab1"
-Asset url: "db://assets/Scene/MyinfoScene.fire"
-Missing uuid: "19e828ce-3caa-4996-9e66-b31e212d7a0f"
-
-2018-11-20T06:36:25.250Z - warn: The Asset used by component "cc.Sprite" in scene "RankScene.fire" is missing. Detailed information:
-Node path: "Canvas/paihangbang"
-Asset url: "db://assets/Scene/RankScene.fire"
-Missing uuid: "1e638228-9ff7-4d13-a28b-f19881b49b19"
-
-2018-11-20T06:36:25.252Z - warn: The Asset used by component "cc.Sprite" in scene "RankScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_myself"
-Asset url: "db://assets/Scene/RankScene.fire"
-Missing uuid: "99b7275b-5802-4a75-b599-d07202ec863c"
-
-2018-11-20T06:36:48.691Z - warn: The Asset used by component "cc.Sprite" in scene "RedpackScene.fire" is missing. Detailed information:
-Node path: "Canvas/zhandoujiesuan"
-Asset url: "db://assets/Scene/RedpackScene.fire"
-Missing uuid: "b1b5a0a3-92a8-475f-b1ac-c0e979571c27"
-
-2018-11-20T06:36:48.691Z - warn: The Asset used by component "cc.Sprite" in scene "RedpackScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_chaikai/hongbao_da"
-Asset url: "db://assets/Scene/RedpackScene.fire"
-Missing uuid: "a8044039-f22c-4f6d-b343-6f3c31ad7b0b"
-
-2018-11-20T06:36:48.692Z - warn: The Asset used by component "cc.Sprite" in scene "RedpackScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_chaikai/btn_cuqian"
-Asset url: "db://assets/Scene/RedpackScene.fire"
-Missing uuid: "e62bc6e1-7eed-44fd-ad82-13f78e7c7b87"
-
-2018-11-20T06:36:48.692Z - warn: The Asset used by component "cc.Sprite" in scene "RedpackScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_chaikai/btn_chakanjiangli"
-Asset url: "db://assets/Scene/RedpackScene.fire"
-Missing uuid: "4051e1bc-597a-4351-9b38-1c95c8ec9aac"
-
-2018-11-20T06:38:23.978Z - warn: The Asset used by component "cc.Sprite" in scene "SettleScene.fire" is missing. Detailed information:
-Node path: "Canvas/zhandoujiesuan"
-Asset url: "db://assets/Scene/SettleScene.fire"
-Missing uuid: "b1b5a0a3-92a8-475f-b1ac-c0e979571c27"
-
-2018-11-20T06:38:23.981Z - warn: The Asset used by component "cc.Sprite" in scene "SettleScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_defen/caidai_2"
-Asset url: "db://assets/Scene/SettleScene.fire"
-Missing uuid: "3fe2d706-d0d9-435b-8276-c539a538f441"
-
-2018-11-20T06:38:23.982Z - warn: The Asset used by component "cc.Sprite" in scene "SettleScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_defen/caidai_1"
-Asset url: "db://assets/Scene/SettleScene.fire"
-Missing uuid: "9c8907e1-3296-4af1-8ff2-b41f341ace88"
-
-2018-11-20T06:38:23.983Z - warn: The Asset used by component "cc.Sprite" in scene "SettleScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_defen/btn_share"
-Asset url: "db://assets/Scene/SettleScene.fire"
-Missing uuid: "e89eaeb6-7d4c-4a7c-baa5-5c6b318d8a2a"
-
-2018-11-20T06:38:23.983Z - warn: The Asset used by component "cc.Button" in scene "SettleScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_defen/btn_share"
-Asset url: "db://assets/Scene/SettleScene.fire"
-Missing uuid: "e89eaeb6-7d4c-4a7c-baa5-5c6b318d8a2a"
-
-2018-11-20T06:38:23.984Z - warn: The Asset used by component "cc.Sprite" in scene "SettleScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_defen/btn_chai"
-Asset url: "db://assets/Scene/SettleScene.fire"
-Missing uuid: "da213bc6-54b4-4d5e-9c57-d5ed2169a82d"
-
-2018-11-20T06:38:23.985Z - warn: The Asset used by component "cc.Button" in scene "SettleScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_defen/btn_chai"
-Asset url: "db://assets/Scene/SettleScene.fire"
-Missing uuid: "da213bc6-54b4-4d5e-9c57-d5ed2169a82d"
-
-2018-11-20T06:38:23.988Z - warn: The Asset used by component "cc.Sprite" in scene "SettleScene.fire" is missing. Detailed information:
-Node path: "Canvas/panel_defen/image_icon"
-Asset url: "db://assets/Scene/SettleScene.fire"
-Missing uuid: "c8b6e1e1-ce97-4357-809c-3415dcd15b50"
-
-2018-11-20T06:50:39.164Z - warn: The Asset used by component "cc.Sprite" in prefab "tips.prefab" is missing. Detailed information:
-Node path: "tips/bg"
-Asset url: "db://assets/resources/prefabs/tips.prefab"
-Missing uuid: "410fb916-8721-4663-bab8-34397391ace7"
-
-2018-11-20T07:01:52.964Z - error: TypeError: Cannot read property 'dirty' of undefined
-    at Object.Editor.Ipc.sendToPanel [as callback] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/builder/panel/builder.js:1:6187)
-    at T.setTimeout (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:594)
-2018-11-20T07:02:02.510Z - normal: Start building with options : {
+2018-11-21T11:20:09.750Z - normal: Load ~/.CocosCreator/settings.json
+2018-11-21T11:20:09.756Z - normal: checking language setting...
+2018-11-21T11:20:09.757Z - normal: Language: zh
+2018-11-21T11:20:10.918Z - success: protocol editor-framework registered
+2018-11-21T11:20:10.918Z - success: protocol app registered
+2018-11-21T11:20:10.919Z - success: protocol theme registered
+2018-11-21T11:20:10.919Z - success: protocol packages registered
+2018-11-21T11:20:10.919Z - success: protocol unpack registerred
+2018-11-21T11:20:10.919Z - success: protocol disable-commonjs registerred
+2018-11-21T11:20:11.121Z - normal: connected!
+2018-11-21T11:20:11.126Z - normal: Check project /Users/linzhang/youyou/chengyuxiaoxiao
+2018-11-21T11:20:11.131Z - normal: Initializing project /Users/linzhang/youyou/chengyuxiaoxiao
+2018-11-21T11:20:11.138Z - normal: Initializing Cocos2d
+2018-11-21T11:20:12.528Z - normal: Initializing Asset Database
+2018-11-21T11:20:12.625Z - success: protocol uuid registerred
+2018-11-21T11:20:12.626Z - success: protocol db registerred
+2018-11-21T11:20:12.626Z - success: protocol thumbnail registerred
+2018-11-21T11:20:12.627Z - normal: Loading editor/builtin packages
+2018-11-21T11:20:12.967Z - success: assets loaded
+2018-11-21T11:20:12.980Z - success: builder loaded
+2018-11-21T11:20:12.985Z - success: cocos-analytics loaded
+2018-11-21T11:20:12.999Z - success: console loaded
+2018-11-21T11:20:13.077Z - success: fb-instant-games loaded
+2018-11-21T11:20:13.081Z - success: google-instant-games loaded
+2018-11-21T11:20:13.094Z - success: hierarchy loaded
+2018-11-21T11:20:13.102Z - success: inspector loaded
+2018-11-21T11:20:13.105Z - success: keystore loaded
+2018-11-21T11:20:13.120Z - success: node-library loaded
+2018-11-21T11:20:13.124Z - success: package-asset loaded
+2018-11-21T11:20:13.131Z - success: preferences loaded
+2018-11-21T11:20:13.140Z - success: project-exporter loaded
+2018-11-21T11:20:13.178Z - success: project-importer loaded
+2018-11-21T11:20:13.186Z - success: project-settings loaded
+2018-11-21T11:20:13.199Z - success: ui-kit loaded
+2018-11-21T11:20:13.207Z - success: scene loaded
+2018-11-21T11:20:13.212Z - success: sprite-editor loaded
+2018-11-21T11:20:13.224Z - success: store loaded
+2018-11-21T11:20:13.237Z - success: timeline loaded
+2018-11-21T11:20:13.237Z - normal: Loading builtin packages
+2018-11-21T11:20:13.250Z - success: asset-db-debugger loaded
+2018-11-21T11:20:13.255Z - success: color-picker loaded
+2018-11-21T11:20:13.507Z - success: google-play-instant loaded
+2018-11-21T11:20:13.511Z - success: jsb-adapter loaded
+2018-11-21T11:20:13.525Z - success: oppo-runtime loaded
+2018-11-21T11:20:13.540Z - success: package-manager loaded
+2018-11-21T11:20:13.904Z - success: qqplay-adapter loaded
+2018-11-21T11:20:13.916Z - success: sdkbox loaded
+2018-11-21T11:20:13.929Z - success: tester loaded
+2018-11-21T11:20:13.940Z - success: ui-grid loaded
+2018-11-21T11:20:13.949Z - success: ui-kit-preview-extra loaded
+2018-11-21T11:20:13.958Z - success: ui-kit-preview loaded
+2018-11-21T11:20:13.968Z - success: ui-tree loaded
+2018-11-21T11:20:13.975Z - success: vivo-runtime loaded
+2018-11-21T11:20:13.977Z - success: weapp-adapter loaded
+2018-11-21T11:20:16.637Z - normal: Loading packages
+2018-11-21T11:20:16.655Z - normal: Watching packages
+2018-11-21T11:20:16.957Z - normal: Run Application
+2018-11-21T11:20:18.609Z - success: preview server running at http://localhost:7456
+2018-11-21T11:21:30.684Z - normal: Start building with options : {
   "actualPlatform": "wechatgame",
   "android-instant": {
     "REMOTE_SERVER_ROOT": "",
@@ -609,7 +107,7 @@ Missing uuid: "410fb916-8721-4663-bab8-34397391ace7"
     "4dcd14cd-14a8-4a6e-ae9e-0a4bf6dfa061",
     "42b202ab-7491-4680-9d35-c49ea4ddedf1",
     "a6ed62ac-6d2c-4666-896d-59c4c311faa8",
-    "29ce233f-ccb7-41be-8610-3aad7b9494fb",
+    "fdeae0b8-01e1-4317-a7c0-8e19bb37d422",
     "b83cf815-05dc-4e09-bc8f-47b6e5608cd4",
     "8e868381-a7b9-47fd-9fe3-354ba31c395d"
   ],
@@ -633,32 +131,32 @@ Missing uuid: "410fb916-8721-4663-bab8-34397391ace7"
   "projectName": "chengyuxiaoxiao",
   "debugBuildWorker": false
 }
-2018-11-20T07:02:02.515Z - normal: Building /Users/linzhang/youyou/chengyuxiaoxiao
-2018-11-20T07:02:02.516Z - normal: Destination /Users/linzhang/wegame/wechatgame
-2018-11-20T07:02:03.145Z - normal: Delete /Users/linzhang/wegame/wechatgame/**/*
-2018-11-20T07:02:10.960Z - normal: Start building assets
-2018-11-20T07:02:10.962Z - normal: Start spawn build-worker
-2018-11-20T07:02:12.489Z - normal: Finish spawn build-worker
-2018-11-20T07:02:12.489Z - normal: Start init build-worker
-2018-11-20T07:02:16.931Z - normal: Finish init build-worker
-2018-11-20T07:02:16.932Z - normal: Start build-assets in worker
-2018-11-20T07:02:18.170Z - normal: Finish build-assets in worker
-2018-11-20T07:02:18.179Z - normal: Finish building assets
-2018-11-20T07:02:18.213Z - normal: Start building plugin scripts
-2018-11-20T07:02:18.305Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
-2018-11-20T07:02:20.020Z - normal: Built to "/Users/linzhang/wegame/wechatgame" successfully
-2018-11-20T07:02:35.904Z - normal: Initializing...
+2018-11-21T11:21:30.690Z - normal: Building /Users/linzhang/youyou/chengyuxiaoxiao
+2018-11-21T11:21:30.690Z - normal: Destination /Users/linzhang/wegame/wechatgame
+2018-11-21T11:21:31.294Z - normal: Delete /Users/linzhang/wegame/wechatgame/**/*
+2018-11-21T11:21:36.879Z - normal: Start building assets
+2018-11-21T11:21:36.879Z - normal: Start spawn build-worker
+2018-11-21T11:21:37.807Z - normal: Finish spawn build-worker
+2018-11-21T11:21:37.808Z - normal: Start init build-worker
+2018-11-21T11:21:41.140Z - normal: Finish init build-worker
+2018-11-21T11:21:41.140Z - normal: Start build-assets in worker
+2018-11-21T11:21:42.280Z - normal: Finish build-assets in worker
+2018-11-21T11:21:42.284Z - normal: Finish building assets
+2018-11-21T11:21:42.307Z - normal: Start building plugin scripts
+2018-11-21T11:21:42.351Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
+2018-11-21T11:21:44.476Z - warn: [Cocos Analystic] Can not find index.html
+2018-11-21T11:21:44.484Z - normal: Built to "/Users/linzhang/wegame/wechatgame" successfully
+2018-11-21T11:21:50.690Z - normal: Initializing...
 
-2018-11-20T07:02:35.914Z - normal: idePortFile: /Users/linzhang/Library/Application Support/微信web开发者工具/Default/.ide
+2018-11-21T11:21:50.702Z - normal: idePortFile: /Users/linzhang/Library/Application Support/微信web开发者工具/Default/.ide
 
-2018-11-20T07:02:35.939Z - normal: IDE server has started, listening on http://127.0.0.1:20369
+2018-11-21T11:21:50.742Z - normal: IDE server has started, listening on http://127.0.0.1:39796
 
-2018-11-20T07:02:35.940Z - normal: initialization finished
+2018-11-21T11:21:50.743Z - normal: initialization finished
 
-2018-11-20T07:02:36.248Z - normal: open IDE success
+2018-11-21T11:21:51.029Z - normal: open IDE success
 
-2018-11-20T07:06:34.808Z - normal: Start building with options : {
->>>>>>> 74b34aee3d5ce1b6345a6734954ca8e67d6ec7da
+2018-11-21T11:55:51.233Z - normal: Start building with options : {
   "actualPlatform": "wechatgame",
   "android-instant": {
     "REMOTE_SERVER_ROOT": "",
@@ -709,7 +207,7 @@ Missing uuid: "410fb916-8721-4663-bab8-34397391ace7"
     "4dcd14cd-14a8-4a6e-ae9e-0a4bf6dfa061",
     "42b202ab-7491-4680-9d35-c49ea4ddedf1",
     "a6ed62ac-6d2c-4666-896d-59c4c311faa8",
-    "29ce233f-ccb7-41be-8610-3aad7b9494fb",
+    "fdeae0b8-01e1-4317-a7c0-8e19bb37d422",
     "b83cf815-05dc-4e09-bc8f-47b6e5608cd4",
     "8e868381-a7b9-47fd-9fe3-354ba31c395d"
   ],
@@ -733,578 +231,28 @@ Missing uuid: "410fb916-8721-4663-bab8-34397391ace7"
   "projectName": "chengyuxiaoxiao",
   "debugBuildWorker": false
 }
-2018-11-20T07:06:34.813Z - normal: Building /Users/linzhang/youyou/chengyuxiaoxiao
-2018-11-20T07:06:34.813Z - normal: Destination /Users/linzhang/wegame/wechatgame
-2018-11-20T07:06:34.816Z - normal: Delete /Users/linzhang/wegame/wechatgame/**/*
-2018-11-20T07:06:41.500Z - normal: Start building assets
-2018-11-20T07:06:41.500Z - normal: Start spawn build-worker
-2018-11-20T07:06:42.287Z - normal: Finish spawn build-worker
-2018-11-20T07:06:42.288Z - normal: Start init build-worker
-2018-11-20T07:06:46.389Z - normal: Finish init build-worker
-2018-11-20T07:06:46.390Z - normal: Start build-assets in worker
-2018-11-20T07:06:47.745Z - normal: Finish build-assets in worker
-2018-11-20T07:06:47.750Z - normal: Finish building assets
-2018-11-20T07:06:47.781Z - normal: Start building plugin scripts
-2018-11-20T07:06:47.821Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
-2018-11-20T07:06:50.307Z - normal: Built to "/Users/linzhang/wegame/wechatgame" successfully
-2018-11-20T07:10:26.343Z - normal: Start building with options : {
-  "actualPlatform": "wechatgame",
-  "android-instant": {
-    "REMOTE_SERVER_ROOT": "",
-    "host": "",
-    "pathPattern": "",
-    "recordPath": "",
-    "scheme": "https",
-    "skipRecord": false
-  },
-  "apiLevel": "",
-  "appABIs": [],
-  "appKey": "",
-  "appSecret": "",
-  "buildPath": "/Users/linzhang/wegame",
-  "debug": false,
-  "dest": "/Users/linzhang/wegame/wechatgame",
-  "embedWebDebugger": false,
-  "encryptJs": true,
-  "excludeScenes": [],
-  "excludedModules": [],
-  "fb-instant-games": {},
-  "includeAnySDK": false,
-  "includeSDKBox": false,
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": false,
-  "jailbreakPlatform": false,
-  "md5Cache": false,
-  "mergeStartScene": false,
-  "oauthLoginServer": "",
-  "optimizeHotUpdate": true,
-  "orientation": {
-    "landscapeLeft": true,
-    "landscapeRight": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "packageName": "org.cocos2d.helloworld",
-  "platform": "wechatgame",
-  "previewHeight": "720",
-  "previewWidth": "1280",
-  "privateKey": "",
-  "qqplay": {
-    "REMOTE_SERVER_ROOT": "",
-    "orientation": "portrait"
-  },
-  "scenes": [
-    "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38",
-    "4dcd14cd-14a8-4a6e-ae9e-0a4bf6dfa061",
-    "42b202ab-7491-4680-9d35-c49ea4ddedf1",
-    "a6ed62ac-6d2c-4666-896d-59c4c311faa8",
-    "29ce233f-ccb7-41be-8610-3aad7b9494fb",
-    "b83cf815-05dc-4e09-bc8f-47b6e5608cd4",
-    "8e868381-a7b9-47fd-9fe3-354ba31c395d"
-  ],
-  "sourceMaps": false,
-  "startScene": "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38",
-  "template": "link",
-  "title": "chengyuxiaoxiao",
-  "useDebugKeystore": true,
-  "vsVersion": "auto",
-  "webOrientation": "auto",
-  "wechatgame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "wx100b0d9ac9176cb5",
-    "isSubdomain": false,
-    "orientation": "portrait",
-    "subContext": ""
-  },
-  "xxteaKey": "d26bfbe9-e497-4d",
-  "zipCompressJs": true,
-  "project": "/Users/linzhang/youyou/chengyuxiaoxiao",
-  "projectName": "chengyuxiaoxiao",
-  "debugBuildWorker": false
-}
-2018-11-20T07:10:26.348Z - normal: Building /Users/linzhang/youyou/chengyuxiaoxiao
-2018-11-20T07:10:26.348Z - normal: Destination /Users/linzhang/wegame/wechatgame
-2018-11-20T07:10:26.349Z - normal: Delete /Users/linzhang/wegame/wechatgame/**/*
-2018-11-20T07:10:31.369Z - normal: Start building assets
-2018-11-20T07:10:31.370Z - normal: Start spawn build-worker
-2018-11-20T07:10:32.303Z - normal: Finish spawn build-worker
-2018-11-20T07:10:32.303Z - normal: Start init build-worker
-2018-11-20T07:10:36.276Z - normal: Finish init build-worker
-2018-11-20T07:10:36.277Z - normal: Start build-assets in worker
-2018-11-20T07:10:37.427Z - normal: Finish build-assets in worker
-2018-11-20T07:10:37.431Z - normal: Finish building assets
-2018-11-20T07:10:37.450Z - normal: Start building plugin scripts
-2018-11-20T07:10:37.490Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
-2018-11-20T07:10:38.816Z - normal: Built to "/Users/linzhang/wegame/wechatgame" successfully
-2018-11-20T09:17:40.950Z - failed: [db-task][sync-changes] Failed to import asset /Users/linzhang/youyou/chengyuxiaoxiao/assets/resources/jsons/idiom.json, message: SyntaxError: /Users/linzhang/youyou/chengyuxiaoxiao/assets/resources/jsons/idiom.json: Unexpected token ] in JSON at position 37609
-    at JSON.parse (<anonymous>)
-    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/fire-fs/node_modules/jsonfile/index.js:36:18
-    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/graceful-fs/graceful-fs.js:90:16
-    at tryToString (fs.js:449:3)
-    at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:436:12)
-2018-11-20T10:10:56.034Z - warn: Error: Ipc will not have a callback. message: scene@renderer:38241
-2018-11-20T10:10:56.037Z - warn: Error: Ipc will not have a callback. message: scene@renderer:38242
-2018-11-20T10:10:56.100Z - error: Failed to reset layout: Error: Failed to close panel scene
-    at Object.e._unloadAll (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:2087)
-    at r.waterfall.e (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/utils/dock-utils.js:1:5916)
-    at fn (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:746:34)
-    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:1213:16
-    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:166:37
-    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:706:43
-    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:167:37
-    at Object.async.waterfall (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:710:44)
-    at Object.e.reset (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/utils/dock-utils.js:1:5899)
-    at EventEmitter.t.ipcRenderer.on (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/utils/dock-utils.js:1:8429)
-    at e.reset.e (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/utils/dock-utils.js:1:8453)
-    at r.waterfall.e (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/utils/dock-utils.js:1:7375)
-    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:52:16
-    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:696:30
-    at /Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:167:37
-    at Immediate.<anonymous> (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:1206:34)
-    at runCallback (timers.js:672:20)
-    at tryOnImmediate (timers.js:645:5)
-    at processImmediate [as _immediateCallback] (timers.js:617:5)
-2018-11-20T10:10:56.173Z - error: Failed to load meta a38db66f-c912-4a7d-90cf-ee8d9e294e75: Failed to query meta info by a38db66f-c912-4a7d-90cf-ee8d9e294e75
-    at asset.e._loadMeta (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/inspector/panel/index.js:1:6371)
-    at Object.Editor.assetdb.queryMetaInfoByUuid [as callback] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/inspector/panel/index.js:1:9021)
-    at Object.e._closeAllSessions (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ipc.js:1:2534)
-    at EventEmitter.t.ipcRenderer.on (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/utils/dock-utils.js:1:8407)
-    at emitTwo (events.js:111:20)
-    at EventEmitter.emit (events.js:194:7)
-2018-11-20T10:10:56.197Z - warn: Failed to send ipc message scene:query-animation-list to panel scene, panel not found
-2018-11-20T10:13:28.537Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:39206
-2018-11-20T10:13:28.540Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:39209
-2018-11-20T10:13:28.540Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:39210
-2018-11-20T10:13:28.541Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:39211
-2018-11-20T10:13:56.929Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:39515
-2018-11-20T10:19:26.635Z - normal: Introduced global variable while editing: abc
-2018-11-20T10:28:25.512Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:28:28.648Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:28:29.333Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:28:42.176Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:28:47.722Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:28:49.736Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:28:52.927Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:28:53.453Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:28:54.605Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:28:57.610Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:29:09.202Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:29:10.953Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:29:11.939Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:29:13.442Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:30:55.445Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:31:02.881Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:31:04.479Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:31:05.860Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:31:11.933Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:31:12.479Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:31:14.522Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:31:15.844Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:31:16.410Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:31:19.485Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:31:20.463Z - warn: ProgressBar FILLED mode only works when barSprite's Type is FILLED!
-2018-11-20T10:42:52.800Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:56552
-2018-11-20T10:43:08.468Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:56610
-2018-11-20T10:43:08.470Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:56614
-2018-11-20T10:45:21.025Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:58433
-2018-11-20T10:45:32.829Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:58546
-2018-11-20T11:33:40.698Z - normal: Start building with options : {
-  "actualPlatform": "wechatgame",
-  "android-instant": {
-    "REMOTE_SERVER_ROOT": "",
-    "host": "",
-    "pathPattern": "",
-    "recordPath": "",
-    "scheme": "https",
-    "skipRecord": false
-  },
-  "apiLevel": "",
-  "appABIs": [],
-  "appKey": "",
-  "appSecret": "",
-  "buildPath": "/Users/linzhang/wegame",
-  "debug": false,
-  "dest": "/Users/linzhang/wegame/wechatgame",
-  "embedWebDebugger": false,
-  "encryptJs": true,
-  "excludeScenes": [],
-  "excludedModules": [],
-  "fb-instant-games": {},
-  "includeAnySDK": false,
-  "includeSDKBox": false,
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": false,
-  "jailbreakPlatform": false,
-  "md5Cache": false,
-  "mergeStartScene": false,
-  "oauthLoginServer": "",
-  "optimizeHotUpdate": true,
-  "orientation": {
-    "landscapeLeft": true,
-    "landscapeRight": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "packageName": "org.cocos2d.helloworld",
-  "platform": "wechatgame",
-  "previewHeight": "720",
-  "previewWidth": "1280",
-  "privateKey": "",
-  "qqplay": {
-    "REMOTE_SERVER_ROOT": "",
-    "orientation": "portrait"
-  },
-  "scenes": [
-    "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38",
-    "4dcd14cd-14a8-4a6e-ae9e-0a4bf6dfa061",
-    "42b202ab-7491-4680-9d35-c49ea4ddedf1",
-    "a6ed62ac-6d2c-4666-896d-59c4c311faa8",
-    "29ce233f-ccb7-41be-8610-3aad7b9494fb",
-    "b83cf815-05dc-4e09-bc8f-47b6e5608cd4",
-    "8e868381-a7b9-47fd-9fe3-354ba31c395d"
-  ],
-  "sourceMaps": false,
-  "startScene": "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38",
-  "template": "link",
-  "title": "chengyuxiaoxiao",
-  "useDebugKeystore": true,
-  "vsVersion": "auto",
-  "webOrientation": "auto",
-  "wechatgame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "wx100b0d9ac9176cb5",
-    "isSubdomain": false,
-    "orientation": "portrait",
-    "subContext": ""
-  },
-  "xxteaKey": "d26bfbe9-e497-4d",
-  "zipCompressJs": true,
-  "project": "/Users/linzhang/youyou/chengyuxiaoxiao",
-  "projectName": "chengyuxiaoxiao",
-  "debugBuildWorker": false
-}
-2018-11-20T11:33:40.701Z - normal: Building /Users/linzhang/youyou/chengyuxiaoxiao
-2018-11-20T11:33:40.702Z - normal: Destination /Users/linzhang/wegame/wechatgame
-2018-11-20T11:33:40.706Z - normal: Delete /Users/linzhang/wegame/wechatgame/**/*
-2018-11-20T11:33:46.650Z - normal: Start building assets
-2018-11-20T11:33:46.651Z - normal: Start spawn build-worker
-2018-11-20T11:33:47.474Z - normal: Finish spawn build-worker
-2018-11-20T11:33:47.474Z - normal: Start init build-worker
-2018-11-20T11:33:52.149Z - normal: Finish init build-worker
-2018-11-20T11:33:52.149Z - normal: Start build-assets in worker
-2018-11-20T11:33:53.354Z - normal: Finish build-assets in worker
-2018-11-20T11:33:53.359Z - normal: Finish building assets
-2018-11-20T11:33:53.387Z - normal: Start building plugin scripts
-2018-11-20T11:33:53.427Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
-2018-11-20T11:33:54.665Z - normal: Built to "/Users/linzhang/wegame/wechatgame" successfully
-2018-11-20T11:33:56.947Z - normal: Initializing...
+2018-11-21T11:55:51.237Z - normal: Building /Users/linzhang/youyou/chengyuxiaoxiao
+2018-11-21T11:55:51.237Z - normal: Destination /Users/linzhang/wegame/wechatgame
+2018-11-21T11:55:51.239Z - normal: Delete /Users/linzhang/wegame/wechatgame/**/*
+2018-11-21T11:55:56.152Z - normal: Start building assets
+2018-11-21T11:55:56.153Z - normal: Start spawn build-worker
+2018-11-21T11:55:57.199Z - normal: Finish spawn build-worker
+2018-11-21T11:55:57.199Z - normal: Start init build-worker
+2018-11-21T11:56:01.165Z - normal: Finish init build-worker
+2018-11-21T11:56:01.167Z - normal: Start build-assets in worker
+2018-11-21T11:56:02.642Z - normal: Finish build-assets in worker
+2018-11-21T11:56:02.649Z - normal: Finish building assets
+2018-11-21T11:56:02.689Z - normal: Start building plugin scripts
+2018-11-21T11:56:02.731Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
+2018-11-21T11:56:04.648Z - warn: [Cocos Analystic] Can not find index.html
+2018-11-21T11:56:04.658Z - normal: Built to "/Users/linzhang/wegame/wechatgame" successfully
+2018-11-21T11:56:10.487Z - normal: Initializing...
 
-2018-11-20T11:33:56.954Z - normal: idePortFile: /Users/linzhang/Library/Application Support/微信web开发者工具/Default/.ide
+2018-11-21T11:56:10.494Z - normal: idePortFile: /Users/linzhang/Library/Application Support/微信web开发者工具/Default/.ide
 
-2018-11-20T11:33:56.978Z - normal: IDE server has started, listening on http://127.0.0.1:20369
+2018-11-21T11:56:10.513Z - normal: IDE server has started, listening on http://127.0.0.1:39796
 
-2018-11-20T11:33:56.978Z - normal: initialization finished
+2018-11-21T11:56:10.514Z - normal: initialization finished
 
-2018-11-20T11:33:57.249Z - normal: open IDE success
+2018-11-21T11:56:10.768Z - normal: open IDE success
 
-2018-11-20T12:34:09.071Z - normal: Start building with options : {
-  "actualPlatform": "wechatgame",
-  "android-instant": {
-    "REMOTE_SERVER_ROOT": "",
-    "host": "",
-    "pathPattern": "",
-    "recordPath": "",
-    "scheme": "https",
-    "skipRecord": false
-  },
-  "apiLevel": "",
-  "appABIs": [],
-  "appKey": "",
-  "appSecret": "",
-  "buildPath": "/Users/linzhang/wegame",
-  "debug": false,
-  "dest": "/Users/linzhang/wegame/wechatgame",
-  "embedWebDebugger": false,
-  "encryptJs": true,
-  "excludeScenes": [],
-  "excludedModules": [],
-  "fb-instant-games": {},
-  "includeAnySDK": false,
-  "includeSDKBox": false,
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": false,
-  "jailbreakPlatform": false,
-  "md5Cache": false,
-  "mergeStartScene": false,
-  "oauthLoginServer": "",
-  "optimizeHotUpdate": true,
-  "orientation": {
-    "landscapeLeft": true,
-    "landscapeRight": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "packageName": "org.cocos2d.helloworld",
-  "platform": "wechatgame",
-  "previewHeight": "720",
-  "previewWidth": "1280",
-  "privateKey": "",
-  "qqplay": {
-    "REMOTE_SERVER_ROOT": "",
-    "orientation": "portrait"
-  },
-  "scenes": [
-    "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38",
-    "4dcd14cd-14a8-4a6e-ae9e-0a4bf6dfa061",
-    "42b202ab-7491-4680-9d35-c49ea4ddedf1",
-    "a6ed62ac-6d2c-4666-896d-59c4c311faa8",
-    "29ce233f-ccb7-41be-8610-3aad7b9494fb",
-    "b83cf815-05dc-4e09-bc8f-47b6e5608cd4",
-    "8e868381-a7b9-47fd-9fe3-354ba31c395d"
-  ],
-  "sourceMaps": false,
-  "startScene": "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38",
-  "template": "link",
-  "title": "chengyuxiaoxiao",
-  "useDebugKeystore": true,
-  "vsVersion": "auto",
-  "webOrientation": "auto",
-  "wechatgame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "wx100b0d9ac9176cb5",
-    "isSubdomain": false,
-    "orientation": "portrait",
-    "subContext": ""
-  },
-  "xxteaKey": "d26bfbe9-e497-4d",
-  "zipCompressJs": true,
-  "project": "/Users/linzhang/youyou/chengyuxiaoxiao",
-  "projectName": "chengyuxiaoxiao",
-  "debugBuildWorker": false
-}
-2018-11-20T12:34:09.080Z - normal: Building /Users/linzhang/youyou/chengyuxiaoxiao
-2018-11-20T12:34:09.080Z - normal: Destination /Users/linzhang/wegame/wechatgame
-2018-11-20T12:34:09.082Z - normal: Delete /Users/linzhang/wegame/wechatgame/**/*
-2018-11-20T12:34:17.288Z - normal: Start building assets
-2018-11-20T12:34:17.288Z - normal: Start spawn build-worker
-2018-11-20T12:34:18.571Z - normal: Finish spawn build-worker
-2018-11-20T12:34:18.571Z - normal: Start init build-worker
-2018-11-20T12:34:23.882Z - normal: Finish init build-worker
-2018-11-20T12:34:23.882Z - normal: Start build-assets in worker
-2018-11-20T12:34:25.318Z - normal: Finish build-assets in worker
-2018-11-20T12:34:25.324Z - normal: Finish building assets
-2018-11-20T12:34:25.355Z - normal: Start building plugin scripts
-2018-11-20T12:34:25.394Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
-2018-11-20T12:34:27.819Z - normal: Built to "/Users/linzhang/wegame/wechatgame" successfully
-2018-11-20T12:34:35.005Z - normal: Initializing...
-
-2018-11-20T12:34:35.017Z - normal: idePortFile: /Users/linzhang/Library/Application Support/微信web开发者工具/Default/.ide
-
-2018-11-20T12:34:35.039Z - normal: IDE server has started, listening on http://127.0.0.1:20369
-
-2018-11-20T12:34:35.040Z - normal: initialization finished
-
-2018-11-20T12:34:35.275Z - normal: open IDE success
-
-<<<<<<< HEAD
->>>>>>> 87e561ba88ceb43879810b897bc5c106238a6097
-=======
-2018-11-20T12:44:30.731Z - normal: Start building with options : {
-  "actualPlatform": "wechatgame",
-  "android-instant": {
-    "REMOTE_SERVER_ROOT": "",
-    "host": "",
-    "pathPattern": "",
-    "recordPath": "",
-    "scheme": "https",
-    "skipRecord": false
-  },
-  "apiLevel": "",
-  "appABIs": [],
-  "appKey": "",
-  "appSecret": "",
-  "buildPath": "/Users/linzhang/wegame",
-  "debug": false,
-  "dest": "/Users/linzhang/wegame/wechatgame",
-  "embedWebDebugger": false,
-  "encryptJs": true,
-  "excludeScenes": [],
-  "excludedModules": [],
-  "fb-instant-games": {},
-  "includeAnySDK": false,
-  "includeSDKBox": false,
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": false,
-  "jailbreakPlatform": false,
-  "md5Cache": false,
-  "mergeStartScene": false,
-  "oauthLoginServer": "",
-  "optimizeHotUpdate": true,
-  "orientation": {
-    "landscapeLeft": true,
-    "landscapeRight": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "packageName": "org.cocos2d.helloworld",
-  "platform": "wechatgame",
-  "previewHeight": "720",
-  "previewWidth": "1280",
-  "privateKey": "",
-  "qqplay": {
-    "REMOTE_SERVER_ROOT": "",
-    "orientation": "portrait"
-  },
-  "scenes": [
-    "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38",
-    "4dcd14cd-14a8-4a6e-ae9e-0a4bf6dfa061",
-    "42b202ab-7491-4680-9d35-c49ea4ddedf1",
-    "a6ed62ac-6d2c-4666-896d-59c4c311faa8",
-    "29ce233f-ccb7-41be-8610-3aad7b9494fb",
-    "b83cf815-05dc-4e09-bc8f-47b6e5608cd4",
-    "8e868381-a7b9-47fd-9fe3-354ba31c395d"
-  ],
-  "sourceMaps": false,
-  "startScene": "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38",
-  "template": "link",
-  "title": "chengyuxiaoxiao",
-  "useDebugKeystore": true,
-  "vsVersion": "auto",
-  "webOrientation": "auto",
-  "wechatgame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "wx100b0d9ac9176cb5",
-    "isSubdomain": false,
-    "orientation": "portrait",
-    "subContext": ""
-  },
-  "xxteaKey": "d26bfbe9-e497-4d",
-  "zipCompressJs": true,
-  "project": "/Users/linzhang/youyou/chengyuxiaoxiao",
-  "projectName": "chengyuxiaoxiao",
-  "debugBuildWorker": false
-}
-2018-11-20T12:44:30.737Z - normal: Building /Users/linzhang/youyou/chengyuxiaoxiao
-2018-11-20T12:44:30.738Z - normal: Destination /Users/linzhang/wegame/wechatgame
-2018-11-20T12:44:30.740Z - normal: Delete /Users/linzhang/wegame/wechatgame/**/*
-2018-11-20T12:44:37.987Z - normal: Start building assets
-2018-11-20T12:44:37.989Z - normal: Start spawn build-worker
-2018-11-20T12:44:39.152Z - normal: Finish spawn build-worker
-2018-11-20T12:44:39.153Z - normal: Start init build-worker
-2018-11-20T12:44:44.744Z - normal: Finish init build-worker
-2018-11-20T12:44:44.746Z - normal: Start build-assets in worker
-2018-11-20T12:44:45.913Z - normal: Finish build-assets in worker
-2018-11-20T12:44:45.916Z - normal: Finish building assets
-2018-11-20T12:44:45.940Z - normal: Start building plugin scripts
-2018-11-20T12:44:45.976Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
-2018-11-20T12:44:47.442Z - normal: Built to "/Users/linzhang/wegame/wechatgame" successfully
-2018-11-20T12:50:22.129Z - normal: Start building with options : {
-  "actualPlatform": "wechatgame",
-  "android-instant": {
-    "REMOTE_SERVER_ROOT": "",
-    "host": "",
-    "pathPattern": "",
-    "recordPath": "",
-    "scheme": "https",
-    "skipRecord": false
-  },
-  "apiLevel": "",
-  "appABIs": [],
-  "appKey": "",
-  "appSecret": "",
-  "buildPath": "/Users/linzhang/wegame",
-  "debug": false,
-  "dest": "/Users/linzhang/wegame/wechatgame",
-  "embedWebDebugger": false,
-  "encryptJs": true,
-  "excludeScenes": [],
-  "excludedModules": [],
-  "fb-instant-games": {},
-  "includeAnySDK": false,
-  "includeSDKBox": false,
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": false,
-  "jailbreakPlatform": false,
-  "md5Cache": false,
-  "mergeStartScene": false,
-  "oauthLoginServer": "",
-  "optimizeHotUpdate": true,
-  "orientation": {
-    "landscapeLeft": true,
-    "landscapeRight": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "packageName": "org.cocos2d.helloworld",
-  "platform": "wechatgame",
-  "previewHeight": "720",
-  "previewWidth": "1280",
-  "privateKey": "",
-  "qqplay": {
-    "REMOTE_SERVER_ROOT": "",
-    "orientation": "portrait"
-  },
-  "scenes": [
-    "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38",
-    "4dcd14cd-14a8-4a6e-ae9e-0a4bf6dfa061",
-    "42b202ab-7491-4680-9d35-c49ea4ddedf1",
-    "a6ed62ac-6d2c-4666-896d-59c4c311faa8",
-    "29ce233f-ccb7-41be-8610-3aad7b9494fb",
-    "b83cf815-05dc-4e09-bc8f-47b6e5608cd4",
-    "8e868381-a7b9-47fd-9fe3-354ba31c395d"
-  ],
-  "sourceMaps": false,
-  "startScene": "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38",
-  "template": "link",
-  "title": "chengyuxiaoxiao",
-  "useDebugKeystore": true,
-  "vsVersion": "auto",
-  "webOrientation": "auto",
-  "wechatgame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "wx100b0d9ac9176cb5",
-    "isSubdomain": false,
-    "orientation": "portrait",
-    "subContext": ""
-  },
-  "xxteaKey": "d26bfbe9-e497-4d",
-  "zipCompressJs": true,
-  "project": "/Users/linzhang/youyou/chengyuxiaoxiao",
-  "projectName": "chengyuxiaoxiao",
-  "debugBuildWorker": false
-}
-2018-11-20T12:50:22.133Z - normal: Building /Users/linzhang/youyou/chengyuxiaoxiao
-2018-11-20T12:50:22.133Z - normal: Destination /Users/linzhang/wegame/wechatgame
-2018-11-20T12:50:22.134Z - normal: Delete /Users/linzhang/wegame/wechatgame/**/*
-2018-11-20T12:50:28.907Z - normal: Start building assets
-2018-11-20T12:50:28.909Z - normal: Start spawn build-worker
-2018-11-20T12:50:30.290Z - normal: Finish spawn build-worker
-2018-11-20T12:50:30.291Z - normal: Start init build-worker
-2018-11-20T12:50:36.171Z - normal: Finish init build-worker
-2018-11-20T12:50:36.171Z - normal: Start build-assets in worker
-2018-11-20T12:50:37.711Z - normal: Finish build-assets in worker
-2018-11-20T12:50:37.715Z - normal: Finish building assets
-2018-11-20T12:50:37.742Z - normal: Start building plugin scripts
-2018-11-20T12:50:37.780Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
-2018-11-20T12:50:38.991Z - normal: Built to "/Users/linzhang/wegame/wechatgame" successfully
-2018-11-20T12:50:43.764Z - normal: Initializing...
-
-2018-11-20T12:50:43.773Z - normal: idePortFile: /Users/linzhang/Library/Application Support/微信web开发者工具/Default/.ide
-
-2018-11-20T12:50:43.802Z - normal: IDE server has started, listening on http://127.0.0.1:20369
-
-2018-11-20T12:50:43.802Z - normal: initialization finished
-
-2018-11-20T12:50:44.019Z - normal: open IDE success
-
-2018-11-20T13:25:39.177Z - error: The thing you want to instantiate must be an object
-    at Object.cc.errorID (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCDebug.js:167:16)
-    at Object.instantiate (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/instantiate.js:29:28)
-    at new TipsScript (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/game/common/script/TipsScript.js:51:25)
-    at extractActualDefaultValues (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClassDecorator.js:95:28)
-    at genProperty (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClassDecorator.js:141:81)
-    at normalized (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClassDecorator.js:204:21)
-    at __decorate (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/game/common/script/TipsScript.js:33:60)
-    at /Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/game/common/script/TipsScript.js:77:5
-    at __define (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/game/common/script/TipsScript.js:81:2)
->>>>>>> 0f6b5b986e989cfb224219c042074f39e039a21b

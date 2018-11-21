@@ -40,6 +40,7 @@ var ResourcesManager_1 = require("../../core/common/ResourcesManager");
 var Tools_1 = require("../../utils/Tools");
 var GameDataManager_1 = require("../common/data/GameDataManager");
 var GameResult_1 = require("./GameResult");
+var GameAudio_1 = require("../common/helper/GameAudio");
 var ChooseView = function (_super) {
     __extends(ChooseView, _super);
     function ChooseView() {
@@ -81,7 +82,7 @@ var ChooseView = function (_super) {
                 cc.log("已经存在");
                 return;
             }
-            this.gameScene.playClickGridEffect();
+            GameAudio_1.GameAudio.playClickGridEffect();
             var vec = gameGrid.getVec();
             var i = gameGrid.getIndex();
             var str = gameGrid.getGridString();

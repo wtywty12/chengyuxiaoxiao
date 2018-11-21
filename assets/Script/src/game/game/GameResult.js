@@ -4,6 +4,7 @@ var Tools_1 = require("../../utils/Tools");
 var GameManager_1 = require("./GameManager");
 var RecordGrid_1 = require("../common/model/RecordGrid");
 var GameDataManager_1 = require("../common/data/GameDataManager");
+var GameAudio_1 = require("../common/helper/GameAudio");
 var GameResultClass = (function () {
     function GameResultClass() {
         this.randomAry = null;
@@ -69,6 +70,7 @@ var GameResultClass = (function () {
         GameDataManager_1.GameDataManager.gameData.addscore(4);
         this.gameScene.setScore(GameDataManager_1.GameDataManager.gameData.score.toString());
         this.gameScene.setTopScore();
+        GameAudio_1.GameAudio.playJudgeRightEffect();
         this.gameScene.updateLevel();
         this.isStartResult = false;
         this.chooseView.resetTempData();
@@ -84,7 +86,7 @@ var GameResultClass = (function () {
         }
     };
     GameResultClass.prototype.onFailed = function () {
-        this.gameScene.playJudgeErrorEffect();
+        GameAudio_1.GameAudio.playJudgeErrorEffect();
         this.chooseView.restoreIdiom();
         this.clearData();
         this.isStartResult = false;

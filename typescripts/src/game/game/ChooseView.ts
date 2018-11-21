@@ -7,6 +7,7 @@ import { Tools } from "../../utils/Tools";
 import { GameDataManager } from "../common/data/GameDataManager";
 import { GameScene } from "./GameScene";
 import { GameResult } from "./GameResult";
+import { GameAudio } from "../common/helper/GameAudio";
 
 @ccclass()
 export class ChooseView extends cc.Component {
@@ -67,7 +68,7 @@ export class ChooseView extends cc.Component {
                 return;
             }
             /** 播放音效 */
-            this.gameScene.playClickGridEffect();
+            GameAudio.playClickGridEffect();
             /** vec 中心表格子索引  i 上方表格子索引 */
             let vec = gameGrid.getVec();
             let i = gameGrid.getIndex();

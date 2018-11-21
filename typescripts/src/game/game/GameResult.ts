@@ -13,6 +13,7 @@ import { GameEngine } from "../common/GameEngine";
 import { GameSceneHepler } from "../common/helper/GameSceneHepler";
 import {StorageInfo} from "../common/data/StorageInfo"
 import {GameScene} from "./GameScene";
+import {GameAudio} from "../common/helper/GameAudio";
 
 class GameResultClass{
      /** 随机成语字 */
@@ -106,6 +107,8 @@ class GameResultClass{
         this.gameScene.setScore(GameDataManager.gameData.score.toString());
         /** 设置最高分 */
         this.gameScene.setTopScore();
+        /** 播放音效 */
+        GameAudio.playJudgeRightEffect();
         /** 设置关卡 */
         this.gameScene.updateLevel();
         /** 设置结束判定 */
@@ -132,7 +135,7 @@ class GameResultClass{
      private onFailed() {
         // cc.log("判定失败");
         /** 播放音效 */
-        this.gameScene.playJudgeErrorEffect();
+        GameAudio.playJudgeErrorEffect();
         /** 还原成语字 */
         this.chooseView.restoreIdiom();
         /** 清理数据 */

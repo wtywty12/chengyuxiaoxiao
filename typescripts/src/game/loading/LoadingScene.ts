@@ -92,11 +92,13 @@ export class LoadingScene extends CommonScene {
             cc.log(status);
             if(status == "resume" || status == null){
                 StorageInfo.setGameAudioStatus("pause");
-                GameAudio.pauseAll();
+                GameAudio.changeBGMVolume(0, true);
+                GameAudio.changeSFXVolume(0);
             }
             else if (status == "pause") {
                 StorageInfo.setGameAudioStatus("resume");
-                GameAudio.resumeAll();
+                GameAudio.changeBGMVolume(60, true);
+                GameAudio.changeSFXVolume(60);
             }
         })
         ////初始化玩家数据 
