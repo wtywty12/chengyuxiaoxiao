@@ -799,11 +799,6 @@
     "meta": 1542719197017,
     "relativePath": "Texture/rankScene/di_1.png"
   },
-  "6f6d8f17-615b-4ad4-a5fa-2d2739448db2": {
-    "asset": 1542774382591,
-    "meta": 1542774385325,
-    "relativePath": "resources/jsons/levels.json"
-  },
   "c9b6e7c2-4507-4920-8d47-d362cbd8cdc1": {
     "asset": 1542785585086,
     "meta": 1542785589052,
@@ -1084,11 +1079,6 @@
     "meta": 1542798891643,
     "relativePath": "Texture/wxRank/wxshareBtn.png"
   },
-  "b70c1e9c-6f74-418c-8997-330ee1f5ec0e": {
-    "asset": 1542800194092,
-    "meta": 1542800195293,
-    "relativePath": "Script/src/utils/Tools.js"
-  },
   "037d078f-6f96-454a-99b3-a96b53c7275e": {
     "asset": 1542790063833,
     "meta": 1542800234581,
@@ -1144,14 +1134,24 @@
     "meta": 1542801302755,
     "relativePath": "Script/src/game/game/GameScene.js"
   },
-  "b3633f1d-5921-4453-a2d4-3d2f735c9fea": {
-    "asset": 1542801811936,
-    "meta": 1542801828753,
-    "relativePath": "Script/src/game/common/data/GameData.js"
-  },
   "97be3ef2-5953-4964-860e-a648c5fe4058": {
     "asset": 1542801757433,
     "meta": 1542801828756,
     "relativePath": "Script/src/game/game/GameResult.js"
+  },
+  "6f6d8f17-615b-4ad4-a5fa-2d2739448db2": {
+    "asset": 1542803764704,
+    "meta": 1542803834344,
+    "relativePath": "resources/jsons/levels.json"
+  },
+  "b3633f1d-5921-4453-a2d4-3d2f735c9fea": {
+    "asset": 1542804035449,
+    "meta": 1542804092543,
+    "relativePath": "Script/src/game/common/data/GameData.js"
+  },
+  "b70c1e9c-6f74-418c-8997-330ee1f5ec0e": {
+    "asset": 1542804052382,
+    "meta": 1542804092545,
+    "relativePath": "Script/src/utils/Tools.js"
   }
 }

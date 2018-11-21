@@ -39,7 +39,7 @@ export class GameData {
         this._tempLevel = 1;
         this._score = 0;
         this._tempScore = 0;
-        this._totalGameTime = 60;
+        this._totalGameTime = 30;
         this._gametime = this._totalGameTime;
         this._playtimes = 0;
         this._gridEffectTime = 0.5;

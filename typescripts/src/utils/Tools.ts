@@ -40,7 +40,7 @@ export class Tools {
         var hour = 60;
         var timeStr = "";
         if (num < second) {
-            return num.toString();
+            return "00:" + num.toString();
         } else if (num < second * minute) {
             var sec = Math.floor(num % second);
             var min = Math.floor(num / second);
