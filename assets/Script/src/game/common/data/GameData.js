@@ -35,7 +35,7 @@ var GameData = (function () {
     };
     GameData.prototype.addgametime = function () {
         var levelsInfo = ConfigManager_1.ConfigManager.levelsJsonMap.get(this._level);
-        var value = levelsInfo.addtime || this._totalGameTime;
+        var value = levelsInfo.addtime || 0;
         this._gametime += value;
         this._totalGameTime += value;
     };

@@ -1,258 +1,58 @@
-2018-11-21T11:20:09.750Z - normal: Load ~/.CocosCreator/settings.json
-2018-11-21T11:20:09.756Z - normal: checking language setting...
-2018-11-21T11:20:09.757Z - normal: Language: zh
-2018-11-21T11:20:10.918Z - success: protocol editor-framework registered
-2018-11-21T11:20:10.918Z - success: protocol app registered
-2018-11-21T11:20:10.919Z - success: protocol theme registered
-2018-11-21T11:20:10.919Z - success: protocol packages registered
-2018-11-21T11:20:10.919Z - success: protocol unpack registerred
-2018-11-21T11:20:10.919Z - success: protocol disable-commonjs registerred
-2018-11-21T11:20:11.121Z - normal: connected!
-2018-11-21T11:20:11.126Z - normal: Check project /Users/linzhang/youyou/chengyuxiaoxiao
-2018-11-21T11:20:11.131Z - normal: Initializing project /Users/linzhang/youyou/chengyuxiaoxiao
-2018-11-21T11:20:11.138Z - normal: Initializing Cocos2d
-2018-11-21T11:20:12.528Z - normal: Initializing Asset Database
-2018-11-21T11:20:12.625Z - success: protocol uuid registerred
-2018-11-21T11:20:12.626Z - success: protocol db registerred
-2018-11-21T11:20:12.626Z - success: protocol thumbnail registerred
-2018-11-21T11:20:12.627Z - normal: Loading editor/builtin packages
-2018-11-21T11:20:12.967Z - success: assets loaded
-2018-11-21T11:20:12.980Z - success: builder loaded
-2018-11-21T11:20:12.985Z - success: cocos-analytics loaded
-2018-11-21T11:20:12.999Z - success: console loaded
-2018-11-21T11:20:13.077Z - success: fb-instant-games loaded
-2018-11-21T11:20:13.081Z - success: google-instant-games loaded
-2018-11-21T11:20:13.094Z - success: hierarchy loaded
-2018-11-21T11:20:13.102Z - success: inspector loaded
-2018-11-21T11:20:13.105Z - success: keystore loaded
-2018-11-21T11:20:13.120Z - success: node-library loaded
-2018-11-21T11:20:13.124Z - success: package-asset loaded
-2018-11-21T11:20:13.131Z - success: preferences loaded
-2018-11-21T11:20:13.140Z - success: project-exporter loaded
-2018-11-21T11:20:13.178Z - success: project-importer loaded
-2018-11-21T11:20:13.186Z - success: project-settings loaded
-2018-11-21T11:20:13.199Z - success: ui-kit loaded
-2018-11-21T11:20:13.207Z - success: scene loaded
-2018-11-21T11:20:13.212Z - success: sprite-editor loaded
-2018-11-21T11:20:13.224Z - success: store loaded
-2018-11-21T11:20:13.237Z - success: timeline loaded
-2018-11-21T11:20:13.237Z - normal: Loading builtin packages
-2018-11-21T11:20:13.250Z - success: asset-db-debugger loaded
-2018-11-21T11:20:13.255Z - success: color-picker loaded
-2018-11-21T11:20:13.507Z - success: google-play-instant loaded
-2018-11-21T11:20:13.511Z - success: jsb-adapter loaded
-2018-11-21T11:20:13.525Z - success: oppo-runtime loaded
-2018-11-21T11:20:13.540Z - success: package-manager loaded
-2018-11-21T11:20:13.904Z - success: qqplay-adapter loaded
-2018-11-21T11:20:13.916Z - success: sdkbox loaded
-2018-11-21T11:20:13.929Z - success: tester loaded
-2018-11-21T11:20:13.940Z - success: ui-grid loaded
-2018-11-21T11:20:13.949Z - success: ui-kit-preview-extra loaded
-2018-11-21T11:20:13.958Z - success: ui-kit-preview loaded
-2018-11-21T11:20:13.968Z - success: ui-tree loaded
-2018-11-21T11:20:13.975Z - success: vivo-runtime loaded
-2018-11-21T11:20:13.977Z - success: weapp-adapter loaded
-2018-11-21T11:20:16.637Z - normal: Loading packages
-2018-11-21T11:20:16.655Z - normal: Watching packages
-2018-11-21T11:20:16.957Z - normal: Run Application
-2018-11-21T11:20:18.609Z - success: preview server running at http://localhost:7456
-2018-11-21T11:21:30.684Z - normal: Start building with options : {
-  "actualPlatform": "wechatgame",
-  "android-instant": {
-    "REMOTE_SERVER_ROOT": "",
-    "host": "",
-    "pathPattern": "",
-    "recordPath": "",
-    "scheme": "https",
-    "skipRecord": false
-  },
-  "apiLevel": "",
-  "appABIs": [],
-  "appKey": "",
-  "appSecret": "",
-  "buildPath": "/Users/linzhang/wegame",
-  "debug": false,
-  "dest": "/Users/linzhang/wegame/wechatgame",
-  "embedWebDebugger": false,
-  "encryptJs": true,
-  "excludeScenes": [],
-  "excludedModules": [],
-  "fb-instant-games": {},
-  "includeAnySDK": false,
-  "includeSDKBox": false,
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": false,
-  "jailbreakPlatform": false,
-  "md5Cache": false,
-  "mergeStartScene": false,
-  "oauthLoginServer": "",
-  "optimizeHotUpdate": true,
-  "orientation": {
-    "landscapeLeft": true,
-    "landscapeRight": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "packageName": "org.cocos2d.helloworld",
-  "platform": "wechatgame",
-  "previewHeight": "720",
-  "previewWidth": "1280",
-  "privateKey": "",
-  "qqplay": {
-    "REMOTE_SERVER_ROOT": "",
-    "orientation": "portrait"
-  },
-  "scenes": [
-    "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38",
-    "4dcd14cd-14a8-4a6e-ae9e-0a4bf6dfa061",
-    "42b202ab-7491-4680-9d35-c49ea4ddedf1",
-    "a6ed62ac-6d2c-4666-896d-59c4c311faa8",
-    "fdeae0b8-01e1-4317-a7c0-8e19bb37d422",
-    "b83cf815-05dc-4e09-bc8f-47b6e5608cd4",
-    "8e868381-a7b9-47fd-9fe3-354ba31c395d"
-  ],
-  "sourceMaps": false,
-  "startScene": "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38",
-  "template": "link",
-  "title": "chengyuxiaoxiao",
-  "useDebugKeystore": true,
-  "vsVersion": "auto",
-  "webOrientation": "auto",
-  "wechatgame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "wx100b0d9ac9176cb5",
-    "isSubdomain": false,
-    "orientation": "portrait",
-    "subContext": ""
-  },
-  "xxteaKey": "d26bfbe9-e497-4d",
-  "zipCompressJs": true,
-  "project": "/Users/linzhang/youyou/chengyuxiaoxiao",
-  "projectName": "chengyuxiaoxiao",
-  "debugBuildWorker": false
-}
-2018-11-21T11:21:30.690Z - normal: Building /Users/linzhang/youyou/chengyuxiaoxiao
-2018-11-21T11:21:30.690Z - normal: Destination /Users/linzhang/wegame/wechatgame
-2018-11-21T11:21:31.294Z - normal: Delete /Users/linzhang/wegame/wechatgame/**/*
-2018-11-21T11:21:36.879Z - normal: Start building assets
-2018-11-21T11:21:36.879Z - normal: Start spawn build-worker
-2018-11-21T11:21:37.807Z - normal: Finish spawn build-worker
-2018-11-21T11:21:37.808Z - normal: Start init build-worker
-2018-11-21T11:21:41.140Z - normal: Finish init build-worker
-2018-11-21T11:21:41.140Z - normal: Start build-assets in worker
-2018-11-21T11:21:42.280Z - normal: Finish build-assets in worker
-2018-11-21T11:21:42.284Z - normal: Finish building assets
-2018-11-21T11:21:42.307Z - normal: Start building plugin scripts
-2018-11-21T11:21:42.351Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
-2018-11-21T11:21:44.476Z - warn: [Cocos Analystic] Can not find index.html
-2018-11-21T11:21:44.484Z - normal: Built to "/Users/linzhang/wegame/wechatgame" successfully
-2018-11-21T11:21:50.690Z - normal: Initializing...
-
-2018-11-21T11:21:50.702Z - normal: idePortFile: /Users/linzhang/Library/Application Support/微信web开发者工具/Default/.ide
-
-2018-11-21T11:21:50.742Z - normal: IDE server has started, listening on http://127.0.0.1:39796
-
-2018-11-21T11:21:50.743Z - normal: initialization finished
-
-2018-11-21T11:21:51.029Z - normal: open IDE success
-
-2018-11-21T11:55:51.233Z - normal: Start building with options : {
-  "actualPlatform": "wechatgame",
-  "android-instant": {
-    "REMOTE_SERVER_ROOT": "",
-    "host": "",
-    "pathPattern": "",
-    "recordPath": "",
-    "scheme": "https",
-    "skipRecord": false
-  },
-  "apiLevel": "",
-  "appABIs": [],
-  "appKey": "",
-  "appSecret": "",
-  "buildPath": "/Users/linzhang/wegame",
-  "debug": false,
-  "dest": "/Users/linzhang/wegame/wechatgame",
-  "embedWebDebugger": false,
-  "encryptJs": true,
-  "excludeScenes": [],
-  "excludedModules": [],
-  "fb-instant-games": {},
-  "includeAnySDK": false,
-  "includeSDKBox": false,
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": false,
-  "jailbreakPlatform": false,
-  "md5Cache": false,
-  "mergeStartScene": false,
-  "oauthLoginServer": "",
-  "optimizeHotUpdate": true,
-  "orientation": {
-    "landscapeLeft": true,
-    "landscapeRight": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "packageName": "org.cocos2d.helloworld",
-  "platform": "wechatgame",
-  "previewHeight": "720",
-  "previewWidth": "1280",
-  "privateKey": "",
-  "qqplay": {
-    "REMOTE_SERVER_ROOT": "",
-    "orientation": "portrait"
-  },
-  "scenes": [
-    "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38",
-    "4dcd14cd-14a8-4a6e-ae9e-0a4bf6dfa061",
-    "42b202ab-7491-4680-9d35-c49ea4ddedf1",
-    "a6ed62ac-6d2c-4666-896d-59c4c311faa8",
-    "fdeae0b8-01e1-4317-a7c0-8e19bb37d422",
-    "b83cf815-05dc-4e09-bc8f-47b6e5608cd4",
-    "8e868381-a7b9-47fd-9fe3-354ba31c395d"
-  ],
-  "sourceMaps": false,
-  "startScene": "03d2ab0b-7930-46fb-a3a9-8f9f4bbddf38",
-  "template": "link",
-  "title": "chengyuxiaoxiao",
-  "useDebugKeystore": true,
-  "vsVersion": "auto",
-  "webOrientation": "auto",
-  "wechatgame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "wx100b0d9ac9176cb5",
-    "isSubdomain": false,
-    "orientation": "portrait",
-    "subContext": ""
-  },
-  "xxteaKey": "d26bfbe9-e497-4d",
-  "zipCompressJs": true,
-  "project": "/Users/linzhang/youyou/chengyuxiaoxiao",
-  "projectName": "chengyuxiaoxiao",
-  "debugBuildWorker": false
-}
-2018-11-21T11:55:51.237Z - normal: Building /Users/linzhang/youyou/chengyuxiaoxiao
-2018-11-21T11:55:51.237Z - normal: Destination /Users/linzhang/wegame/wechatgame
-2018-11-21T11:55:51.239Z - normal: Delete /Users/linzhang/wegame/wechatgame/**/*
-2018-11-21T11:55:56.152Z - normal: Start building assets
-2018-11-21T11:55:56.153Z - normal: Start spawn build-worker
-2018-11-21T11:55:57.199Z - normal: Finish spawn build-worker
-2018-11-21T11:55:57.199Z - normal: Start init build-worker
-2018-11-21T11:56:01.165Z - normal: Finish init build-worker
-2018-11-21T11:56:01.167Z - normal: Start build-assets in worker
-2018-11-21T11:56:02.642Z - normal: Finish build-assets in worker
-2018-11-21T11:56:02.649Z - normal: Finish building assets
-2018-11-21T11:56:02.689Z - normal: Start building plugin scripts
-2018-11-21T11:56:02.731Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
-2018-11-21T11:56:04.648Z - warn: [Cocos Analystic] Can not find index.html
-2018-11-21T11:56:04.658Z - normal: Built to "/Users/linzhang/wegame/wechatgame" successfully
-2018-11-21T11:56:10.487Z - normal: Initializing...
-
-2018-11-21T11:56:10.494Z - normal: idePortFile: /Users/linzhang/Library/Application Support/微信web开发者工具/Default/.ide
-
-2018-11-21T11:56:10.513Z - normal: IDE server has started, listening on http://127.0.0.1:39796
-
-2018-11-21T11:56:10.514Z - normal: initialization finished
-
-2018-11-21T11:56:10.768Z - normal: open IDE success
-
+2018-11-21T12:31:22.300Z - normal: Load ~/.CocosCreator/settings.json
+2018-11-21T12:31:22.303Z - normal: checking language setting...
+2018-11-21T12:31:22.304Z - normal: Language: zh
+2018-11-21T12:31:22.939Z - success: protocol editor-framework registered
+2018-11-21T12:31:22.940Z - success: protocol app registered
+2018-11-21T12:31:22.940Z - success: protocol theme registered
+2018-11-21T12:31:22.941Z - success: protocol packages registered
+2018-11-21T12:31:22.941Z - success: protocol unpack registerred
+2018-11-21T12:31:22.942Z - success: protocol disable-commonjs registerred
+2018-11-21T12:31:23.085Z - normal: connected!
+2018-11-21T12:31:23.089Z - normal: Check project /Users/linzhang/youyou/chengyuxiaoxiao
+2018-11-21T12:31:23.095Z - normal: Initializing project /Users/linzhang/youyou/chengyuxiaoxiao
+2018-11-21T12:31:23.103Z - normal: Initializing Cocos2d
+2018-11-21T12:31:23.821Z - normal: Initializing Asset Database
+2018-11-21T12:31:23.866Z - success: protocol uuid registerred
+2018-11-21T12:31:23.866Z - success: protocol db registerred
+2018-11-21T12:31:23.866Z - success: protocol thumbnail registerred
+2018-11-21T12:31:23.866Z - normal: Loading editor/builtin packages
+2018-11-21T12:31:24.038Z - success: assets loaded
+2018-11-21T12:31:24.043Z - success: builder loaded
+2018-11-21T12:31:24.045Z - success: cocos-analytics loaded
+2018-11-21T12:31:24.050Z - success: console loaded
+2018-11-21T12:31:24.088Z - success: fb-instant-games loaded
+2018-11-21T12:31:24.089Z - success: google-instant-games loaded
+2018-11-21T12:31:24.096Z - success: hierarchy loaded
+2018-11-21T12:31:24.101Z - success: inspector loaded
+2018-11-21T12:31:24.102Z - success: keystore loaded
+2018-11-21T12:31:24.108Z - success: node-library loaded
+2018-11-21T12:31:24.110Z - success: package-asset loaded
+2018-11-21T12:31:24.112Z - success: preferences loaded
+2018-11-21T12:31:24.115Z - success: project-exporter loaded
+2018-11-21T12:31:24.133Z - success: project-importer loaded
+2018-11-21T12:31:24.137Z - success: project-settings loaded
+2018-11-21T12:31:24.141Z - success: ui-kit loaded
+2018-11-21T12:31:24.146Z - success: scene loaded
+2018-11-21T12:31:24.148Z - success: sprite-editor loaded
+2018-11-21T12:31:24.153Z - success: store loaded
+2018-11-21T12:31:24.159Z - success: timeline loaded
+2018-11-21T12:31:24.159Z - normal: Loading builtin packages
+2018-11-21T12:31:24.165Z - success: asset-db-debugger loaded
+2018-11-21T12:31:24.166Z - success: color-picker loaded
+2018-11-21T12:31:24.254Z - success: google-play-instant loaded
+2018-11-21T12:31:24.256Z - success: jsb-adapter loaded
+2018-11-21T12:31:24.260Z - success: oppo-runtime loaded
+2018-11-21T12:31:24.264Z - success: package-manager loaded
+2018-11-21T12:31:24.360Z - success: qqplay-adapter loaded
+2018-11-21T12:31:24.366Z - success: sdkbox loaded
+2018-11-21T12:31:24.370Z - success: tester loaded
+2018-11-21T12:31:24.376Z - success: ui-grid loaded
+2018-11-21T12:31:24.380Z - success: ui-kit-preview-extra loaded
+2018-11-21T12:31:24.384Z - success: ui-kit-preview loaded
+2018-11-21T12:31:24.389Z - success: ui-tree loaded
+2018-11-21T12:31:24.392Z - success: vivo-runtime loaded
+2018-11-21T12:31:24.393Z - success: weapp-adapter loaded
+2018-11-21T12:31:25.396Z - normal: Loading packages
+2018-11-21T12:31:25.403Z - normal: Watching packages
+2018-11-21T12:31:25.498Z - normal: Run Application
+2018-11-21T12:31:26.898Z - success: preview server running at http://localhost:7457

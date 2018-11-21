@@ -123,7 +123,7 @@ class GameResultClass{
         }
         else {
             /** 答对一个加两秒 */
-            var rewardTime = 2;
+            var rewardTime = 1;
             GameDataManager.gameData.gametime = GameDataManager.gameData.gametime + rewardTime;
             this.gameScene.addScheTimes(rewardTime);
         }

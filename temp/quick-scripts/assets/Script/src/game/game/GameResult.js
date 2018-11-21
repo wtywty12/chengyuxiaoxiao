@@ -83,7 +83,7 @@ var GameResultClass = function () {
             GameDataManager_1.GameDataManager.gameData.gametime = GameDataManager_1.GameDataManager.gameData.totalGameTime;
             GameManager_1.GameManager.onGameLevelup();
         } else {
-            var rewardTime = 2;
+            var rewardTime = 1;
             GameDataManager_1.GameDataManager.gameData.gametime = GameDataManager_1.GameDataManager.gameData.gametime + rewardTime;
             this.gameScene.addScheTimes(rewardTime);
         }

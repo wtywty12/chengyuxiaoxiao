@@ -76,8 +76,8 @@ export class GameData {
     //增加游戏时间
     public addgametime(){
         var levelsInfo = ConfigManager.levelsJsonMap.get(this._level)
-        var value = levelsInfo.addtime || this._totalGameTime;
-        this._gametime +=value
+        var value = levelsInfo.addtime || 0;
+        this._gametime += value
         this._totalGameTime += value;
     }
     // public addgametime(value:number){
