@@ -43,7 +43,6 @@ var GameDataManager_1 = require("../common/data/GameDataManager");
 var GameEngine_1 = require("../common/GameEngine");
 var GameSceneHepler_1 = require("../common/helper/GameSceneHepler");
 var GameResult_1 = require("./GameResult");
-var Audio_1 = require("../../core/common/Audio");
 var GameAudio_1 = require("../common/helper/GameAudio");
 var StorageInfo_1 = require("../common/data/StorageInfo");
 var RecordGrid_1 = require("../common/model/RecordGrid");
@@ -72,12 +71,11 @@ var GameScene = function (_super) {
     };
     GameScene.prototype.onDestroy = function () {
         GameDataManager_1.GameDataManager.gameData.refuseData();
-        this.audio.stopAll();
+        GameAudio_1.GameAudio.stopAll();
         this.unscheduleAllCallbacks();
     };
     GameScene.prototype.loadFinish = function () {
-        this.audio = new Audio_1.Audio(1, 101);
-        this.audio.playBGM("bgMusic");
+        GameAudio_1.GameAudio.playGameMusic();
         this.setScore(GameDataManager_1.GameDataManager.gameData.score.toString());
         this.setTopScore();
         this.updateLevel();
@@ -166,12 +164,6 @@ var GameScene = function (_super) {
     };
     GameScene.prototype.setTopScore = function () {
         this.lbl_topScore.string = StorageInfo_1.StorageInfo.getTopScore().toString();
-    };
-    GameScene.prototype.playClickGridEffect = function () {
-        this.audio.playSFX("click", 1);
-    };
-    GameScene.prototype.playJudgeErrorEffect = function () {
-        this.audio.playSFX("error", 1);
     };
     GameScene.prototype.updateLevel = function () {
         this.lbl_level.string = "第" + GameDataManager_1.GameDataManager.gameData.level.toString() + "关";

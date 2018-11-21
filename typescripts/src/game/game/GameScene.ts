@@ -96,13 +96,12 @@ export class GameScene extends cc.Component {
     /** 类销毁 */
     protected onDestroy(): void {
         GameDataManager.gameData.refuseData()
-        this.audio.stopAll();
+        GameAudio.stopAll();
         this.unscheduleAllCallbacks();
     }
 
     private loadFinish(): void {
-        this.audio = new Audio(1, 101);
-        this.audio.playBGM("bgMusic");
+        GameAudio.playGameMusic();
         this.setScore(GameDataManager.gameData.score.toString());
         this.setTopScore();
         this.updateLevel();
@@ -225,20 +224,6 @@ export class GameScene extends cc.Component {
      */
     public setTopScore() {
         this.lbl_topScore.string = StorageInfo.getTopScore().toString();
-    }
-
-    /**
-     * 点击格子音效
-     */
-    public playClickGridEffect() {
-        this.audio.playSFX("click", 1);
-    }
-
-    /**
-     * 判定失败音效
-     */
-    public playJudgeErrorEffect() {
-        this.audio.playSFX("error", 1);
     }
 
     /**

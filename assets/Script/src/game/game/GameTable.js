@@ -28,6 +28,7 @@ var RandomAry_1 = require("./../common/model/RandomAry");
 var ConfigManager_1 = require("./../common/ConfigManager");
 var GameDataManager_1 = require("../common/data/GameDataManager");
 var Tools_1 = require("../../utils/Tools");
+var GameAudio_1 = require("../common/helper/GameAudio");
 var GameTable = (function (_super) {
     __extends(GameTable, _super);
     function GameTable() {
@@ -99,7 +100,7 @@ var GameTable = (function (_super) {
                 cc.log("已经存在");
                 return;
             }
-            this.gameScene.playClickGridEffect();
+            GameAudio_1.GameAudio.playClickGridEffect();
             this.chooseView.setGridInfo(index, str);
             var length = Tools_1.Tools.getMapLength(RecordGrid_1.RecordGrid.getChooseGridMap());
             RecordGrid_1.RecordGrid.setGameTableGridMap(index, gameGrid);

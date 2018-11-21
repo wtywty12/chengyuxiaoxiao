@@ -41,7 +41,7 @@
     "appid": "wx100b0d9ac9176cb5",
     "isSubdomain": false,
     "orientation": "portrait",
-    "subContext": "wechatgame-subcontext"
+    "subContext": ""
   },
   "xxteaKey": "d26bfbe9-e497-4d",
   "zipCompressJs": true
