@@ -12,6 +12,8 @@ import {GameAudio} from "../common/helper/GameAudio";
 import { StorageInfo } from "../common/data/StorageInfo";
 import {TipsScript} from "../common/script/TipsScript";
 import { RecordGrid } from "../common/model/RecordGrid";
+import {ConfigManager} from "./../common/ConfigManager";
+import { Tools } from "../../utils/Tools";
 
 @ccclass()
 export class GameScene extends cc.Component {
@@ -40,6 +42,12 @@ export class GameScene extends cc.Component {
      */
     @property(cc.Label)
     private lbl_topScore: cc.Label = null;
+
+    /**
+     * 关卡数
+     */
+    @property(cc.Label)
+    private lbl_level: cc.Label = null;
 
     /**
      * 返回按钮
@@ -95,7 +103,9 @@ export class GameScene extends cc.Component {
     private loadFinish(): void {
         this.audio = new Audio(1, 101);
         this.audio.playBGM("bgMusic");
+        this.setScore(GameDataManager.gameData.score.toString());
         this.setTopScore();
+        this.updateLevel();
 
         GameResult.setGameScene(this);
         GameManager.onGameStart();
@@ -115,7 +125,6 @@ export class GameScene extends cc.Component {
         var eventType = event.type;
         var eventName = event.target._name;
         GameAudio.playBtnEffect();
-        cc.log(eventType)
         if (eventType == "touchstart"){
             if (eventName == "btn_tishi") {
                 if (this.tipsScript == null) {
@@ -137,8 +146,6 @@ export class GameScene extends cc.Component {
                         this.tipsScript.close();
                         this.tipsScript = null;
                     }
-                    // GameManager.onGameOver();
-                    // GameEngine.changeScene(GameSceneHepler.SETTLE)
                     break;
                 default:
                     break;
@@ -158,10 +165,10 @@ export class GameScene extends cc.Component {
      * 创建时间倒计时
      */
     public createCDTime() {
-        this.lbl_time.string = GameDataManager.gameData.gametime.toString();
+        this.lbl_time.string = Tools.numberToDate(GameDataManager.gameData.gametime);
         var timeCallback = function (dt: number) {
             GameDataManager.gameData.gametime--;
-            this.lbl_time.string = GameDataManager.gameData.gametime.toString();
+            this.lbl_time.string = Tools.numberToDate(GameDataManager.gameData.gametime);
             if (GameDataManager.gameData.gametime < 0) {
                 GameManager.onGameOver();
                 GameEngine.changeScene(GameSceneHepler.SETTLE)
@@ -232,6 +239,13 @@ export class GameScene extends cc.Component {
      */
     public playJudgeErrorEffect() {
         this.audio.playSFX("error", 1);
+    }
+
+    /**
+     * 设置关卡数
+     */
+    public updateLevel() {
+        this.lbl_level.string = "第" + GameDataManager.gameData.level.toString() + "关";
     }
     
 }

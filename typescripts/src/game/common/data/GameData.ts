@@ -15,6 +15,8 @@ export class GameData {
     private _tempScore: number;
     //当前全清了多少次 等级
     private _level : number;
+    /** 临时记录关卡 红包返回继续 */
+    private _tempLevel: number;
     //游戏过关时间
     private _gametime : number;
     /** 游戏过关总时间 */
@@ -29,33 +31,38 @@ export class GameData {
     private _gridWidth: number;
     /** 格子高 */
     private _gridHeight: number;
+    /** 每日红包次数 */
+    private _redPackTimes: number;
 
     constructor() {
         this._level = 1;
+        this._tempLevel = 1;
         this._score = 0;
         this._tempScore = 0;
-        this._gametime = 60;
-        this._totalGameTime = 60;
+        this._totalGameTime = 30;
+        this._gametime = this._totalGameTime;
         this._playtimes = 0;
         this._gridEffectTime = 0.5;
         this._gridWidth = 109;
         this._gridHeight = 109;
+        this._redPackTimes = 3;
     }
 
     public refuseData(){//重制数据
+        this._tempLevel = this._level;
         this._level = 1;
         this._tempScore = this._score;
         this._score = 0;
 
-        this._gametime = 60;
-        this._totalGameTime = 60;
+        this._gametime = this._totalGameTime;
+        // this._totalGameTime = 60;
         // this._playtimes = 0;//个人中心记录次数 此处不能清零
     }
     //游戏开始
     public gameStart(){
-        this._score = 0;
-        this._gametime = 60;
-        this._totalGameTime = 60;
+        // this._score = 0;
+        this._gametime = this._totalGameTime;
+        // this._totalGameTime = 60;
     }
     //增加等级
     public addlevel(){
@@ -69,7 +76,7 @@ export class GameData {
     //增加游戏时间
     public addgametime(){
         var levelsInfo = ConfigManager.levelsJsonMap.get(this._level)
-        var value = levelsInfo.addtime || 60
+        var value = levelsInfo.addtime || this._totalGameTime;
         this._gametime +=value
         this._totalGameTime += value;
     }
@@ -98,6 +105,12 @@ export class GameData {
     }
     set level(_level :number) {
         this._level = _level;
+    }
+    get templevel(): number{
+        return this._tempLevel;
+    }
+    set templevel(_level :number) {
+        this._tempLevel = _level;
     }
     // get topscore():number{
     //     return this._topscore
@@ -138,6 +151,12 @@ export class GameData {
     }
     get gridGridHeight(): number{
         return this._gridHeight;
+    }
+    set redPackTimes(times: number) {
+        this._redPackTimes = times;
+    }
+    get redPackTimes() {
+        return this._redPackTimes;
     }
 
 }

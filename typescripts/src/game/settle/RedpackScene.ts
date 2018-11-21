@@ -64,6 +64,8 @@ export class SettleScene extends cc.Component {
     private onClickContinue():void{
         GameAudio.playBtnEffect();
         GameDataManager.gameData.refuseData()
+        // GameDataManager.gameData.level = GameDataManager.gameData.templevel;
+        // GameDataManager.gameData.score = GameDataManager.gameData.tempScore;
         GameEngine.changeScene(GameSceneHepler.GAME);
     }
     //后退到主界面

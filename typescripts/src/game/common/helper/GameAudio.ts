@@ -22,6 +22,17 @@ class GameAudioClass {
         this.audio.playSFX("btnEffect", 1);
     }
 
+    public pauseAll(): void {
+        cc.audioEngine.pauseAll();
+    }
+
+    public resumeAll(): void {
+        cc.audioEngine.resumeAll();
+    }
+
+    public stopAll(): void {
+        cc.audioEngine.stopAll();
+    }
 
 }
 

@@ -16,6 +16,17 @@ class StorageInfoClass {
         return this._instance;
     }
 
+    /**    ***************************    SET    ********************************* */
+
+    /**
+     * 首次登录
+     */
+    public setFirstLogin() {
+        if (this.getFirstLogin() == true) {
+            GameEngine.localStorage.set("FirstLogin", "true");
+        }
+    }
+
     /**
      *  设置最高分 
      */
@@ -26,6 +37,13 @@ class StorageInfoClass {
             /** 如果是则替换 */
             GameEngine.localStorage.set("TopScore", score.toString());
         }
+    }
+
+    /**
+     *  重置红包次数 
+     */
+    public resetRedPackTimes() {
+        GameEngine.localStorage.set("RedPackTimes", "0");
     }
 
     /**
@@ -48,6 +66,39 @@ class StorageInfoClass {
     }
 
     /**
+     * 设置年
+     */
+    public setGameYear(year: string) {
+        GameEngine.localStorage.set("GameYear", year);
+    }
+
+    /**
+     * 设置月
+     */
+    public setGameMonth(month: string) {
+        GameEngine.localStorage.set("GameMonth", month);
+    }
+
+    /**
+     * 设置日
+     */
+    public setGameDate(date: string) {
+        GameEngine.localStorage.set("GameDate", date);
+    }
+
+    /**
+     * 设置声音状态
+     * @parme string status
+     *     status:  pause 暂停  resume 激活
+     */
+    public setGameAudioStatus(status: string) {
+        GameEngine.localStorage.set("GameAudioStatus", status);
+    }
+
+
+     /**    ***************************    GET    ********************************* */
+
+    /**
      * 返回最高分
      */
     public getTopScore(): number {
@@ -61,8 +112,47 @@ class StorageInfoClass {
         return Number(GameEngine.localStorage.get("RedPackTimes")) || 0;
     }
 
+    /**
+     * 返回红包金额
+     */
     public getRedPackMoney(): number {
         return Number(GameEngine.localStorage.get("RedPackMoney")) || 0;
+    }
+
+    /**
+     * 返回年
+     */
+    public getGameYear(): string {
+        return GameEngine.localStorage.get("GameYear");
+    }
+
+    /**
+     * 返回月
+     */
+    public getGameMonth(): string {
+        return GameEngine.localStorage.get("GameMonth");
+    }
+
+    /**
+     * 返回日
+     */
+    public getGameDate(): string {
+        return GameEngine.localStorage.get("GameDate");
+    }
+
+    /**
+     * 返回声音状态
+     */
+    public getGameAudioStatus(): string {
+        return GameEngine.localStorage.get("GameAudioStatus");
+    }
+
+    /**
+     * 返回首次登录
+     */
+    public getFirstLogin(): boolean {
+        var isFirstLogin = GameEngine.localStorage.get("FirstLogin");
+        return isFirstLogin == null;
     }
 
 }

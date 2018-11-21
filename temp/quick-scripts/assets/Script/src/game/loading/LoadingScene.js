@@ -123,6 +123,8 @@ var GameEngine_1 = require("../common/GameEngine");
 var GameSceneHepler_1 = require("../common/helper/GameSceneHepler");
 var GameDataManager_1 = require("../common/data/GameDataManager");
 var GameAudio_1 = require("../common/helper/GameAudio");
+var StorageInfo_1 = require("../common/data/StorageInfo");
+var Tools_1 = require("../../utils/Tools");
 var LoadingScene = function (_super) {
     __extends(LoadingScene, _super);
     function LoadingScene() {
@@ -155,6 +157,10 @@ var LoadingScene = function (_super) {
                             }
                             console.log('load jsons subpackage successfully.');
                         });
+                        if (StorageInfo_1.StorageInfo.getFirstLogin() == true) {
+                            StorageInfo_1.StorageInfo.setFirstLogin();
+                            Tools_1.Tools.resetDate();
+                        }
                         this.progressLabel.string = "正在加载";
                         this.setProgress(0);
                         return [4, ConfigManager_1.ConfigManager.load()];
@@ -174,7 +180,15 @@ var LoadingScene = function (_super) {
                         });
                         this.btn_music.node.on(cc.Node.EventType.TOUCH_END, function () {
                             GameAudio_1.GameAudio.playBtnEffect();
-                            if (GameEngine_1.GameEngine.audio.getState() == cc.audioEngine.AudioState.PAUSED) {} else {}
+                            var status = StorageInfo_1.StorageInfo.getGameAudioStatus();
+                            cc.log(status);
+                            if (status == "resume" || status == null) {
+                                StorageInfo_1.StorageInfo.setGameAudioStatus("pause");
+                                GameAudio_1.GameAudio.pauseAll();
+                            } else if (status == "pause") {
+                                StorageInfo_1.StorageInfo.setGameAudioStatus("resume");
+                                GameAudio_1.GameAudio.resumeAll();
+                            }
                         });
                         this.setProgress(70);
                         return [4, this.initPlayerData()];

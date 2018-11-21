@@ -32,6 +32,7 @@ var Audio_1 = require("../../core/common/Audio");
 var GameAudio_1 = require("../common/helper/GameAudio");
 var StorageInfo_1 = require("../common/data/StorageInfo");
 var RecordGrid_1 = require("../common/model/RecordGrid");
+var Tools_1 = require("../../utils/Tools");
 var GameScene = (function (_super) {
     __extends(GameScene, _super);
     function GameScene() {
@@ -41,6 +42,7 @@ var GameScene = (function (_super) {
         _this.lbl_time = null;
         _this.lbl_score = null;
         _this.lbl_topScore = null;
+        _this.lbl_level = null;
         _this.btn_back = null;
         _this.btn_tishi = null;
         _this.bar_time = null;
@@ -61,7 +63,9 @@ var GameScene = (function (_super) {
     GameScene.prototype.loadFinish = function () {
         this.audio = new Audio_1.Audio(1, 101);
         this.audio.playBGM("bgMusic");
+        this.setScore(GameDataManager_1.GameDataManager.gameData.score.toString());
         this.setTopScore();
+        this.updateLevel();
         GameResult_1.GameResult.setGameScene(this);
         GameManager_1.GameManager.onGameStart();
         this.btn_back.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
@@ -75,7 +79,6 @@ var GameScene = (function (_super) {
         var eventType = event.type;
         var eventName = event.target._name;
         GameAudio_1.GameAudio.playBtnEffect();
-        cc.log(eventType);
         if (eventType == "touchstart") {
             if (eventName == "btn_tishi") {
                 if (this.tipsScript == null) {
@@ -110,10 +113,10 @@ var GameScene = (function (_super) {
         }
     };
     GameScene.prototype.createCDTime = function () {
-        this.lbl_time.string = GameDataManager_1.GameDataManager.gameData.gametime.toString();
+        this.lbl_time.string = Tools_1.Tools.numberToDate(GameDataManager_1.GameDataManager.gameData.gametime);
         var timeCallback = function (dt) {
             GameDataManager_1.GameDataManager.gameData.gametime--;
-            this.lbl_time.string = GameDataManager_1.GameDataManager.gameData.gametime.toString();
+            this.lbl_time.string = Tools_1.Tools.numberToDate(GameDataManager_1.GameDataManager.gameData.gametime);
             if (GameDataManager_1.GameDataManager.gameData.gametime < 0) {
                 GameManager_1.GameManager.onGameOver();
                 GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.SETTLE);
@@ -157,6 +160,9 @@ var GameScene = (function (_super) {
     GameScene.prototype.playJudgeErrorEffect = function () {
         this.audio.playSFX("error", 1);
     };
+    GameScene.prototype.updateLevel = function () {
+        this.lbl_level.string = "第" + GameDataManager_1.GameDataManager.gameData.level.toString() + "关";
+    };
     __decorate([
         property(GameTable_1.GameTable)
     ], GameScene.prototype, "gameTable", void 0);
@@ -172,6 +178,9 @@ var GameScene = (function (_super) {
     __decorate([
         property(cc.Label)
     ], GameScene.prototype, "lbl_topScore", void 0);
+    __decorate([
+        property(cc.Label)
+    ], GameScene.prototype, "lbl_level", void 0);
     __decorate([
         property(cc.Node)
     ], GameScene.prototype, "btn_back", void 0);

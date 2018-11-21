@@ -106,17 +106,12 @@ class GameResultClass{
         this.gameScene.setScore(GameDataManager.gameData.score.toString());
         /** 设置最高分 */
         this.gameScene.setTopScore();
+        /** 设置关卡 */
+        this.gameScene.updateLevel();
         /** 设置结束判定 */
         this.isStartResult = false;
         /** 恢复数据 */
         this.chooseView.resetTempData();
-        /** 判定 弹出红包界面 */
-        var redPackTimes = StorageInfo.getRedPackTimes();
-        if (redPackTimes < 5) {
-            StorageInfo.setRedPackTimes(1);
-            GameManager.onGameOver();
-            GameEngine.changeScene(GameSceneHepler.SETTLE)
-        }
         /** 判定胜利 */
         cc.log(Tools.getGridNumber(this.gameTable.tableWidth, this.gameTable.tableHeight))
         if (Tools.getMapLength(RecordGrid.getGameTableGridMap()) == 4 * Tools.getGridNumber(this.gameTable.tableWidth, this.gameTable.tableHeight)) {

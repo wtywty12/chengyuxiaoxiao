@@ -8,6 +8,8 @@ import {GameSceneHepler} from "../common/helper/GameSceneHepler";
 import { GameDataManager } from "../common/data/GameDataManager";
 import { GameData } from "../common/data/GameData";
 import {GameAudio} from "../common/helper/GameAudio";
+import { StorageInfo } from "../common/data/StorageInfo";
+import { Tools } from "../../utils/Tools";
 
 /**
  * @author: liubowen
@@ -55,6 +57,10 @@ export class LoadingScene extends CommonScene {
             }
             console.log('load jsons subpackage successfully.');
         });
+        if (StorageInfo.getFirstLogin() == true) {
+            StorageInfo.setFirstLogin();
+            Tools.resetDate();
+        }
         this.progressLabel.string = "正在加载";
         this.setProgress(0);
         await ConfigManager.load();
@@ -71,11 +77,16 @@ export class LoadingScene extends CommonScene {
         this.btn_music.node.on(cc.Node.EventType.TOUCH_END,function(){
             //判断全局 控制声音
             GameAudio.playBtnEffect();
-            if(GameEngine.audio.getState() == cc.audioEngine.AudioState.PAUSED)
-            {
-                
+            var status = StorageInfo.getGameAudioStatus();
+            cc.log(status);
+            if(status == "resume" || status == null){
+                StorageInfo.setGameAudioStatus("pause");
+                GameAudio.pauseAll();
             }
-            else{}
+            else if (status == "pause") {
+                StorageInfo.setGameAudioStatus("resume");
+                GameAudio.resumeAll();
+            }
         })
         ////初始化玩家数据 
         this.setProgress(70);

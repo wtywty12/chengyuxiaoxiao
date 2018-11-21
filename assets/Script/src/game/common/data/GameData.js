@@ -5,26 +5,26 @@ var StorageInfo_1 = require("./StorageInfo");
 var GameData = (function () {
     function GameData() {
         this._level = 1;
+        this._tempLevel = 1;
         this._score = 0;
         this._tempScore = 0;
-        this._gametime = 60;
-        this._totalGameTime = 60;
+        this._totalGameTime = 30;
+        this._gametime = this._totalGameTime;
         this._playtimes = 0;
         this._gridEffectTime = 0.5;
         this._gridWidth = 109;
         this._gridHeight = 109;
+        this._redPackTimes = 3;
     }
     GameData.prototype.refuseData = function () {
+        this._tempLevel = this._level;
         this._level = 1;
         this._tempScore = this._score;
         this._score = 0;
-        this._gametime = 60;
-        this._totalGameTime = 60;
+        this._gametime = this._totalGameTime;
     };
     GameData.prototype.gameStart = function () {
-        this._score = 0;
-        this._gametime = 60;
-        this._totalGameTime = 60;
+        this._gametime = this._totalGameTime;
     };
     GameData.prototype.addlevel = function () {
         this._level += 1;
@@ -35,7 +35,7 @@ var GameData = (function () {
     };
     GameData.prototype.addgametime = function () {
         var levelsInfo = ConfigManager_1.ConfigManager.levelsJsonMap.get(this._level);
-        var value = levelsInfo.addtime || 60;
+        var value = levelsInfo.addtime || this._totalGameTime;
         this._gametime += value;
         this._totalGameTime += value;
     };
@@ -65,6 +65,16 @@ var GameData = (function () {
         },
         set: function (_level) {
             this._level = _level;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(GameData.prototype, "templevel", {
+        get: function () {
+            return this._tempLevel;
+        },
+        set: function (_level) {
+            this._tempLevel = _level;
         },
         enumerable: true,
         configurable: true
@@ -127,6 +137,16 @@ var GameData = (function () {
     Object.defineProperty(GameData.prototype, "gridGridHeight", {
         get: function () {
             return this._gridHeight;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(GameData.prototype, "redPackTimes", {
+        get: function () {
+            return this._redPackTimes;
+        },
+        set: function (times) {
+            this._redPackTimes = times;
         },
         enumerable: true,
         configurable: true

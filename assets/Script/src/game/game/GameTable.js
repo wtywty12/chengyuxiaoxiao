@@ -55,7 +55,7 @@ var GameTable = (function (_super) {
         var gridNumber = Tools_1.Tools.getGridNumber(this.tableWidth, this.tableHeight);
         this.randomAry = new RandomAry_1.RandomAry(gridNumber);
         this.randomIdiom = this.randomAry.getRandomIdiom();
-        RecordGrid_1.RecordGrid.initLastIdiomAry(this.randomIdiom);
+        RecordGrid_1.RecordGrid.initLastIdiomAry(Tools_1.Tools.deepCopyArray(this.randomIdiom));
         this.produceAry = this.randomAry.getProduceArray();
         this.gridPrefab = ResourcesManager_1.ResourcesManager.getPrefab("GameGrid");
         this.chooseView.setGameTable(this);

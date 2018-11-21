@@ -5,6 +5,7 @@ cc._RF.push(module, 'b70c16cb3RBjImXMw7h9ewO', 'Tools', __filename);
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+var StorageInfo_1 = require("../game/common/data/StorageInfo");
 var Tools = function () {
     function Tools() {}
     Tools.getMapLength = function (map) {
@@ -16,11 +17,58 @@ var Tools = function () {
     };
     Tools.getGridNumber = function (tableWidth, tableHeight) {
         var totalNumber = tableWidth * tableHeight;
-        var reduceNumber = 0;
-        if (totalNumber % 4 != 0) {
-            reduceNumber = -1;
+        return Math.floor(totalNumber * 0.25);
+    };
+    Tools.deepCopyArray = function (array) {
+        var newArray = [];
+        for (var i = 0; i < array.length; i++) {
+            newArray.push(array[i]);
         }
-        return Math.floor(totalNumber * 0.25 + reduceNumber);
+        return newArray;
+    };
+    Tools.numberToDate = function (num) {
+        var second = 60;
+        var minute = 60;
+        var hour = 60;
+        var timeStr = "";
+        if (num < second) {
+            return num.toString();
+        } else if (num < second * minute) {
+            var sec = Math.floor(num % second);
+            var min = Math.floor(num / second);
+            var secStr = "";
+            if (sec < 10) {
+                secStr = "0" + secStr.toString();
+            }
+            var minStr = "";
+            if (min < 10) {
+                minStr = "0" + minStr.toString();
+            }
+            return minStr + ":" + minStr;
+        } else {
+            return num.toString();
+        }
+    };
+    Tools.judgeIsSomeDay = function (year, month, date) {
+        var myDate = new Date();
+        var isSomeDay = false;
+        if (Number(year) == myDate.getFullYear()) {
+            if (Number(month) == myDate.getMonth()) {
+                if (Number(date) == myDate.getDate()) {
+                    isSomeDay = true;
+                }
+            }
+        }
+        return isSomeDay;
+    };
+    Tools.resetDate = function () {
+        var myDate = new Date();
+        var year = myDate.getFullYear();
+        var month = myDate.getMonth();
+        var date = myDate.getDate();
+        StorageInfo_1.StorageInfo.setGameYear(year.toString());
+        StorageInfo_1.StorageInfo.setGameMonth(month.toString());
+        StorageInfo_1.StorageInfo.setGameDate(date.toString());
     };
     return Tools;
 }();

@@ -24,6 +24,15 @@ var GameAudioClass = function () {
     GameAudioClass.prototype.playBtnEffect = function () {
         this.audio.playSFX("btnEffect", 1);
     };
+    GameAudioClass.prototype.pauseAll = function () {
+        cc.audioEngine.pauseAll();
+    };
+    GameAudioClass.prototype.resumeAll = function () {
+        cc.audioEngine.resumeAll();
+    };
+    GameAudioClass.prototype.stopAll = function () {
+        cc.audioEngine.stopAll();
+    };
     return GameAudioClass;
 }();
 exports.GameAudio = GameAudioClass.instance;

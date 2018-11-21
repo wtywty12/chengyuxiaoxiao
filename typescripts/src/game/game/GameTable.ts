@@ -58,7 +58,7 @@ export class GameTable extends cc.Component {
         let gridNumber = Tools.getGridNumber(this.tableWidth, this.tableHeight);
         this.randomAry = new RandomAry(gridNumber);
         this.randomIdiom = this.randomAry.getRandomIdiom();
-        RecordGrid.initLastIdiomAry(this.randomIdiom);
+        RecordGrid.initLastIdiomAry(Tools.deepCopyArray(this.randomIdiom));
         this.produceAry = this.randomAry.getProduceArray();
         this.gridPrefab = ResourcesManager.getPrefab("GameGrid");
         this.chooseView.setGameTable(this);

@@ -18,7 +18,7 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 300,
+                "height": 298.34375,
                 "type": "panel",
                 "width": 204
               },
@@ -27,12 +27,12 @@
                 "children": [
                   "assets"
                 ],
-                "height": 423,
+                "height": 420.65625,
                 "type": "panel",
                 "width": 204
               }
             ],
-            "height": 726,
+            "height": 722,
             "type": "dock-v",
             "width": 204
           },
@@ -43,7 +43,7 @@
                 "children": [
                   "scene"
                 ],
-                "height": 457,
+                "height": 453,
                 "type": "panel",
                 "width": 920
               },
@@ -58,7 +58,7 @@
                 "width": 920
               }
             ],
-            "height": 726,
+            "height": 722,
             "type": "dock-v",
             "width": 920
           },
@@ -67,7 +67,7 @@
             "children": [
               "inspector"
             ],
-            "height": 726,
+            "height": 722,
             "type": "panel",
             "width": 304
           }
@@ -83,7 +83,7 @@
         "scene"
       ]
     },
-    "window-1542697301216": {},
+    "window-1542768125257": {},
     "worker": {}
   },
   "panels": {

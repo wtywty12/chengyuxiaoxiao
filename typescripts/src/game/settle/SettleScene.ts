@@ -7,6 +7,8 @@ import {GameEngine} from "../common/GameEngine";
 import {GameSceneHepler} from "../common/helper/GameSceneHepler";
 import { GameDataManager } from "../common/data/GameDataManager";
 import {GameAudio} from "../common/helper/GameAudio";
+import {StorageInfo} from "../common/data/StorageInfo";
+import {Tools} from "../../utils/Tools";
 
 /**
  * @author: wangtianye
@@ -36,11 +38,13 @@ export class SettleScene extends cc.Component {
 
     /** 类加载 */
     protected onLoad() {
+        this.btn_redpack.node.active = false;
         this.lbl_score.string = GameDataManager.gameData.tempScore.toString()
         this.btn_redpack.node.on(cc.Node.EventType.TOUCH_END,this.onClickRedPack);
         this.btn_share.node.on(cc.Node.EventType.TOUCH_END,this.onClickShare);
         this.btn_continue.node.on(cc.Node.EventType.TOUCH_END,this.onClickContinue)
         this.btn_back.node.on(cc.Node.EventType.TOUCH_END,this.onClickBack)
+        this.displayRedPackScene();
     }
 
     /** 类销毁 */
@@ -50,6 +54,7 @@ export class SettleScene extends cc.Component {
     //点击拆红包
     private onClickRedPack():void{
         GameAudio.playBtnEffect();
+        StorageInfo.setRedPackTimes(1);
         GameEngine.changeScene(GameSceneHepler.READPACK)
     }
     //点击炫耀一下
@@ -67,5 +72,39 @@ export class SettleScene extends cc.Component {
         GameAudio.playBtnEffect();
         GameDataManager.gameData.refuseData()
         GameEngine.changeScene(GameSceneHepler.LOADING)
+    }
+
+    /**
+     * 判定 弹出红包界面
+     */
+    public displayRedPackScene() {
+        /** 随机弹出红包 */
+        var rand = Math.random();
+        if (rand < 0.8) {
+            return;
+        }
+        /** 判定 弹出红包界面 */
+        var redPackTimes = StorageInfo.getRedPackTimes();
+        if (redPackTimes <= GameDataManager.gameData.redPackTimes) {
+            this.btn_redpack.node.active = true;
+        }
+        else {
+            /** 判定是否同一天 */
+            if (this.judgeIsSomeDay() == false) {
+                Tools.resetDate();
+                StorageInfo.resetRedPackTimes();
+                this.btn_redpack.node.active = true;
+            }
+        }
+    }
+
+    /**
+     * 判定是否同一天
+     */
+    private judgeIsSomeDay(): boolean {
+        var year = StorageInfo.getGameYear();
+        var month = StorageInfo.getGameMonth();
+        var date = StorageInfo.getGameDate();
+        return Tools.judgeIsSomeDay(year, month, date);
     }
 }
