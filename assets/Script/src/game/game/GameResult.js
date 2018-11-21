@@ -38,6 +38,7 @@ var GameResultClass = (function () {
     GameResultClass.prototype.startResult = function (idiomAry) {
         this.isStartResult = true;
         var chooseMap = RecordGrid_1.RecordGrid.getChooseGridMap();
+        var endIdiom = "";
         var isSussess = false;
         for (var i = 0; i < idiomAry.length; i++) {
             var idiom = idiomAry[i];
@@ -50,10 +51,12 @@ var GameResultClass = (function () {
             }
             if (isEqual) {
                 isSussess = true;
+                endIdiom = idiom;
                 break;
             }
         }
         if (isSussess) {
+            RecordGrid_1.RecordGrid.reduceLastIdiomAry(endIdiom);
             this.chooseView.playChooseFadeOut();
             RecordGrid_1.RecordGrid.clearRecordData();
             var cb1 = cc.callFunc(this.onSuccessFul, this);

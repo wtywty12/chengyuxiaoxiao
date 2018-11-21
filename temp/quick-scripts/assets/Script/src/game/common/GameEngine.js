@@ -74,6 +74,7 @@ var GameEngineClass = function () {
         var prefabNode = cc.instantiate(prefab);
         var tipsScript = prefabNode.getComponent("TipsScript");
         tipsScript.show(message);
+        return tipsScript;
     };
     GameEngineClass.prototype.changeScene = function (scene) {
         cc.director.loadScene(scene);

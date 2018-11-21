@@ -31,6 +31,7 @@ var GameResult_1 = require("./GameResult");
 var Audio_1 = require("../../core/common/Audio");
 var GameAudio_1 = require("../common/helper/GameAudio");
 var StorageInfo_1 = require("../common/data/StorageInfo");
+var RecordGrid_1 = require("../common/model/RecordGrid");
 var GameScene = (function (_super) {
     __extends(GameScene, _super);
     function GameScene() {
@@ -41,10 +42,11 @@ var GameScene = (function (_super) {
         _this.lbl_score = null;
         _this.lbl_topScore = null;
         _this.btn_back = null;
-        _this.btn_share = null;
+        _this.btn_tishi = null;
         _this.bar_time = null;
         _this.audio = null;
         _this.scheTimes = 0;
+        _this.tipsScript = null;
         return _this;
     }
     GameScene.prototype.onLoad = function () {
@@ -63,7 +65,9 @@ var GameScene = (function (_super) {
         GameResult_1.GameResult.setGameScene(this);
         GameManager_1.GameManager.onGameStart();
         this.btn_back.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
-        this.btn_share.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
+        this.btn_tishi.on(cc.Node.EventType.TOUCH_START, this.onTouchEventListener, this);
+        this.btn_tishi.on(cc.Node.EventType.TOUCH_CANCEL, this.onTouchEventListener, this);
+        this.btn_tishi.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
         this.createCDTime();
         this.createScheBar();
     };
@@ -71,22 +75,38 @@ var GameScene = (function (_super) {
         var eventType = event.type;
         var eventName = event.target._name;
         GameAudio_1.GameAudio.playBtnEffect();
-        if (eventType != "touchend") {
-            cc.log("EventType is error, it is ", eventType);
-            return;
+        cc.log(eventType);
+        if (eventType == "touchstart") {
+            if (eventName == "btn_tishi") {
+                if (this.tipsScript == null) {
+                    var idiom = RecordGrid_1.RecordGrid.getLastIdiomAry()[0];
+                    this.tipsScript = GameEngine_1.GameEngine.showTips(idiom);
+                }
+            }
         }
-        switch (eventName) {
-            case "btn_back":
-                GameManager_1.GameManager.onGameOver();
-                GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.LOADING);
-                break;
-            case "btn_share":
-                cc.log("获取用户信息");
-                GameManager_1.GameManager.onGameOver();
-                GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.SETTLE);
-                break;
-            default:
-                break;
+        else if (eventType == "touchend") {
+            switch (eventName) {
+                case "btn_back":
+                    GameManager_1.GameManager.onGameOver();
+                    GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.LOADING);
+                    break;
+                case "btn_tishi":
+                    if (this.tipsScript != null) {
+                        this.tipsScript.close();
+                        this.tipsScript = null;
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+        else if (eventType == "touchcancel") {
+            if (eventName == "btn_tishi") {
+                if (this.tipsScript != null) {
+                    this.tipsScript.close();
+                    this.tipsScript = null;
+                }
+            }
         }
     };
     GameScene.prototype.createCDTime = function () {
@@ -157,7 +177,7 @@ var GameScene = (function (_super) {
     ], GameScene.prototype, "btn_back", void 0);
     __decorate([
         property(cc.Node)
-    ], GameScene.prototype, "btn_share", void 0);
+    ], GameScene.prototype, "btn_tishi", void 0);
     __decorate([
         property(cc.ProgressBar)
     ], GameScene.prototype, "bar_time", void 0);

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "wxshareBtn",
+    "texture": "3d637588-fbf1-49c4-80b9-7d9c00477a4a",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      272,
+      104
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      272,
+      104
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

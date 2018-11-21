@@ -10,6 +10,7 @@ var RecordGridClass = function () {
         this.chooseGridMap = new Map();
         this.gameTableGridMap = new Map();
         this.tempChooseGridMap = new Map();
+        this.lastIdiomAry = [];
     }
     Object.defineProperty(RecordGridClass, "instance", {
         get: function get() {
@@ -44,6 +45,20 @@ var RecordGridClass = function () {
     };
     RecordGridClass.prototype.gettempChooseGridMap = function () {
         return this.tempChooseGridMap;
+    };
+    RecordGridClass.prototype.initLastIdiomAry = function (idiomAry) {
+        this.lastIdiomAry = idiomAry;
+    };
+    RecordGridClass.prototype.reduceLastIdiomAry = function (idiom) {
+        var _this = this;
+        this.lastIdiomAry.forEach(function (value, key) {
+            if (idiom == value) {
+                _this.lastIdiomAry.splice(key, key + 1);
+            }
+        });
+    };
+    RecordGridClass.prototype.getLastIdiomAry = function () {
+        return this.lastIdiomAry;
     };
     RecordGridClass.prototype.displayGrid = function (str, index) {
         if (typeof str != "string" || typeof index != "number" || str == "") {

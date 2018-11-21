@@ -96,14 +96,14 @@ export class SettleScene extends cc.Component {
                 cc.log(`res -> userInfo`,res.userInfo.avatarUrl)
                 var userInfo = res.userInfo
                 var nickName = userInfo.nickName
-                var avatarUrl = userInfo.avatarUrl
+                GameDataManager.userData.headUrl = userInfo.avatarUrl
                 var gender = userInfo.gender //性别 0：未知、1：男、2：女
                 var province = userInfo.province
                 var city = userInfo.city
                 var country = userInfo.country
 
-                self.path = avatarUrl ;
-                ImageHelper.loadImage(avatarUrl,this.image_head)
+                // self.path = avatarUrl ; 
+                ImageHelper.loadImage(GameDataManager.userData.headUrl,self.image_head)
                 
             }
             

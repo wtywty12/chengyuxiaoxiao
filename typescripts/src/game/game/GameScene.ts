@@ -10,6 +10,8 @@ import { GameResult } from "./GameResult";
 import {Audio} from "../../core/common/Audio";
 import {GameAudio} from "../common/helper/GameAudio";
 import { StorageInfo } from "../common/data/StorageInfo";
+import {TipsScript} from "../common/script/TipsScript";
+import { RecordGrid } from "../common/model/RecordGrid";
 
 @ccclass()
 export class GameScene extends cc.Component {
@@ -49,7 +51,7 @@ export class GameScene extends cc.Component {
      * 分享按钮
      */
     @property(cc.Node)
-    private btn_share: cc.Node = null;
+    private btn_tishi: cc.Node = null;
 
     /**
      * 进度条
@@ -66,6 +68,11 @@ export class GameScene extends cc.Component {
      * 进度条次数 用于判定成功+2秒进度条显示
      */
     private scheTimes: number = 0;
+
+    /**
+     * 弹出框类
+     */
+    private tipsScript: TipsScript = null;
 
     /** 构造函数 */
     protected constructor() {
@@ -94,7 +101,9 @@ export class GameScene extends cc.Component {
         GameManager.onGameStart();
 
         this.btn_back.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
-        this.btn_share.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
+        this.btn_tishi.on(cc.Node.EventType.TOUCH_START, this.onTouchEventListener, this);
+        this.btn_tishi.on(cc.Node.EventType.TOUCH_CANCEL, this.onTouchEventListener, this);
+        this.btn_tishi.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener, this);
 
         /** 创建倒计时 */
         this.createCDTime();
@@ -106,39 +115,42 @@ export class GameScene extends cc.Component {
         var eventType = event.type;
         var eventName = event.target._name;
         GameAudio.playBtnEffect();
-        if (eventType != "touchend") {
-            cc.log("EventType is error, it is ", eventType);
-            return;
+        cc.log(eventType)
+        if (eventType == "touchstart"){
+            if (eventName == "btn_tishi") {
+                if (this.tipsScript == null) {
+                    let idiom = RecordGrid.getLastIdiomAry()[0];
+                    this.tipsScript = GameEngine.showTips(idiom);
+                }
+            }
         }
-        switch(eventName) {
-            case "btn_back":
-                //TODO 
-                GameManager.onGameOver();
-                GameEngine.changeScene(GameSceneHepler.LOADING)
-                // GameEngine.loginService.login();
-                break;
-            case "btn_share":
-                cc.log("获取用户信息");
-                GameManager.onGameOver();
-                GameEngine.changeScene(GameSceneHepler.SETTLE)
-                // wx.getUserInfo({
-                //     success: function(res:any) {
-                //         cc.log(`res ${res}`)
-                //         cc.log(`res -> userInfo`,res.userInfo)
-                //         cc.log(`res -> userInfo`,res.userInfo.nickName)
-                //         cc.log(`res -> userInfo`,res.userInfo.avatarUrl)
-                //         var userInfo = res.userInfo
-                //         var nickName = userInfo.nickName
-                //         var avatarUrl = userInfo.avatarUrl
-                //         var gender = userInfo.gender //性别 0：未知、1：男、2：女
-                //         var province = userInfo.province
-                //         var city = userInfo.city
-                //         var country = userInfo.country
-                //     }
-                // })
-                break;
-            default:
-                break;
+        else if (eventType == "touchend") {
+            switch(eventName) {
+                case "btn_back":
+                    //TODO 
+                    GameManager.onGameOver();
+                    GameEngine.changeScene(GameSceneHepler.LOADING)
+                    // GameEngine.loginService.login();
+                    break;
+                case "btn_tishi":
+                    if (this.tipsScript != null) {
+                        this.tipsScript.close();
+                        this.tipsScript = null;
+                    }
+                    // GameManager.onGameOver();
+                    // GameEngine.changeScene(GameSceneHepler.SETTLE)
+                    break;
+                default:
+                    break;
+            }
+        }
+        else if (eventType == "touchcancel") {
+            if (eventName == "btn_tishi") {
+                if (this.tipsScript != null) {
+                    this.tipsScript.close();
+                    this.tipsScript = null;
+                }
+            }
         }
     }
 

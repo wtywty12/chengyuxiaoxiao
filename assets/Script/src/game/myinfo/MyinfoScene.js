@@ -24,6 +24,7 @@ var property = cc._decorator.property;
 var GameEngine_1 = require("../common/GameEngine");
 var GameSceneHepler_1 = require("../common/helper/GameSceneHepler");
 var GameDataManager_1 = require("../common/data/GameDataManager");
+var ImageHelper_1 = require("../common/helper/ImageHelper");
 var StorageInfo_1 = require("../common/data/StorageInfo");
 var GameAudio_1 = require("../common/helper/GameAudio");
 var SettleScene = (function (_super) {
@@ -63,7 +64,22 @@ var SettleScene = (function (_super) {
     SettleScene.prototype.onClickTixian = function () {
         GameAudio_1.GameAudio.playBtnEffect();
         var self = this;
-        GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.DEPOSIT);
+        wx.getUserInfo({
+            success: function (res) {
+                cc.log("res " + res);
+                cc.log("res -> userInfo", res.userInfo);
+                cc.log("res -> userInfo", res.userInfo.nickName);
+                cc.log("res -> userInfo", res.userInfo.avatarUrl);
+                var userInfo = res.userInfo;
+                var nickName = userInfo.nickName;
+                GameDataManager_1.GameDataManager.userData.headUrl = userInfo.avatarUrl;
+                var gender = userInfo.gender;
+                var province = userInfo.province;
+                var city = userInfo.city;
+                var country = userInfo.country;
+                ImageHelper_1.ImageHelper.loadImage(GameDataManager_1.GameDataManager.userData.headUrl, self.image_head);
+            }
+        });
     };
     SettleScene.prototype.loadImgurl = function (container, url) {
         cc.loader.load(url, function (err, texture) {

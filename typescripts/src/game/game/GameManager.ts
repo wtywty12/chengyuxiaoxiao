@@ -34,6 +34,10 @@ export class GameManagerClass {
         this.gameScene = gameScene;
     }
 
+    public getRandomIdiom(): Array<string> {
+        return this.gameTable.getRandomIdiom();
+    }
+
     /**
      * 游戏开始
      */

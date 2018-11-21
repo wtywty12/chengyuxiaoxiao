@@ -75,14 +75,17 @@ var LoadingScene = (function (_super) {
         _this.btn_start = null;
         _this.btn_myinfo = null;
         _this.youzi = null;
+        _this.wxRankPre = null;
         _this.progress = 0;
         return _this;
     }
     LoadingScene.prototype.load = function () {
         return __awaiter(this, void 0, void 0, function () {
+            var self;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
+                        self = this;
                         cc.loader.downloader.loadSubpackage('loadingScene', function (err) {
                             if (err) {
                                 return;
@@ -110,7 +113,12 @@ var LoadingScene = (function (_super) {
                         });
                         this.btn_rank.node.on(cc.Node.EventType.TOUCH_END, function () {
                             GameAudio_1.GameAudio.playBtnEffect();
-                            GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.RANK);
+                            var wxRank = cc.instantiate(self.wxRankPre);
+                            cc.director.getScene().addChild(wxRank);
+                            wx.getOpenDataContext().postMessage({
+                                messageType: 1,
+                                MAIN_MENU_NUM: 1,
+                            });
                         });
                         this.btn_music.node.on(cc.Node.EventType.TOUCH_END, function () {
                             GameAudio_1.GameAudio.playBtnEffect();
@@ -209,6 +217,9 @@ var LoadingScene = (function (_super) {
     __decorate([
         property(cc.Sprite)
     ], LoadingScene.prototype, "youzi", void 0);
+    __decorate([
+        property(cc.Prefab)
+    ], LoadingScene.prototype, "wxRankPre", void 0);
     LoadingScene = __decorate([
         ccclass()
     ], LoadingScene);

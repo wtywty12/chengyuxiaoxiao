@@ -60,6 +60,7 @@ class GameResultClass{
         // cc.log("开始判定");
         this.isStartResult = true;
         let chooseMap = RecordGrid.getChooseGridMap();
+        let endIdiom = "";
         /** 判定结果 */
         let isSussess = false;
         for (var i=0; i<idiomAry.length; i++) {
@@ -73,10 +74,13 @@ class GameResultClass{
             }
             if (isEqual) {
                 isSussess = true;
+                endIdiom = idiom;
                 break;
             }
         }
         if (isSussess) {
+            /** 删除已经用的成语 */
+            RecordGrid.reduceLastIdiomAry(endIdiom);
              /** 播放上方表特性 */
             this.chooseView.playChooseFadeOut();
             /** 清理记录 */

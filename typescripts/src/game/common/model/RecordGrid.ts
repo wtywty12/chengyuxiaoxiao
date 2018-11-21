@@ -10,6 +10,8 @@ class RecordGridClass{
     private gameTableGridMap: Map<number, GameGrid> = new Map<number, GameGrid>();
     /** 判定动画时临时记录vec和grid */
     private tempChooseGridMap: Map<number, string> = new Map<number, string>();
+    /** 记录剩下的成语数组 用于提示 */
+    private lastIdiomAry: Array<string> = [];
 
     private constructor () {
     } 
@@ -72,6 +74,30 @@ class RecordGridClass{
         return this.tempChooseGridMap;
     }
 
+    /**
+     * 初始化剩下成语数组
+     */
+    public initLastIdiomAry(idiomAry: Array<string>) {
+        this.lastIdiomAry = idiomAry;
+    }
+
+    /**
+     * 设置剩下成语数组
+     */
+    public reduceLastIdiomAry(idiom: string) {
+        this.lastIdiomAry.forEach((value, key) => {
+            if (idiom == value) {
+                this.lastIdiomAry.splice(key, key+1);
+            }
+        })
+    }
+
+    /**
+     * 获取剩下成语数组
+     */
+    public getLastIdiomAry() {
+        return this.lastIdiomAry;
+    }
 
     /**
      * 显示格子

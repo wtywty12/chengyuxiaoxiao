@@ -30,6 +30,9 @@ var GameManagerClass = (function () {
         this.chooseView = chooseView;
         this.gameScene = gameScene;
     };
+    GameManagerClass.prototype.getRandomIdiom = function () {
+        return this.gameTable.getRandomIdiom();
+    };
     GameManagerClass.prototype.onGameStart = function () {
         GameDataManager_1.GameDataManager.gameData.gameStart();
         this.loadGameFinish();
