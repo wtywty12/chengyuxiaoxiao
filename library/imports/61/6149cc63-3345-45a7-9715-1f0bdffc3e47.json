@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btn_haoyou",
+    "texture": "f4f9fa83-23d1-4ec5-92d6-066a5664ff92",
+    "atlas": "",
+    "rect": [
+      1,
+      0,
+      287,
+      84
+    ],
+    "offset": [
+      0.5,
+      0
+    ],
+    "originalSize": [
+      288,
+      84
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

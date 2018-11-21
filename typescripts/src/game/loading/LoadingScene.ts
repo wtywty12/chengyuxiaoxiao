@@ -42,9 +42,13 @@ export class LoadingScene extends CommonScene {
     @property(cc.Sprite)
     private youzi :cc.Sprite = null;
 
+    @property(cc.Prefab)
+    private wxRankPre : cc.Prefab = null;
+
     //进度
     private progress:number  = 0;
     protected async load() {
+        var self = this
         cc.loader.downloader.loadSubpackage('loadingScene', function (err: any) {
             if (err) {
                 return ;
@@ -72,7 +76,14 @@ export class LoadingScene extends CommonScene {
         })
         this.btn_rank.node.on(cc.Node.EventType.TOUCH_END,function(){
             GameAudio.playBtnEffect();
-            GameEngine.changeScene(GameSceneHepler.RANK)
+            // GameEngine.changeScene(GameSceneHepler.RANK)
+            let wxRank = cc.instantiate(self.wxRankPre);
+            // wxRank.parent = this.node;
+            cc.director.getScene().addChild(wxRank)
+            wx.getOpenDataContext().postMessage({
+                messageType: 1,
+                MAIN_MENU_NUM: 1,
+            });
         })
         this.btn_music.node.on(cc.Node.EventType.TOUCH_END,function(){
             //判断全局 控制声音

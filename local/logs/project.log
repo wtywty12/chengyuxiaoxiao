@@ -1,3 +1,122 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+2018-11-20T03:21:55.044Z - normal: Load ~/.CocosCreator/settings.json
+2018-11-20T03:21:55.046Z - normal: checking language setting...
+2018-11-20T03:21:55.046Z - normal: Language: zh
+2018-11-20T03:21:55.523Z - success: protocol editor-framework registered
+2018-11-20T03:21:55.523Z - success: protocol app registered
+2018-11-20T03:21:55.523Z - success: protocol theme registered
+2018-11-20T03:21:55.524Z - success: protocol packages registered
+2018-11-20T03:21:55.524Z - success: protocol unpack registerred
+2018-11-20T03:21:55.524Z - success: protocol disable-commonjs registerred
+2018-11-20T03:21:55.998Z - normal: connected!
+2018-11-20T03:21:56.002Z - normal: Check project /Users/wangtianye/svn/wxgame_chengyuxiaoxiao
+2018-11-20T03:21:56.005Z - normal: Initializing project /Users/wangtianye/svn/wxgame_chengyuxiaoxiao
+2018-11-20T03:21:56.010Z - normal: Initializing Cocos2d
+2018-11-20T03:21:56.476Z - normal: Initializing Asset Database
+2018-11-20T03:21:56.509Z - success: protocol uuid registerred
+2018-11-20T03:21:56.510Z - success: protocol db registerred
+2018-11-20T03:21:56.510Z - success: protocol thumbnail registerred
+2018-11-20T03:21:56.510Z - normal: Loading editor/builtin packages
+2018-11-20T03:21:56.628Z - success: assets loaded
+2018-11-20T03:21:56.631Z - success: builder loaded
+2018-11-20T03:21:56.633Z - success: cocos-analytics loaded
+2018-11-20T03:21:56.638Z - success: console loaded
+2018-11-20T03:21:56.665Z - success: fb-instant-games loaded
+2018-11-20T03:21:56.667Z - success: google-instant-games loaded
+2018-11-20T03:21:56.673Z - success: hierarchy loaded
+2018-11-20T03:21:56.676Z - success: inspector loaded
+2018-11-20T03:21:56.678Z - success: keystore loaded
+2018-11-20T03:21:56.683Z - success: node-library loaded
+2018-11-20T03:21:56.686Z - success: package-asset loaded
+2018-11-20T03:21:56.687Z - success: preferences loaded
+2018-11-20T03:21:56.691Z - success: project-exporter loaded
+2018-11-20T03:21:56.704Z - success: project-importer loaded
+2018-11-20T03:21:56.707Z - success: project-settings loaded
+2018-11-20T03:21:56.714Z - success: ui-kit loaded
+2018-11-20T03:21:56.718Z - success: scene loaded
+2018-11-20T03:21:56.720Z - success: sprite-editor loaded
+2018-11-20T03:21:56.724Z - success: store loaded
+2018-11-20T03:21:56.729Z - success: timeline loaded
+2018-11-20T03:21:56.730Z - normal: Loading builtin packages
+2018-11-20T03:21:56.736Z - success: asset-db-debugger loaded
+2018-11-20T03:21:56.738Z - success: color-picker loaded
+2018-11-20T03:21:56.823Z - success: google-play-instant loaded
+2018-11-20T03:21:56.826Z - success: jsb-adapter loaded
+2018-11-20T03:21:56.833Z - success: package-manager loaded
+2018-11-20T03:21:56.965Z - success: qqplay-adapter loaded
+2018-11-20T03:21:56.973Z - success: sdkbox loaded
+2018-11-20T03:21:56.978Z - success: tester loaded
+2018-11-20T03:21:56.982Z - success: ui-grid loaded
+2018-11-20T03:21:56.988Z - success: ui-kit-preview-extra loaded
+2018-11-20T03:21:56.994Z - success: ui-kit-preview loaded
+2018-11-20T03:21:56.999Z - success: ui-tree loaded
+2018-11-20T03:21:57.000Z - success: weapp-adapter loaded
+2018-11-20T03:21:57.639Z - normal: Loading packages
+2018-11-20T03:21:57.644Z - normal: Watching packages
+2018-11-20T03:21:57.694Z - normal: Run Application
+2018-11-20T03:21:58.741Z - success: preview server running at http://localhost:7456
+=======
+2018-11-19T15:06:08.205Z - normal: Load ~/.CocosCreator/settings.json
+2018-11-19T15:06:08.211Z - normal: checking language setting...
+2018-11-19T15:06:08.211Z - normal: Language: zh
+2018-11-19T15:06:09.363Z - success: protocol editor-framework registered
+2018-11-19T15:06:09.364Z - success: protocol app registered
+2018-11-19T15:06:09.364Z - success: protocol theme registered
+2018-11-19T15:06:09.364Z - success: protocol packages registered
+2018-11-19T15:06:09.365Z - success: protocol unpack registerred
+2018-11-19T15:06:09.365Z - success: protocol disable-commonjs registerred
+2018-11-19T15:06:09.566Z - normal: connected!
+2018-11-19T15:06:09.571Z - normal: Check project /Users/linzhang/youyou/chengyuxiaoxiao
+2018-11-19T15:06:09.575Z - normal: Initializing project /Users/linzhang/youyou/chengyuxiaoxiao
+2018-11-19T15:06:09.581Z - normal: Initializing Cocos2d
+2018-11-19T15:06:10.708Z - normal: Initializing Asset Database
+2018-11-19T15:06:10.785Z - success: protocol uuid registerred
+2018-11-19T15:06:10.786Z - success: protocol db registerred
+2018-11-19T15:06:10.786Z - success: protocol thumbnail registerred
+2018-11-19T15:06:10.786Z - normal: Loading editor/builtin packages
+2018-11-19T15:06:11.074Z - success: assets loaded
+2018-11-19T15:06:11.082Z - success: builder loaded
+2018-11-19T15:06:11.087Z - success: cocos-analytics loaded
+2018-11-19T15:06:11.097Z - success: console loaded
+2018-11-19T15:06:11.148Z - success: fb-instant-games loaded
+2018-11-19T15:06:11.151Z - success: google-instant-games loaded
+2018-11-19T15:06:11.162Z - success: hierarchy loaded
+2018-11-19T15:06:11.169Z - success: inspector loaded
+2018-11-19T15:06:11.171Z - success: keystore loaded
+2018-11-19T15:06:11.184Z - success: node-library loaded
+2018-11-19T15:06:11.188Z - success: package-asset loaded
+2018-11-19T15:06:11.190Z - success: preferences loaded
+2018-11-19T15:06:11.194Z - success: project-exporter loaded
+2018-11-19T15:06:11.217Z - success: project-importer loaded
+2018-11-19T15:06:11.222Z - success: project-settings loaded
+2018-11-19T15:06:11.228Z - success: ui-kit loaded
+2018-11-19T15:06:11.234Z - success: scene loaded
+2018-11-19T15:06:11.237Z - success: sprite-editor loaded
+2018-11-19T15:06:11.246Z - success: store loaded
+2018-11-19T15:06:11.256Z - success: timeline loaded
+2018-11-19T15:06:11.256Z - normal: Loading builtin packages
+2018-11-19T15:06:11.265Z - success: asset-db-debugger loaded
+2018-11-19T15:06:11.268Z - success: color-picker loaded
+2018-11-19T15:06:11.447Z - success: google-play-instant loaded
+2018-11-19T15:06:11.450Z - success: jsb-adapter loaded
+2018-11-19T15:06:11.457Z - success: oppo-runtime loaded
+2018-11-19T15:06:11.466Z - success: package-manager loaded
+2018-11-19T15:06:11.727Z - success: qqplay-adapter loaded
+2018-11-19T15:06:11.738Z - success: sdkbox loaded
+2018-11-19T15:06:11.749Z - success: tester loaded
+2018-11-19T15:06:11.761Z - success: ui-grid loaded
+2018-11-19T15:06:11.770Z - success: ui-kit-preview-extra loaded
+2018-11-19T15:06:11.779Z - success: ui-kit-preview loaded
+2018-11-19T15:06:11.788Z - success: ui-tree loaded
+2018-11-19T15:06:11.794Z - success: vivo-runtime loaded
+2018-11-19T15:06:11.797Z - success: weapp-adapter loaded
+2018-11-19T15:06:14.326Z - normal: Loading packages
+2018-11-19T15:06:14.331Z - normal: Watching packages
+2018-11-19T15:06:14.456Z - normal: Run Application
+2018-11-19T15:06:15.992Z - success: preview server running at http://localhost:7456
+2018-11-19T15:54:32.757Z - normal: Start building with options : {
+=======
 2018-11-20T06:27:05.303Z - normal: Load ~/.CocosCreator/settings.json
 2018-11-20T06:27:05.308Z - normal: checking language setting...
 2018-11-20T06:27:05.309Z - normal: Language: zh
@@ -539,6 +658,7 @@ Missing uuid: "410fb916-8721-4663-bab8-34397391ace7"
 2018-11-20T07:02:36.248Z - normal: open IDE success
 
 2018-11-20T07:06:34.808Z - normal: Start building with options : {
+>>>>>>> 74b34aee3d5ce1b6345a6734954ca8e67d6ec7da
   "actualPlatform": "wechatgame",
   "android-instant": {
     "REMOTE_SERVER_ROOT": "",
@@ -986,6 +1106,9 @@ Missing uuid: "410fb916-8721-4663-bab8-34397391ace7"
 
 2018-11-20T12:34:35.275Z - normal: open IDE success
 
+<<<<<<< HEAD
+>>>>>>> 87e561ba88ceb43879810b897bc5c106238a6097
+=======
 2018-11-20T12:44:30.731Z - normal: Start building with options : {
   "actualPlatform": "wechatgame",
   "android-instant": {
@@ -1184,3 +1307,4 @@ Missing uuid: "410fb916-8721-4663-bab8-34397391ace7"
     at __decorate (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/game/common/script/TipsScript.js:33:60)
     at /Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/game/common/script/TipsScript.js:77:5
     at __define (/Users/linzhang/youyou/chengyuxiaoxiao/temp/quick-scripts/assets/Script/src/game/common/script/TipsScript.js:81:2)
+>>>>>>> 0f6b5b986e989cfb224219c042074f39e039a21b

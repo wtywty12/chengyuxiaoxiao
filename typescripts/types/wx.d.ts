@@ -81,7 +81,7 @@ interface IWxApi {
     sendSocketMessage?(obj: any): void;
 
     onSocketMessage?(obj: any): void;
-    
+
     closeSocket?(obj: any): void;
 
     onSocketClose?(obj: any): void;
@@ -242,18 +242,24 @@ interface IWxApi {
 
     onHide(obj: any): void;
 
-    //开放数据 API
-    onMessage?(obj: any):void;
+    // 开放域数据 API
+    getOpenDataContext?(): OpenDataContext;
 
-    getUserCloudStorage?(obj: any):void;
+    getLaunchOptionsSync(): LaunchOption;
 
-    setUserCloudStorage?(obj: any):void;
+    updateShareMenu(obj: any): void;
 
-    getFriendCloudStorage?(obj:any):void;
+    exitMiniProgram(object: any): void;
 
-    getGroupCloudStorage?(obj:any):void;
+    getShareInfo(object: any): void;
 
-    removeUserCloudStorage?(obj:any):void
+    hideShareMenu(object: any): void;
+}
+
+interface OpenDataContext {
+    postMessage(obj: any): void;
+
+    // canvas():HTMLCanvasElement;
 }
 
 interface UserInfoButton {
@@ -269,8 +275,17 @@ interface UserInfoButton {
 
 }
 
-interface CanvasContext {
+interface LaunchOption {
+    scene: number;
+    query: any;
+    isSticky: boolean;
+    shareTicket: string;
+    referrerInfo: ReferrerInfo;
+}
 
+interface ReferrerInfo {
+    appId: string;
+    extraData: any;
 }
 
 declare let wx: IWxApi;
