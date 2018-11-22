@@ -39,10 +39,14 @@ var GameManagerClass = (function () {
         GameDataManager_1.GameDataManager.gameData.gameStart();
         this.loadGameFinish();
     };
-    GameManagerClass.prototype.onGameLevelup = function () {
+    GameManagerClass.prototype.addGameTime = function () {
         this.addScheTIme();
         GameDataManager_1.GameDataManager.gameData.addgametime();
+    };
+    GameManagerClass.prototype.onGameLevelup = function () {
+        this.addGameTime();
         GameDataManager_1.GameDataManager.gameData.addlevel();
+        this.gameScene.updateLevel();
         this.gameTable.onClearAll();
         this.chooseView.onClearAll();
         this.loadGameFinish();

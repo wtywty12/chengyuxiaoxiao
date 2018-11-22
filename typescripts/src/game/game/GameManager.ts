@@ -47,14 +47,22 @@ export class GameManagerClass {
         this.loadGameFinish();
     }
     /**
+     * 添加过关时间
+     */
+    public addGameTime() {
+        /** 过关时间 */
+        this.addScheTIme();
+        GameDataManager.gameData.addgametime()
+    }
+    /**
      * 进入下一关
      */
     public onGameLevelup(){
-        //先加上当前关卡的奖励时间
-        //过关进度条加时间 需要位于等级增加之前
-        this.addScheTIme();
-        GameDataManager.gameData.addgametime()
+        this.addGameTime();
+        /** 添加等级 */        
         GameDataManager.gameData.addlevel()
+        /** 设置关卡 */
+        this.gameScene.updateLevel();
         //清除所有
         this.gameTable.onClearAll();
         this.chooseView.onClearAll();

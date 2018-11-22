@@ -67,19 +67,20 @@ var GameResultClass = (function () {
         }
     };
     GameResultClass.prototype.resetChooseData = function () {
+        if (Tools_1.Tools.getMapLength(RecordGrid_1.RecordGrid.getGameTableGridMap()) == 4 * Tools_1.Tools.getGridNumber(this.gameTable.tableWidth, this.gameTable.tableHeight)) {
+            GameManager_1.GameManager.onGameLevelup();
+        }
+        this.chooseView.playChooseFadeIn();
         this.isStartResult = false;
         this.chooseView.resetTempData();
     };
     GameResultClass.prototype.onSuccessFul = function () {
         this.chooseView.clearChooseGrid();
-        this.chooseView.playChooseFadeIn();
         GameDataManager_1.GameDataManager.gameData.addscore(4);
         this.gameScene.setScore(GameDataManager_1.GameDataManager.gameData.score.toString());
         this.gameScene.setTopScore();
         cc.log(Tools_1.Tools.getGridNumber(this.gameTable.tableWidth, this.gameTable.tableHeight));
         if (Tools_1.Tools.getMapLength(RecordGrid_1.RecordGrid.getGameTableGridMap()) == 4 * Tools_1.Tools.getGridNumber(this.gameTable.tableWidth, this.gameTable.tableHeight)) {
-            GameManager_1.GameManager.onGameLevelup();
-            this.gameScene.updateLevel();
         }
         else {
             var rewardTime = 1;

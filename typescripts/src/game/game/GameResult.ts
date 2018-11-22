@@ -101,6 +101,11 @@ class GameResultClass{
      * 恢复数据
      */
     private resetChooseData() {
+        if (Tools.getMapLength(RecordGrid.getGameTableGridMap()) == 4 * Tools.getGridNumber(this.gameTable.tableWidth, this.gameTable.tableHeight)) {
+            GameManager.onGameLevelup();
+        }
+        /** 显示上方背景格子 */
+        this.chooseView.playChooseFadeIn();
         /** 设置结束判定 */
         this.isStartResult = false;
         /** 恢复数据 */
@@ -114,8 +119,6 @@ class GameResultClass{
         // cc.log("判定成功");
         /** 清理上方成语 */
         this.chooseView.clearChooseGrid();
-        /** 显示上方背景格子 */
-        this.chooseView.playChooseFadeIn();
         /** 设置得分 */
         GameDataManager.gameData.addscore(4);
         this.gameScene.setScore(GameDataManager.gameData.score.toString());
@@ -124,9 +127,7 @@ class GameResultClass{
         /** 判定胜利 */
         cc.log(Tools.getGridNumber(this.gameTable.tableWidth, this.gameTable.tableHeight))
         if (Tools.getMapLength(RecordGrid.getGameTableGridMap()) == 4 * Tools.getGridNumber(this.gameTable.tableWidth, this.gameTable.tableHeight)) {
-            GameManager.onGameLevelup();
-            /** 设置关卡 */
-            this.gameScene.updateLevel();
+            //
         }
         else {
             /** 答对一个加两秒 */
