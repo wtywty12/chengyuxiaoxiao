@@ -9,6 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var ccclass = cc._decorator.ccclass;
 var GameDataManager_1 = require("./../common/data/GameDataManager");
 var ConfigManager_1 = require("../common/ConfigManager");
+var GameResult_1 = require("./GameResult");
 var GameManagerClass = (function () {
     function GameManagerClass() {
         this.gameTable = null;
@@ -61,6 +62,7 @@ var GameManagerClass = (function () {
         this.gameTable.onGameOver();
         this.chooseView.onGameOver();
         this.gameScene.onGameOver();
+        GameResult_1.GameResult.onGameOver();
     };
     var GameManagerClass_1;
     GameManagerClass = GameManagerClass_1 = __decorate([

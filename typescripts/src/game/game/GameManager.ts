@@ -5,6 +5,7 @@ import {GameScene} from "./GameScene";
 import {GameDataManager} from "./../common/data/GameDataManager"
 import { GameData } from "../common/data/GameData";
 import {ConfigManager} from "../common/ConfigManager";
+import {GameResult} from "./GameResult";
 
 /**
  * 游戏管理器
@@ -86,6 +87,7 @@ export class GameManagerClass {
         this.gameTable.onGameOver();
         this.chooseView.onGameOver();
         this.gameScene.onGameOver();
+        GameResult.onGameOver();
     }
 }
 

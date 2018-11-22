@@ -80,17 +80,31 @@ class GameResultClass{
             }
         }
         if (isSussess) {
+            /** 播放音效 */
+            GameAudio.playJudgeRightEffect();
             /** 删除已经用的成语 */
             RecordGrid.reduceLastIdiomAry(endIdiom);
              /** 播放上方表特性 */
             this.chooseView.playChooseFadeOut();
             /** 清理记录 */
             RecordGrid.clearRecordData();
-            var cb1 = cc.callFunc(this.onSuccessFul, this);
+            /** 执行判定成功数据逻辑 */
+            this.onSuccessFul();
+            var cb1 = cc.callFunc(this.resetChooseData, this);
             this.gameTable.node.runAction(cc.sequence(cc.delayTime(GameDataManager.gameData.gridEffectTime), cb1));
         } else {
             this.onFailed();
         }
+    }
+
+    /**
+     * 恢复数据
+     */
+    private resetChooseData() {
+        /** 设置结束判定 */
+        this.isStartResult = false;
+        /** 恢复数据 */
+        this.chooseView.resetTempData();
     }
 
     /**
@@ -107,12 +121,6 @@ class GameResultClass{
         this.gameScene.setScore(GameDataManager.gameData.score.toString());
         /** 设置最高分 */
         this.gameScene.setTopScore();
-        /** 播放音效 */
-        GameAudio.playJudgeRightEffect();
-        /** 设置结束判定 */
-        this.isStartResult = false;
-        /** 恢复数据 */
-        this.chooseView.resetTempData();
         /** 判定胜利 */
         cc.log(Tools.getGridNumber(this.gameTable.tableWidth, this.gameTable.tableHeight))
         if (Tools.getMapLength(RecordGrid.getGameTableGridMap()) == 4 * Tools.getGridNumber(this.gameTable.tableWidth, this.gameTable.tableHeight)) {
@@ -139,8 +147,6 @@ class GameResultClass{
         this.chooseView.restoreIdiom();
         /** 清理数据 */
         this.clearData();
-        /** 设置结束判定 */
-        this.isStartResult = false;
      }
 
      /**
@@ -151,6 +157,16 @@ class GameResultClass{
         RecordGrid.clearRecordData();
         /** 清理上方成语 */
         this.chooseView.clearChooseGrid();
+        /** 设置结束判定 */
+        this.isStartResult = false;
+     }
+
+     /**
+      * 游戏结束
+      */
+     public onGameOver() {
+        /** 设置结束判定 */
+        this.clearData();
      }
 }
 
