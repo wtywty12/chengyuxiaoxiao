@@ -17,6 +17,7 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
 Object.defineProperty(exports, "__esModule", { value: true });
 var ccclass = cc._decorator.ccclass;
 var GameDataManager_1 = require("./../common/data/GameDataManager");
+var ConfigManager_1 = require("../common/ConfigManager");
 var GameManagerClass = function () {
     function GameManagerClass() {
         this.gameTable = null;
@@ -47,11 +48,17 @@ var GameManagerClass = function () {
         this.loadGameFinish();
     };
     GameManagerClass.prototype.onGameLevelup = function () {
+        this.addScheTIme();
         GameDataManager_1.GameDataManager.gameData.addgametime();
         GameDataManager_1.GameDataManager.gameData.addlevel();
         this.gameTable.onClearAll();
         this.chooseView.onClearAll();
         this.loadGameFinish();
+    };
+    GameManagerClass.prototype.addScheTIme = function () {
+        var levelsInfo = ConfigManager_1.ConfigManager.levelsJsonMap.get(GameDataManager_1.GameDataManager.gameData.level);
+        var value = levelsInfo.addtime || 0;
+        this.gameScene.addScheTimes(value);
     };
     GameManagerClass.prototype.loadGameFinish = function () {
         this.chooseView.loadFinish();
@@ -62,7 +69,7 @@ var GameManagerClass = function () {
     GameManagerClass.prototype.onGameOver = function () {
         this.gameTable.onGameOver();
         this.chooseView.onGameOver();
-        this.gameScene.resetCDTime();
+        this.gameScene.onGameOver();
     };
     var GameManagerClass_1;
     GameManagerClass = GameManagerClass_1 = __decorate([ccclass()], GameManagerClass);

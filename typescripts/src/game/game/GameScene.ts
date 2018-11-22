@@ -97,7 +97,7 @@ export class GameScene extends cc.Component {
     protected onDestroy(): void {
         GameDataManager.gameData.refuseData()
         GameAudio.stopAll();
-        this.unscheduleAllCallbacks();
+        this.onGameOver();
     }
 
     private loadFinish(): void {
@@ -169,6 +169,7 @@ export class GameScene extends cc.Component {
             GameDataManager.gameData.gametime--;
             this.lbl_time.string = Tools.numberToDate(GameDataManager.gameData.gametime);
             if (GameDataManager.gameData.gametime <= 0) {
+                this.bar_time.progress = 0;
                 GameManager.onGameOver();
                 GameEngine.changeScene(GameSceneHepler.SETTLE)
             }
@@ -180,7 +181,7 @@ export class GameScene extends cc.Component {
      * 创建进度条进度器
      */
     public createScheBar() {
-        var time = GameDataManager.gameData.gametime * 0.01;
+        var time = GameDataManager.gameData.totalGameTime * 0.01;
         this.scheTimes = 100;
         var barCallback = function (dt: number) {
             this.scheTimes --;
@@ -196,10 +197,10 @@ export class GameScene extends cc.Component {
     /**
      * 答对增加进度条百分比
      */
-    public addScheTimes(score: number) {
-        if (typeof(score) == "number") {
-            var percent = score / GameDataManager.gameData.gametime * 100;
-            this.scheTimes += score;
+    public addScheTimes(time: number) {
+        if (typeof(time) == "number") {
+            var percent = time / GameDataManager.gameData.totalGameTime * 100;
+            this.scheTimes += percent;
         }
     }
 
@@ -207,9 +208,16 @@ export class GameScene extends cc.Component {
      * 重置定时器
      */
     public resetCDTime() {
-        this.unscheduleAllCallbacks();
+        this.onGameOver();
         this.createCDTime();
         this.createScheBar();
+    }
+
+    /**
+     * 关闭所有定时器
+     */
+    public onGameOver() {
+        this.unscheduleAllCallbacks();
     }
 
     /**

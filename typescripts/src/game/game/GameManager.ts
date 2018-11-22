@@ -2,9 +2,9 @@ import ccclass = cc._decorator.ccclass;
 import {GameTable} from "./GameTable";
 import {ChooseView} from "./ChooseView";
 import {GameScene} from "./GameScene";
-// import {GameData} from "./../common/data/GameData"
 import {GameDataManager} from "./../common/data/GameDataManager"
 import { GameData } from "../common/data/GameData";
+import {ConfigManager} from "../common/ConfigManager";
 
 /**
  * 游戏管理器
@@ -50,16 +50,26 @@ export class GameManagerClass {
      */
     public onGameLevelup(){
         //先加上当前关卡的奖励时间
+        //过关进度条加时间 需要位于等级增加之前
+        this.addScheTIme();
         GameDataManager.gameData.addgametime()
         GameDataManager.gameData.addlevel()
-        //重置倒计时
-        // this.gameScene.resetCDTime();
         //清除所有
         this.gameTable.onClearAll();
         this.chooseView.onClearAll();
         
         this.loadGameFinish();
     }
+
+    /**
+     * 过关进度条加时间
+     */
+    private addScheTIme() {
+        var levelsInfo = ConfigManager.levelsJsonMap.get(GameDataManager.gameData.level);
+        var value = levelsInfo.addtime || 0;
+        this.gameScene.addScheTimes(value);
+    }
+
     /**
      * 加载游戏
      */
@@ -75,7 +85,7 @@ export class GameManagerClass {
     public onGameOver() {
         this.gameTable.onGameOver();
         this.chooseView.onGameOver();
-        this.gameScene.resetCDTime();
+        this.gameScene.onGameOver();
     }
 }
 

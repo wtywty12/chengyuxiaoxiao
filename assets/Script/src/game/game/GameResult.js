@@ -71,12 +71,12 @@ var GameResultClass = (function () {
         this.gameScene.setScore(GameDataManager_1.GameDataManager.gameData.score.toString());
         this.gameScene.setTopScore();
         GameAudio_1.GameAudio.playJudgeRightEffect();
-        this.gameScene.updateLevel();
         this.isStartResult = false;
         this.chooseView.resetTempData();
         cc.log(Tools_1.Tools.getGridNumber(this.gameTable.tableWidth, this.gameTable.tableHeight));
         if (Tools_1.Tools.getMapLength(RecordGrid_1.RecordGrid.getGameTableGridMap()) == 4 * Tools_1.Tools.getGridNumber(this.gameTable.tableWidth, this.gameTable.tableHeight)) {
             GameManager_1.GameManager.onGameLevelup();
+            this.gameScene.updateLevel();
         }
         else {
             var rewardTime = 1;

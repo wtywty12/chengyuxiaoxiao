@@ -109,8 +109,6 @@ class GameResultClass{
         this.gameScene.setTopScore();
         /** 播放音效 */
         GameAudio.playJudgeRightEffect();
-        /** 设置关卡 */
-        this.gameScene.updateLevel();
         /** 设置结束判定 */
         this.isStartResult = false;
         /** 恢复数据 */
@@ -119,6 +117,8 @@ class GameResultClass{
         cc.log(Tools.getGridNumber(this.gameTable.tableWidth, this.gameTable.tableHeight))
         if (Tools.getMapLength(RecordGrid.getGameTableGridMap()) == 4 * Tools.getGridNumber(this.gameTable.tableWidth, this.gameTable.tableHeight)) {
             GameManager.onGameLevelup();
+            /** 设置关卡 */
+            this.gameScene.updateLevel();
         }
         else {
             /** 答对一个加两秒 */

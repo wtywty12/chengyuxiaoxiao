@@ -72,7 +72,7 @@ var GameScene = function (_super) {
     GameScene.prototype.onDestroy = function () {
         GameDataManager_1.GameDataManager.gameData.refuseData();
         GameAudio_1.GameAudio.stopAll();
-        this.unscheduleAllCallbacks();
+        this.onGameOver();
     };
     GameScene.prototype.loadFinish = function () {
         GameAudio_1.GameAudio.playGameMusic();
@@ -129,6 +129,7 @@ var GameScene = function (_super) {
             GameDataManager_1.GameDataManager.gameData.gametime--;
             this.lbl_time.string = Tools_1.Tools.numberToDate(GameDataManager_1.GameDataManager.gameData.gametime);
             if (GameDataManager_1.GameDataManager.gameData.gametime <= 0) {
+                this.bar_time.progress = 0;
                 GameManager_1.GameManager.onGameOver();
                 GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.SETTLE);
             }
@@ -136,7 +137,7 @@ var GameScene = function (_super) {
         this.schedule(timeCallback, 1);
     };
     GameScene.prototype.createScheBar = function () {
-        var time = GameDataManager_1.GameDataManager.gameData.gametime * 0.01;
+        var time = GameDataManager_1.GameDataManager.gameData.totalGameTime * 0.01;
         this.scheTimes = 100;
         var barCallback = function barCallback(dt) {
             this.scheTimes--;
@@ -148,16 +149,19 @@ var GameScene = function (_super) {
         }
         this.schedule(barCallback, time);
     };
-    GameScene.prototype.addScheTimes = function (score) {
-        if (typeof score == "number") {
-            var percent = score / GameDataManager_1.GameDataManager.gameData.gametime * 100;
-            this.scheTimes += score;
+    GameScene.prototype.addScheTimes = function (time) {
+        if (typeof time == "number") {
+            var percent = time / GameDataManager_1.GameDataManager.gameData.totalGameTime * 100;
+            this.scheTimes += percent;
         }
     };
     GameScene.prototype.resetCDTime = function () {
-        this.unscheduleAllCallbacks();
+        this.onGameOver();
         this.createCDTime();
         this.createScheBar();
+    };
+    GameScene.prototype.onGameOver = function () {
+        this.unscheduleAllCallbacks();
     };
     GameScene.prototype.setScore = function (score) {
         if (typeof score != "string") {
