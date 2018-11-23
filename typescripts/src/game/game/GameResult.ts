@@ -117,15 +117,14 @@ class GameResultClass{
      */
     private onSuccessFul() {
         // cc.log("判定成功");
+        /** 添加答对数 */
+        GameDataManager.gameData.rightTimes++;
         /** 清理上方成语 */
         this.chooseView.clearChooseGrid();
         /** 设置得分 */
-        GameDataManager.gameData.addscore(4);
+        GameDataManager.gameData.setScore();
         this.gameScene.setScore(GameDataManager.gameData.score.toString());
-        /** 设置最高分 */
-        this.gameScene.setTopScore();
         /** 判定胜利 */
-        cc.log(Tools.getGridNumber(this.gameTable.tableWidth, this.gameTable.tableHeight))
         if (Tools.getMapLength(RecordGrid.getGameTableGridMap()) == 4 * Tools.getGridNumber(this.gameTable.tableWidth, this.gameTable.tableHeight)) {
             //
         }

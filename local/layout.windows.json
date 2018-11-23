@@ -5,10 +5,10 @@
       "main": true,
       "url": "app://editor/index.html",
       "windowType": "dockable",
-      "x": 0,
-      "y": 0,
+      "x": -1920,
+      "y": -157,
       "width": 1440,
-      "height": 900,
+      "height": 813,
       "layout": {
         "children": [
           {
@@ -18,7 +18,7 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 298.671875,
+                "height": 299,
                 "type": "panel",
                 "width": 204
               },
@@ -27,7 +27,7 @@
                 "children": [
                   "assets"
                 ],
-                "height": 420.328125,
+                "height": 420,
                 "type": "panel",
                 "width": 204
               }
@@ -83,13 +83,12 @@
         "scene"
       ]
     },
-    "window-1542855925619": {},
-    "worker": {}
+    "window-1542974387513": {}
   },
   "panels": {
     "builder": {
-      "x": -5,
-      "y": 23,
+      "x": 326,
+      "y": 99,
       "width": 654,
       "height": 586
     },
@@ -110,6 +109,12 @@
       "y": 516,
       "width": 504,
       "height": 288
+    },
+    "node-library": {
+      "x": 810,
+      "y": 277,
+      "width": 300,
+      "height": 502
     }
   }
 }

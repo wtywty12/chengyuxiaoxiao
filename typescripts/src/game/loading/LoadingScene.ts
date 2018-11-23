@@ -80,10 +80,10 @@ export class LoadingScene extends CommonScene {
             let wxRank = cc.instantiate(self.wxRankPre);
             // wxRank.parent = this.node;
             cc.director.getScene().addChild(wxRank)
-            wx.getOpenDataContext().postMessage({
-                messageType: 1,
-                MAIN_MENU_NUM: 1,
-            });
+            // wx.getOpenDataContext().postMessage({
+            //     messageType: 1,
+            //     MAIN_MENU_NUM: 1,
+            // });
         })
         this.btn_music.node.on(cc.Node.EventType.TOUCH_END,function(){
             //判断全局 控制声音
@@ -127,7 +127,7 @@ export class LoadingScene extends CommonScene {
     //初始化玩家信息
     private initPlayerData():void{
         //通过后台获取 用户信息 若未授权 提示用户去授权 并拉去玩家信息
-        GameDataManager.gameData.playtimes = 0
+        // GameDataManager.gameData.playtimes = 0
         // GameDataManager.gameData.topscore = 10
     }
     protected unload(): void {

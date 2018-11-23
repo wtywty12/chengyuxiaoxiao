@@ -10,6 +10,7 @@ var ccclass = cc._decorator.ccclass;
 var GameDataManager_1 = require("./../common/data/GameDataManager");
 var ConfigManager_1 = require("../common/ConfigManager");
 var GameResult_1 = require("./GameResult");
+var StorageInfo_1 = require("../common/data/StorageInfo");
 var GameManagerClass = (function () {
     function GameManagerClass() {
         this.gameTable = null;
@@ -36,6 +37,7 @@ var GameManagerClass = (function () {
         return this.gameTable.getRandomIdiom();
     };
     GameManagerClass.prototype.onGameStart = function () {
+        StorageInfo_1.StorageInfo.addPlayTimes();
         GameDataManager_1.GameDataManager.gameData.gameStart();
         this.loadGameFinish();
     };
@@ -46,6 +48,7 @@ var GameManagerClass = (function () {
     GameManagerClass.prototype.onGameLevelup = function () {
         this.addGameTime();
         GameDataManager_1.GameDataManager.gameData.addlevel();
+        this.gameScene.setTopScore();
         this.gameScene.updateLevel();
         this.gameTable.onClearAll();
         this.chooseView.onClearAll();

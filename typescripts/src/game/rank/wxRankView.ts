@@ -1,90 +1,77 @@
-/**
- * User: lizhen
- * Note: wxRankView
- */
-// import {GameComponent} from "../../../core/component/GameComponent";
 import {GameEngine} from "../../game/common/GameEngine";
 import {GameDataManager} from "../../game/common/data/GameDataManager";
+import {GameAudio} from "../common/helper/GameAudio";
+import {GameSceneHepler} from "../common/helper/GameSceneHepler";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
 export class wxRankView extends cc.Component {
     @property(cc.Button)
-    private friendBtn: cc.Button = null;
+    private btn_back: cc.Button = null;
     @property(cc.Button)
-    private friendGroupBtn: cc.Button = null;
-    @property(cc.Sprite)
-    rankingScrollView:cc.Sprite = null;
+    private btn_invite: cc.Button = null;
 
     private tex:cc.Texture2D = null;
 
-    load() {
-        this.friendBtn.interactable = false;
-        this.friendGroupBtn.interactable = true;
+    protected constructor() {
+        super();
     }
-    start(){
+
+    protected onLoad() {
+        this.btn_back.node.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener);
+        this.btn_invite.node.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener);
+        
+    }
+
+    protected start(){
         this.tex = new cc.Texture2D();
-    }
-    unload() {
-
-    }
-
-    friendHandler() {
-        this.friendBtn.interactable = false;
-        this.friendGroupBtn.interactable = true;
+        console.log("send")
+        wx.getUserInfo({
+            success:(event: any) => {
+                console.log(event);
+            }
+        })
         wx.getOpenDataContext().postMessage({
-            messageType: 1,
-            MAIN_MENU_NUM: 1,
+            EventType: "0",
+            EventData: ""
         });
     }
 
-    groupFriendHandler() {
-        this.friendBtn.interactable = true;
-        this.friendGroupBtn.interactable = false;
-        this.shareGroup("shareTicket");
+    protected onDestroy() {
+        wx.getOpenDataContext().postMessage({
+            EventType: "3",
+            EventData: ""
+        });
     }
 
-    shareGroup(name: string) {
+    private onTouchEventListener(event: any) {
+        var eventType = event.type;
+        var eventName = event.target._name;
+        GameAudio.playBtnEffect();
+        if (eventType == "touchend") {
+            switch(eventName) {
+                case "btn_back":
+                    GameAudio.playBtnEffect();
+                    GameDataManager.gameData.refuseData()
+                    GameEngine.changeScene(GameSceneHepler.LOADING)
+                    break;
+                case "btn_invite":
+                    this.shareGroup();
+                default:
+                    break;
+            }
+        }
+    }
+
+    private shareGroup() {
         wx.shareAppMessage({
             title: "汉语六级你能考多少？试试就知道!",
             query: `sharePlayerId=${GameDataManager.userData.playerId}`,
             imageUrl: `https://liubowen.top/dzk-res/share/70001.png`,
-            success: (resData: any) => {
-                if (resData.shareTickets != undefined && resData.shareTickets.length > 0) {
-                    if ("shareTicket" == name) {
-                        wx.getOpenDataContext().postMessage({
-                            messageType: 5,
-                            MAIN_MENU_NUM: 1,
-                            shareTicket: resData.shareTickets[0]
-                        });
-                    }
-                }
+            success: (event: any) => {
+                console.log("微信分享返回数据 =>", event);
             }
         })
     }
-    shareGame(){
-       wx.getOpenDataContext().postMessage({
-            messageType: 3,
-            MAIN_MENU_NUM: 1,
-            score: 10,
-        });
-        // GameEngine.shareGame();
-    }
-    closeBtn() {
-        this.node.removeFromParent(true);
-    }
-    upHandler(){
-        wx.getOpenDataContext().postMessage({
-            messageType: 6,
-            MAIN_MENU_NUM: 1,
-        });
-    }
-    downHandler(){
-        wx.getOpenDataContext().postMessage({
-            messageType: 7,
-            MAIN_MENU_NUM: 1,
-        });
-    }
-
 }

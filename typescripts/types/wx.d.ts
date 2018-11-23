@@ -254,6 +254,10 @@ interface IWxApi {
     getShareInfo(object: any): void;
 
     hideShareMenu(object: any): void;
+
+    setUserCloudStorage?(obj: any):void;
+
+    removeUserCloudStorage?(obj:any):void
 }
 
 interface OpenDataContext {

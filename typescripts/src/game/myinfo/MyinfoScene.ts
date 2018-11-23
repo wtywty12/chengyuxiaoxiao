@@ -73,7 +73,7 @@ export class SettleScene extends cc.Component {
         /** 设置红包总金额 */
         this.label_price.string = StorageInfo.getRedPackMoney().toFixed(2);
         /** 设置游戏次数 */
-        this.label_playtimes.string = GameDataManager.gameData.playtimes.toString();
+        this.label_playtimes.string = StorageInfo.getPlayTimes().toString();
     }
 
     /** 类销毁 */

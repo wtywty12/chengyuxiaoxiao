@@ -6,6 +6,7 @@ import {GameDataManager} from "./../common/data/GameDataManager"
 import { GameData } from "../common/data/GameData";
 import {ConfigManager} from "../common/ConfigManager";
 import {GameResult} from "./GameResult";
+import { StorageInfo } from "../common/data/StorageInfo";
 
 /**
  * 游戏管理器
@@ -43,6 +44,7 @@ export class GameManagerClass {
      * 游戏开始
      */
     public onGameStart() {
+        StorageInfo.addPlayTimes();
         GameDataManager.gameData.gameStart()
         this.loadGameFinish();
     }
@@ -61,6 +63,8 @@ export class GameManagerClass {
         this.addGameTime();
         /** 添加等级 */        
         GameDataManager.gameData.addlevel()
+        /** 设置最高分 */
+        this.gameScene.setTopScore();
         /** 设置关卡 */
         this.gameScene.updateLevel();
         //清除所有
