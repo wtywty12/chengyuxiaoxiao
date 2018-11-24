@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2018-11-24T06:02:12.514Z - normal: Load ~/.CocosCreator/settings.json
 2018-11-24T06:02:12.517Z - normal: checking language setting...
 2018-11-24T06:02:12.517Z - normal: Language: zh
@@ -57,6 +58,133 @@
 2018-11-24T06:02:18.121Z - normal: Run Application
 2018-11-24T06:02:19.891Z - success: preview server running at http://localhost:7456
 2018-11-24T06:45:12.427Z - normal: Start building with options : {
+=======
+<<<<<<< HEAD
+2018-11-23T03:06:01.968Z - normal: Load ~/.CocosCreator/settings.json
+2018-11-23T03:06:01.978Z - normal: checking language setting...
+2018-11-23T03:06:01.978Z - normal: Language: zh
+2018-11-23T03:06:04.328Z - success: protocol editor-framework registered
+2018-11-23T03:06:04.328Z - success: protocol app registered
+2018-11-23T03:06:04.328Z - success: protocol theme registered
+2018-11-23T03:06:04.328Z - success: protocol packages registered
+2018-11-23T03:06:04.328Z - success: protocol unpack registerred
+2018-11-23T03:06:04.328Z - success: protocol disable-commonjs registerred
+2018-11-23T03:06:04.478Z - normal: connected!
+2018-11-23T03:06:04.478Z - normal: Check project C:\github\chengyuxiaoxiao
+2018-11-23T03:06:04.488Z - normal: Initializing project C:\github\chengyuxiaoxiao
+2018-11-23T03:06:04.498Z - normal: Initializing Cocos2d
+2018-11-23T03:06:05.948Z - normal: Initializing Asset Database
+2018-11-23T03:06:06.048Z - success: protocol uuid registerred
+2018-11-23T03:06:06.048Z - success: protocol db registerred
+2018-11-23T03:06:06.048Z - success: protocol thumbnail registerred
+2018-11-23T03:06:06.048Z - normal: Loading editor/builtin packages
+2018-11-23T03:06:06.318Z - success: assets loaded
+2018-11-23T03:06:06.328Z - success: builder loaded
+2018-11-23T03:06:06.338Z - success: cocos-analytics loaded
+2018-11-23T03:06:06.338Z - success: console loaded
+2018-11-23T03:06:06.408Z - success: fb-instant-games loaded
+2018-11-23T03:06:06.418Z - success: google-instant-games loaded
+2018-11-23T03:06:06.418Z - success: hierarchy loaded
+2018-11-23T03:06:06.428Z - success: inspector loaded
+2018-11-23T03:06:06.428Z - success: keystore loaded
+2018-11-23T03:06:06.438Z - success: node-library loaded
+2018-11-23T03:06:06.438Z - success: package-asset loaded
+2018-11-23T03:06:06.448Z - success: preferences loaded
+2018-11-23T03:06:06.448Z - success: project-exporter loaded
+2018-11-23T03:06:06.478Z - success: project-importer loaded
+2018-11-23T03:06:06.478Z - success: project-settings loaded
+2018-11-23T03:06:06.488Z - success: ui-kit loaded
+2018-11-23T03:06:06.488Z - success: scene loaded
+2018-11-23T03:06:06.488Z - success: sprite-editor loaded
+2018-11-23T03:06:06.498Z - success: store loaded
+2018-11-23T03:06:06.508Z - success: timeline loaded
+2018-11-23T03:06:06.508Z - normal: Loading builtin packages
+2018-11-23T03:06:06.528Z - success: asset-db-debugger loaded
+2018-11-23T03:06:06.538Z - success: code-editor loaded
+2018-11-23T03:06:06.538Z - success: color-picker loaded
+2018-11-23T03:06:06.718Z - success: google-play-instant loaded
+2018-11-23T03:06:06.718Z - success: jsb-adapter loaded
+2018-11-23T03:06:06.738Z - success: oppo-runtime loaded
+2018-11-23T03:06:06.738Z - success: package-manager loaded
+2018-11-23T03:06:06.968Z - success: qqplay-adapter loaded
+2018-11-23T03:06:06.978Z - success: sdkbox loaded
+2018-11-23T03:06:06.988Z - success: tester loaded
+2018-11-23T03:06:06.988Z - success: ui-grid loaded
+2018-11-23T03:06:06.988Z - success: ui-kit-preview-extra loaded
+2018-11-23T03:06:06.998Z - success: ui-kit-preview loaded
+2018-11-23T03:06:06.998Z - success: ui-tree loaded
+2018-11-23T03:06:07.008Z - success: vivo-runtime loaded
+2018-11-23T03:06:07.008Z - success: weapp-adapter loaded
+2018-11-23T03:06:09.152Z - normal: Loading packages
+2018-11-23T03:06:09.162Z - normal: Watching packages
+2018-11-23T03:06:10.402Z - normal: Run Application
+2018-11-23T03:06:17.753Z - success: preview server running at http://localhost:7456
+2018-11-23T08:47:32.247Z - info: shutdown preview server
+=======
+2018-11-23T02:26:21.036Z - normal: Load ~/.CocosCreator/settings.json
+2018-11-23T02:26:21.040Z - normal: checking language setting...
+2018-11-23T02:26:21.040Z - normal: Language: zh
+2018-11-23T02:26:22.277Z - success: protocol editor-framework registered
+2018-11-23T02:26:22.277Z - success: protocol app registered
+2018-11-23T02:26:22.277Z - success: protocol theme registered
+2018-11-23T02:26:22.278Z - success: protocol packages registered
+2018-11-23T02:26:22.278Z - success: protocol unpack registerred
+2018-11-23T02:26:22.278Z - success: protocol disable-commonjs registerred
+2018-11-23T02:26:22.474Z - normal: connected!
+2018-11-23T02:26:22.481Z - normal: Check project /Users/linzhang/youyou/chengyuxiaoxiao
+2018-11-23T02:26:22.487Z - normal: Initializing project /Users/linzhang/youyou/chengyuxiaoxiao
+2018-11-23T02:26:22.498Z - normal: Initializing Cocos2d
+2018-11-23T02:26:23.470Z - normal: Initializing Asset Database
+2018-11-23T02:26:23.540Z - success: protocol uuid registerred
+2018-11-23T02:26:23.541Z - success: protocol db registerred
+2018-11-23T02:26:23.541Z - success: protocol thumbnail registerred
+2018-11-23T02:26:23.541Z - normal: Loading editor/builtin packages
+2018-11-23T02:26:23.808Z - success: assets loaded
+2018-11-23T02:26:23.815Z - success: builder loaded
+2018-11-23T02:26:23.820Z - success: cocos-analytics loaded
+2018-11-23T02:26:23.828Z - success: console loaded
+2018-11-23T02:26:23.866Z - success: fb-instant-games loaded
+2018-11-23T02:26:23.870Z - success: google-instant-games loaded
+2018-11-23T02:26:23.882Z - success: hierarchy loaded
+2018-11-23T02:26:23.888Z - success: inspector loaded
+2018-11-23T02:26:23.891Z - success: keystore loaded
+2018-11-23T02:26:23.904Z - success: node-library loaded
+2018-11-23T02:26:23.907Z - success: package-asset loaded
+2018-11-23T02:26:23.910Z - success: preferences loaded
+2018-11-23T02:26:23.916Z - success: project-exporter loaded
+2018-11-23T02:26:23.942Z - success: project-importer loaded
+2018-11-23T02:26:23.948Z - success: project-settings loaded
+2018-11-23T02:26:23.954Z - success: ui-kit loaded
+2018-11-23T02:26:23.960Z - success: scene loaded
+2018-11-23T02:26:23.965Z - success: sprite-editor loaded
+2018-11-23T02:26:23.973Z - success: store loaded
+2018-11-23T02:26:23.983Z - success: timeline loaded
+2018-11-23T02:26:23.984Z - normal: Loading builtin packages
+2018-11-23T02:26:23.994Z - success: asset-db-debugger loaded
+2018-11-23T02:26:23.996Z - success: color-picker loaded
+2018-11-23T02:26:24.185Z - success: google-play-instant loaded
+2018-11-23T02:26:24.187Z - success: jsb-adapter loaded
+2018-11-23T02:26:24.195Z - success: oppo-runtime loaded
+2018-11-23T02:26:24.205Z - success: package-manager loaded
+2018-11-23T02:26:24.513Z - success: qqplay-adapter loaded
+2018-11-23T02:26:24.523Z - success: sdkbox loaded
+2018-11-23T02:26:24.534Z - success: tester loaded
+2018-11-23T02:26:24.543Z - success: ui-grid loaded
+2018-11-23T02:26:24.550Z - success: ui-kit-preview-extra loaded
+2018-11-23T02:26:24.558Z - success: ui-kit-preview loaded
+2018-11-23T02:26:24.565Z - success: ui-tree loaded
+2018-11-23T02:26:24.571Z - success: vivo-runtime loaded
+2018-11-23T02:26:24.574Z - success: weapp-adapter loaded
+2018-11-23T02:26:26.362Z - normal: Loading packages
+2018-11-23T02:26:26.369Z - normal: Watching packages
+2018-11-23T02:26:26.469Z - normal: Run Application
+2018-11-23T02:26:28.039Z - success: preview server running at http://localhost:7456
+2018-11-23T02:28:32.519Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:1607
+2018-11-23T02:28:56.371Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:1853
+2018-11-23T02:29:02.796Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:1860
+2018-11-23T02:30:58.187Z - warn: object already destroyed
+2018-11-23T04:35:26.796Z - normal: Start building with options : {
+>>>>>>> 2f17f02ac9cfa35e9dedbf68856ff5bb0467b715
   "actualPlatform": "wechatgame",
   "android-instant": {
     "REMOTE_SERVER_ROOT": "",
@@ -594,6 +722,7 @@ Node path: "Canvas/panel_bottom/panel_tab/scrollView"
   "projectName": "chengyuxiaoxiao",
   "debugBuildWorker": false
 }
+<<<<<<< HEAD
 2018-11-24T08:38:39.948Z - normal: Building /Users/linzhang/youyou/chengyuxiaoxiao
 2018-11-24T08:38:39.948Z - normal: Destination /Users/linzhang/wegame/wechatgame
 2018-11-24T08:38:39.950Z - normal: Delete /Users/linzhang/wegame/wechatgame/**/*
@@ -609,3 +738,21 @@ Node path: "Canvas/panel_bottom/panel_tab/scrollView"
 2018-11-24T08:38:52.575Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
 2018-11-24T08:38:54.232Z - warn: [Cocos Analystic] Can not find index.html
 2018-11-24T08:38:54.240Z - normal: Built to "/Users/linzhang/wegame/wechatgame" successfully
+=======
+2018-11-23T11:59:59.559Z - normal: Building /Users/linzhang/youyou/chengyuxiaoxiao
+2018-11-23T11:59:59.559Z - normal: Destination /Users/linzhang/wegame/wechatgame
+2018-11-23T11:59:59.562Z - normal: Delete /Users/linzhang/wegame/wechatgame/**/*
+2018-11-23T12:00:07.477Z - normal: Start building assets
+2018-11-23T12:00:07.490Z - normal: Start spawn build-worker
+2018-11-23T12:00:08.499Z - normal: Finish spawn build-worker
+2018-11-23T12:00:08.499Z - normal: Start init build-worker
+2018-11-23T12:00:13.404Z - normal: Finish init build-worker
+2018-11-23T12:00:13.406Z - normal: Start build-assets in worker
+2018-11-23T12:00:15.157Z - normal: Finish build-assets in worker
+2018-11-23T12:00:15.195Z - normal: Finish building assets
+2018-11-23T12:00:15.234Z - normal: Start building plugin scripts
+2018-11-23T12:00:15.279Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
+2018-11-23T12:00:17.375Z - warn: [Cocos Analystic] Can not find index.html
+2018-11-23T12:00:17.383Z - normal: Built to "/Users/linzhang/wegame/wechatgame" successfully
+>>>>>>> 4e5f1b1c73e6e65dc55ee3324480db0feb5af65d
+>>>>>>> 2f17f02ac9cfa35e9dedbf68856ff5bb0467b715
