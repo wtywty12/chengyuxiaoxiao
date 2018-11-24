@@ -1,4 +1,71 @@
 <<<<<<< HEAD
+2018-11-24T07:56:52.689Z - normal: Load ~/.CocosCreator/settings.json
+2018-11-24T07:56:52.689Z - normal: checking language setting...
+2018-11-24T07:56:52.689Z - normal: Language: zh
+2018-11-24T07:56:54.831Z - warn: Invalid layout profile, remove old profile and init a new one at: C:\github\chengyuxiaoxiao\local\layout.windows.json
+2018-11-24T07:56:54.862Z - success: protocol editor-framework registered
+2018-11-24T07:56:54.862Z - success: protocol app registered
+2018-11-24T07:56:54.862Z - success: protocol theme registered
+2018-11-24T07:56:54.862Z - success: protocol packages registered
+2018-11-24T07:56:54.862Z - success: protocol unpack registerred
+2018-11-24T07:56:54.862Z - success: protocol disable-commonjs registerred
+2018-11-24T07:56:55.002Z - normal: connected!
+2018-11-24T07:56:55.002Z - normal: Check project C:\github\chengyuxiaoxiao
+2018-11-24T07:56:55.018Z - normal: Initializing project C:\github\chengyuxiaoxiao
+2018-11-24T07:56:55.033Z - normal: Initializing Cocos2d
+2018-11-24T07:56:56.399Z - normal: Initializing Asset Database
+2018-11-24T07:56:56.492Z - warn: Failed to parse C:\github\chengyuxiaoxiao\library\uuid-to-mtime.json: Unexpected token < in JSON at position 1657.
+2018-11-24T07:56:56.508Z - success: protocol uuid registerred
+2018-11-24T07:56:56.508Z - success: protocol db registerred
+2018-11-24T07:56:56.508Z - success: protocol thumbnail registerred
+2018-11-24T07:56:56.508Z - normal: Loading editor/builtin packages
+2018-11-24T07:56:56.757Z - success: assets loaded
+2018-11-24T07:56:56.773Z - success: builder loaded
+2018-11-24T07:56:56.773Z - success: cocos-analytics loaded
+2018-11-24T07:56:56.773Z - success: console loaded
+2018-11-24T07:56:56.835Z - success: fb-instant-games loaded
+2018-11-24T07:56:56.835Z - success: google-instant-games loaded
+2018-11-24T07:56:56.851Z - success: hierarchy loaded
+2018-11-24T07:56:56.851Z - success: inspector loaded
+2018-11-24T07:56:56.851Z - success: keystore loaded
+2018-11-24T07:56:56.867Z - success: node-library loaded
+2018-11-24T07:56:56.867Z - success: package-asset loaded
+2018-11-24T07:56:56.867Z - success: preferences loaded
+2018-11-24T07:56:56.867Z - success: project-exporter loaded
+2018-11-24T07:56:56.898Z - success: project-importer loaded
+2018-11-24T07:56:56.898Z - success: project-settings loaded
+2018-11-24T07:56:56.913Z - success: ui-kit loaded
+2018-11-24T07:56:56.913Z - success: scene loaded
+2018-11-24T07:56:56.913Z - success: sprite-editor loaded
+2018-11-24T07:56:56.929Z - success: store loaded
+2018-11-24T07:56:56.929Z - success: timeline loaded
+2018-11-24T07:56:56.929Z - normal: Loading builtin packages
+2018-11-24T07:56:56.945Z - success: asset-db-debugger loaded
+2018-11-24T07:56:56.960Z - success: code-editor loaded
+2018-11-24T07:56:56.960Z - success: color-picker loaded
+2018-11-24T07:56:57.116Z - success: google-play-instant loaded
+2018-11-24T07:56:57.116Z - success: jsb-adapter loaded
+2018-11-24T07:56:57.132Z - success: oppo-runtime loaded
+2018-11-24T07:56:57.132Z - success: package-manager loaded
+2018-11-24T07:56:57.336Z - success: qqplay-adapter loaded
+2018-11-24T07:56:57.351Z - success: sdkbox loaded
+2018-11-24T07:56:57.351Z - success: tester loaded
+2018-11-24T07:56:57.351Z - success: ui-grid loaded
+2018-11-24T07:56:57.367Z - success: ui-kit-preview-extra loaded
+2018-11-24T07:56:57.367Z - success: ui-kit-preview loaded
+2018-11-24T07:56:57.367Z - success: ui-tree loaded
+2018-11-24T07:56:57.382Z - success: vivo-runtime loaded
+2018-11-24T07:56:57.382Z - success: weapp-adapter loaded
+2018-11-24T07:56:59.331Z - normal: Loading packages
+2018-11-24T07:56:59.346Z - normal: Watching packages
+2018-11-24T07:57:00.445Z - normal: Run Application
+2018-11-24T07:57:07.002Z - success: preview server running at http://localhost:7456
+2018-11-24T09:08:59.027Z - error: Window "main" crashed: [object Object]
+    at WebContents.nativeWin.webContents.on.e (C:\CocosCreator\resources\app.asar\editor-framework\lib\main\window.js:1:2607)
+    at emitTwo (events.js:106:13)
+    at WebContents.emit (events.js:194:7)
+=======
+<<<<<<< HEAD
 2018-11-24T06:02:12.514Z - normal: Load ~/.CocosCreator/settings.json
 2018-11-24T06:02:12.517Z - normal: checking language setting...
 2018-11-24T06:02:12.517Z - normal: Language: zh
@@ -756,3 +823,4 @@ Node path: "Canvas/panel_bottom/panel_tab/scrollView"
 2018-11-23T12:00:17.383Z - normal: Built to "/Users/linzhang/wegame/wechatgame" successfully
 >>>>>>> 4e5f1b1c73e6e65dc55ee3324480db0feb5af65d
 >>>>>>> 2f17f02ac9cfa35e9dedbf68856ff5bb0467b715
+>>>>>>> d8c7b1c4add265e404007044313d174431795fec
