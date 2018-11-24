@@ -7,8 +7,6 @@ import {ConfigManager} from "../ConfigManager";
 import {StorageInfo} from "./StorageInfo";
 
 export class GameData {
-    //最高分 改为存本地缓存
-    // private _topscore : number;
     //当前分数
     private _score : number;
     /** 临时分数 用于红包显示分数 */
@@ -23,8 +21,6 @@ export class GameData {
     private _totalGameTime: number;
     //玩家id
     private _playerId : number;
-    //玩家玩的次数
-    // private _playtimes:number;
     /** 判定动画消除时间 */
     private _gridEffectTime: number;
     /** 格子宽 */
@@ -62,8 +58,6 @@ export class GameData {
         this._lastTime = 0;
         this._gametime = this._totalGameTime;
         this.rightTimes = 0;
-        // this._totalGameTime = 60;
-        // this._playtimes = 0;//个人中心记录次数 此处不能清零
     }
     //游戏开始
     public gameStart(){
@@ -86,20 +80,6 @@ export class GameData {
         var value = levelsInfo.addtime || 0;
         this._gametime += value
     }
-    // public addgametime(value:number){
-    //     if(value == null)
-    //     {
-    //         var levelsInfo = ConfigManager.levelsJsonMap.get(this._level)
-    //         value = levelsInfo.addtime
-    //     }
-    //     this._gametime +=value
-    // }
-    // get playtimes(): number{
-    //     return this._playtimes;
-    // }
-    // set playtimes(_playtimes :number) {
-    //     this._playtimes = _playtimes;
-    // }
     get playerId(): number{
         return this._playerId;
     }
@@ -118,12 +98,6 @@ export class GameData {
     set templevel(_level :number) {
         this._tempLevel = _level;
     }
-    // get topscore():number{
-    //     return this._topscore
-    // }
-    // set topscore(_topscore : number) {
-    //     this._topscore = _topscore
-    // }
     get score():number{
         return this._score
     }

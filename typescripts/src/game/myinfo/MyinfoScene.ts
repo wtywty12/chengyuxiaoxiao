@@ -12,6 +12,7 @@ import {GameEventTransmitter} from "../../core/event/GameEventTransmitter";
 import { ImageHelper } from "../common/helper/ImageHelper";
 import {StorageInfo} from "../common/data/StorageInfo";
 import {GameAudio} from "../common/helper/GameAudio";
+import {ResourcesManager} from "../../core/common/ResourcesManager";
 
 
 /**
@@ -47,11 +48,13 @@ export class SettleScene extends cc.Component {
     @property(cc.Button)
     private btn_back :cc.Button = null;
     
-    @property(cc.Layout)
-    private tab1 : cc.Layout = null; 
+    @property(cc.Node)
+    private layout_tab : cc.Node = null; 
 
-    @property(cc.Layout)
-    private tab2 : cc.Layout = null;
+    @property(cc.ScrollView)
+    private scrollView : cc.ScrollView = null; 
+
+    private items: Array<any> = [];
 
     @property(cc.Sprite)
     private image_head:cc.Sprite = null;
@@ -74,6 +77,8 @@ export class SettleScene extends cc.Component {
         this.label_price.string = StorageInfo.getRedPackMoney().toFixed(2);
         /** 设置游戏次数 */
         this.label_playtimes.string = StorageInfo.getPlayTimes().toString();
+
+        this.updateLayout();
     }
 
     /** 类销毁 */
@@ -87,28 +92,30 @@ export class SettleScene extends cc.Component {
     //点击提现
     private onClickTixian():void{
         GameAudio.playBtnEffect();
-        var self = this
-        wx.getUserInfo({
-            success: function(res:any) {
-                cc.log(`res ${res}`)
-                cc.log(`res -> userInfo`,res.userInfo)
-                cc.log(`res -> userInfo`,res.userInfo.nickName)
-                cc.log(`res -> userInfo`,res.userInfo.avatarUrl)
-                var userInfo = res.userInfo
-                var nickName = userInfo.nickName
-                GameDataManager.userData.headUrl = userInfo.avatarUrl
-                var gender = userInfo.gender //性别 0：未知、1：男、2：女
-                var province = userInfo.province
-                var city = userInfo.city
-                var country = userInfo.country
+        // var self = this
+        // wx.getUserInfo({
+        //     withCredentials: false,
+        //     lang: "zh_CN",
+        //     success: function(res:any) {
+        //         console.log(`res ${res}`)
+        //         console.log(`res -> userInfo`,res.userInfo)
+        //         console.log(`res -> userInfo`,res.userInfo.nickName)
+        //         console.log(`res -> userInfo`,res.userInfo.avatarUrl)
+        //         var userInfo = res.userInfo
+        //         var nickName = userInfo.nickName
+        //         GameDataManager.userData.headUrl = userInfo.avatarUrl
+        //         var gender = userInfo.gender //性别 0：未知、1：男、2：女
+        //         var province = userInfo.province
+        //         var city = userInfo.city
+        //         var country = userInfo.country
 
-                // self.path = avatarUrl ; 
-                ImageHelper.loadImage(GameDataManager.userData.headUrl,self.image_head)
+        //         // self.path = avatarUrl ; 
+        //         ImageHelper.loadImage(GameDataManager.userData.headUrl,self.image_head)
                 
-            }
+        //     }
             
-        })
-        // GameEngine.changeScene(GameSceneHepler.DEPOSIT)
+        // })
+        GameEngine.changeScene(GameSceneHepler.DEPOSIT)
     }
     private loadImgurl(container:cc.Sprite,url:string):void{
         cc.loader.load(url, function (err:any, texture:cc.Texture2D) {
@@ -134,23 +141,23 @@ export class SettleScene extends cc.Component {
     //点击为存入的
     private onClickWaitSave():void{
         GameAudio.playBtnEffect();
-        var userinfo = GameEngine.loginService.getUserInfo();
-        cc.log(`res -> userInfo--onClickWaitSave`,userinfo)
+        // var userinfo = GameEngine.loginService.getUserInfo();
+        // cc.log(`res -> userInfo--onClickWaitSave`,userinfo)
         // this.tab1.node.active = true;
         // this.tab2.node.active = false;
     }
     //点击已经存入的
     private onClickSaved():void{
         GameAudio.playBtnEffect();
-        wx.chooseImage({
-            count: 1,
-            sizeType: ['original', 'compressed'],
-            sourceType :['album', 'camera'],
-            success: (res: any) => {
-                cc.log(`res--getUserInfo = ${res}`)
-                let tempFilePaths: string = res.tempFilePaths;
-            },
-        })
+        // wx.chooseImage({
+        //     count: 1,
+        //     sizeType: ['original', 'compressed'],
+        //     sourceType :['album', 'camera'],
+        //     success: (res: any) => {
+        //         cc.log(`res--getUserInfo = ${res}`)
+        //         let tempFilePaths: string = res.tempFilePaths;
+        //     },
+        // })
         // this.tab1.node.active = false;
         // this.tab2.node.active = true;
     }
@@ -158,5 +165,28 @@ export class SettleScene extends cc.Component {
         GameAudio.playBtnEffect();
         GameDataManager.gameData.refuseData()
         GameEngine.changeScene(GameSceneHepler.LOADING)
+    }
+
+    private updateLayout() {
+        var prefab = ResourcesManager.getPrefab("myInfoItem");
+        let item: cc.Node = cc.instantiate(prefab);
+        let height = item.height;
+        let space = 5;
+        for (var i=0; i<5; i++) {
+            //设置x坐标
+            item.x = 0
+            //设置y坐标
+            item.y = - (i * (height + space))
+            //存储item
+            this.items.push(item);
+            //继续创建
+            this.layout_tab.addChild(item);
+            if (i < 4) {
+                item = cc.instantiate(prefab);
+            }
+        }
+        //设置list的高度 不设置无法滑动
+        this.layout_tab.height = 20 + this.items.length * (height + space);
+        this.scrollView.scrollToTop();
     }
 }

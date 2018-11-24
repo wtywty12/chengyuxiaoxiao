@@ -53,6 +53,7 @@ var GameScene = function (_super) {
         var _this = _super.call(this) || this;
         _this.gameTable = null;
         _this.chooseView = null;
+        _this.bg_hong = null;
         _this.lbl_time = null;
         _this.lbl_score = null;
         _this.lbl_topScore = null;
@@ -128,6 +129,13 @@ var GameScene = function (_super) {
         var timeCallback = function timeCallback(dt) {
             GameDataManager_1.GameDataManager.gameData.gametime--;
             this.lbl_time.string = Tools_1.Tools.numberToDate(GameDataManager_1.GameDataManager.gameData.gametime);
+            if (GameDataManager_1.GameDataManager.gameData.gametime <= 10) {
+                this.playRemind();
+            } else {
+                if (this.bg_hong.node.active == true) {
+                    this.bg_hong.node.active = false;
+                }
+            }
             if (GameDataManager_1.GameDataManager.gameData.gametime <= 0) {
                 this.bar_time.progress = 0;
                 GameManager_1.GameManager.onGameOver();
@@ -155,6 +163,11 @@ var GameScene = function (_super) {
             this.scheTimes += percent;
         }
     };
+    GameScene.prototype.playRemind = function () {
+        var fadeIn = cc.fadeIn(0.25);
+        var fadeOut = cc.fadeOut(0.25);
+        this.bg_hong.node.runAction(cc.sequence(fadeIn, fadeOut));
+    };
     GameScene.prototype.resetCDTime = function () {
         this.onGameOver();
         this.createCDTime();
@@ -177,6 +190,7 @@ var GameScene = function (_super) {
     };
     __decorate([property(GameTable_1.GameTable)], GameScene.prototype, "gameTable", void 0);
     __decorate([property(ChooseView_1.ChooseView)], GameScene.prototype, "chooseView", void 0);
+    __decorate([property(cc.Sprite)], GameScene.prototype, "bg_hong", void 0);
     __decorate([property(cc.Label)], GameScene.prototype, "lbl_time", void 0);
     __decorate([property(cc.Label)], GameScene.prototype, "lbl_score", void 0);
     __decorate([property(cc.Label)], GameScene.prototype, "lbl_topScore", void 0);

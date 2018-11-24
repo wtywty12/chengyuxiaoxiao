@@ -39,9 +39,9 @@ var property = cc._decorator.property;
 var GameEngine_1 = require("../common/GameEngine");
 var GameSceneHepler_1 = require("../common/helper/GameSceneHepler");
 var GameDataManager_1 = require("../common/data/GameDataManager");
-var ImageHelper_1 = require("../common/helper/ImageHelper");
 var StorageInfo_1 = require("../common/data/StorageInfo");
 var GameAudio_1 = require("../common/helper/GameAudio");
+var ResourcesManager_1 = require("../../core/common/ResourcesManager");
 var SettleScene = function (_super) {
     __extends(SettleScene, _super);
     function SettleScene() {
@@ -55,8 +55,9 @@ var SettleScene = function (_super) {
         _this.btn_waitsave = null;
         _this.btn_saved = null;
         _this.btn_back = null;
-        _this.tab1 = null;
-        _this.tab2 = null;
+        _this.layout_tab = null;
+        _this.scrollView = null;
+        _this.items = [];
         _this.image_head = null;
         _this.path = null;
         return _this;
@@ -70,6 +71,7 @@ var SettleScene = function (_super) {
         this.btn_saved.node.on(cc.Node.EventType.TOUCH_END, this.onClickSaved);
         this.label_price.string = StorageInfo_1.StorageInfo.getRedPackMoney().toFixed(2);
         this.label_playtimes.string = StorageInfo_1.StorageInfo.getPlayTimes().toString();
+        this.updateLayout();
     };
     SettleScene.prototype.onDestroy = function () {};
     SettleScene.prototype.onClickAddTimes = function () {
@@ -77,23 +79,7 @@ var SettleScene = function (_super) {
     };
     SettleScene.prototype.onClickTixian = function () {
         GameAudio_1.GameAudio.playBtnEffect();
-        var self = this;
-        wx.getUserInfo({
-            success: function success(res) {
-                cc.log("res " + res);
-                cc.log("res -> userInfo", res.userInfo);
-                cc.log("res -> userInfo", res.userInfo.nickName);
-                cc.log("res -> userInfo", res.userInfo.avatarUrl);
-                var userInfo = res.userInfo;
-                var nickName = userInfo.nickName;
-                GameDataManager_1.GameDataManager.userData.headUrl = userInfo.avatarUrl;
-                var gender = userInfo.gender;
-                var province = userInfo.province;
-                var city = userInfo.city;
-                var country = userInfo.country;
-                ImageHelper_1.ImageHelper.loadImage(GameDataManager_1.GameDataManager.userData.headUrl, self.image_head);
-            }
-        });
+        GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.DEPOSIT);
     };
     SettleScene.prototype.loadImgurl = function (container, url) {
         cc.loader.load(url, function (err, texture) {
@@ -114,25 +100,31 @@ var SettleScene = function (_super) {
     };
     SettleScene.prototype.onClickWaitSave = function () {
         GameAudio_1.GameAudio.playBtnEffect();
-        var userinfo = GameEngine_1.GameEngine.loginService.getUserInfo();
-        cc.log("res -> userInfo--onClickWaitSave", userinfo);
     };
     SettleScene.prototype.onClickSaved = function () {
         GameAudio_1.GameAudio.playBtnEffect();
-        wx.chooseImage({
-            count: 1,
-            sizeType: ['original', 'compressed'],
-            sourceType: ['album', 'camera'],
-            success: function success(res) {
-                cc.log("res--getUserInfo = " + res);
-                var tempFilePaths = res.tempFilePaths;
-            }
-        });
     };
     SettleScene.prototype.onClickBack = function () {
         GameAudio_1.GameAudio.playBtnEffect();
         GameDataManager_1.GameDataManager.gameData.refuseData();
         GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.LOADING);
+    };
+    SettleScene.prototype.updateLayout = function () {
+        var prefab = ResourcesManager_1.ResourcesManager.getPrefab("myInfoItem");
+        var item = cc.instantiate(prefab);
+        var height = item.height;
+        var space = 5;
+        for (var i = 0; i < 5; i++) {
+            item.x = 0;
+            item.y = -(i * (height + space));
+            this.items.push(item);
+            this.layout_tab.addChild(item);
+            if (i < 4) {
+                item = cc.instantiate(prefab);
+            }
+        }
+        this.layout_tab.height = 20 + this.items.length * (height + space);
+        this.scrollView.scrollToTop();
     };
     __decorate([property(cc.Label)], SettleScene.prototype, "label_jihuitimes", void 0);
     __decorate([property(cc.Label)], SettleScene.prototype, "label_price", void 0);
@@ -143,8 +135,8 @@ var SettleScene = function (_super) {
     __decorate([property(cc.Button)], SettleScene.prototype, "btn_waitsave", void 0);
     __decorate([property(cc.Button)], SettleScene.prototype, "btn_saved", void 0);
     __decorate([property(cc.Button)], SettleScene.prototype, "btn_back", void 0);
-    __decorate([property(cc.Layout)], SettleScene.prototype, "tab1", void 0);
-    __decorate([property(cc.Layout)], SettleScene.prototype, "tab2", void 0);
+    __decorate([property(cc.Node)], SettleScene.prototype, "layout_tab", void 0);
+    __decorate([property(cc.ScrollView)], SettleScene.prototype, "scrollView", void 0);
     __decorate([property(cc.Sprite)], SettleScene.prototype, "image_head", void 0);
     SettleScene = __decorate([ccclass()], SettleScene);
     return SettleScene;

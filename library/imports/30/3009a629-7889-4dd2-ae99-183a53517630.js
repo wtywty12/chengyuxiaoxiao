@@ -138,6 +138,7 @@ var LoadingScene = function (_super) {
         _this.btn_myinfo = null;
         _this.youzi = null;
         _this.wxRankPre = null;
+        _this.btn_audio = null;
         _this.progress = 0;
         return _this;
     }
@@ -187,10 +188,12 @@ var LoadingScene = function (_super) {
                             var status = StorageInfo_1.StorageInfo.getGameAudioStatus();
                             cc.log(status);
                             if (status == "resume" || status == null) {
+                                self.btn_audio.spriteFrame = ResourcesManager_1.ResourcesManager.getImage('audio_guan');
                                 StorageInfo_1.StorageInfo.setGameAudioStatus("pause");
                                 GameAudio_1.GameAudio.changeBGMVolume(0, true);
                                 GameAudio_1.GameAudio.changeSFXVolume(0);
                             } else if (status == "pause") {
+                                self.btn_audio.spriteFrame = ResourcesManager_1.ResourcesManager.getImage('audio_kai');
                                 StorageInfo_1.StorageInfo.setGameAudioStatus("resume");
                                 GameAudio_1.GameAudio.changeBGMVolume(60, true);
                                 GameAudio_1.GameAudio.changeSFXVolume(60);
@@ -269,6 +272,7 @@ var LoadingScene = function (_super) {
     __decorate([property(cc.Button)], LoadingScene.prototype, "btn_myinfo", void 0);
     __decorate([property(cc.Sprite)], LoadingScene.prototype, "youzi", void 0);
     __decorate([property(cc.Prefab)], LoadingScene.prototype, "wxRankPre", void 0);
+    __decorate([property(cc.Sprite)], LoadingScene.prototype, "btn_audio", void 0);
     LoadingScene = __decorate([ccclass()], LoadingScene);
     return LoadingScene;
 }(CommonScene_1.CommonScene);

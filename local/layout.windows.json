@@ -100,6 +100,50 @@
         "scene"
       ]
     }
+<<<<<<< HEAD
   },
   "panels": {}
+=======
+=======
+    },
+<<<<<<< HEAD
+    "window-1543049275802": {}
+=======
+    "window-1542974387513": {}
+>>>>>>> 4e5f1b1c73e6e65dc55ee3324480db0feb5af65d
+>>>>>>> 2f17f02ac9cfa35e9dedbf68856ff5bb0467b715
+  },
+  "panels": {
+    "builder": {
+      "x": 326,
+      "y": 99,
+      "width": 654,
+      "height": 586
+    },
+    "sprite-editor": {
+      "x": 115,
+      "y": 79,
+      "width": 1143,
+      "height": 659
+    },
+    "console": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+    },
+    "timeline": {
+      "x": 291,
+      "y": 516,
+      "width": 504,
+      "height": 288
+    },
+    "node-library": {
+      "x": 810,
+      "y": 277,
+      "width": 300,
+      "height": 502
+    }
+  }
+>>>>>>> d8c7b1c4add265e404007044313d174431795fec
 }

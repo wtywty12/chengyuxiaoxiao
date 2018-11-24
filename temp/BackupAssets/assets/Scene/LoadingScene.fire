@@ -41,8 +41,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.18359375,
-      "y": 0.18359375,
+      "x": 0.2640625,
+      "y": 0.2640625,
       "z": 1
     },
     "_quat": {
@@ -776,7 +776,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "7ea709ca-7e5a-4146-917c-777883a5f508"
+      "__uuid__": "57e9e18e-8aad-4b00-bb53-fba3e08e15d7"
     },
     "_type": 1,
     "_sizeMode": 0,
@@ -836,7 +836,7 @@
       "a": 255
     },
     "_N$normalSprite": {
-      "__uuid__": "7ea709ca-7e5a-4146-917c-777883a5f508"
+      "__uuid__": "57e9e18e-8aad-4b00-bb53-fba3e08e15d7"
     },
     "_N$pressedSprite": null,
     "pressedSprite": null,
@@ -1452,6 +1452,9 @@
     },
     "wxRankPre": {
       "__uuid__": "c4f7c58a-07a4-43ef-ad94-4b5ccc01e573"
+    },
+    "btn_audio": {
+      "__id__": 17
     },
     "_id": "a4CmpLFLxKuaNmZT88ezpP"
   }

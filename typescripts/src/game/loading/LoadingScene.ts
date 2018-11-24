@@ -45,9 +45,20 @@ export class LoadingScene extends CommonScene {
     @property(cc.Prefab)
     private wxRankPre : cc.Prefab = null;
 
+    @property(cc.Sprite)
+    private btn_audio : cc.Sprite = null;
+
     //进度
     private progress:number  = 0;
     protected async load() {
+        // console.log("开始请求个人信息");
+        // wx.getUserInfo({
+        //     withCredentials: false,
+        //     lang: "zh_CN",
+        //     success: (res: any) => {
+        //         console.log("getUserInfo: => ", res);
+        //     }
+        // })
         var self = this
         cc.loader.downloader.loadSubpackage('loadingScene', function (err: any) {
             if (err) {
@@ -91,11 +102,13 @@ export class LoadingScene extends CommonScene {
             var status = StorageInfo.getGameAudioStatus();
             cc.log(status);
             if(status == "resume" || status == null){
+                self.btn_audio.spriteFrame = ResourcesManager.getImage('audio_guan');
                 StorageInfo.setGameAudioStatus("pause");
                 GameAudio.changeBGMVolume(0, true);
                 GameAudio.changeSFXVolume(0);
             }
             else if (status == "pause") {
+                self.btn_audio.spriteFrame = ResourcesManager.getImage('audio_kai');
                 StorageInfo.setGameAudioStatus("resume");
                 GameAudio.changeBGMVolume(60, true);
                 GameAudio.changeSFXVolume(60);

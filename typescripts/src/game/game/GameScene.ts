@@ -26,6 +26,12 @@ export class GameScene extends cc.Component {
      private chooseView: ChooseView = null;
 
     /**
+     * 最后十秒红色背景提示
+     */
+    @property(cc.Sprite)
+    private bg_hong: cc.Sprite = null;
+
+    /**
      * 倒计时按钮
      */
     @property(cc.Label)
@@ -168,6 +174,13 @@ export class GameScene extends cc.Component {
         var timeCallback = function (dt: number) {
             GameDataManager.gameData.gametime--;
             this.lbl_time.string = Tools.numberToDate(GameDataManager.gameData.gametime);
+            if (GameDataManager.gameData.gametime <= 10) {
+                this.playRemind();
+            } else {
+                if (this.bg_hong.node.active == true) {
+                    this.bg_hong.node.active = false;
+                }
+            }
             if (GameDataManager.gameData.gametime <= 0) {
                 this.bar_time.progress = 0;
                 GameManager.onGameOver();
@@ -202,6 +215,15 @@ export class GameScene extends cc.Component {
             var percent = time / GameDataManager.gameData.totalGameTime * 100;
             this.scheTimes += percent;
         }
+    }
+
+    /**
+     * 播放红色紧急背景
+     */
+    public playRemind() {
+        let fadeIn = cc.fadeIn(0.25);
+        let fadeOut = cc.fadeOut(0.25);
+        this.bg_hong.node.runAction(cc.sequence(fadeIn, fadeOut));
     }
 
     /**
