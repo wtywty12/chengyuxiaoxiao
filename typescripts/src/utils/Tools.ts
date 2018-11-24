@@ -24,6 +24,9 @@ export class Tools {
      * 深拷贝 数组
      */
     public static deepCopyArray(array: Array<any>): Array<any> {
+        if (array == null) {
+            true;
+        }
         var newArray = [];
         for (var i=0; i < array.length; i++) {
             newArray.push(array[i]);

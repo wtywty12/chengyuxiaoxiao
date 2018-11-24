@@ -16,6 +16,9 @@ var Tools = (function () {
         return Math.floor(totalNumber * 0.25);
     };
     Tools.deepCopyArray = function (array) {
+        if (array == null) {
+            true;
+        }
         var newArray = [];
         for (var i = 0; i < array.length; i++) {
             newArray.push(array[i]);

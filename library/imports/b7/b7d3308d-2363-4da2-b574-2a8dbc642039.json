@@ -1,28 +1,28 @@
 {
   "__type__": "cc.SpriteFrame",
   "content": {
-    "name": "tixian_diban_1",
-    "texture": "cc83f34b-4120-41fb-8357-2f769982c4df",
+    "name": "hong",
+    "texture": "36b94950-ddcb-429b-ace5-7fd7e70260b9",
     "atlas": "",
     "rect": [
       0,
       0,
-      56,
-      56
+      682,
+      681
     ],
     "offset": [
       0,
       0
     ],
     "originalSize": [
-      56,
-      56
+      682,
+      681
     ],
     "capInsets": [
-      13,
-      12,
-      13,
-      13
+      0,
+      0,
+      0,
+      0
     ]
   }
 }

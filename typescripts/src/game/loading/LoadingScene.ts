@@ -48,6 +48,14 @@ export class LoadingScene extends CommonScene {
     //进度
     private progress:number  = 0;
     protected async load() {
+        // console.log("开始请求个人信息");
+        // wx.getUserInfo({
+        //     withCredentials: false,
+        //     lang: "zh_CN",
+        //     success: (res: any) => {
+        //         console.log("getUserInfo: => ", res);
+        //     }
+        // })
         var self = this
         cc.loader.downloader.loadSubpackage('loadingScene', function (err: any) {
             if (err) {
