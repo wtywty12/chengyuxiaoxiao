@@ -10,12 +10,12 @@ var GameData = (function () {
         this._tempScore = 0;
         this._totalGameTime = 30;
         this._gametime = this._totalGameTime;
-        this._playtimes = 0;
         this._gridEffectTime = 0.5;
         this._gridWidth = 109;
         this._gridHeight = 109;
         this._redPackTimes = 3;
         this._lastTime = 0;
+        this.rightTimes = 0;
     }
     GameData.prototype.refuseData = function () {
         this._tempLevel = this._level;
@@ -24,6 +24,7 @@ var GameData = (function () {
         this._score = 0;
         this._lastTime = 0;
         this._gametime = this._totalGameTime;
+        this.rightTimes = 0;
     };
     GameData.prototype.gameStart = function () {
         this._score = 0;
@@ -32,8 +33,9 @@ var GameData = (function () {
     GameData.prototype.addlevel = function () {
         this._level += 1;
     };
-    GameData.prototype.addscore = function (value) {
-        this._score += Math.floor(value * Math.sqrt(this._playtimes || 1));
+    GameData.prototype.setScore = function () {
+        var playTimes = StorageInfo_1.StorageInfo.getPlayTimes();
+        this.score = Math.floor(this.rightTimes * 4 * Math.sqrt(playTimes));
         StorageInfo_1.StorageInfo.setTopScore(this._score);
     };
     GameData.prototype.addgametime = function () {
@@ -41,16 +43,6 @@ var GameData = (function () {
         var value = levelsInfo.addtime || 0;
         this._gametime += value;
     };
-    Object.defineProperty(GameData.prototype, "playtimes", {
-        get: function () {
-            return this._playtimes;
-        },
-        set: function (_playtimes) {
-            this._playtimes = _playtimes;
-        },
-        enumerable: true,
-        configurable: true
-    });
     Object.defineProperty(GameData.prototype, "playerId", {
         get: function () {
             return this._playerId;
@@ -159,6 +151,16 @@ var GameData = (function () {
         },
         set: function (times) {
             this._lastTime = times;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(GameData.prototype, "rightTimes", {
+        get: function () {
+            return this._rightTimes;
+        },
+        set: function (times) {
+            this._rightTimes = times;
         },
         enumerable: true,
         configurable: true

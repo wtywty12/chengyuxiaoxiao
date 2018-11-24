@@ -6,6 +6,7 @@ cc._RF.push(module, '057c0eqrf9GUbey+y6qoZ2C', 'StorageInfo');
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var GameEngine_1 = require("../GameEngine");
+var GameDataManager_1 = require("./GameDataManager");
 var StorageInfoClass = function () {
     function StorageInfoClass() {}
     Object.defineProperty(StorageInfoClass, "instance", {
@@ -27,6 +28,14 @@ var StorageInfoClass = function () {
         var topScore = this.getTopScore();
         ;
         if (score > topScore) {
+            if (typeof score != "number") {
+                console.log("score is not number!");
+                return;
+            }
+            wx.getOpenDataContext().postMessage({
+                EventType: "2",
+                EventData: { score: score, level: GameDataManager_1.GameDataManager.gameData.level }
+            });
             GameEngine_1.GameEngine.localStorage.set("TopScore", score.toString());
         }
     };
@@ -55,6 +64,10 @@ var StorageInfoClass = function () {
     StorageInfoClass.prototype.setGameAudioStatus = function (status) {
         GameEngine_1.GameEngine.localStorage.set("GameAudioStatus", status);
     };
+    StorageInfoClass.prototype.addPlayTimes = function () {
+        var times = this.getPlayTimes() + 1;
+        GameEngine_1.GameEngine.localStorage.set("PlayTimes", times.toString());
+    };
     StorageInfoClass.prototype.getTopScore = function () {
         return Number(GameEngine_1.GameEngine.localStorage.get("TopScore")) || 0;
     };
@@ -79,6 +92,9 @@ var StorageInfoClass = function () {
     StorageInfoClass.prototype.getFirstLogin = function () {
         var isFirstLogin = GameEngine_1.GameEngine.localStorage.get("FirstLogin");
         return isFirstLogin == null;
+    };
+    StorageInfoClass.prototype.getPlayTimes = function () {
+        return Number(GameEngine_1.GameEngine.localStorage.get("PlayTimes"));
     };
     return StorageInfoClass;
 }();

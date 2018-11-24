@@ -121,10 +121,6 @@ var LoadingScene = (function (_super) {
                             GameAudio_1.GameAudio.playBtnEffect();
                             var wxRank = cc.instantiate(self.wxRankPre);
                             cc.director.getScene().addChild(wxRank);
-                            wx.getOpenDataContext().postMessage({
-                                messageType: 1,
-                                MAIN_MENU_NUM: 1,
-                            });
                         });
                         this.btn_music.node.on(cc.Node.EventType.TOUCH_END, function () {
                             GameAudio_1.GameAudio.playBtnEffect();
@@ -155,7 +151,6 @@ var LoadingScene = (function (_super) {
         });
     };
     LoadingScene.prototype.initPlayerData = function () {
-        GameDataManager_1.GameDataManager.gameData.playtimes = 0;
     };
     LoadingScene.prototype.unload = function () {
     };

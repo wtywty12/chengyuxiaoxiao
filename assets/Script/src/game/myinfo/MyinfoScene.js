@@ -54,7 +54,7 @@ var SettleScene = (function (_super) {
         this.btn_waitsave.node.on(cc.Node.EventType.TOUCH_END, this.onClickWaitSave);
         this.btn_saved.node.on(cc.Node.EventType.TOUCH_END, this.onClickSaved);
         this.label_price.string = StorageInfo_1.StorageInfo.getRedPackMoney().toFixed(2);
-        this.label_playtimes.string = GameDataManager_1.GameDataManager.gameData.playtimes.toString();
+        this.label_playtimes.string = StorageInfo_1.StorageInfo.getPlayTimes().toString();
     };
     SettleScene.prototype.onDestroy = function () {
     };

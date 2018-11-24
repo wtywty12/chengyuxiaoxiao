@@ -24,7 +24,7 @@ export class GameData {
     //玩家id
     private _playerId : number;
     //玩家玩的次数
-    private _playtimes:number;
+    // private _playtimes:number;
     /** 判定动画消除时间 */
     private _gridEffectTime: number;
     /** 格子宽 */
@@ -35,6 +35,8 @@ export class GameData {
     private _redPackTimes: number;
     /** 游戏过关剩余时间 */
     private _lastTime: number;
+    /** 答对成语数 */
+    private _rightTimes: number;
 
     constructor() {
         this._level = 1;
@@ -43,12 +45,13 @@ export class GameData {
         this._tempScore = 0;
         this._totalGameTime = 30;
         this._gametime = this._totalGameTime;
-        this._playtimes = 0;
+        // this._playtimes = 0;
         this._gridEffectTime = 0.5;
         this._gridWidth = 109;
         this._gridHeight = 109;
         this._redPackTimes = 3;
         this._lastTime = 0;
+        this.rightTimes = 0;
     }
 
     public refuseData(){//重制数据
@@ -58,6 +61,7 @@ export class GameData {
         this._score = 0;
         this._lastTime = 0;
         this._gametime = this._totalGameTime;
+        this.rightTimes = 0;
         // this._totalGameTime = 60;
         // this._playtimes = 0;//个人中心记录次数 此处不能清零
     }
@@ -71,8 +75,9 @@ export class GameData {
         this._level += 1;
     }
     //增加分数
-    public addscore(value :number){
-        this._score += Math.floor(value * Math.sqrt(this._playtimes || 1));
+    public setScore(){
+        var playTimes = StorageInfo.getPlayTimes();
+        this.score = Math.floor(this.rightTimes * 4 * Math.sqrt(playTimes));
         StorageInfo.setTopScore(this._score);
     }
     //增加游戏时间
@@ -89,12 +94,12 @@ export class GameData {
     //     }
     //     this._gametime +=value
     // }
-    get playtimes(): number{
-        return this._playtimes;
-    }
-    set playtimes(_playtimes :number) {
-        this._playtimes = _playtimes;
-    }
+    // get playtimes(): number{
+    //     return this._playtimes;
+    // }
+    // set playtimes(_playtimes :number) {
+    //     this._playtimes = _playtimes;
+    // }
     get playerId(): number{
         return this._playerId;
     }
@@ -164,5 +169,11 @@ export class GameData {
     }
     get lastTime() {
         return this._lastTime;
+    }
+    set rightTimes(times: number) {
+        this._rightTimes = times;
+    }
+    get rightTimes() {
+        return this._rightTimes;
     }
 }

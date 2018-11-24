@@ -2,6 +2,7 @@
  * 统一设置游戏内对缓存数据的读取
  */
 import {GameEngine} from "../GameEngine";
+import {GameDataManager} from "./GameDataManager";
 
 class StorageInfoClass {
     private constructor() {
@@ -35,6 +36,14 @@ class StorageInfoClass {
         var topScore = this.getTopScore();;
         if (score > topScore) {
             /** 如果是则替换 */
+            if (typeof(score) != "number") {
+                console.log("score is not number!");
+                return;
+            }
+            wx.getOpenDataContext().postMessage({
+                EventType: "2",
+                EventData: {score: score, level: GameDataManager.gameData.level}
+            });
             GameEngine.localStorage.set("TopScore", score.toString());
         }
     }
@@ -95,6 +104,14 @@ class StorageInfoClass {
         GameEngine.localStorage.set("GameAudioStatus", status);
     }
 
+    /**
+     * 设置玩的次数
+     */
+    public addPlayTimes() {
+        var times = this.getPlayTimes() + 1;
+        GameEngine.localStorage.set("PlayTimes", times.toString());
+    }
+
 
      /**    ***************************    GET    ********************************* */
 
@@ -153,6 +170,13 @@ class StorageInfoClass {
     public getFirstLogin(): boolean {
         var isFirstLogin = GameEngine.localStorage.get("FirstLogin");
         return isFirstLogin == null;
+    }
+
+    /**
+     * 获取玩的次数
+     */
+    public getPlayTimes(): number {
+        return Number(GameEngine.localStorage.get("PlayTimes"));
     }
 
 }

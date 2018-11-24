@@ -34,84 +34,75 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var GameEngine_1 = require("../../game/common/GameEngine");
 var GameDataManager_1 = require("../../game/common/data/GameDataManager");
+var GameAudio_1 = require("../common/helper/GameAudio");
+var GameSceneHepler_1 = require("../common/helper/GameSceneHepler");
 var _a = cc._decorator,
     ccclass = _a.ccclass,
     property = _a.property;
 var wxRankView = function (_super) {
     __extends(wxRankView, _super);
     function wxRankView() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.friendBtn = null;
-        _this.friendGroupBtn = null;
-        _this.rankingScrollView = null;
+        var _this = _super.call(this) || this;
+        _this.btn_back = null;
+        _this.btn_invite = null;
         _this.tex = null;
         return _this;
     }
-    wxRankView.prototype.load = function () {
-        this.friendBtn.interactable = false;
-        this.friendGroupBtn.interactable = true;
+    wxRankView.prototype.onLoad = function () {
+        this.btn_back.node.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener);
+        this.btn_invite.node.on(cc.Node.EventType.TOUCH_END, this.onTouchEventListener);
     };
     wxRankView.prototype.start = function () {
         this.tex = new cc.Texture2D();
-    };
-    wxRankView.prototype.unload = function () {};
-    wxRankView.prototype.friendHandler = function () {
-        this.friendBtn.interactable = false;
-        this.friendGroupBtn.interactable = true;
+        console.log("send");
+        wx.getUserInfo({
+            success: function success(event) {
+                console.log(event);
+            }
+        });
         wx.getOpenDataContext().postMessage({
-            messageType: 1,
-            MAIN_MENU_NUM: 1
+            EventType: "0",
+            EventData: ""
         });
     };
-    wxRankView.prototype.groupFriendHandler = function () {
-        this.friendBtn.interactable = true;
-        this.friendGroupBtn.interactable = false;
-        this.shareGroup("shareTicket");
+    wxRankView.prototype.onDestroy = function () {
+        wx.getOpenDataContext().postMessage({
+            EventType: "3",
+            EventData: ""
+        });
     };
-    wxRankView.prototype.shareGroup = function (name) {
+    wxRankView.prototype.onTouchEventListener = function (event) {
+        var eventType = event.type;
+        var eventName = event.target._name;
+        GameAudio_1.GameAudio.playBtnEffect();
+        if (eventType == "touchend") {
+            switch (eventName) {
+                case "btn_back":
+                    GameAudio_1.GameAudio.playBtnEffect();
+                    GameDataManager_1.GameDataManager.gameData.refuseData();
+                    GameEngine_1.GameEngine.changeScene(GameSceneHepler_1.GameSceneHepler.LOADING);
+                    break;
+                case "btn_invite":
+                    this.shareGroup();
+                default:
+                    break;
+            }
+        }
+    };
+    wxRankView.prototype.shareGroup = function () {
         wx.shareAppMessage({
             title: "汉语六级你能考多少？试试就知道!",
             query: "sharePlayerId=" + GameDataManager_1.GameDataManager.userData.playerId,
             imageUrl: "https://liubowen.top/dzk-res/share/70001.png",
-            success: function success(resData) {
-                if (resData.shareTickets != undefined && resData.shareTickets.length > 0) {
-                    if ("shareTicket" == name) {
-                        wx.getOpenDataContext().postMessage({
-                            messageType: 5,
-                            MAIN_MENU_NUM: 1,
-                            shareTicket: resData.shareTickets[0]
-                        });
-                    }
-                }
+            success: function success(event) {
+                console.log("微信分享返回数据 =>", event);
             }
         });
     };
-    wxRankView.prototype.shareGame = function () {
-        wx.getOpenDataContext().postMessage({
-            messageType: 3,
-            MAIN_MENU_NUM: 1,
-            score: 10
-        });
-    };
-    wxRankView.prototype.closeBtn = function () {
-        this.node.removeFromParent(true);
-    };
-    wxRankView.prototype.upHandler = function () {
-        wx.getOpenDataContext().postMessage({
-            messageType: 6,
-            MAIN_MENU_NUM: 1
-        });
-    };
-    wxRankView.prototype.downHandler = function () {
-        wx.getOpenDataContext().postMessage({
-            messageType: 7,
-            MAIN_MENU_NUM: 1
-        });
-    };
-    __decorate([property(cc.Button)], wxRankView.prototype, "friendBtn", void 0);
-    __decorate([property(cc.Button)], wxRankView.prototype, "friendGroupBtn", void 0);
-    __decorate([property(cc.Sprite)], wxRankView.prototype, "rankingScrollView", void 0);
+    __decorate([property(cc.Button)], wxRankView.prototype, "btn_back", void 0);
+    __decorate([property(cc.Button)], wxRankView.prototype, "btn_invite", void 0);
     wxRankView = __decorate([ccclass], wxRankView);
     return wxRankView;
 }(cc.Component);
