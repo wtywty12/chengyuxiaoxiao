@@ -103,6 +103,7 @@ var LoadingScene = (function (_super) {
                         });
                         if (StorageInfo_1.StorageInfo.getFirstLogin() == true) {
                             StorageInfo_1.StorageInfo.setFirstLogin();
+                            StorageInfo_1.StorageInfo.setGameAudioStatus("resume");
                             Tools_1.Tools.resetDate();
                         }
                         this.progressLabel.string = "正在加载";
@@ -126,14 +127,14 @@ var LoadingScene = (function (_super) {
                         this.btn_music.node.on(cc.Node.EventType.TOUCH_END, function () {
                             GameAudio_1.GameAudio.playBtnEffect();
                             var status = StorageInfo_1.StorageInfo.getGameAudioStatus();
-                            cc.log(status);
-                            if (status == "resume" || status == null) {
+                            console.log("audio status : " + status);
+                            if (status == "resume") {
                                 self.btn_audio.spriteFrame = ResourcesManager_1.ResourcesManager.getImage('audio_guan');
                                 StorageInfo_1.StorageInfo.setGameAudioStatus("pause");
                                 GameAudio_1.GameAudio.changeBGMVolume(0, true);
                                 GameAudio_1.GameAudio.changeSFXVolume(0);
                             }
-                            else if (status == "pause") {
+                            else {
                                 self.btn_audio.spriteFrame = ResourcesManager_1.ResourcesManager.getImage('audio_kai');
                                 StorageInfo_1.StorageInfo.setGameAudioStatus("resume");
                                 GameAudio_1.GameAudio.changeBGMVolume(60, true);

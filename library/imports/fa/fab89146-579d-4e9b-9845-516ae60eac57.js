@@ -60,15 +60,17 @@ var SettleScene = function (_super) {
         _this.items = [];
         _this.image_head = null;
         _this.path = null;
+        _this.self = null;
         return _this;
     }
     SettleScene.prototype.onLoad = function () {
+        this.self = this;
         this.btn_addtimes.node.on(cc.Node.EventType.TOUCH_END, this.onClickAddTimes);
         this.btn_tixian.node.on(cc.Node.EventType.TOUCH_END, this.onClickTixian);
         this.btn_kefu.node.on(cc.Node.EventType.TOUCH_END, this.onClickTifu);
         this.btn_back.node.on(cc.Node.EventType.TOUCH_END, this.onClickBack);
-        this.btn_waitsave.node.on(cc.Node.EventType.TOUCH_END, this.onClickWaitSave);
-        this.btn_saved.node.on(cc.Node.EventType.TOUCH_END, this.onClickSaved);
+        this.btn_waitsave.node.on(cc.Node.EventType.TOUCH_END, this.onClickWaitSave, this);
+        this.btn_saved.node.on(cc.Node.EventType.TOUCH_END, this.onClickSaved, this);
         this.label_price.string = StorageInfo_1.StorageInfo.getRedPackMoney().toFixed(2);
         this.label_playtimes.string = StorageInfo_1.StorageInfo.getPlayTimes().toString();
         this.updateLayout();
@@ -99,10 +101,16 @@ var SettleScene = function (_super) {
         GameEngine_1.GameEngine.shareGame();
     };
     SettleScene.prototype.onClickWaitSave = function () {
+        console.log("onClickWaitSave");
         GameAudio_1.GameAudio.playBtnEffect();
+        this.btn_waitsave.spriteFrame = ResourcesManager_1.ResourcesManager.getImage("waitsave");
+        this.btn_saved.spriteFrame = ResourcesManager_1.ResourcesManager.getImage("saved");
     };
     SettleScene.prototype.onClickSaved = function () {
+        console.log("onClickSaved");
         GameAudio_1.GameAudio.playBtnEffect();
+        this.btn_saved.spriteFrame = ResourcesManager_1.ResourcesManager.getImage("waitsave");
+        this.btn_waitsave.spriteFrame = ResourcesManager_1.ResourcesManager.getImage("saved");
     };
     SettleScene.prototype.onClickBack = function () {
         GameAudio_1.GameAudio.playBtnEffect();
@@ -132,8 +140,8 @@ var SettleScene = function (_super) {
     __decorate([property(cc.Button)], SettleScene.prototype, "btn_addtimes", void 0);
     __decorate([property(cc.Button)], SettleScene.prototype, "btn_tixian", void 0);
     __decorate([property(cc.Button)], SettleScene.prototype, "btn_kefu", void 0);
-    __decorate([property(cc.Button)], SettleScene.prototype, "btn_waitsave", void 0);
-    __decorate([property(cc.Button)], SettleScene.prototype, "btn_saved", void 0);
+    __decorate([property(cc.Sprite)], SettleScene.prototype, "btn_waitsave", void 0);
+    __decorate([property(cc.Sprite)], SettleScene.prototype, "btn_saved", void 0);
     __decorate([property(cc.Button)], SettleScene.prototype, "btn_back", void 0);
     __decorate([property(cc.Node)], SettleScene.prototype, "layout_tab", void 0);
     __decorate([property(cc.ScrollView)], SettleScene.prototype, "scrollView", void 0);

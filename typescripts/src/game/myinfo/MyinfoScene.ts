@@ -39,11 +39,11 @@ export class SettleScene extends cc.Component {
     @property(cc.Button)
     private btn_kefu: cc.Button = null;
 
-    @property(cc.Button)
-    private btn_waitsave:cc.Button = null;
+    @property(cc.Sprite)
+    private btn_waitsave:cc.Sprite = null;
 
-    @property(cc.Button)
-    private btn_saved :cc.Button = null;
+    @property(cc.Sprite)
+    private btn_saved :cc.Sprite = null;
     
     @property(cc.Button)
     private btn_back :cc.Button = null;
@@ -60,6 +60,9 @@ export class SettleScene extends cc.Component {
     private image_head:cc.Sprite = null;
     
     private path :string = null;
+
+    private self: any = null;
+
     /** 构造函数 */
     protected constructor() {
         super();
@@ -67,12 +70,13 @@ export class SettleScene extends cc.Component {
 
     /** 类加载 */
     protected onLoad() {
+        this.self = this;
         this.btn_addtimes.node.on(cc.Node.EventType.TOUCH_END,this.onClickAddTimes);
         this.btn_tixian.node.on(cc.Node.EventType.TOUCH_END,this.onClickTixian);
         this.btn_kefu.node.on(cc.Node.EventType.TOUCH_END,this.onClickTifu)
         this.btn_back.node.on(cc.Node.EventType.TOUCH_END,this.onClickBack)
-        this.btn_waitsave.node.on(cc.Node.EventType.TOUCH_END,this.onClickWaitSave)
-        this.btn_saved.node.on(cc.Node.EventType.TOUCH_END,this.onClickSaved)
+        this.btn_waitsave.node.on(cc.Node.EventType.TOUCH_END,this.onClickWaitSave,this)
+        this.btn_saved.node.on(cc.Node.EventType.TOUCH_END,this.onClickSaved, this)
         /** 设置红包总金额 */
         this.label_price.string = StorageInfo.getRedPackMoney().toFixed(2);
         /** 设置游戏次数 */
@@ -140,7 +144,10 @@ export class SettleScene extends cc.Component {
     }
     //点击为存入的
     private onClickWaitSave():void{
+        console.log("onClickWaitSave")
         GameAudio.playBtnEffect();
+        this.btn_waitsave.spriteFrame = ResourcesManager.getImage("waitsave");
+        this.btn_saved.spriteFrame = ResourcesManager.getImage("saved");
         // var userinfo = GameEngine.loginService.getUserInfo();
         // cc.log(`res -> userInfo--onClickWaitSave`,userinfo)
         // this.tab1.node.active = true;
@@ -148,7 +155,10 @@ export class SettleScene extends cc.Component {
     }
     //点击已经存入的
     private onClickSaved():void{
+        console.log("onClickSaved")
         GameAudio.playBtnEffect();
+        this.btn_saved.spriteFrame = ResourcesManager.getImage("waitsave");
+        this.btn_waitsave.spriteFrame = ResourcesManager.getImage("saved");
         // wx.chooseImage({
         //     count: 1,
         //     sizeType: ['original', 'compressed'],

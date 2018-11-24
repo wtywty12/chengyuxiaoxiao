@@ -117,6 +117,7 @@ var GameScene = (function (_super) {
             GameDataManager_1.GameDataManager.gameData.gametime--;
             this.lbl_time.string = Tools_1.Tools.numberToDate(GameDataManager_1.GameDataManager.gameData.gametime);
             if (GameDataManager_1.GameDataManager.gameData.gametime <= 10) {
+                this.bg_hong.node.active = true;
                 this.playRemind();
             }
             else {

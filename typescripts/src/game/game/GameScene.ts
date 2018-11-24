@@ -175,6 +175,7 @@ export class GameScene extends cc.Component {
             GameDataManager.gameData.gametime--;
             this.lbl_time.string = Tools.numberToDate(GameDataManager.gameData.gametime);
             if (GameDataManager.gameData.gametime <= 10) {
+                this.bg_hong.node.active = true;
                 this.playRemind();
             } else {
                 if (this.bg_hong.node.active == true) {

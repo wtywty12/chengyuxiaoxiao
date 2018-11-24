@@ -1,8 +1,8 @@
 {
   "__type__": "cc.SpriteFrame",
   "content": {
-    "name": "di_1(1)",
-    "texture": "e3b882f4-c0dc-4266-8439-bc4cd345592d",
+    "name": "waitsave",
+    "texture": "28df6eb7-0cea-46f7-84f8-a250fe32dedb",
     "atlas": "",
     "rect": [
       0,

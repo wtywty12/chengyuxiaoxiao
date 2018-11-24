@@ -74,6 +74,7 @@ export class LoadingScene extends CommonScene {
         });
         if (StorageInfo.getFirstLogin() == true) {
             StorageInfo.setFirstLogin();
+            StorageInfo.setGameAudioStatus("resume");
             Tools.resetDate();
         }
         this.progressLabel.string = "正在加载";
@@ -100,14 +101,14 @@ export class LoadingScene extends CommonScene {
             //判断全局 控制声音
             GameAudio.playBtnEffect();
             var status = StorageInfo.getGameAudioStatus();
-            cc.log(status);
-            if(status == "resume" || status == null){
+            console.log("audio status : " + status);
+            if(status == "resume"){
                 self.btn_audio.spriteFrame = ResourcesManager.getImage('audio_guan');
                 StorageInfo.setGameAudioStatus("pause");
                 GameAudio.changeBGMVolume(0, true);
                 GameAudio.changeSFXVolume(0);
             }
-            else if (status == "pause") {
+            else {
                 self.btn_audio.spriteFrame = ResourcesManager.getImage('audio_kai');
                 StorageInfo.setGameAudioStatus("resume");
                 GameAudio.changeBGMVolume(60, true);

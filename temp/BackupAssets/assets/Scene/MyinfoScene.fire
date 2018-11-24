@@ -41,8 +41,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.2640625,
-      "y": 0.2640625,
+      "x": 0.7154641287344599,
+      "y": 0.7154641287344599,
       "z": 1
     },
     "_quat": {
@@ -2685,7 +2685,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "c8f64364-b03b-40ce-9666-cf607e45172c"
+      "__uuid__": "144296fa-2234-4451-9d8b-3986980fd063"
     },
     "_type": 1,
     "_sizeMode": 0,
@@ -2745,7 +2745,7 @@
       "a": 255
     },
     "_N$normalSprite": {
-      "__uuid__": "c8f64364-b03b-40ce-9666-cf607e45172c"
+      "__uuid__": "144296fa-2234-4451-9d8b-3986980fd063"
     },
     "_N$pressedSprite": null,
     "pressedSprite": null,
@@ -2922,7 +2922,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "4c26e7a6-1398-42e7-89c2-d98b29043b20"
+      "__uuid__": "1f1d870d-4d1c-449c-9320-c1397839ecef"
     },
     "_type": 1,
     "_sizeMode": 0,
@@ -2982,7 +2982,7 @@
       "a": 255
     },
     "_N$normalSprite": {
-      "__uuid__": "4c26e7a6-1398-42e7-89c2-d98b29043b20"
+      "__uuid__": "1f1d870d-4d1c-449c-9320-c1397839ecef"
     },
     "_N$pressedSprite": null,
     "pressedSprite": null,
@@ -4329,10 +4329,10 @@
       "__id__": 43
     },
     "btn_waitsave": {
-      "__id__": 59
+      "__id__": 58
     },
     "btn_saved": {
-      "__id__": 64
+      "__id__": 63
     },
     "btn_back": {
       "__id__": 91
