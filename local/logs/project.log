@@ -1,64 +1,73 @@
-2018-11-26T03:10:48.835Z - normal: Load ~/.CocosCreator/settings.json
-2018-11-26T03:10:48.839Z - normal: checking language setting...
-2018-11-26T03:10:48.839Z - normal: Language: zh
-2018-11-26T03:10:50.086Z - warn: Invalid layout profile, remove old profile and init a new one at: /Users/linzhang/youyou/chengyuxiaoxiao/local/layout.windows.json
-2018-11-26T03:10:50.122Z - success: protocol editor-framework registered
-2018-11-26T03:10:50.122Z - success: protocol app registered
-2018-11-26T03:10:50.122Z - success: protocol theme registered
-2018-11-26T03:10:50.122Z - success: protocol packages registered
-2018-11-26T03:10:50.123Z - success: protocol unpack registerred
-2018-11-26T03:10:50.123Z - success: protocol disable-commonjs registerred
-2018-11-26T03:10:50.355Z - normal: connected!
-2018-11-26T03:10:50.361Z - normal: Check project /Users/linzhang/youyou/chengyuxiaoxiao
-2018-11-26T03:10:50.366Z - normal: Initializing project /Users/linzhang/youyou/chengyuxiaoxiao
-2018-11-26T03:10:50.370Z - normal: Initializing Cocos2d
-2018-11-26T03:10:51.383Z - normal: Initializing Asset Database
-2018-11-26T03:10:51.448Z - warn: Failed to parse /Users/linzhang/youyou/chengyuxiaoxiao/library/uuid-to-mtime.json: Unexpected token < in JSON at position 8350.
-2018-11-26T03:10:51.449Z - success: protocol uuid registerred
-2018-11-26T03:10:51.449Z - success: protocol db registerred
-2018-11-26T03:10:51.450Z - success: protocol thumbnail registerred
-2018-11-26T03:10:51.450Z - normal: Loading editor/builtin packages
-2018-11-26T03:10:51.708Z - success: assets loaded
-2018-11-26T03:10:51.716Z - success: builder loaded
-2018-11-26T03:10:51.719Z - success: cocos-analytics loaded
-2018-11-26T03:10:51.731Z - success: console loaded
-2018-11-26T03:10:51.771Z - success: fb-instant-games loaded
-2018-11-26T03:10:51.775Z - success: google-instant-games loaded
-2018-11-26T03:10:51.787Z - success: hierarchy loaded
-2018-11-26T03:10:51.794Z - success: inspector loaded
-2018-11-26T03:10:51.797Z - success: keystore loaded
-2018-11-26T03:10:51.811Z - success: node-library loaded
-2018-11-26T03:10:51.814Z - success: package-asset loaded
-2018-11-26T03:10:51.822Z - success: preferences loaded
-2018-11-26T03:10:51.828Z - success: project-exporter loaded
-2018-11-26T03:10:51.855Z - success: project-importer loaded
-2018-11-26T03:10:51.864Z - success: project-settings loaded
-2018-11-26T03:10:51.874Z - success: ui-kit loaded
-2018-11-26T03:10:51.880Z - success: scene loaded
-2018-11-26T03:10:51.885Z - success: sprite-editor loaded
-2018-11-26T03:10:51.895Z - success: store loaded
-2018-11-26T03:10:51.907Z - success: timeline loaded
-2018-11-26T03:10:51.908Z - normal: Loading builtin packages
-2018-11-26T03:10:51.918Z - success: asset-db-debugger loaded
-2018-11-26T03:10:51.921Z - success: color-picker loaded
-2018-11-26T03:10:52.124Z - success: google-play-instant loaded
-2018-11-26T03:10:52.127Z - success: jsb-adapter loaded
-2018-11-26T03:10:52.136Z - success: oppo-runtime loaded
-2018-11-26T03:10:52.146Z - success: package-manager loaded
-2018-11-26T03:10:52.459Z - success: qqplay-adapter loaded
-2018-11-26T03:10:52.470Z - success: sdkbox loaded
-2018-11-26T03:10:52.480Z - success: tester loaded
-2018-11-26T03:10:52.489Z - success: ui-grid loaded
-2018-11-26T03:10:52.496Z - success: ui-kit-preview-extra loaded
-2018-11-26T03:10:52.503Z - success: ui-kit-preview loaded
-2018-11-26T03:10:52.511Z - success: ui-tree loaded
-2018-11-26T03:10:52.518Z - success: vivo-runtime loaded
-2018-11-26T03:10:52.520Z - success: weapp-adapter loaded
-2018-11-26T03:10:54.357Z - normal: Loading packages
-2018-11-26T03:10:54.365Z - normal: Watching packages
-2018-11-26T03:10:54.458Z - normal: Run Application
-2018-11-26T03:11:00.189Z - success: preview server running at http://localhost:7456
-2018-11-26T03:13:27.546Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:1809
-2018-11-26T03:28:25.050Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:10657
-2018-11-26T03:33:39.436Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:13426
-2018-11-26T03:33:39.450Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:13428
+2018-12-09T11:12:50.145Z - normal: Load ~/.CocosCreator/settings.json
+2018-12-09T11:12:50.152Z - normal: checking language setting...
+2018-12-09T11:12:50.152Z - normal: Language: zh
+2018-12-09T11:12:51.422Z - success: protocol editor-framework registered
+2018-12-09T11:12:51.422Z - success: protocol app registered
+2018-12-09T11:12:51.423Z - success: protocol theme registered
+2018-12-09T11:12:51.423Z - success: protocol packages registered
+2018-12-09T11:12:51.423Z - success: protocol unpack registerred
+2018-12-09T11:12:51.424Z - success: protocol disable-commonjs registerred
+2018-12-09T11:12:51.522Z - normal: connected!
+2018-12-09T11:12:51.525Z - normal: Check project /Users/linzhang/youyou/chengyuxiaoxiao
+2018-12-09T11:12:51.532Z - normal: Initializing project /Users/linzhang/youyou/chengyuxiaoxiao
+2018-12-09T11:12:51.541Z - normal: Initializing Cocos2d
+2018-12-09T11:12:53.010Z - normal: Initializing Asset Database
+2018-12-09T11:12:53.084Z - success: protocol uuid registerred
+2018-12-09T11:12:53.084Z - success: protocol db registerred
+2018-12-09T11:12:53.085Z - success: protocol thumbnail registerred
+2018-12-09T11:12:53.085Z - normal: Loading editor/builtin packages
+2018-12-09T11:12:53.332Z - success: assets loaded
+2018-12-09T11:12:53.340Z - success: builder loaded
+2018-12-09T11:12:53.345Z - success: cocos-analytics loaded
+2018-12-09T11:12:53.355Z - success: console loaded
+2018-12-09T11:12:53.423Z - success: fb-instant-games loaded
+2018-12-09T11:12:53.427Z - success: google-instant-games loaded
+2018-12-09T11:12:53.436Z - success: hierarchy loaded
+2018-12-09T11:12:53.445Z - success: inspector loaded
+2018-12-09T11:12:53.449Z - success: keystore loaded
+2018-12-09T11:12:53.460Z - success: node-library loaded
+2018-12-09T11:12:53.464Z - success: package-asset loaded
+2018-12-09T11:12:53.469Z - success: preferences loaded
+2018-12-09T11:12:53.476Z - success: project-exporter loaded
+2018-12-09T11:12:53.510Z - success: project-importer loaded
+2018-12-09T11:12:53.516Z - success: project-settings loaded
+2018-12-09T11:12:53.529Z - success: ui-kit loaded
+2018-12-09T11:12:53.538Z - success: scene loaded
+2018-12-09T11:12:53.540Z - success: sprite-editor loaded
+2018-12-09T11:12:53.549Z - success: store loaded
+2018-12-09T11:12:53.562Z - success: timeline loaded
+2018-12-09T11:12:53.562Z - normal: Loading builtin packages
+2018-12-09T11:12:53.573Z - success: asset-db-debugger loaded
+2018-12-09T11:12:53.579Z - success: color-picker loaded
+2018-12-09T11:12:53.829Z - success: google-play-instant loaded
+2018-12-09T11:12:53.832Z - success: jsb-adapter loaded
+2018-12-09T11:12:53.845Z - success: oppo-runtime loaded
+2018-12-09T11:12:53.864Z - success: package-manager loaded
+2018-12-09T11:12:54.185Z - success: qqplay-adapter loaded
+2018-12-09T11:12:54.200Z - success: sdkbox loaded
+2018-12-09T11:12:54.213Z - success: tester loaded
+2018-12-09T11:12:54.227Z - success: ui-grid loaded
+2018-12-09T11:12:54.239Z - success: ui-kit-preview-extra loaded
+2018-12-09T11:12:54.249Z - success: ui-kit-preview loaded
+2018-12-09T11:12:54.259Z - success: ui-tree loaded
+2018-12-09T11:12:54.271Z - success: vivo-runtime loaded
+2018-12-09T11:12:54.274Z - success: weapp-adapter loaded
+2018-12-09T11:12:56.430Z - normal: Loading packages
+2018-12-09T11:12:56.442Z - normal: Watching packages
+2018-12-09T11:12:56.613Z - normal: Run Application
+2018-12-09T11:12:59.503Z - success: preview server running at http://localhost:7456
+2018-12-09T11:13:02.077Z - error: Error: Cannot find module '../screen'
+    at Module._resolveFilename (module.js:470:15)
+    at Function.Module._resolveFilename (/Applications/CocosCreator.app/Contents/Resources/electron.asar/common/reset-search-paths.js:35:12)
+    at Function.Module._load (module.js:418:25)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.get [as screen] (/Applications/CocosCreator.app/Contents/Resources/electron.asar/browser/api/exports/electron.js:11:16)
+    at u.adjust (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:3743)
+    at Function._restoreWindowStates (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:8094)
+    at Object.e.run (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/main/editor.js:1:4997)
+    at r.series.e (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/init.js:1:8803)
+    at process.on.e (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:345)
+    at emitOne (events.js:101:20)
+    at process.emit (events.js:191:7)
+    at process._fatalException (bootstrap_node.js:308:26)
